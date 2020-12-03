@@ -1,0 +1,750 @@
+# Reading pref.tcl
+# do convolution_layer_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+G:/neural-burning/convolution_layer {G:/neural-burning/convolution_layer/convolution_layer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:05 on Dec 03,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/neural-burning/convolution_layer" G:/neural-burning/convolution_layer/convolution_layer.v 
+# -- Compiling module convolution_layer
+# 
+# Top level modules:
+# 	convolution_layer
+# End time: 14:33:05 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:16 on Dec 03,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v 
+# -- Compiling module testbence
+# 
+# Top level modules:
+# 	testbence
+# End time: 14:33:16 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbence
+# vsim -gui -l msim_transcript work.testbence 
+# Start time: 14:33:26 on Dec 03,2020
+# Loading work.testbence
+# Loading work.convolution_layer
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 48
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 70
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/clk
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+run
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+run
+# 1 3 c
+# 1 1 0 1 1 1 2 1 1
+run
+# 1 1 1 0 1 2 1 1 1
+run
+# 1 1 1 1 3 1 1 1 1
+run
+# 1 1 1 2 1 0 1 1 1
+run
+# 1 1 2 1 1 1 0 1 1
+run
+# 1 2 1 1 1 1 1 0 1
+run
+# 2 1 1 1 1 1 1 1 0
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 48
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 70
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/enable
+add wave -position end  sim:/testbence/is_buffer_full
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+run
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+run
+# 1 3 c
+# 1 1 0 1 1 1 2 1 1
+run
+# 1 1 1 0 1 2 1 1 1
+run
+# 1 1 1 1 3 1 1 1 1
+run
+# 1 1 1 2 1 0 1 1 1
+run
+# 1 1 2 1 1 1 0 1 1
+run
+# 1 2 1 1 1 1 1 0 1
+run
+# 2 1 1 1 1 1 1 1 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 48
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 70
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/kernel_input_stream
+add wave -position end  sim:/testbence/matrix_input_stream
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+run
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:39:09 on Dec 03,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v 
+# -- Compiling module testbence
+# 
+# Top level modules:
+# 	testbence
+# End time: 14:39:09 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbence
+# End time: 14:39:29 on Dec 03,2020, Elapsed time: 0:06:03
+# Errors: 0, Warnings: 7
+# vsim -gui -l msim_transcript work.testbence 
+# Start time: 14:39:29 on Dec 03,2020
+# Loading work.testbence
+# Loading work.convolution_layer
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/clk
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/kernel_input_stream
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+run
+# 1 3 c
+# 1 1 0 1 1 1 2 1 1
+run
+# 1 1 1 0 1 2 1 1 1
+run
+# 1 1 1 1 3 1 1 1 1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/matrix_input_stream
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+run
+# 1 3 c
+# 1 1 0 1 1 1 2 1 1
+run
+# 1 1 1 0 1 2 1 1 1
+run
+# 1 1 1 1 3 1 1 1 1
+run
+# 1 1 1 2 1 0 1 1 1
+run
+# 1 1 2 1 1 1 0 1 1
+run
+# 1 2 1 1 1 1 1 0 1
+run
+# 2 1 1 1 1 1 1 1 0
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+run
+# 1 3 c
+# 1 1 0 1 1 1 2 1 1
+# Load canceled
+vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:58:56 on Dec 03,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v 
+# -- Compiling module testbence
+# 
+# Top level modules:
+# 	testbence
+# End time: 14:58:56 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbence
+# End time: 14:59:05 on Dec 03,2020, Elapsed time: 0:19:36
+# Errors: 0, Warnings: 7
+# vsim -gui -l msim_transcript work.testbence 
+# Start time: 14:59:05 on Dec 03,2020
+# Loading work.testbence
+# Loading work.convolution_layer
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/clk
+add wave -position end  sim:/testbence/kernel_input_stream
+add wave -position end  sim:/testbence/matrix_input_stream
+add wave -position end  sim:/testbence/enable
+run
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./input_matrix.hex" for reading.
+# No such file or directory. (errno = ENOENT)    : G:/neural-burning/convolution_layer/testbench/testbench.v(38)
+#    Time: 0 ns  Iteration: 0  Instance: /testbence
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./kernel_matrix.hex" for reading.
+# No such file or directory. (errno = ENOENT)    : G:/neural-burning/convolution_layer/testbench/testbench.v(39)
+#    Time: 0 ns  Iteration: 0  Instance: /testbence
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 44
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 63
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# x x x x x x x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 44
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 63
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# x x x x x x x x x
+vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:07:24 on Dec 03,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v 
+# -- Compiling module testbence
+# 
+# Top level modules:
+# 	testbence
+# End time: 15:07:24 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbence
+# End time: 15:07:34 on Dec 03,2020, Elapsed time: 0:08:29
+# Errors: 28, Warnings: 9
+# vsim -gui -l msim_transcript work.testbence 
+# Start time: 15:07:34 on Dec 03,2020
+# Loading work.testbence
+# Loading work.convolution_layer
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error: (vsim-3043) Unresolved reference to 'getenv'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 42
+# ** Error: (vsim-3043) Unresolved reference to 'getenv'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# Error loading design
+# End time: 15:07:34 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 7
+vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:12:27 on Dec 03,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v 
+# -- Compiling module testbence
+# 
+# Top level modules:
+# 	testbence
+# End time: 15:12:27 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbence
+# vsim -gui -l msim_transcript work.testbence 
+# Start time: 15:12:34 on Dec 03,2020
+# Loading work.testbence
+# Loading work.convolution_layer
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 47
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 50
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 66
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 69
+# ** Error: (vsim-3043) Unresolved reference to 'getenv'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 42
+# ** Error: (vsim-3043) Unresolved reference to 'getenv'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 42
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# Error loading design
+# End time: 15:12:34 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 7
+vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:12:51 on Dec 03,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v 
+# -- Compiling module testbence
+# 
+# Top level modules:
+# 	testbence
+# End time: 15:12:51 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbence
+# vsim -gui -l msim_transcript work.testbence 
+# Start time: 15:12:57 on Dec 03,2020
+# Loading work.testbence
+# Loading work.convolution_layer
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 46
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 65
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/clk
+run
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "testbench/input_matrix.hex" for reading.
+# No such file or directory. (errno = ENOENT)    : G:/neural-burning/convolution_layer/testbench/testbench.v(38)
+#    Time: 0 ns  Iteration: 0  Instance: /testbence
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "testbench/kernel_matrix.hex" for reading.
+# No such file or directory. (errno = ENOENT)    : G:/neural-burning/convolution_layer/testbench/testbench.v(39)
+#    Time: 0 ns  Iteration: 0  Instance: /testbence
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 43
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 46
+# x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 62
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 65
+# x x x x x x x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 43
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 46
+# x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 62
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 65
+# x x x x x x x x x
+run
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 43
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 46
+# x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 62
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 200 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 65
+# x x x x x x x x x
+vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:16:06 on Dec 03,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v 
+# -- Compiling module testbence
+# 
+# Top level modules:
+# 	testbence
+# End time: 15:16:07 on Dec 03,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbence
+# End time: 15:16:16 on Dec 03,2020, Elapsed time: 0:03:19
+# Errors: 42, Warnings: 9
+# vsim -gui -l msim_transcript work.testbence 
+# Start time: 15:16:16 on Dec 03,2020
+# Loading work.testbence
+# Loading work.convolution_layer
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 46
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 65
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/clk
+run
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./testbench/input_matrix.hex" for reading.
+# No such file or directory. (errno = ENOENT)    : G:/neural-burning/convolution_layer/testbench/testbench.v(38)
+#    Time: 0 ns  Iteration: 0  Instance: /testbence
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "./testbench/kernel_matrix.hex" for reading.
+# No such file or directory. (errno = ENOENT)    : G:/neural-burning/convolution_layer/testbench/testbench.v(39)
+#    Time: 0 ns  Iteration: 0  Instance: /testbence
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 43
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 46
+# x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 62
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 0 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 65
+# x x x x x x x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 43
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 46
+# x x x
+# ** Error (suppressible): (vsim-PLI-3084) $feof : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 62
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
+#    Time: 100 ns  Iteration: 0  Process: /testbence/#INITIAL#35 File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 65
+# x x x x x x x x x
+vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:17:25 on Dec 03,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/convolution_layer/testbench/testbench.v 
+# -- Compiling module testbence
+# 
+# Top level modules:
+# 	testbence
+# End time: 15:17:25 on Dec 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.testbence
+# End time: 15:17:33 on Dec 03,2020, Elapsed time: 0:01:17
+# Errors: 28, Warnings: 9
+# vsim -gui -l msim_transcript work.testbence 
+# Start time: 15:17:33 on Dec 03,2020
+# Loading work.testbence
+# Loading work.convolution_layer
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 46
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 65
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbence File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_output_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(5).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (27) does not match connection size (12) for port 'kernel_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (36) for port 'matrix_input_stream'. The port definition is at: G:/neural-burning/convolution_layer/convolution_layer.v(1).
+#    Time: 0 ns  Iteration: 0  Instance: /testbence/DUT File: G:/neural-burning/convolution_layer/testbench/testbench.v Line: 19
+add wave -position end  sim:/testbence/clk
+run
+# 3 1 a
+# 0 1 1 1 1 1 1 1 2
+# 2 2 b
+# 1 0 1 1 1 1 1 2 1
+run
+# 1 3 c
+# 1 1 0 1 1 1 2 1 1
+run
+# 1 1 1 0 1 2 1 1 1
+run
+# 1 1 1 1 3 1 1 1 1
+run
+# 1 1 1 2 1 0 1 1 1
+run
+# 1 1 2 1 1 1 0 1 1
+run
+# 1 2 1 1 1 1 1 0 1
+run
+# 2 1 1 1 1 1 1 1 0
+run
+run
+# End time: 15:18:08 on Dec 03,2020, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 7
