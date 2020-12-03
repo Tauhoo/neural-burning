@@ -6,8 +6,9 @@ module testbence();
     parameter max_input_matrix_width = 9 ;
     parameter max_kernel_width       = 3 ;
     parameter max_kernel_height      = 3 ;
+    localparam matrix_output_width   = max_input_matrix_width - max_kernel_width + 1;
     
-    wire  [(data_size*max_input_matrix_width)-1:0]  matrix_output_stream   ;
+    wire  [(data_size*matrix_output_width)-1:0]  matrix_output_stream   ;
     reg    clk   ;
     wire    is_buffer_full   ;
     reg    enable   ;
@@ -15,7 +16,7 @@ module testbence();
     reg  [(data_size*max_input_matrix_width)-1:0]  matrix_input_stream   ;
     reg  [data_size-1:0] temp_data;
     
-    convolution_layer    #(data_size , max_input_matrix_width , max_kernel_width , max_kernel_height)
+    convolution_layer    #(max_input_matrix_width, max_kernel_width, max_kernel_height, data_size)
     DUT  (
     .matrix_output_stream (matrix_output_stream) ,
     .clk (clk) ,
