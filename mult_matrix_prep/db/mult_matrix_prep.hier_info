@@ -1,0 +1,35 @@
+|mult_matrix_prep
+input_stream[0] => ~NO_FANOUT~
+input_stream[1] => ~NO_FANOUT~
+input_stream[2] => ~NO_FANOUT~
+input_stream[3] => ~NO_FANOUT~
+input_stream[4] => ~NO_FANOUT~
+input_stream[5] => ~NO_FANOUT~
+input_stream[6] => ~NO_FANOUT~
+input_stream[7] => ~NO_FANOUT~
+input_stream[8] => buffer[2][0][0].DATAIN
+input_stream[9] => buffer[2][0][1].DATAIN
+input_stream[10] => buffer[2][0][2].DATAIN
+input_stream[11] => buffer[2][0][3].DATAIN
+output_stream[0] <= <GND>
+output_stream[1] <= <GND>
+output_stream[2] <= <GND>
+output_stream[3] <= <GND>
+output_stream[4] <= buffer[2][1][0].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[5] <= buffer[2][1][1].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[6] <= buffer[2][1][2].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[7] <= buffer[2][1][3].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[8] <= buffer[2][0][0].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[9] <= buffer[2][0][1].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[10] <= buffer[2][0][2].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[11] <= buffer[2][0][3].DB_MAX_OUTPUT_PORT_TYPE
+clk => buffer[2][1][0].CLK
+clk => buffer[2][1][1].CLK
+clk => buffer[2][1][2].CLK
+clk => buffer[2][1][3].CLK
+clk => buffer[2][0][0].CLK
+clk => buffer[2][0][1].CLK
+clk => buffer[2][0][2].CLK
+clk => buffer[2][0][3].CLK
+
+
