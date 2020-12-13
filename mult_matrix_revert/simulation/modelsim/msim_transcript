@@ -1,0 +1,176 @@
+# Reading pref.tcl
+# do mult_matrix_revert_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+G:/neural-burning/mult_matrix_revert {G:/neural-burning/mult_matrix_revert/mult_matrix_revert.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:44:54 on Dec 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/neural-burning/mult_matrix_revert" G:/neural-burning/mult_matrix_revert/mult_matrix_revert.v 
+# -- Compiling module mult_matrix_revert
+# 
+# Top level modules:
+# 	mult_matrix_revert
+# End time: 21:44:54 on Dec 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:45:09 on Dec 13,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 21:45:09 on Dec 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 21:45:19 on Dec 13,2020
+# Loading work.testbench
+# Loading work.mult_matrix_revert
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 36
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/input_stream
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 36
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:47:52 on Dec 13,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 21:47:52 on Dec 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 36
+run
+run
+run
+run
+run
+vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:48:40 on Dec 13,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 21:48:41 on Dec 13,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 36
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 36
+add wave -position end  sim:/testbench/output_stream
+run
+run
+run
+run
+run
+run
+run
+vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/mult_matrix_revert.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:55:16 on Dec 13,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/mult_matrix_revert.v 
+# -- Compiling module mult_matrix_revert
+# 
+# Top level modules:
+# 	mult_matrix_revert
+# End time: 21:55:16 on Dec 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mult_matrix_revert
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 36
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 36
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.v Line: 36
+run
+run
+run
+run
+run
+run
+# End time: 22:02:06 on Dec 13,2020, Elapsed time: 0:16:47
+# Errors: 0, Warnings: 2

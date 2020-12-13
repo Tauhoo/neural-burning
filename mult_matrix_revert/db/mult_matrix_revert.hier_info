@@ -1,0 +1,31 @@
+|mult_matrix_revert
+input_stream[0] => buffer[2][2][0].DATAIN
+input_stream[1] => buffer[2][2][1].DATAIN
+input_stream[2] => buffer[2][2][2].DATAIN
+input_stream[3] => buffer[2][2][3].DATAIN
+input_stream[4] => ~NO_FANOUT~
+input_stream[5] => ~NO_FANOUT~
+input_stream[6] => ~NO_FANOUT~
+input_stream[7] => ~NO_FANOUT~
+input_stream[8] => ~NO_FANOUT~
+input_stream[9] => ~NO_FANOUT~
+input_stream[10] => ~NO_FANOUT~
+input_stream[11] => ~NO_FANOUT~
+output_stream[0] <= buffer[2][2][0].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[1] <= buffer[2][2][1].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[2] <= buffer[2][2][2].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[3] <= buffer[2][2][3].DB_MAX_OUTPUT_PORT_TYPE
+output_stream[4] <= <GND>
+output_stream[5] <= <GND>
+output_stream[6] <= <GND>
+output_stream[7] <= <GND>
+output_stream[8] <= <GND>
+output_stream[9] <= <GND>
+output_stream[10] <= <GND>
+output_stream[11] <= <GND>
+clk => buffer[2][2][0].CLK
+clk => buffer[2][2][1].CLK
+clk => buffer[2][2][2].CLK
+clk => buffer[2][2][3].CLK
+
+

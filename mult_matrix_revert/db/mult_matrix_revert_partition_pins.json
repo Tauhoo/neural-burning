@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "output_stream[0]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[1]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[2]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
