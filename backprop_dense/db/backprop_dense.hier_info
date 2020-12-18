@@ -1,0 +1,28 @@
+|backprop_dense
+x_data[0] => dy_dw[0].DATAIN
+x_data[1] => dy_dw[1].DATAIN
+x_data[2] => dy_dw[2].DATAIN
+x_data[3] => dy_dw[3].DATAIN
+x_data[4] => dy_dw[4].DATAIN
+x_data[5] => dy_dw[5].DATAIN
+x_data[6] => dy_dw[6].DATAIN
+x_data[7] => dy_dw[7].DATAIN
+x_data[8] => dy_dw[8].DATAIN
+x_data[9] => dy_dw[9].DATAIN
+x_data[10] => dy_dw[10].DATAIN
+x_data[11] => dy_dw[11].DATAIN
+clk => ~NO_FANOUT~
+dy_dw[0] <= x_data[0].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[1] <= x_data[1].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[2] <= x_data[2].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[3] <= x_data[3].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[4] <= x_data[4].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[5] <= x_data[5].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[6] <= x_data[6].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[7] <= x_data[7].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[8] <= x_data[8].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[9] <= x_data[9].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[10] <= x_data[10].DB_MAX_OUTPUT_PORT_TYPE
+dy_dw[11] <= x_data[11].DB_MAX_OUTPUT_PORT_TYPE
+
+

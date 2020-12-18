@@ -1,0 +1,35 @@
+|backprop_cost
+y_stream[0] => Add3.IN4
+y_stream[1] => Add3.IN3
+y_stream[2] => Add3.IN2
+y_stream[3] => Add3.IN1
+y_stream[4] => Add1.IN4
+y_stream[5] => Add1.IN3
+y_stream[6] => Add1.IN2
+y_stream[7] => Add1.IN1
+y_stream[8] => Add0.IN4
+y_stream[9] => Add0.IN3
+y_stream[10] => Add0.IN2
+y_stream[11] => Add0.IN1
+label_stream[0] => Add3.IN8
+label_stream[1] => Add3.IN7
+label_stream[2] => Add3.IN6
+label_stream[3] => Add3.IN5
+label_stream[4] => Add1.IN8
+label_stream[5] => Add1.IN7
+label_stream[6] => Add1.IN6
+label_stream[7] => Add1.IN5
+label_stream[8] => Add0.IN8
+label_stream[9] => Add0.IN7
+label_stream[10] => Add0.IN6
+label_stream[11] => Add0.IN5
+clk => result[0].CLK
+clk => result[1].CLK
+clk => result[2].CLK
+clk => result[3].CLK
+cost[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+cost[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+cost[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
+cost[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

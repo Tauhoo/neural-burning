@@ -1,0 +1,28 @@
+|backprop_to_all
+w_data[0] => dy_dyold[0].DATAIN
+w_data[1] => dy_dyold[1].DATAIN
+w_data[2] => dy_dyold[2].DATAIN
+w_data[3] => dy_dyold[3].DATAIN
+w_data[4] => dy_dyold[4].DATAIN
+w_data[5] => dy_dyold[5].DATAIN
+w_data[6] => dy_dyold[6].DATAIN
+w_data[7] => dy_dyold[7].DATAIN
+w_data[8] => dy_dyold[8].DATAIN
+w_data[9] => dy_dyold[9].DATAIN
+w_data[10] => dy_dyold[10].DATAIN
+w_data[11] => dy_dyold[11].DATAIN
+clk => ~NO_FANOUT~
+dy_dyold[0] <= w_data[0].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[1] <= w_data[1].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[2] <= w_data[2].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[3] <= w_data[3].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[4] <= w_data[4].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[5] <= w_data[5].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[6] <= w_data[6].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[7] <= w_data[7].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[8] <= w_data[8].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[9] <= w_data[9].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[10] <= w_data[10].DB_MAX_OUTPUT_PORT_TYPE
+dy_dyold[11] <= w_data[11].DB_MAX_OUTPUT_PORT_TYPE
+
+
