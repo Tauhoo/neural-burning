@@ -1,0 +1,349 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dc_dw_stream[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[11]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[1]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_layer_index[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[27]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[28]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[29]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[30]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[31]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[32]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[21]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[22]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[23]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[24]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[25]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[26]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[15]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[16]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[17]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[18]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[19]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[20]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[3]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[4]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[5]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[6]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[7]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[8]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[9]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[10]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[11]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[12]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[13]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_layer_index[0]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[0]",
+					"strict" : false
+				},
+				{
+					"name" : "current_layer_index[2]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[1]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[2]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[3]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[4]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[5]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[6]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[7]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[8]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[9]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[10]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[11]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[0]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[1]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[2]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[3]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[0]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[4]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[8]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[1]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[5]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[9]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[2]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[6]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[10]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[3]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[7]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[11]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[4]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[5]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[6]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[7]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[8]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[9]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[10]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[11]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

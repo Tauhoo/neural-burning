@@ -1,0 +1,4102 @@
+# Reading pref.tcl
+# do backprop_stack_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+G:/neural-burning/backprop_stack {G:/neural-burning/backprop_stack/backprop_stack.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:25:59 on Dec 21,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/backprop_stack.v 
+# -- Compiling module backprop_stack
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 16:25:59 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:26:27 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:26:27 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 16:26:30 on Dec 21,2020
+# Loading work.testbench
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           4
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           5
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           6
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           7
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           8
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           9
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          10
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          11
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          12
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          13
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          14
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          15
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          16
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          17
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          18
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          19
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           4
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           5
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           6
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           7
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           8
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           9
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          10
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          11
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          12
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          13
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          14
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          15
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          16
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          17
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          18
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          19
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+add wave -position end  sim:/testbench/dc_dw_stream
+add wave -position end  sim:/testbench/backprop_to_all
+add wave -position end  sim:/testbench/backprop_dense
+add wave -position end  sim:/testbench/backprop_start
+add wave -position end  sim:/testbench/dc_dw_layer_index
+add wave -position end  sim:/testbench/current_layer_index
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           4
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           5
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           6
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           7
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           8
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           9
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          10
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          11
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          12
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          13
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          14
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          15
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          16
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          17
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          18
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          19
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           4
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           5
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           6
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           7
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           8
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           9
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          10
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          11
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          12
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          13
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          14
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          15
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          16
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          17
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          18
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :          19
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:28:08 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:28:08 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:28:54 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:28:54 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  2  2  2 |  0  0  0 
+#  3  3  3 |  1  2  3 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  4  4  4 |  0  0  0 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 | 10 11 12 
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 10  9  8 
+# layer :           1
+#  1  1  1 |  0  0  0 
+#  2  2  2 |  0  0  0 
+#  3  3  3 |  1  2  3 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  2  0 14 
+#  5  5  5 |  2  4  6 
+# layer :           1
+#  4  4  4 |  0  0  0 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           1
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  8 10 12 
+#  5  5  5 |  1  1  1 
+#  5  5  5 | 12 10  8 
+# layer :           1
+#  5  5  5 | 10 11 12 
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 10  9  8 
+# layer :           2
+#  1  1  1 |  0  0  0 
+#  2  2  2 |  0  0  0 
+#  3  3  3 |  1  2  3 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 14 10  6 
+#  5  5  5 |  6 10 14 
+# layer :           1
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  2  0 14 
+#  5  5  5 |  2  4  6 
+# layer :           2
+#  4  4  4 |  0  0  0 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  3  7 11 
+#  5  5  5 |  1 13  9 
+#  5  5  5 |  9  9  9 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  1 13  9 
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  0  0  0 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  0  0  0 
+#  5  5  5 |  0  0  0 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  0  0  0 
+#  5  5  5 |  0  0  0 
+#  5  5  5 |  0  0  0 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  2  2  2 |  0  0  0 
+#  3  3  3 |  1  2  3 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  4  4  4 |  0  0  0 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 | 10 11 12 
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 10  9  8 
+# layer :           1
+#  1  1  1 |  1 15 13 
+#  2  2  2 | 13 13 13 
+#  3  3  3 |  1  2  3 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  2  2  2 |  0  0  0 
+#  3  3  3 |  1  2  3 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  4  4  4 |  0  0  0 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 | 10 11 12 
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 10  9  8 
+# layer :           1
+#  1  1  1 |  0  0  0 
+#  2  2  2 |  0  0  0 
+#  3  3  3 |  1  2  3 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  2  0 14 
+#  5  5  5 |  2  4  6 
+# layer :           1
+#  4  4  4 |  0  0  0 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           1
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  8 10 12 
+#  5  5  5 |  1  1  1 
+#  5  5  5 | 12 10  8 
+# layer :           1
+#  5  5  5 | 10 11 12 
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 10  9  8 
+# layer :           2
+#  1  1  1 |  0  0  0 
+#  2  2  2 |  0  0  0 
+#  3  3  3 |  1  2  3 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 14 10  6 
+#  5  5  5 |  6 10 14 
+# layer :           1
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  2  0 14 
+#  5  5  5 |  2  4  6 
+# layer :           2
+#  4  4  4 |  0  0  0 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  3  7 11 
+#  5  5  5 |  1 13  9 
+#  5  5  5 |  9  9  9 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  1 13  9 
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  0  0  0 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  0  0  0 
+#  5  5  5 |  0  0  0 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  0  0  0 
+#  5  5  5 |  0  0  0 
+#  5  5  5 |  0  0  0 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  2  2  2 |  0  0  0 
+#  3  3  3 |  1  2  3 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  4  4  4 |  0  0  0 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 | 10 11 12 
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 10  9  8 
+# layer :           1
+#  1  1  1 |  1 15 13 
+#  2  2  2 | 13 13 13 
+#  3  3  3 |  1  2  3 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  2  0 14 
+#  5  5  5 |  2  4  6 
+# layer :           1
+#  4  4  4 | 13 13 13 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           1
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  8 10 12 
+#  5  5  5 |  1  1  1 
+#  5  5  5 | 12 10  8 
+# layer :           1
+#  5  5  5 | 10 11 12 
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 10  9  8 
+# layer :           2
+#  1  1  1 |  3  2  1 
+#  2  2  2 |  1  1  1 
+#  3  3  3 |  1  2  3 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  5  5  5 
+#  5  5  5 | 14 10  6 
+#  5  5  5 |  6 10 14 
+# layer :           1
+#  5  5  5 |  9  9  9 
+#  5  5  5 |  2  0 14 
+#  5  5  5 |  2  4  6 
+# layer :           2
+#  4  4  4 |  1  1  1 
+#  4  4  4 |  1  2  3 
+#  4  4  4 |  3  2  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  3  7 11 
+#  5  5  5 |  1 13  9 
+#  5  5  5 |  9  9  9 
+# layer :           1
+#  5  5  5 |  3  5  7 
+#  5  5  5 |  1 15 13 
+#  5  5  5 | 13 13 13 
+# layer :           2
+#  5  5  5 |  1  2  3 
+#  5  5  5 |  3  2  1 
+#  5  5  5 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 |  4  8 12 
+#  5  5  5 | 13 13 13 
+#  5  5  5 | 13 13 13 
+# layer :           1
+#  5  5  5 |  8 10 12 
+#  5  5  5 |  1  1  1 
+#  5  5  5 |  1  1  1 
+# layer :           2
+#  6  6  6 |  3  2  1 
+#  6  6  6 |  1  1  1 
+#  6  6  6 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  5  5  5 | 14  2  6 
+#  5  5  5 | 14  2  6 
+#  5  5  5 | 14  2  6 
+# layer :           1
+#  5  5  5 | 10 12 14 
+#  5  5  5 | 10 12 14 
+#  5  5  5 | 10 12 14 
+# layer :           2
+#  7  7  7 |  1  1  1 
+#  7  7  7 |  1  1  1 
+#  7  7  7 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           1
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  9  9  9 
+# layer :           1
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 | 11 11 11 
+#  3  3  3 | 11 11 11 
+#  3  3  3 | 11 11 11 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 59
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 67
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 74
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           1
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:53:56 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:53:56 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:54:05 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v 
+# -- Compiling module backprop_stack
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 16:54:05 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 52
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 54
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 60
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 62
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 68
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 70
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 75
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 10, found 9.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/testbench/testbench.v(19): [TFMPC] - Missing connection for port 'cal_dy_dy_old'.
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 52
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 54
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 60
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 62
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 68
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 70
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 75
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 10, found 9.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 19
+# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/testbench/testbench.v(19): [TFMPC] - Missing connection for port 'cal_dy_dy_old'.
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:55:28 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:55:29 on Dec 21,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  9  9  9 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  0  0  0 
+#  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  0  0  0 
+#  3  3  3 |  0  0  0 
+#  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  1  1  1 |  3  3  3 
+#  1  1  1 |  3  3  3 
+#  1  1  1 |  1  1  1 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  2  2  2 |  3  3  3 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           2
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  9  9  9 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 
+#  3  3  3 |  0  0  0 
+#  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  0  0  0 
+#  3  3  3 |  0  0  0 
+#  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  0  0  0 
+#  1  1  1 |  1  1  1 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 
+#  2  2  2 |  1  1  1 
+#  2  2  2 |  1  1  1 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:24:55 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v 
+# -- Compiling module backprop_stack
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 17:24:55 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           1
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+#  3  3  3 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  1  1  1 
+#  1  1  1 |  0  0  0 |  1  1  1 
+#  1  1  1 |  1  1  1 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  2  2  2 
+#  2  2  2 |  1  1  1 |  2  2  2 
+#  2  2  2 |  1  1  1 |  2  2  2 
+# layer :           1
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+# layer :           2
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+# layer :           3
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  1  1  1 
+#  1  1  1 |  0  0  0 |  1  1  1 
+#  1  1  1 |  1  1  1 |  1  1  1 
+# layer :           1
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  2  2  2 
+#  2  2  2 |  1  1  1 |  2  2  2 
+#  2  2  2 |  1  1  1 |  2  2  2 
+# layer :           1
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+# layer :           2
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+# layer :           3
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           1
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+# layer :           2
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  1  1  1 
+#  3  3  3 |  1  1  1 |  1  1  1 
+#  3  3  3 |  1  1  1 |  1  1  1 
+# layer :           1
+#  1  1  1 |  0  0  0 |  1  1  1 
+#  1  1  1 |  0  0  0 |  1  1  1 
+#  1  1  1 |  1  1  1 |  1  1  1 
+# layer :           2
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  2  2  2 
+#  3  3  3 |  1  1  1 |  2  2  2 
+#  3  3  3 |  1  1  1 |  2  2  2 
+# layer :           1
+#  2  2  2 |  0  0  0 |  2  2  2 
+#  2  2  2 |  1  1  1 |  2  2  2 
+#  2  2  2 |  1  1  1 |  2  2  2 
+# layer :           2
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+# layer :           3
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           2
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  1  1  1 
+#  3  3  3 |  3  3  3 |  1  1  1 
+#  3  3  3 |  3  3  3 |  1  1  1 
+# layer :           1
+#  3  3  3 |  1  1  1 |  1  1  1 
+#  3  3  3 |  1  1  1 |  1  1  1 
+#  3  3  3 |  1  1  1 |  1  1  1 
+# layer :           2
+#  1  1  1 |  0  0  0 |  1  1  1 
+#  1  1  1 |  0  0  0 |  1  1  1 
+#  1  1  1 |  1  1  1 |  1  1  1 
+# layer :           3
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+#  0  0  0 |  0  0  0 |  1  1  1 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  2  2  2 
+#  3  3  3 |  3  3  3 |  2  2  2 
+#  3  3  3 |  3  3  3 |  2  2  2 
+# layer :           1
+#  3  3  3 |  1  1  1 |  2  2  2 
+#  3  3  3 |  1  1  1 |  2  2  2 
+#  3  3  3 |  1  1  1 |  2  2  2 
+# layer :           2
+#  2  2  2 |  0  0  0 |  2  2  2 
+#  2  2  2 |  1  1  1 |  2  2  2 
+#  2  2  2 |  1  1  1 |  2  2  2 
+# layer :           3
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+#  0  0  0 |  0  0  0 |  2  2  2 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:26:10 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v 
+# -- Compiling module backprop_stack
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 17:26:10 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  x  x  x 
+#  1  1  1 |  0  0  0 |  x  x  x 
+#  1  1  1 |  1  1  1 |  x  x  x 
+# layer :           1
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           2
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           3
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  x  x  x 
+#  2  2  2 |  1  1  1 |  x  x  x 
+#  2  2  2 |  1  1  1 |  x  x  x 
+# layer :           1
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           2
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           3
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  x  x  x 
+#  3  3  3 |  1  1  1 |  x  x  x 
+#  3  3  3 |  1  1  1 |  x  x  x 
+# layer :           1
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           2
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           3
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  x  x  x 
+#  3  3  3 |  1  1  1 |  x  x  x 
+#  3  3  3 |  1  1  1 |  x  x  x 
+# layer :           1
+#  1  1  1 |  0  0  0 |  x  x  x 
+#  1  1  1 |  0  0  0 |  x  x  x 
+#  1  1  1 |  1  1  1 |  x  x  x 
+# layer :           2
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           3
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  x  x  x 
+#  3  3  3 |  1  1  1 |  x  x  x 
+#  3  3  3 |  1  1  1 |  x  x  x 
+# layer :           1
+#  2  2  2 |  0  0  0 |  x  x  x 
+#  2  2  2 |  1  1  1 |  x  x  x 
+#  2  2  2 |  1  1  1 |  x  x  x 
+# layer :           2
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           3
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  x  x  x 
+#  3  3  3 |  3  3  3 |  x  x  x 
+#  3  3  3 |  3  3  3 |  x  x  x 
+# layer :           1
+#  3  3  3 |  1  1  1 |  x  x  x 
+#  3  3  3 |  1  1  1 |  x  x  x 
+#  3  3  3 |  1  1  1 |  x  x  x 
+# layer :           2
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           3
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:27:27 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v 
+# -- Compiling module backprop_stack
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 17:27:27 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  x  x  x 
+#  1  1  1 |  0  0  0 |  x  x  x 
+#  1  1  1 |  1  1  1 |  x  x  x 
+# layer :           1
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           2
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           3
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  x  x  x 
+#  2  2  2 |  1  1  1 |  x  x  x 
+#  2  2  2 |  1  1  1 |  x  x  x 
+# layer :           1
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           2
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+# layer :           3
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+#  0  0  0 |  0  0  0 |  x  x  x 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:28:41 on Dec 21,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.v 
+# -- Compiling module backprop_stack
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 17:28:41 on Dec 21,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  2  2  2 |  0  0  0 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           2
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           2
+#  2  2  2 |  0  0  0 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  9  9  9 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           2
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           2
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           2
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  0  0  0 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           2
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  3  3  3 
+#  1  1  1 |  0  0  0 |  3  3  3 
+#  1  1  1 |  1  1  1 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           1
+#  1  1  1 |  3  3  3 |  3  3  3 
+#  1  1  1 |  3  3  3 |  3  3  3 
+#  1  1  1 |  1  1  1 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           1
+#  2  2  2 |  3  3  3 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           2
+#  1  1  1 |  1  1  1 |  3  3  3 
+#  1  1  1 |  1  1  1 |  3  3  3 
+#  1  1  1 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           2
+#  2  2  2 |  1  1  1 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 | 11 11 11 |  3  3  3 
+#  3  3  3 | 11 11 11 |  3  3  3 
+#  3  3  3 | 11 11 11 |  3  3  3 
+# layer :           1
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+# layer :           2
+#  4  4  4 |  1  1  1 |  3  3  3 
+#  4  4  4 |  1  1  1 |  3  3  3 
+#  4  4  4 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+restart
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  2  2  2 |  0  0  0 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           2
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           2
+#  2  2  2 |  0  0  0 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  9  9  9 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           2
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           2
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           2
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  0  0  0 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+#  3  3  3 |  0  0  0 |  0  0  0 
+# layer :           1
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           2
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  3  3  3 
+#  1  1  1 |  0  0  0 |  3  3  3 
+#  1  1  1 |  1  1  1 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           1
+#  1  1  1 |  3  3  3 |  3  3  3 
+#  1  1  1 |  3  3  3 |  3  3  3 
+#  1  1  1 |  1  1  1 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           1
+#  2  2  2 |  3  3  3 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           2
+#  1  1  1 |  1  1  1 |  3  3  3 
+#  1  1  1 |  1  1  1 |  3  3  3 
+#  1  1  1 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           1
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           2
+#  2  2  2 |  1  1  1 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+#  2  2  2 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+# layer :           1
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+#  3  3  3 |  3  3  3 |  3  3  3 
+# layer :           2
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 | 11 11 11 |  3  3  3 
+#  3  3  3 | 11 11 11 |  3  3  3 
+#  3  3  3 | 11 11 11 |  3  3  3 
+# layer :           1
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+#  3  3  3 |  9  9  9 |  3  3  3 
+# layer :           2
+#  4  4  4 |  1  1  1 |  3  3  3 
+#  4  4  4 |  1  1  1 |  3  3  3 
+#  4  4  4 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+#  3  3  3 |  1  1  1 |  3  3  3 
+# layer :           1
+#  3  3  3 | 11 11 11 |  3  3  3 
+#  3  3  3 | 11 11 11 |  3  3  3 
+#  3  3  3 | 11 11 11 |  3  3  3 
+# layer :           2
+#  5  5  5 |  1  1  1 |  3  3  3 
+#  5  5  5 |  1  1  1 |  3  3  3 
+#  5  5  5 |  1  1  1 |  3  3  3 
+# layer :           3
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+#  0  0  0 |  0  0  0 |  3  3  3 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 53
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 55
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 69
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 71
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  2  2  2 |  0  0  0 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           1
+#  2  2  2 |  0  0  0 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+#  2  2  2 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           2
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+#  3  3  3 |  3  3  3 |  0  0  0 
+# layer :           1
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+#  3  3  3 |  1  1  1 |  0  0  0 
+# layer :           2
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  0  0  0 |  0  0  0 
+#  1  1  1 |  1  1  1 |  0  0  0 
+# layer :           3
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+#  0  0  0 |  0  0  0 |  0  0  0 
+# End time: 20:06:31 on Dec 21,2020, Elapsed time: 3:40:01
+# Errors: 0, Warnings: 7
