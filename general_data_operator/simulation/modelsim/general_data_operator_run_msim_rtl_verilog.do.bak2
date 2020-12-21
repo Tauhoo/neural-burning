@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+G:/neural-burning/general_data_operator {G:/neural-burning/general_data_operator/general_data_operator.v}
+vlog -vlog01compat -work work +incdir+G:/neural-burning/general_data_operator {G:/neural-burning/general_data_operator/general_data_operator_test.v}
+

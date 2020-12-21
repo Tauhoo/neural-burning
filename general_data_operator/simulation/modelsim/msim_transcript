@@ -1,0 +1,150 @@
+# Reading pref.tcl
+# do general_data_operator_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+G:/neural-burning/general_data_operator/src {G:/neural-burning/general_data_operator/src/gdo_parameter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:05:53 on Dec 22,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo_parameter.v 
+# ** Error: G:/neural-burning/general_data_operator/src/gdo_parameter.v(1): (vlog-2155) Global declarations are illegal in Verilog 2001 syntax.
+# End time: 00:05:53 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./general_data_operator_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+G:/neural-burning/general_data_operator/src {G:/neural-burning/general_data_operator/src/gdo_parameter.v}"
+vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:06:42 on Dec 22,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v 
+# -- Compiling module general_data_operator
+# 
+# Top level modules:
+# 	general_data_operator
+# End time: 00:06:42 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.general_data_operator
+# vsim work.general_data_operator 
+# Start time: 00:06:47 on Dec 22,2020
+# Loading work.general_data_operator
+# ** Error (suppressible): (vsim-PLI-3077) $rtoi : Function takes only one argument of type real.
+#    Time: 0 ps  Iteration: 0  Region: /general_data_operator/gdo_pow File: G:/neural-burning/general_data_operator/src/gdo_pow.v Line: 6
+# Error loading design
+# End time: 00:06:47 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:07:29 on Dec 22,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v 
+# -- Compiling module general_data_operator
+# 
+# Top level modules:
+# 	general_data_operator
+# End time: 00:07:29 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.general_data_operator
+# vsim work.general_data_operator 
+# Start time: 00:07:32 on Dec 22,2020
+# Loading work.general_data_operator
+run
+# add : 00000000
+# mult : 11111100
+# sub : 00000000
+# pow : 00010000
+vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:11:08 on Dec 22,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v 
+# -- Compiling module general_data_operator
+# 
+# Top level modules:
+# 	general_data_operator
+# End time: 00:11:08 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.general_data_operator
+run
+# add : 00000000
+# mult : 11111100
+# sub : 00000000
+# pow : 00010110
+vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:15:03 on Dec 22,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v 
+# -- Compiling module general_data_operator
+# 
+# Top level modules:
+# 	general_data_operator
+# End time: 00:15:03 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.general_data_operator
+run
+# add : 00000000
+# mult : 11111100
+# sub : 00000000
+# pow : 00001000
+vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:16:06 on Dec 22,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v 
+# -- Compiling module general_data_operator
+# 
+# Top level modules:
+# 	general_data_operator
+# End time: 00:16:06 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+restart
+# Loading work.general_data_operator
+run
+# add : 00000000
+# mult : 11111100
+# sub : 00000000
+# pow : 10110110
+vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:17:55 on Dec 22,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v 
+# -- Compiling module general_data_operator
+# 
+# Top level modules:
+# 	general_data_operator
+# End time: 00:17:55 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.general_data_operator
+run
+# add : 00000000
+# mult : 11111100
+# sub : 00000000
+# pow : 10110110
+vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:19:41 on Dec 22,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/general_data_operator/general_data_operator.v 
+# -- Compiling module general_data_operator
+# 
+# Top level modules:
+# 	general_data_operator
+# End time: 00:19:41 on Dec 22,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.general_data_operator
+run
+# add : 00000000
+# mult : 11111100
+# sub : 00000000
+# pow : 10000000
+# End time: 00:20:19 on Dec 22,2020, Elapsed time: 0:12:47
+# Errors: 0, Warnings: 0

@@ -1,0 +1,20 @@
+|general_data_operator
+out_data[0] <= <GND>
+out_data[1] <= <GND>
+out_data[2] <= <GND>
+out_data[3] <= <GND>
+out_data[4] <= <VCC>
+out_data[5] <= <GND>
+out_data[6] <= <GND>
+out_data[7] <= <GND>
+out_data[8] <= <GND>
+out_data[9] <= <GND>
+out_data[10] <= <GND>
+out_data[11] <= <GND>
+out_data[12] <= <GND>
+out_data[13] <= <GND>
+out_data[14] <= <GND>
+out_data[15] <= <GND>
+out_data[16] <= <GND>
+
+

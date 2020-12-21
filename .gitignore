@@ -82,5 +82,3 @@ sc_dpiheader.h
 vsim.dbg
 
 # End of https://www.toptal.com/developers/gitignore/api/alteraquartusii,modelsim
-
-general_data_operator
