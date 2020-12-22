@@ -2,7 +2,7 @@
 `timescale 1ns / 1ns
 module testbench  ; 
 
-parameter data_size  = 4 ;
+parameter data_size  = 8 ;
 parameter size  = 3 ; 
   wire  [(data_size*size)-1:0]  y_stream   ; 
   reg  [(data_size*size)-1:0]  data_stream   ; 
@@ -46,28 +46,21 @@ parameter size  = 3 ;
     if(index < size) begin
       for (colum = 0; colum < size; colum = colum + 1) begin
         if (colum == size - 1) begin
-          $fscanf(weight_matrix_file, "%h\n", temp_data);
+          $fscanf(weight_matrix_file, "%d\n", temp_data);
         end else begin
-          $fscanf(weight_matrix_file, "%h ", temp_data);
+          $fscanf(weight_matrix_file, "%d ", temp_data);
         end
         w_stream[(size - colum) * data_size - 1 -: data_size] = temp_data;
       end
     end
 
-    // for (colum = 0; colum < size; colum = colum + 1) begin
-    //   if (colum == size - 1) begin
-    //     $write("%h -> weight\n", w_stream[(size - colum) * data_size - 1 -: data_size]);
-    //   end else begin
-    //     $write("%h ", w_stream[(size - colum) * data_size - 1 -: data_size]);
-    //   end
-    // end
 
     if (index < size * 2 - 1) begin
       for (colum = 0; colum < size; colum = colum + 1) begin
         if (colum == size - 1) begin
-          $fscanf(input_matrix_file, "%h\n", temp_data);
+          $fscanf(input_matrix_file, "%d\n", temp_data);
         end else begin
-          $fscanf(input_matrix_file, "%h ", temp_data);
+          $fscanf(input_matrix_file, "%d ", temp_data);
         end
         data_stream[(size - colum) * data_size - 1 -: data_size] = temp_data;
       end
@@ -77,13 +70,29 @@ parameter size  = 3 ;
       end
     end
 
-    // for (colum = 0; colum < size; colum = colum + 1) begin
-    //   if (colum == size - 1) begin
-    //     $write("%h -> data\n", data_stream[(size - colum) * data_size - 1 -: data_size]);
-    //   end else begin
-    //     $write("%h ", data_stream[(size - colum) * data_size - 1 -: data_size]);
-    //   end
-    // end
+    for (colum = 0; colum < size; colum = colum + 1) begin
+      if (colum == size - 1) begin
+        $write("%d -> weight | ", w_stream[(size - colum) * data_size - 1 -: data_size]);
+      end else begin
+        $write("%d ", w_stream[(size - colum) * data_size - 1 -: data_size]);
+      end
+    end
+
+    for (colum = 0; colum < size; colum = colum + 1) begin
+      if (colum == size - 1) begin
+        $write("%d -> data | ", data_stream[(size - colum) * data_size - 1 -: data_size]);
+      end else begin
+        $write("%d ", data_stream[(size - colum) * data_size - 1 -: data_size]);
+      end
+    end
+
+    for (colum = 0; colum < size; colum = colum + 1) begin
+      if (colum == size - 1) begin
+        $write("%d -> y \n", y_stream[(size - colum) * data_size - 1 -: data_size]);
+      end else begin
+        $write("%d ", y_stream[(size - colum) * data_size - 1 -: data_size]);
+      end
+    end
 
     index = index + 1;
 	  #50 ;

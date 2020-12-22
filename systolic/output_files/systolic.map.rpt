@@ -1,5 +1,5 @@
 Analysis & Synthesis report for systolic
-Sat Dec 12 01:10:55 2020
+Tue Dec 22 16:05:22 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,8 +14,8 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: Top-level Entity: |systolic
  12. Post-Synthesis Netlist Statistics for Top Partition
  13. Elapsed Time Per Partition
@@ -46,17 +46,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Dec 12 01:10:55 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 22 16:05:22 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; systolic                                    ;
 ; Top-level Entity Name           ; systolic                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 96                                          ;
+; Total registers                 ; 224                                         ;
 ; Total pins                      ; 74                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 6                                           ;
+; Total DSP Blocks                ; 9                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -170,13 +170,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                        ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path          ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
-; systolic.v                       ; yes             ; User Verilog HDL File  ; G:/neural-burning/systolic/systolic.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++-----------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path                          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                              ; Library ;
++-----------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+; systolic.v                                                ; yes             ; User Verilog HDL File        ; G:/neural-burning/systolic/systolic.v                     ;         ;
+; /neural-burning/general_data_operator/src/gdo_parameter.v ; yes             ; Auto-Found Verilog HDL File  ; /neural-burning/general_data_operator/src/gdo_parameter.v ;         ;
+; /neural-burning/general_data_operator/src/gdo_mult.v      ; yes             ; Auto-Found Verilog HDL File  ; /neural-burning/general_data_operator/src/gdo_mult.v      ;         ;
+; /neural-burning/general_data_operator/src/gdo_add.v       ; yes             ; Auto-Found Verilog HDL File  ; /neural-burning/general_data_operator/src/gdo_add.v       ;         ;
++-----------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -184,25 +187,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 48        ;
+; Estimate of Logic utilization (ALMs needed) ; 117       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 24        ;
+; Combinational ALUT usage for logic          ; 162       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
-;     -- 5 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 4         ;
+;     -- 5 input functions                    ; 6         ;
 ;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 24        ;
+;     -- <=3 input functions                  ; 152       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 96        ;
+; Dedicated logic registers                   ; 224       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 74        ;
 ;                                             ;           ;
-; Total DSP Blocks                            ; 6         ;
+; Total DSP Blocks                            ; 9         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 99        ;
-; Total fan-out                               ; 506       ;
-; Average fan-out                             ; 1.85      ;
+; Maximum fan-out                             ; 224       ;
+; Total fan-out                               ; 1225      ;
+; Average fan-out                             ; 2.26      ;
 +---------------------------------------------+-----------+
 
 
@@ -211,55 +214,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |systolic                  ; 24 (24)             ; 96 (96)                   ; 0                 ; 6          ; 74   ; 0            ; |systolic           ; systolic    ; work         ;
+; |systolic                  ; 162 (162)           ; 224 (224)                 ; 0                 ; 9          ; 74   ; 0            ; |systolic           ; systolic    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary          ;
-+-----------------------------------------+-------------+
-; Statistic                               ; Number Used ;
-+-----------------------------------------+-------------+
-; Two Independent 18x18                   ; 3           ;
-; Sum of two 18x18 with systolic register ; 3           ;
-; Total number of DSP blocks              ; 6           ;
-;                                         ;             ;
-; Fixed Point Unsigned Multiplier         ; 9           ;
-+-----------------------------------------+-------------+
-
-
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; next_sum_reg[0][0][7]                  ; Lost fanout        ;
-; next_sum_reg[0][0][6]                  ; Lost fanout        ;
-; next_sum_reg[0][0][5]                  ; Lost fanout        ;
-; next_sum_reg[0][0][4]                  ; Lost fanout        ;
-; next_sum_reg[0][0][3]                  ; Lost fanout        ;
-; next_sum_reg[0][0][2]                  ; Lost fanout        ;
-; next_sum_reg[0][0][1]                  ; Lost fanout        ;
-; next_sum_reg[0][0][0]                  ; Lost fanout        ;
-; next_sum_reg[1][0][7]                  ; Lost fanout        ;
-; next_sum_reg[1][0][6]                  ; Lost fanout        ;
-; next_sum_reg[1][0][5]                  ; Lost fanout        ;
-; next_sum_reg[1][0][4]                  ; Lost fanout        ;
-; next_sum_reg[1][0][3]                  ; Lost fanout        ;
-; next_sum_reg[1][0][2]                  ; Lost fanout        ;
-; next_sum_reg[1][0][1]                  ; Lost fanout        ;
-; next_sum_reg[1][0][0]                  ; Lost fanout        ;
-; next_sum_reg[2][0][7]                  ; Lost fanout        ;
-; next_sum_reg[2][0][6]                  ; Lost fanout        ;
-; next_sum_reg[2][0][5]                  ; Lost fanout        ;
-; next_sum_reg[2][0][4]                  ; Lost fanout        ;
-; next_sum_reg[2][0][3]                  ; Lost fanout        ;
-; next_sum_reg[2][0][2]                  ; Lost fanout        ;
-; next_sum_reg[2][0][1]                  ; Lost fanout        ;
-; next_sum_reg[2][0][0]                  ; Lost fanout        ;
-; Total Number of Removed Registers = 24 ;                    ;
-+----------------------------------------+--------------------+
++----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary ;
++-------------------------------+--------------+
+; Statistic                     ; Number Used  ;
++-------------------------------+--------------+
+; Two Independent 18x18         ; 9            ;
+; Total number of DSP blocks    ; 9            ;
+;                               ;              ;
+; Fixed Point Signed Multiplier ; 9            ;
++-------------------------------+--------------+
 
 
 +------------------------------------------------------+
@@ -267,14 +236,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 96    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 224   ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |systolic|w_round[2]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -284,6 +262,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+-------------------------------------------------+
 ; data_size      ; 8     ; Signed Integer                                  ;
 ; size           ; 3     ; Signed Integer                                  ;
+; gdo_size       ; 4     ; Signed Integer                                  ;
 +----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -293,16 +272,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 96                          ;
-;     plain             ; 96                          ;
-; arriav_lcell_comb     ; 24                          ;
-;     arith             ; 24                          ;
-;         2 data inputs ; 24                          ;
-; arriav_mac            ; 6                           ;
+; arriav_ff             ; 224                         ;
+;     ENA SCLR          ; 32                          ;
+;     plain             ; 192                         ;
+; arriav_lcell_comb     ; 162                         ;
+;     arith             ; 80                          ;
+;         1 data inputs ; 32                          ;
+;         2 data inputs ; 48                          ;
+;     normal            ; 82                          ;
+;         3 data inputs ; 72                          ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 4                           ;
+; arriav_mac            ; 9                           ;
 ; boundary_port         ; 74                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.70                        ;
-; Average LUT depth     ; 0.56                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 1.76                        ;
 +-----------------------+-----------------------------+
 
 
@@ -321,35 +306,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Dec 12 01:10:48 2020
+    Info: Processing started: Tue Dec 22 16:05:15 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off systolic -c systolic
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file systolic.v
     Info (12023): Found entity 1: systolic File: G:/neural-burning/systolic/systolic.v Line: 1
 Info (12127): Elaborating entity "systolic" for the top level hierarchy
-Warning (10175): Verilog HDL warning at systolic.v(112): ignoring unsupported system task File: G:/neural-burning/systolic/systolic.v Line: 112
-Warning (10175): Verilog HDL warning at systolic.v(114): ignoring unsupported system task File: G:/neural-burning/systolic/systolic.v Line: 114
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "w_reg" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "a_reg" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "sum_reg" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "next_a_reg" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "next_sum_reg" into its bus
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 24 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "set_w" File: G:/neural-burning/systolic/systolic.v Line: 31
-Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 389 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 96 logic cells
-    Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Sat Dec 12 01:10:55 2020
+    Info (21061): Implemented 306 logic cells
+    Info (21062): Implemented 9 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Tue Dec 22 16:05:22 2020
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:15
 
 

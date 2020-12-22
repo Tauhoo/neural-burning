@@ -7,6 +7,10 @@ module systolic(data_stream,
     parameter data_size = 8;
     parameter size      = 3;
     
+    `include "G:\\neural-burning\\general_data_operator\\src\\gdo_parameter.v"
+    `include "G:\\neural-burning\\general_data_operator\\src\\gdo_add.v"
+    `include "G:\\neural-burning\\general_data_operator\\src\\gdo_mult.v"
+    
     genvar index;
     
     input [data_size * size - 1:0] data_stream;
@@ -94,7 +98,7 @@ module systolic(data_stream,
         //update next_sum
         for (colum = 0; colum < size; colum = colum + 1) begin
             for (row = 0; row < size; row = row + 1) begin
-                next_sum_reg[colum][row] = sum_reg[colum][row] + a_reg[colum][row] * w_reg[colum][row];
+                next_sum_reg[colum][row] = gdo_add(sum_reg[colum][row], gdo_mult(a_reg[colum][row], w_reg[colum][row]));
             end
         end
         
