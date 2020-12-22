@@ -8,9 +8,14 @@ module backprop_stack(backprop_dense,
                       copy,
                       cal_dy_dy_old,
                       dc_dw_stream);
-    parameter data_size      = 4;
+    
+    parameter data_size      = 8;
     parameter size           = 3;
     parameter max_layer_size = 4;
+    
+    `include "G:\\neural-burning\\general_data_operator\\src\\gdo_parameter.v"
+    `include "G:\\neural-burning\\general_data_operator\\src\\gdo_add.v"
+    `include "G:\\neural-burning\\general_data_operator\\src\\gdo_mult.v"
     
     input clk;
     input reset;
@@ -20,23 +25,23 @@ module backprop_stack(backprop_dense,
     input [32:0] dc_dw_layer_index;
     
     input [data_size*size - 1:0] backprop_dense;
-    wire [data_size - 1:0] backprop_dense_wire [0:size - 1];
+    wire signed [data_size - 1:0] backprop_dense_wire [0:size - 1];
     
     input [data_size*size - 1:0] backprop_to_all;
-    wire [data_size - 1:0] backprop_to_all_wire [0:size - 1];
+    wire signed [data_size - 1:0] backprop_to_all_wire [0:size - 1];
     
     input [data_size*size - 1:0] backprop_start;
-    wire [data_size - 1:0] backprop_start_wire [0:size - 1];
+    wire signed [data_size - 1:0] backprop_start_wire [0:size - 1];
     
     output [data_size*size - 1:0] dc_dw_stream;
     
     genvar gen_index;
     
-    reg [data_size - 1:0] dy_dw [0:size - 1][0:size - 1][0:max_layer_size - 1];
-    reg [data_size - 1:0] dy_dy_old [0:size - 1][0:size - 1][0:max_layer_size - 1];
-    reg [data_size - 1:0] dy_dy_dense [0:size - 1][0:size - 1];
-    reg [data_size - 1:0] dc_dw [0:size - 1];
-    reg [data_size - 1:0] copy_dy_dw [0:size - 1][0:size - 1];
+    reg signed [data_size - 1:0] dy_dw [0:size - 1][0:size - 1][0:max_layer_size - 1];
+    reg signed [data_size - 1:0] dy_dy_old [0:size - 1][0:size - 1][0:max_layer_size - 1];
+    reg signed [data_size - 1:0] dy_dy_dense [0:size - 1][0:size - 1];
+    reg signed [data_size - 1:0] dc_dw [0:size - 1];
+    reg signed [data_size - 1:0] copy_dy_dw [0:size - 1][0:size - 1];
     
     generate
     for (gen_index = 0; gen_index < size; gen_index = gen_index + 1) begin : set_tp_wire
@@ -52,7 +57,7 @@ module backprop_stack(backprop_dense,
     integer row;
     integer index;
     integer layer_index;
-    reg [data_size - 1:0] temp_matrix [0:size - 1][0:size - 1];
+    reg signed [data_size - 1:0] temp_matrix [0:size - 1][0:size - 1];
     
     initial begin
         for (layer_index = 0; layer_index < max_layer_size; layer_index = layer_index + 1) begin
@@ -79,7 +84,6 @@ module backprop_stack(backprop_dense,
     
     always @(posedge clk) begin
         $write(" ==  ==  ==  ==  ==  ==  == \n");
-        
         //copy
         if (copy) begin
             for (row = 0; row < size; row = row + 1) begin
@@ -102,14 +106,14 @@ module backprop_stack(backprop_dense,
         for (row = 0; row < size; row = row + 1) begin
             dc_dw[row] = 0;
             for (colum = 0; colum < size; colum = colum + 1) begin
-                dc_dw[row] = dc_dw[row] + copy_dy_dw[colum][dc_dw_layer_index] * dy_dy_old[row][colum][current_layer_index + 1];
+                dc_dw[row] = gdo_add(dc_dw[row], gdo_mult(copy_dy_dw[colum][dc_dw_layer_index], dy_dy_old[row][colum][current_layer_index + 1]));
             end
         end
         
         //update dy_dw
         for (colum = 0; colum < size; colum = colum + 1) begin
             for (row = 0; row < size; row = row + 1) begin
-                dy_dw[colum][row][current_layer_index] = dy_dw[colum][row][current_layer_index] + backprop_start_wire[row];
+                dy_dw[colum][row][current_layer_index] = gdo_add(dy_dw[colum][row][current_layer_index], backprop_start_wire[row]);
             end
         end
         
@@ -134,7 +138,7 @@ module backprop_stack(backprop_dense,
                     for (row = 0; row < size; row = row + 1) begin
                         for (colum = 0; colum < size; colum = colum + 1) begin
                             for (index = 0; index < size; index = index + 1) begin
-                                temp_matrix[colum][row] = temp_matrix[colum][row] + dy_dy_dense[index][row] * dy_dy_old[colum][index][layer_index];
+                                temp_matrix[colum][row] = gdo_add(temp_matrix[colum][row], gdo_mult(dy_dy_old[index][row][layer_index], dy_dy_dense[colum][index]));
                             end
                         end
                     end
@@ -153,15 +157,15 @@ module backprop_stack(backprop_dense,
             $write("layer : %d\n", layer_index);
             for (row = 0; row < size; row = row + 1) begin
                 for (colum = 0; colum < size; colum = colum + 1) begin
-                    $write("%d ",  dy_dw[colum][row][layer_index]);
+                    $write("%f ",  dy_dw[colum][row][layer_index] * 2.0**(-1.0*gdo_size));
                 end
                 $write("| ");
                 for (colum = 0; colum < size; colum = colum + 1) begin
-                    $write("%d ",  dy_dy_old[colum][row][layer_index]);
+                    $write("%f ",  dy_dy_old[colum][row][layer_index] * 2.0**(-1.0*gdo_size));
                 end
                 $write("| ");
                 for (colum = 0; colum < size; colum = colum + 1) begin
-                    $write("%d ", copy_dy_dw[colum][row]);
+                    $write("%f ", copy_dy_dw[colum][row] * 2.0**(-1.0*gdo_size));
                 end
                 $write("\n");
             end

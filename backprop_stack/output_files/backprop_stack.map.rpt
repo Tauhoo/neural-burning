@@ -1,5 +1,5 @@
 Analysis & Synthesis report for backprop_stack
-Mon Dec 21 16:25:09 2020
+Tue Dec 22 14:10:57 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -47,17 +47,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 21 16:25:09 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 22 14:10:57 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; backprop_stack                              ;
 ; Top-level Entity Name           ; backprop_stack                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 228                                         ;
-; Total pins                      ; 117                                         ;
+; Total registers                 ; 480                                         ;
+; Total pins                      ; 166                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 114                                         ;
+; Total DSP Blocks                ; 117                                         ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -175,13 +175,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
-; backprop_stack.v                 ; yes             ; User Verilog HDL File  ; G:/neural-burning/backprop_stack/backprop_stack.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++-----------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path                          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                              ; Library ;
++-----------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+; backprop_stack.v                                          ; yes             ; User Verilog HDL File        ; G:/neural-burning/backprop_stack/backprop_stack.v         ;         ;
+; /neural-burning/general_data_operator/src/gdo_parameter.v ; yes             ; Auto-Found Verilog HDL File  ; /neural-burning/general_data_operator/src/gdo_parameter.v ;         ;
+; /neural-burning/general_data_operator/src/gdo_mult.v      ; yes             ; Auto-Found Verilog HDL File  ; /neural-burning/general_data_operator/src/gdo_mult.v      ;         ;
+; /neural-burning/general_data_operator/src/gdo_add.v       ; yes             ; Auto-Found Verilog HDL File  ; /neural-burning/general_data_operator/src/gdo_add.v       ;         ;
++-----------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -189,25 +192,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 280       ;
+; Estimate of Logic utilization (ALMs needed) ; 631       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 296       ;
+; Combinational ALUT usage for logic          ; 1000      ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 80        ;
-;     -- 5 input functions                    ; 101       ;
-;     -- 4 input functions                    ; 1         ;
-;     -- <=3 input functions                  ; 114       ;
+;     -- 6 input functions                    ; 183       ;
+;     -- 5 input functions                    ; 194       ;
+;     -- 4 input functions                    ; 2         ;
+;     -- <=3 input functions                  ; 621       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 228       ;
+; Dedicated logic registers                   ; 480       ;
 ;                                             ;           ;
-; I/O pins                                    ; 117       ;
+; I/O pins                                    ; 166       ;
 ;                                             ;           ;
-; Total DSP Blocks                            ; 114       ;
+; Total DSP Blocks                            ; 117       ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 228       ;
-; Total fan-out                               ; 3293      ;
-; Average fan-out                             ; 3.78      ;
+; Maximum fan-out                             ; 480       ;
+; Total fan-out                               ; 7932      ;
+; Average fan-out                             ; 4.11      ;
 +---------------------------------------------+-----------+
 
 
@@ -216,22 +219,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; |backprop_stack            ; 296 (296)           ; 228 (228)                 ; 0                 ; 114        ; 117  ; 0            ; |backprop_stack     ; backprop_stack ; work         ;
+; |backprop_stack            ; 1000 (1000)         ; 480 (480)                 ; 0                 ; 117        ; 166  ; 0            ; |backprop_stack     ; backprop_stack ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 18x18 plus 36       ; 111         ;
-; Sum of two 18x18                ; 3           ;
-; Total number of DSP blocks      ; 114         ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 117         ;
-+---------------------------------+-------------+
++----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary ;
++-------------------------------+--------------+
+; Statistic                     ; Number Used  ;
++-------------------------------+--------------+
+; Independent 9x9               ; 3            ;
+; Two Independent 18x18         ; 114          ;
+; Total number of DSP blocks    ; 117          ;
+;                               ;              ;
+; Fixed Point Signed Multiplier ; 117          ;
++-------------------------------+--------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -239,22 +242,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+----------------------------------------+
 ; Register name                           ; Reason for Removal                     ;
 +-----------------------------------------+----------------------------------------+
-; dy_dw[1][2][0][0]                       ; Merged with dy_dw[0][2][0][0]          ;
-; dy_dw[2][2][0][0]                       ; Merged with dy_dw[0][2][0][0]          ;
-; dy_dw[1][2][1][0]                       ; Merged with dy_dw[0][2][1][0]          ;
-; dy_dw[2][2][1][0]                       ; Merged with dy_dw[0][2][1][0]          ;
-; dy_dw[1][2][2][0]                       ; Merged with dy_dw[0][2][2][0]          ;
-; dy_dw[2][2][2][0]                       ; Merged with dy_dw[0][2][2][0]          ;
-; dy_dw[1][2][3][0]                       ; Merged with dy_dw[0][2][3][0]          ;
-; dy_dw[2][2][3][0]                       ; Merged with dy_dw[0][2][3][0]          ;
-; dy_dw[1][1][0][0]                       ; Merged with dy_dw[0][1][0][0]          ;
-; dy_dw[2][1][0][0]                       ; Merged with dy_dw[0][1][0][0]          ;
-; dy_dw[1][1][1][0]                       ; Merged with dy_dw[0][1][1][0]          ;
-; dy_dw[2][1][1][0]                       ; Merged with dy_dw[0][1][1][0]          ;
-; dy_dw[1][1][2][0]                       ; Merged with dy_dw[0][1][2][0]          ;
-; dy_dw[2][1][2][0]                       ; Merged with dy_dw[0][1][2][0]          ;
-; dy_dw[1][1][3][0]                       ; Merged with dy_dw[0][1][3][0]          ;
-; dy_dw[2][1][3][0]                       ; Merged with dy_dw[0][1][3][0]          ;
+; copy_dy_dw[1][0][0]                     ; Merged with copy_dy_dw[0][0][0]        ;
+; copy_dy_dw[2][0][0]                     ; Merged with copy_dy_dw[0][0][0]        ;
 ; dy_dw[1][0][0][0]                       ; Merged with dy_dw[0][0][0][0]          ;
 ; dy_dw[2][0][0][0]                       ; Merged with dy_dw[0][0][0][0]          ;
 ; dy_dw[1][0][1][0]                       ; Merged with dy_dw[0][0][1][0]          ;
@@ -263,22 +252,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dy_dw[2][0][2][0]                       ; Merged with dy_dw[0][0][2][0]          ;
 ; dy_dw[1][0][3][0]                       ; Merged with dy_dw[0][0][3][0]          ;
 ; dy_dw[2][0][3][0]                       ; Merged with dy_dw[0][0][3][0]          ;
-; dy_dw[1][2][0][1]                       ; Merged with dy_dw[0][2][0][1]          ;
-; dy_dw[2][2][0][1]                       ; Merged with dy_dw[0][2][0][1]          ;
-; dy_dw[1][2][1][1]                       ; Merged with dy_dw[0][2][1][1]          ;
-; dy_dw[2][2][1][1]                       ; Merged with dy_dw[0][2][1][1]          ;
-; dy_dw[1][2][2][1]                       ; Merged with dy_dw[0][2][2][1]          ;
-; dy_dw[2][2][2][1]                       ; Merged with dy_dw[0][2][2][1]          ;
-; dy_dw[1][2][3][1]                       ; Merged with dy_dw[0][2][3][1]          ;
-; dy_dw[2][2][3][1]                       ; Merged with dy_dw[0][2][3][1]          ;
-; dy_dw[1][1][0][1]                       ; Merged with dy_dw[0][1][0][1]          ;
-; dy_dw[2][1][0][1]                       ; Merged with dy_dw[0][1][0][1]          ;
-; dy_dw[1][1][1][1]                       ; Merged with dy_dw[0][1][1][1]          ;
-; dy_dw[2][1][1][1]                       ; Merged with dy_dw[0][1][1][1]          ;
-; dy_dw[1][1][2][1]                       ; Merged with dy_dw[0][1][2][1]          ;
-; dy_dw[2][1][2][1]                       ; Merged with dy_dw[0][1][2][1]          ;
-; dy_dw[1][1][3][1]                       ; Merged with dy_dw[0][1][3][1]          ;
-; dy_dw[2][1][3][1]                       ; Merged with dy_dw[0][1][3][1]          ;
+; copy_dy_dw[1][1][0]                     ; Merged with copy_dy_dw[0][1][0]        ;
+; copy_dy_dw[2][1][0]                     ; Merged with copy_dy_dw[0][1][0]        ;
+; dy_dw[1][1][0][0]                       ; Merged with dy_dw[0][1][0][0]          ;
+; dy_dw[2][1][0][0]                       ; Merged with dy_dw[0][1][0][0]          ;
+; dy_dw[1][1][1][0]                       ; Merged with dy_dw[0][1][1][0]          ;
+; dy_dw[2][1][1][0]                       ; Merged with dy_dw[0][1][1][0]          ;
+; dy_dw[1][1][2][0]                       ; Merged with dy_dw[0][1][2][0]          ;
+; dy_dw[2][1][2][0]                       ; Merged with dy_dw[0][1][2][0]          ;
+; dy_dw[1][1][3][0]                       ; Merged with dy_dw[0][1][3][0]          ;
+; dy_dw[2][1][3][0]                       ; Merged with dy_dw[0][1][3][0]          ;
+; copy_dy_dw[1][2][0]                     ; Merged with copy_dy_dw[0][2][0]        ;
+; copy_dy_dw[2][2][0]                     ; Merged with copy_dy_dw[0][2][0]        ;
+; dy_dw[1][2][0][0]                       ; Merged with dy_dw[0][2][0][0]          ;
+; dy_dw[2][2][0][0]                       ; Merged with dy_dw[0][2][0][0]          ;
+; dy_dw[1][2][1][0]                       ; Merged with dy_dw[0][2][1][0]          ;
+; dy_dw[2][2][1][0]                       ; Merged with dy_dw[0][2][1][0]          ;
+; dy_dw[1][2][2][0]                       ; Merged with dy_dw[0][2][2][0]          ;
+; dy_dw[2][2][2][0]                       ; Merged with dy_dw[0][2][2][0]          ;
+; dy_dw[1][2][3][0]                       ; Merged with dy_dw[0][2][3][0]          ;
+; dy_dw[2][2][3][0]                       ; Merged with dy_dw[0][2][3][0]          ;
+; copy_dy_dw[1][0][1]                     ; Merged with copy_dy_dw[0][0][1]        ;
+; copy_dy_dw[2][0][1]                     ; Merged with copy_dy_dw[0][0][1]        ;
 ; dy_dw[1][0][0][1]                       ; Merged with dy_dw[0][0][0][1]          ;
 ; dy_dw[2][0][0][1]                       ; Merged with dy_dw[0][0][0][1]          ;
 ; dy_dw[1][0][1][1]                       ; Merged with dy_dw[0][0][1][1]          ;
@@ -287,22 +282,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dy_dw[2][0][2][1]                       ; Merged with dy_dw[0][0][2][1]          ;
 ; dy_dw[1][0][3][1]                       ; Merged with dy_dw[0][0][3][1]          ;
 ; dy_dw[2][0][3][1]                       ; Merged with dy_dw[0][0][3][1]          ;
-; dy_dw[1][2][0][2]                       ; Merged with dy_dw[0][2][0][2]          ;
-; dy_dw[2][2][0][2]                       ; Merged with dy_dw[0][2][0][2]          ;
-; dy_dw[1][2][1][2]                       ; Merged with dy_dw[0][2][1][2]          ;
-; dy_dw[2][2][1][2]                       ; Merged with dy_dw[0][2][1][2]          ;
-; dy_dw[1][2][2][2]                       ; Merged with dy_dw[0][2][2][2]          ;
-; dy_dw[2][2][2][2]                       ; Merged with dy_dw[0][2][2][2]          ;
-; dy_dw[1][2][3][2]                       ; Merged with dy_dw[0][2][3][2]          ;
-; dy_dw[2][2][3][2]                       ; Merged with dy_dw[0][2][3][2]          ;
-; dy_dw[1][1][0][2]                       ; Merged with dy_dw[0][1][0][2]          ;
-; dy_dw[2][1][0][2]                       ; Merged with dy_dw[0][1][0][2]          ;
-; dy_dw[1][1][1][2]                       ; Merged with dy_dw[0][1][1][2]          ;
-; dy_dw[2][1][1][2]                       ; Merged with dy_dw[0][1][1][2]          ;
-; dy_dw[1][1][2][2]                       ; Merged with dy_dw[0][1][2][2]          ;
-; dy_dw[2][1][2][2]                       ; Merged with dy_dw[0][1][2][2]          ;
-; dy_dw[1][1][3][2]                       ; Merged with dy_dw[0][1][3][2]          ;
-; dy_dw[2][1][3][2]                       ; Merged with dy_dw[0][1][3][2]          ;
+; copy_dy_dw[1][1][1]                     ; Merged with copy_dy_dw[0][1][1]        ;
+; copy_dy_dw[2][1][1]                     ; Merged with copy_dy_dw[0][1][1]        ;
+; dy_dw[1][1][0][1]                       ; Merged with dy_dw[0][1][0][1]          ;
+; dy_dw[2][1][0][1]                       ; Merged with dy_dw[0][1][0][1]          ;
+; dy_dw[1][1][1][1]                       ; Merged with dy_dw[0][1][1][1]          ;
+; dy_dw[2][1][1][1]                       ; Merged with dy_dw[0][1][1][1]          ;
+; dy_dw[1][1][2][1]                       ; Merged with dy_dw[0][1][2][1]          ;
+; dy_dw[2][1][2][1]                       ; Merged with dy_dw[0][1][2][1]          ;
+; dy_dw[1][1][3][1]                       ; Merged with dy_dw[0][1][3][1]          ;
+; dy_dw[2][1][3][1]                       ; Merged with dy_dw[0][1][3][1]          ;
+; copy_dy_dw[1][2][1]                     ; Merged with copy_dy_dw[0][2][1]        ;
+; copy_dy_dw[2][2][1]                     ; Merged with copy_dy_dw[0][2][1]        ;
+; dy_dw[1][2][0][1]                       ; Merged with dy_dw[0][2][0][1]          ;
+; dy_dw[2][2][0][1]                       ; Merged with dy_dw[0][2][0][1]          ;
+; dy_dw[1][2][1][1]                       ; Merged with dy_dw[0][2][1][1]          ;
+; dy_dw[2][2][1][1]                       ; Merged with dy_dw[0][2][1][1]          ;
+; dy_dw[1][2][2][1]                       ; Merged with dy_dw[0][2][2][1]          ;
+; dy_dw[2][2][2][1]                       ; Merged with dy_dw[0][2][2][1]          ;
+; dy_dw[1][2][3][1]                       ; Merged with dy_dw[0][2][3][1]          ;
+; dy_dw[2][2][3][1]                       ; Merged with dy_dw[0][2][3][1]          ;
+; copy_dy_dw[1][0][2]                     ; Merged with copy_dy_dw[0][0][2]        ;
+; copy_dy_dw[2][0][2]                     ; Merged with copy_dy_dw[0][0][2]        ;
 ; dy_dw[1][0][0][2]                       ; Merged with dy_dw[0][0][0][2]          ;
 ; dy_dw[2][0][0][2]                       ; Merged with dy_dw[0][0][0][2]          ;
 ; dy_dw[1][0][1][2]                       ; Merged with dy_dw[0][0][1][2]          ;
@@ -311,22 +312,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dy_dw[2][0][2][2]                       ; Merged with dy_dw[0][0][2][2]          ;
 ; dy_dw[1][0][3][2]                       ; Merged with dy_dw[0][0][3][2]          ;
 ; dy_dw[2][0][3][2]                       ; Merged with dy_dw[0][0][3][2]          ;
-; dy_dw[1][2][0][3]                       ; Merged with dy_dw[0][2][0][3]          ;
-; dy_dw[2][2][0][3]                       ; Merged with dy_dw[0][2][0][3]          ;
-; dy_dw[1][2][1][3]                       ; Merged with dy_dw[0][2][1][3]          ;
-; dy_dw[2][2][1][3]                       ; Merged with dy_dw[0][2][1][3]          ;
-; dy_dw[1][2][2][3]                       ; Merged with dy_dw[0][2][2][3]          ;
-; dy_dw[2][2][2][3]                       ; Merged with dy_dw[0][2][2][3]          ;
-; dy_dw[1][2][3][3]                       ; Merged with dy_dw[0][2][3][3]          ;
-; dy_dw[2][2][3][3]                       ; Merged with dy_dw[0][2][3][3]          ;
-; dy_dw[1][1][0][3]                       ; Merged with dy_dw[0][1][0][3]          ;
-; dy_dw[2][1][0][3]                       ; Merged with dy_dw[0][1][0][3]          ;
-; dy_dw[1][1][1][3]                       ; Merged with dy_dw[0][1][1][3]          ;
-; dy_dw[2][1][1][3]                       ; Merged with dy_dw[0][1][1][3]          ;
-; dy_dw[1][1][2][3]                       ; Merged with dy_dw[0][1][2][3]          ;
-; dy_dw[2][1][2][3]                       ; Merged with dy_dw[0][1][2][3]          ;
-; dy_dw[1][1][3][3]                       ; Merged with dy_dw[0][1][3][3]          ;
-; dy_dw[2][1][3][3]                       ; Merged with dy_dw[0][1][3][3]          ;
+; copy_dy_dw[1][1][2]                     ; Merged with copy_dy_dw[0][1][2]        ;
+; copy_dy_dw[2][1][2]                     ; Merged with copy_dy_dw[0][1][2]        ;
+; dy_dw[1][1][0][2]                       ; Merged with dy_dw[0][1][0][2]          ;
+; dy_dw[2][1][0][2]                       ; Merged with dy_dw[0][1][0][2]          ;
+; dy_dw[1][1][1][2]                       ; Merged with dy_dw[0][1][1][2]          ;
+; dy_dw[2][1][1][2]                       ; Merged with dy_dw[0][1][1][2]          ;
+; dy_dw[1][1][2][2]                       ; Merged with dy_dw[0][1][2][2]          ;
+; dy_dw[2][1][2][2]                       ; Merged with dy_dw[0][1][2][2]          ;
+; dy_dw[1][1][3][2]                       ; Merged with dy_dw[0][1][3][2]          ;
+; dy_dw[2][1][3][2]                       ; Merged with dy_dw[0][1][3][2]          ;
+; copy_dy_dw[1][2][2]                     ; Merged with copy_dy_dw[0][2][2]        ;
+; copy_dy_dw[2][2][2]                     ; Merged with copy_dy_dw[0][2][2]        ;
+; dy_dw[1][2][0][2]                       ; Merged with dy_dw[0][2][0][2]          ;
+; dy_dw[2][2][0][2]                       ; Merged with dy_dw[0][2][0][2]          ;
+; dy_dw[1][2][1][2]                       ; Merged with dy_dw[0][2][1][2]          ;
+; dy_dw[2][2][1][2]                       ; Merged with dy_dw[0][2][1][2]          ;
+; dy_dw[1][2][2][2]                       ; Merged with dy_dw[0][2][2][2]          ;
+; dy_dw[2][2][2][2]                       ; Merged with dy_dw[0][2][2][2]          ;
+; dy_dw[1][2][3][2]                       ; Merged with dy_dw[0][2][3][2]          ;
+; dy_dw[2][2][3][2]                       ; Merged with dy_dw[0][2][3][2]          ;
+; copy_dy_dw[1][0][3]                     ; Merged with copy_dy_dw[0][0][3]        ;
+; copy_dy_dw[2][0][3]                     ; Merged with copy_dy_dw[0][0][3]        ;
 ; dy_dw[1][0][0][3]                       ; Merged with dy_dw[0][0][0][3]          ;
 ; dy_dw[2][0][0][3]                       ; Merged with dy_dw[0][0][0][3]          ;
 ; dy_dw[1][0][1][3]                       ; Merged with dy_dw[0][0][1][3]          ;
@@ -335,43 +342,219 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dy_dw[2][0][2][3]                       ; Merged with dy_dw[0][0][2][3]          ;
 ; dy_dw[1][0][3][3]                       ; Merged with dy_dw[0][0][3][3]          ;
 ; dy_dw[2][0][3][3]                       ; Merged with dy_dw[0][0][3][3]          ;
+; copy_dy_dw[1][1][3]                     ; Merged with copy_dy_dw[0][1][3]        ;
+; copy_dy_dw[2][1][3]                     ; Merged with copy_dy_dw[0][1][3]        ;
+; dy_dw[1][1][0][3]                       ; Merged with dy_dw[0][1][0][3]          ;
+; dy_dw[2][1][0][3]                       ; Merged with dy_dw[0][1][0][3]          ;
+; dy_dw[1][1][1][3]                       ; Merged with dy_dw[0][1][1][3]          ;
+; dy_dw[2][1][1][3]                       ; Merged with dy_dw[0][1][1][3]          ;
+; dy_dw[1][1][2][3]                       ; Merged with dy_dw[0][1][2][3]          ;
+; dy_dw[2][1][2][3]                       ; Merged with dy_dw[0][1][2][3]          ;
+; dy_dw[1][1][3][3]                       ; Merged with dy_dw[0][1][3][3]          ;
+; dy_dw[2][1][3][3]                       ; Merged with dy_dw[0][1][3][3]          ;
+; copy_dy_dw[1][2][3]                     ; Merged with copy_dy_dw[0][2][3]        ;
+; copy_dy_dw[2][2][3]                     ; Merged with copy_dy_dw[0][2][3]        ;
+; dy_dw[1][2][0][3]                       ; Merged with dy_dw[0][2][0][3]          ;
+; dy_dw[2][2][0][3]                       ; Merged with dy_dw[0][2][0][3]          ;
+; dy_dw[1][2][1][3]                       ; Merged with dy_dw[0][2][1][3]          ;
+; dy_dw[2][2][1][3]                       ; Merged with dy_dw[0][2][1][3]          ;
+; dy_dw[1][2][2][3]                       ; Merged with dy_dw[0][2][2][3]          ;
+; dy_dw[2][2][2][3]                       ; Merged with dy_dw[0][2][2][3]          ;
+; dy_dw[1][2][3][3]                       ; Merged with dy_dw[0][2][3][3]          ;
+; dy_dw[2][2][3][3]                       ; Merged with dy_dw[0][2][3][3]          ;
+; copy_dy_dw[1][0][4]                     ; Merged with copy_dy_dw[0][0][4]        ;
+; copy_dy_dw[2][0][4]                     ; Merged with copy_dy_dw[0][0][4]        ;
+; dy_dw[1][0][0][4]                       ; Merged with dy_dw[0][0][0][4]          ;
+; dy_dw[2][0][0][4]                       ; Merged with dy_dw[0][0][0][4]          ;
+; dy_dw[1][0][1][4]                       ; Merged with dy_dw[0][0][1][4]          ;
+; dy_dw[2][0][1][4]                       ; Merged with dy_dw[0][0][1][4]          ;
+; dy_dw[1][0][2][4]                       ; Merged with dy_dw[0][0][2][4]          ;
+; dy_dw[2][0][2][4]                       ; Merged with dy_dw[0][0][2][4]          ;
+; dy_dw[1][0][3][4]                       ; Merged with dy_dw[0][0][3][4]          ;
+; dy_dw[2][0][3][4]                       ; Merged with dy_dw[0][0][3][4]          ;
+; copy_dy_dw[1][1][4]                     ; Merged with copy_dy_dw[0][1][4]        ;
+; copy_dy_dw[2][1][4]                     ; Merged with copy_dy_dw[0][1][4]        ;
+; dy_dw[1][1][0][4]                       ; Merged with dy_dw[0][1][0][4]          ;
+; dy_dw[2][1][0][4]                       ; Merged with dy_dw[0][1][0][4]          ;
+; dy_dw[1][1][1][4]                       ; Merged with dy_dw[0][1][1][4]          ;
+; dy_dw[2][1][1][4]                       ; Merged with dy_dw[0][1][1][4]          ;
+; dy_dw[1][1][2][4]                       ; Merged with dy_dw[0][1][2][4]          ;
+; dy_dw[2][1][2][4]                       ; Merged with dy_dw[0][1][2][4]          ;
+; dy_dw[1][1][3][4]                       ; Merged with dy_dw[0][1][3][4]          ;
+; dy_dw[2][1][3][4]                       ; Merged with dy_dw[0][1][3][4]          ;
+; copy_dy_dw[1][2][4]                     ; Merged with copy_dy_dw[0][2][4]        ;
+; copy_dy_dw[2][2][4]                     ; Merged with copy_dy_dw[0][2][4]        ;
+; dy_dw[1][2][0][4]                       ; Merged with dy_dw[0][2][0][4]          ;
+; dy_dw[2][2][0][4]                       ; Merged with dy_dw[0][2][0][4]          ;
+; dy_dw[1][2][1][4]                       ; Merged with dy_dw[0][2][1][4]          ;
+; dy_dw[2][2][1][4]                       ; Merged with dy_dw[0][2][1][4]          ;
+; dy_dw[1][2][2][4]                       ; Merged with dy_dw[0][2][2][4]          ;
+; dy_dw[2][2][2][4]                       ; Merged with dy_dw[0][2][2][4]          ;
+; dy_dw[1][2][3][4]                       ; Merged with dy_dw[0][2][3][4]          ;
+; dy_dw[2][2][3][4]                       ; Merged with dy_dw[0][2][3][4]          ;
+; copy_dy_dw[1][0][5]                     ; Merged with copy_dy_dw[0][0][5]        ;
+; copy_dy_dw[2][0][5]                     ; Merged with copy_dy_dw[0][0][5]        ;
+; dy_dw[1][0][0][5]                       ; Merged with dy_dw[0][0][0][5]          ;
+; dy_dw[2][0][0][5]                       ; Merged with dy_dw[0][0][0][5]          ;
+; dy_dw[1][0][1][5]                       ; Merged with dy_dw[0][0][1][5]          ;
+; dy_dw[2][0][1][5]                       ; Merged with dy_dw[0][0][1][5]          ;
+; dy_dw[1][0][2][5]                       ; Merged with dy_dw[0][0][2][5]          ;
+; dy_dw[2][0][2][5]                       ; Merged with dy_dw[0][0][2][5]          ;
+; dy_dw[1][0][3][5]                       ; Merged with dy_dw[0][0][3][5]          ;
+; dy_dw[2][0][3][5]                       ; Merged with dy_dw[0][0][3][5]          ;
+; copy_dy_dw[1][1][5]                     ; Merged with copy_dy_dw[0][1][5]        ;
+; copy_dy_dw[2][1][5]                     ; Merged with copy_dy_dw[0][1][5]        ;
+; dy_dw[1][1][0][5]                       ; Merged with dy_dw[0][1][0][5]          ;
+; dy_dw[2][1][0][5]                       ; Merged with dy_dw[0][1][0][5]          ;
+; dy_dw[1][1][1][5]                       ; Merged with dy_dw[0][1][1][5]          ;
+; dy_dw[2][1][1][5]                       ; Merged with dy_dw[0][1][1][5]          ;
+; dy_dw[1][1][2][5]                       ; Merged with dy_dw[0][1][2][5]          ;
+; dy_dw[2][1][2][5]                       ; Merged with dy_dw[0][1][2][5]          ;
+; dy_dw[1][1][3][5]                       ; Merged with dy_dw[0][1][3][5]          ;
+; dy_dw[2][1][3][5]                       ; Merged with dy_dw[0][1][3][5]          ;
+; copy_dy_dw[1][2][5]                     ; Merged with copy_dy_dw[0][2][5]        ;
+; copy_dy_dw[2][2][5]                     ; Merged with copy_dy_dw[0][2][5]        ;
+; dy_dw[1][2][0][5]                       ; Merged with dy_dw[0][2][0][5]          ;
+; dy_dw[2][2][0][5]                       ; Merged with dy_dw[0][2][0][5]          ;
+; dy_dw[1][2][1][5]                       ; Merged with dy_dw[0][2][1][5]          ;
+; dy_dw[2][2][1][5]                       ; Merged with dy_dw[0][2][1][5]          ;
+; dy_dw[1][2][2][5]                       ; Merged with dy_dw[0][2][2][5]          ;
+; dy_dw[2][2][2][5]                       ; Merged with dy_dw[0][2][2][5]          ;
+; dy_dw[1][2][3][5]                       ; Merged with dy_dw[0][2][3][5]          ;
+; dy_dw[2][2][3][5]                       ; Merged with dy_dw[0][2][3][5]          ;
+; copy_dy_dw[1][0][6]                     ; Merged with copy_dy_dw[0][0][6]        ;
+; copy_dy_dw[2][0][6]                     ; Merged with copy_dy_dw[0][0][6]        ;
+; dy_dw[1][0][0][6]                       ; Merged with dy_dw[0][0][0][6]          ;
+; dy_dw[2][0][0][6]                       ; Merged with dy_dw[0][0][0][6]          ;
+; dy_dw[1][0][1][6]                       ; Merged with dy_dw[0][0][1][6]          ;
+; dy_dw[2][0][1][6]                       ; Merged with dy_dw[0][0][1][6]          ;
+; dy_dw[1][0][2][6]                       ; Merged with dy_dw[0][0][2][6]          ;
+; dy_dw[2][0][2][6]                       ; Merged with dy_dw[0][0][2][6]          ;
+; dy_dw[1][0][3][6]                       ; Merged with dy_dw[0][0][3][6]          ;
+; dy_dw[2][0][3][6]                       ; Merged with dy_dw[0][0][3][6]          ;
+; copy_dy_dw[1][1][6]                     ; Merged with copy_dy_dw[0][1][6]        ;
+; copy_dy_dw[2][1][6]                     ; Merged with copy_dy_dw[0][1][6]        ;
+; dy_dw[1][1][0][6]                       ; Merged with dy_dw[0][1][0][6]          ;
+; dy_dw[2][1][0][6]                       ; Merged with dy_dw[0][1][0][6]          ;
+; dy_dw[1][1][1][6]                       ; Merged with dy_dw[0][1][1][6]          ;
+; dy_dw[2][1][1][6]                       ; Merged with dy_dw[0][1][1][6]          ;
+; dy_dw[1][1][2][6]                       ; Merged with dy_dw[0][1][2][6]          ;
+; dy_dw[2][1][2][6]                       ; Merged with dy_dw[0][1][2][6]          ;
+; dy_dw[1][1][3][6]                       ; Merged with dy_dw[0][1][3][6]          ;
+; dy_dw[2][1][3][6]                       ; Merged with dy_dw[0][1][3][6]          ;
+; copy_dy_dw[1][2][6]                     ; Merged with copy_dy_dw[0][2][6]        ;
+; copy_dy_dw[2][2][6]                     ; Merged with copy_dy_dw[0][2][6]        ;
+; dy_dw[1][2][0][6]                       ; Merged with dy_dw[0][2][0][6]          ;
+; dy_dw[2][2][0][6]                       ; Merged with dy_dw[0][2][0][6]          ;
+; dy_dw[1][2][1][6]                       ; Merged with dy_dw[0][2][1][6]          ;
+; dy_dw[2][2][1][6]                       ; Merged with dy_dw[0][2][1][6]          ;
+; dy_dw[1][2][2][6]                       ; Merged with dy_dw[0][2][2][6]          ;
+; dy_dw[2][2][2][6]                       ; Merged with dy_dw[0][2][2][6]          ;
+; dy_dw[1][2][3][6]                       ; Merged with dy_dw[0][2][3][6]          ;
+; dy_dw[2][2][3][6]                       ; Merged with dy_dw[0][2][3][6]          ;
+; copy_dy_dw[1][0][7]                     ; Merged with copy_dy_dw[0][0][7]        ;
+; copy_dy_dw[2][0][7]                     ; Merged with copy_dy_dw[0][0][7]        ;
+; dy_dw[1][0][0][7]                       ; Merged with dy_dw[0][0][0][7]          ;
+; dy_dw[2][0][0][7]                       ; Merged with dy_dw[0][0][0][7]          ;
+; dy_dw[1][0][1][7]                       ; Merged with dy_dw[0][0][1][7]          ;
+; dy_dw[2][0][1][7]                       ; Merged with dy_dw[0][0][1][7]          ;
+; dy_dw[1][0][2][7]                       ; Merged with dy_dw[0][0][2][7]          ;
+; dy_dw[2][0][2][7]                       ; Merged with dy_dw[0][0][2][7]          ;
+; dy_dw[1][0][3][7]                       ; Merged with dy_dw[0][0][3][7]          ;
+; dy_dw[2][0][3][7]                       ; Merged with dy_dw[0][0][3][7]          ;
+; copy_dy_dw[1][1][7]                     ; Merged with copy_dy_dw[0][1][7]        ;
+; copy_dy_dw[2][1][7]                     ; Merged with copy_dy_dw[0][1][7]        ;
+; dy_dw[1][1][0][7]                       ; Merged with dy_dw[0][1][0][7]          ;
+; dy_dw[2][1][0][7]                       ; Merged with dy_dw[0][1][0][7]          ;
+; dy_dw[1][1][1][7]                       ; Merged with dy_dw[0][1][1][7]          ;
+; dy_dw[2][1][1][7]                       ; Merged with dy_dw[0][1][1][7]          ;
+; dy_dw[1][1][2][7]                       ; Merged with dy_dw[0][1][2][7]          ;
+; dy_dw[2][1][2][7]                       ; Merged with dy_dw[0][1][2][7]          ;
+; dy_dw[1][1][3][7]                       ; Merged with dy_dw[0][1][3][7]          ;
+; dy_dw[2][1][3][7]                       ; Merged with dy_dw[0][1][3][7]          ;
+; copy_dy_dw[1][2][7]                     ; Merged with copy_dy_dw[0][2][7]        ;
+; copy_dy_dw[2][2][7]                     ; Merged with copy_dy_dw[0][2][7]        ;
+; dy_dw[1][2][0][7]                       ; Merged with dy_dw[0][2][0][7]          ;
+; dy_dw[2][2][0][7]                       ; Merged with dy_dw[0][2][0][7]          ;
+; dy_dw[1][2][1][7]                       ; Merged with dy_dw[0][2][1][7]          ;
+; dy_dw[2][2][1][7]                       ; Merged with dy_dw[0][2][1][7]          ;
+; dy_dw[1][2][2][7]                       ; Merged with dy_dw[0][2][2][7]          ;
+; dy_dw[2][2][2][7]                       ; Merged with dy_dw[0][2][2][7]          ;
+; dy_dw[1][2][3][7]                       ; Merged with dy_dw[0][2][3][7]          ;
+; dy_dw[2][2][3][7]                       ; Merged with dy_dw[0][2][3][7]          ;
 ; temp_matrix[0][0][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][0][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][0][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][0][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][0][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][0][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][0][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][1][0]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][1][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][1][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][1][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][1][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][1][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][1][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][1][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][2][0]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][2][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][2][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][2][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][2][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][2][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][2][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[0][2][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][0][0]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][0][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][0][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][0][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][0][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][0][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][0][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][0][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][1][0]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][1][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][1][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][1][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][1][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][1][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][1][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][1][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][2][0]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][2][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][2][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[1][2][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][2][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][2][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][2][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[1][2][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][0][0]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][0][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][0][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][0][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][0][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][0][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][0][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][0][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][1][0]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][1][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][1][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][1][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][1][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][1][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][1][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][1][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][2][0]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][2][1]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][2][2]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[2][2][3]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][2][4]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][2][5]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][2][6]                    ; Merged with temp_matrix[0][0][0]       ;
+; temp_matrix[2][2][7]                    ; Merged with temp_matrix[0][0][0]       ;
 ; temp_matrix[0][0][0]                    ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 132 ;                                        ;
+; Total Number of Removed Registers = 312 ;                                        ;
 +-----------------------------------------+----------------------------------------+
 
 
@@ -380,12 +563,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 228   ;
+; Total registers                              ; 480   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 192   ;
+; Number of registers using Synchronous Load   ; 384   ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -395,9 +578,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |backprop_stack|Mux105     ;
-; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |backprop_stack|Mux79      ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |backprop_stack|Mux32      ;
+; 4:1                ; 88 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |backprop_stack|Mux284     ;
+; 4:1                ; 72 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |backprop_stack|Mux165     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |backprop_stack|Mux107     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |backprop_stack|copy_dy_dw ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -406,7 +590,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+-------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                  ;
 +----------------+-------+-------------------------------------------------------+
-; data_size      ; 4     ; Signed Integer                                        ;
+; gdo_size       ; 4     ; Signed Integer                                        ;
+; data_size      ; 8     ; Signed Integer                                        ;
 ; size           ; 3     ; Signed Integer                                        ;
 ; max_layer_size ; 4     ; Signed Integer                                        ;
 +----------------+-------+-------------------------------------------------------+
@@ -418,23 +603,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 228                         ;
-;     SLD               ; 192                         ;
-;     plain             ; 36                          ;
-; arriav_lcell_comb     ; 296                         ;
-;     arith             ; 12                          ;
-;         2 data inputs ; 12                          ;
-;     normal            ; 284                         ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 99                          ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 101                         ;
-;         6 data inputs ; 80                          ;
-; arriav_mac            ; 114                         ;
-; boundary_port         ; 117                         ;
+; arriav_ff             ; 480                         ;
+;     ENA               ; 16                          ;
+;     SLD               ; 384                         ;
+;     plain             ; 80                          ;
+; arriav_lcell_comb     ; 1000                        ;
+;     arith             ; 96                          ;
+;         2 data inputs ; 96                          ;
+;     normal            ; 592                         ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 211                         ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 194                         ;
+;         6 data inputs ; 183                         ;
+;     shared            ; 312                         ;
+;         2 data inputs ; 72                          ;
+;         3 data inputs ; 240                         ;
+; arriav_mac            ; 117                         ;
+; boundary_port         ; 166                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.30                        ;
-; Average LUT depth     ; 1.52                        ;
+; Max LUT depth         ; 5.70                        ;
+; Average LUT depth     ; 2.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -443,7 +632,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -453,20 +642,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 21 16:25:00 2020
+    Info: Processing started: Tue Dec 22 14:10:48 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off backprop_stack -c backprop_stack
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file backprop_stack.v
     Info (12023): Found entity 1: backprop_stack File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 1
 Info (12127): Elaborating entity "backprop_stack" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at backprop_stack.v(37): object "copy_dy_dw" assigned a value but never read File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 37
-Warning (10175): Verilog HDL warning at backprop_stack.v(78): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 78
-Warning (10175): Verilog HDL warning at backprop_stack.v(148): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 148
-Warning (10175): Verilog HDL warning at backprop_stack.v(151): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 151
-Warning (10175): Verilog HDL warning at backprop_stack.v(153): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 153
-Warning (10175): Verilog HDL warning at backprop_stack.v(155): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 155
+Warning (10175): Verilog HDL warning at backprop_stack.v(85): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 85
+Warning (10175): Verilog HDL warning at backprop_stack.v(86): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 86
 Warning (10175): Verilog HDL warning at backprop_stack.v(157): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 157
+Warning (10175): Verilog HDL warning at backprop_stack.v(160): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 160
+Warning (10175): Verilog HDL warning at backprop_stack.v(162): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 162
+Warning (10175): Verilog HDL warning at backprop_stack.v(164): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 164
+Warning (10175): Verilog HDL warning at backprop_stack.v(166): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 166
+Warning (10175): Verilog HDL warning at backprop_stack.v(168): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 168
+Warning (10175): Verilog HDL warning at backprop_stack.v(170): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 170
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "dy_dw" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "dy_dy_old" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "dy_dy_dense" into its bus
@@ -475,48 +666,47 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 32 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[2]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[3]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[4]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[5]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[6]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[7]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[8]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[9]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[10]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[11]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[12]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[13]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[14]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[15]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[16]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[17]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[18]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[19]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[20]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[21]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[22]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[23]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[24]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[25]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[26]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[27]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[28]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[29]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[30]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[31]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "dc_dw_layer_index[32]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 18
-    Warning (15610): No output dependent on input pin "copy" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 16
-Info (21057): Implemented 755 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 105 input pins
-    Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 524 logic cells
-    Info (21062): Implemented 114 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 4861 megabytes
-    Info: Processing ended: Mon Dec 21 16:25:09 2020
+Warning (21074): Design contains 31 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[2]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[3]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[4]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[5]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[6]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[7]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[8]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[9]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[10]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[11]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[12]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[13]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[14]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[15]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[16]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[17]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[18]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[19]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[20]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[21]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[22]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[23]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[24]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[25]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[26]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[27]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[28]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[29]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[30]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[31]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+    Warning (15610): No output dependent on input pin "dc_dw_layer_index[32]" File: G:/neural-burning/backprop_stack/backprop_stack.v Line: 24
+Info (21057): Implemented 1451 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 142 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 1168 logic cells
+    Info (21062): Implemented 117 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
+    Info: Peak virtual memory: 4901 megabytes
+    Info: Processing ended: Tue Dec 22 14:10:57 2020
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
 
 

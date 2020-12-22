@@ -52,6 +52,54 @@
 					"strict" : false
 				},
 				{
+					"name" : "dc_dw_stream[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[16]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[17]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[18]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[19]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[20]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[21]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[22]",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_stream[23]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -68,7 +116,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "copy",
+					"strict" : false
+				},
+				{
+					"name" : "dc_dw_layer_index[0]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[0]",
 					"strict" : false
 				},
 				{
@@ -192,11 +248,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer_index[0]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[0]",
+					"name" : "cal_dy_dy_old",
 					"strict" : false
 				},
 				{
@@ -232,6 +284,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "backprop_to_all[8]",
 					"strict" : false
 				},
@@ -248,6 +304,150 @@
 					"strict" : false
 				},
 				{
+					"name" : "backprop_to_all[12]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[13]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[14]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[15]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[16]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[17]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[18]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[19]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[20]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[21]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[22]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_to_all[23]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[0]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[16]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[8]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[1]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[17]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[9]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[2]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[18]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[10]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[3]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[19]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[11]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[4]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[20]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[12]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[5]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[21]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[13]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[6]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[22]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[14]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[7]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[23]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_start[15]",
+					"strict" : false
+				},
+				{
 					"name" : "backprop_dense[0]",
 					"strict" : false
 				},
@@ -261,54 +461,6 @@
 				},
 				{
 					"name" : "backprop_dense[3]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[0]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[4]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[8]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[1]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[5]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[9]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[2]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[6]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[10]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[3]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[7]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_start[11]",
 					"strict" : false
 				},
 				{
@@ -341,6 +493,54 @@
 				},
 				{
 					"name" : "backprop_dense[11]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[12]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[13]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[14]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[15]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[16]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[17]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[18]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[19]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[20]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[21]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[22]",
+					"strict" : false
+				},
+				{
+					"name" : "backprop_dense[23]",
 					"strict" : false
 				}
 			]
