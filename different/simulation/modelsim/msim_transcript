@@ -1,0 +1,298 @@
+# Reading pref.tcl
+# do different_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/neural-burning/different {G:/neural-burning/different/diff_to_all.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:59:08 on Dec 25,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/different" G:/neural-burning/different/diff_to_all.sv 
+# -- Compiling module diff_to_all
+# 
+# Top level modules:
+# 	diff_to_all
+# End time: 22:59:08 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/neural-burning/different {G:/neural-burning/different/diff_dense.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:59:09 on Dec 25,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/different" G:/neural-burning/different/diff_dense.sv 
+# -- Compiling module diff_dense
+# 
+# Top level modules:
+# 	diff_dense
+# End time: 22:59:09 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/neural-burning/different {G:/neural-burning/different/diff_start.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:59:09 on Dec 25,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/different" G:/neural-burning/different/diff_start.sv 
+# -- Compiling module diff_start
+# 
+# Top level modules:
+# 	diff_start
+# End time: 22:59:09 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/neural-burning/different {G:/neural-burning/different/different.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:59:09 on Dec 25,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/different" G:/neural-burning/different/different.sv 
+# -- Compiling module different
+# 
+# Top level modules:
+# 	different
+# End time: 22:59:09 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:59:21 on Dec 25,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 22:59:21 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 22:59:23 on Dec 25,2020
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.different
+# Loading work.diff_dense
+# Loading work.diff_start
+# Loading work.diff_to_all
+# ** Error: (vsim-3043) Unresolved reference to 'fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 37
+# Error loading design
+# End time: 22:59:24 on Dec 25,2020, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:59:48 on Dec 25,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 22:59:48 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 22:59:52 on Dec 25,2020
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.different
+# Loading work.diff_dense
+# Loading work.diff_start
+# Loading work.diff_to_all
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 37
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 41
+restart
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 37
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 41
+add wave -position end  sim:/testbench/x
+add wave -position end  sim:/testbench/weight
+add wave -position end  sim:/testbench/diff_start_out
+add wave -position end  sim:/testbench/clk
+add wave -position end  sim:/testbench/diff_to_all_out
+add wave -position end  sim:/testbench/diff_dense_out
+run
+run
+run
+vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:00:53 on Dec 25,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 23:00:53 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 37
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 41
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 37
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 41
+vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:02:43 on Dec 25,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 23:02:43 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+run
+vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:05:38 on Dec 25,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 23:05:38 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 43
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 45
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 43
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 45
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 43
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 45
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 43
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 45
+run
+run
+vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:20:38 on Dec 25,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 23:20:38 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 43
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 45
+run
+000000000001000000000000000100000000000000100000 000000000001000000000000001000000000000000100000000000000100000000000000010000000000000001000000 000000000100000000000000010000000000000001000000vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:21:05 on Dec 25,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/different/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 23:21:05 on Dec 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 40
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 43
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/different/testbench/testbench.v Line: 45
+run
+# 000000000001000000000000000100000000000000100000 000000000001000000000000001000000000000000100000
+# 000000000100000000000000010000000000000001000000 000000000100000000000000010000000000000001000000
+run
+# 000000000100000000000000010000000000000001000000 000000000100000000000000010000000000000001000000
+run
+# 000000000100000000000000010000000000000001000000 000000000100000000000000010000000000000001000000
+# End time: 23:23:36 on Dec 25,2020, Elapsed time: 0:23:44
+# Errors: 0, Warnings: 4
