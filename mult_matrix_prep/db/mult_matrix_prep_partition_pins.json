@@ -4,6 +4,38 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "output_stream[0]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[1]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[2]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[3]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[4]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[5]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[6]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[7]",
+					"strict" : false
+				},
+				{
 					"name" : "output_stream[8]",
 					"strict" : false
 				},
@@ -20,11 +52,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "input_stream[8]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "input_stream[8]",
 					"strict" : false
 				},
 				{
@@ -37,6 +69,38 @@
 				},
 				{
 					"name" : "input_stream[11]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[4]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[3]",
 					"strict" : false
 				}
 			]

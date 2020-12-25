@@ -20,6 +20,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "output_stream[4]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[5]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[6]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[7]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[8]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[9]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[10]",
+					"strict" : false
+				},
+				{
+					"name" : "output_stream[11]",
+					"strict" : false
+				},
+				{
 					"name" : "input_stream[0]",
 					"strict" : false
 				},
@@ -37,6 +69,38 @@
 				},
 				{
 					"name" : "input_stream[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[4]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[8]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[9]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[10]",
+					"strict" : false
+				},
+				{
+					"name" : "input_stream[11]",
 					"strict" : false
 				}
 			]

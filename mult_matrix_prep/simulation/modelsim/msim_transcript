@@ -10,492 +10,56 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+G:/neural-burning/mult_matrix_prep {G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v}
+# vlog -sv -work work +incdir+G:/neural-burning/mult_matrix_prep {G:/neural-burning/mult_matrix_prep/mult_matrix_prep.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:02:41 on Dec 12,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/neural-burning/mult_matrix_prep" G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
+# Start time: 20:51:00 on Dec 22,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/mult_matrix_prep" G:/neural-burning/mult_matrix_prep/mult_matrix_prep.sv 
 # -- Compiling module mult_matrix_prep
 # 
 # Top level modules:
 # 	mult_matrix_prep
-# End time: 23:02:41 on Dec 12,2020, Elapsed time: 0:00:00
+# End time: 20:51:00 on Dec 22,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
+vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:04:10 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# ** Error: G:/neural-burning/mult_matrix_prep/testbench/testbench.v(23): (vlog-2730) Undefined variable: 'input_matrix_file'.
-# End time: 23:04:10 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:04:58 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# ** Error: G:/neural-burning/mult_matrix_prep/testbench/testbench.v(35): Range must be bounded by constant expressions.
-# End time: 23:04:58 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:05:57 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
+# Start time: 20:52:02 on Dec 22,2020
+# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 23:05:57 on Dec 12,2020, Elapsed time: 0:00:00
+# End time: 20:52:02 on Dec 22,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 23:06:07 on Dec 12,2020
-# Loading work.testbench
-# Loading work.mult_matrix_prep
-# ** Error: (vsim-3043) Unresolved reference to 'fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 31
-# Error loading design
-# End time: 23:06:07 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:06:46 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 23:06:46 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.testbench
-# vsim work.testbench 
-# Start time: 23:06:51 on Dec 12,2020
+# Start time: 20:52:05 on Dec 22,2020
+# Loading sv_std.std
 # Loading work.testbench
 # Loading work.mult_matrix_prep
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 31
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.sv Line: 32
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 33
-# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 31
-# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 33
-# Error loading design
-# End time: 23:06:51 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 2
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:07:35 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 23:07:35 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.testbench
-# vsim work.testbench 
-# Start time: 23:07:37 on Dec 12,2020
-# Loading work.testbench
-# Loading work.mult_matrix_prep
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.sv Line: 34
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 31
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.sv Line: 32
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 33
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.sv Line: 34
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.sv Line: 32
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.sv Line: 34
 add wave -position end  sim:/testbench/output_stream
-add wave -position end  sim:/testbench/input_stream
 add wave -position end  sim:/testbench/clk
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:08:43 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 23:08:43 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:16:57 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:16:57 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:19:03 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:19:03 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:09 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:20:09 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:21:02 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:21:02 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:22:56 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:22:56 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:24:13 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:24:13 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:27:26 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:27:27 on Dec 12,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:28:14 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:28:14 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:29:14 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:29:15 on Dec 12,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-run
-run
-run
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:22 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/mult_matrix_prep.v 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 23:30:22 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.mult_matrix_prep
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 30
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-run
-run
-run
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:49 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 23:30:49 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 34
-run
-#           0
-#           1
-run
-#           2
-run
-#           3
-run
-#           4
-run
-#           5
-run
-#           6
-run
-#           7
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 34
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:31:29 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 23:31:29 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 34
-run
-run
-run
-run
-#           4
-#           4
-#           4
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 34
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:33:39 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 23:33:40 on Dec 12,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 34
-run
-run
-#           2
-#           2
-#           2
-run
-#           3
-#           3
-#           3
-run
-#           4
-#           4
-#           4
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 34
-vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:34:12 on Dec 12,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_prep/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 23:34:12 on Dec 12,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 32
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_prep/testbench/testbench.v Line: 34
+add wave -position end  sim:/testbench/input_stream
+add wave -position end  sim:/testbench/temp_data
 run
 run
 run
@@ -514,5 +78,5 @@ run
 #           6
 #           6
 #           6
-# End time: 23:54:03 on Dec 12,2020, Elapsed time: 0:46:26
+# End time: 20:53:09 on Dec 22,2020, Elapsed time: 0:01:04
 # Errors: 0, Warnings: 2

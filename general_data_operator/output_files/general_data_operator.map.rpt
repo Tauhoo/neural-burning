@@ -1,5 +1,5 @@
 Analysis & Synthesis report for general_data_operator
-Tue Dec 22 00:05:32 2020
+Tue Dec 22 20:42:28 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,10 +14,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |general_data_operator
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Dec 22 00:05:31 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 22 20:42:28 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; general_data_operator                       ;
 ; Top-level Entity Name           ; general_data_operator                       ;
@@ -72,6 +71,8 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                                          ; 5CSEMA6F31C6          ;                       ;
 ; Top-level entity name                                                           ; general_data_operator ; general_data_operator ;
 ; Family name                                                                     ; Cyclone V             ; Cyclone V             ;
+; Verilog Show LMF Mapping Messages                                               ; Off                   ;                       ;
+; Verilog Version                                                                 ; SystemVerilog_2005    ; Verilog_2001          ;
 ; Use smart compilation                                                           ; Off                   ; Off                   ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                    ; On                    ;
 ; Enable compact report table                                                     ; Off                   ; Off                   ;
@@ -80,7 +81,6 @@ https://fpgasoftware.intel.com/eula.
 ; Create Debugging Nodes for IP Cores                                             ; Off                   ; Off                   ;
 ; Preserve fewer node names                                                       ; On                    ; On                    ;
 ; Intel FPGA IP Evaluation Mode                                                   ; Enable                ; Enable                ;
-; Verilog Version                                                                 ; Verilog_2001          ; Verilog_2001          ;
 ; VHDL Version                                                                    ; VHDL_1993             ; VHDL_1993             ;
 ; State Machine Processing                                                        ; Auto                  ; Auto                  ;
 ; Safe State Machine                                                              ; Off                   ; Off                   ;
@@ -167,18 +167,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
-; general_data_operator.v          ; yes             ; User Verilog HDL File        ; G:/neural-burning/general_data_operator/general_data_operator.v ;         ;
-; src/gdo_parameter.v              ; yes             ; Auto-Found Verilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo_parameter.v     ;         ;
-; src/gdo_mult.v                   ; yes             ; Auto-Found Verilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo_mult.v          ;         ;
-; src/gdo_add.v                    ; yes             ; Auto-Found Verilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo_add.v           ;         ;
-; src/gdo_sub.v                    ; yes             ; Auto-Found Verilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo_sub.v           ;         ;
-; src/gdo_pow.v                    ; yes             ; Auto-Found Verilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo_pow.v           ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; src/gdo.sv                       ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo.sv               ;         ;
+; general_data_operator.sv         ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/general_data_operator/general_data_operator.sv ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------+
@@ -233,16 +229,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |general_data_operator ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; gdo_size       ; 4     ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -273,44 +259,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Dec 22 00:05:25 2020
+    Info: Processing started: Tue Dec 22 20:42:22 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off general_data_operator -c general_data_operator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file general_data_operator.v
-    Info (12023): Found entity 1: general_data_operator File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 1
+Info (12021): Found 1 design units, including 0 entities, in source file src/gdo.sv
+    Info (12022): Found design unit 1: gdo (SystemVerilog) File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file general_data_operator.sv
+    Info (12023): Found entity 1: general_data_operator File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 2
 Info (12127): Elaborating entity "general_data_operator" for the top level hierarchy
-Warning (10175): Verilog HDL warning at general_data_operator.v(16): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 16
-Warning (10175): Verilog HDL warning at general_data_operator.v(17): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 17
-Warning (10175): Verilog HDL warning at general_data_operator.v(18): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 18
-Warning (10175): Verilog HDL warning at general_data_operator.v(19): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 19
+Warning (10175): Verilog HDL warning at general_data_operator.sv(13): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 13
+Warning (10175): Verilog HDL warning at general_data_operator.sv(14): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out_data[0]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[1]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[2]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[3]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[4]" is stuck at VCC File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[5]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[6]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[7]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[8]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[9]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[10]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[11]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[12]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[13]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[14]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[15]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
-    Warning (13410): Pin "out_data[16]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.v Line: 8
+    Warning (13410): Pin "out_data[0]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[1]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[2]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[3]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[4]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[5]" is stuck at VCC File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[6]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[7]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[8]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[9]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[10]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[11]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[12]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[13]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[14]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[15]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[16]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 17 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
     Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Tue Dec 22 00:05:32 2020
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Tue Dec 22 20:42:28 2020
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:14
 
 
