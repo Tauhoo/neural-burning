@@ -1,0 +1,55 @@
+# Reading pref.tcl
+# do controller_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/neural-burning/controller {G:/neural-burning/controller/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:40:09 on Dec 26,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/controller" G:/neural-burning/controller/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 18:40:10 on Dec 26,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim work.controller
+# vsim work.controller 
+# Start time: 18:41:59 on Dec 26,2020
+# Loading sv_std.std
+# Loading work.controller
+run
+run
+run
+restart
+run
+restart
+add wave -position end  sim:/controller/clk
+add wave -position end  sim:/controller/op
+add wave -position end  sim:/controller/code_count
+add wave -position end  sim:/controller/code_index
+add wave -position end  sim:/controller/reset
+add wave -position end  sim:/controller/w_layer_index
+add wave -position end  sim:/controller/w_row_index
+add wave -position end  sim:/controller/is_load
+add wave -position end  sim:/controller/code_reset
+add wave -position end  sim:/controller/code_active
+add wave -position end  sim:/controller/is_update
+add wave -position end  sim:/controller/i_is_load
+add wave -position end  sim:/controller/load_w
+add wave -position end  sim:/controller/backprop_cost
+add wave -position end  sim:/controller/use_z
+wave create -driver freeze -pattern clock -initialvalue HiZ -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/controller/clk
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave export -file G:/neural-burning/controller/testbench/testbench -starttime 0 -endtime 1000 -format vlog -designunit controller
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# End time: 19:35:17 on Dec 26,2020, Elapsed time: 0:53:18
+# Errors: 0, Warnings: 0
