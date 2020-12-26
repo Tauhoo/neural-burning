@@ -1,0 +1,39 @@
+# Reading pref.tcl
+# do code_storage_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/neural-burning/code_storage {G:/neural-burning/code_storage/code_storage.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:03 on Dec 26,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/code_storage" G:/neural-burning/code_storage/code_storage.sv 
+# -- Compiling module code_storage
+# 
+# Top level modules:
+# 	code_storage
+# End time: 22:20:03 on Dec 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.code_storage
+# vsim work.code_storage 
+# Start time: 22:20:12 on Dec 26,2020
+# Loading sv_std.std
+# Loading work.code_storage
+wave create -driver freeze -pattern clock -initialvalue HiZ -period 100ps -dutycycle 50 -starttime 0ps -endtime 2000ps sim:/code_storage/clk
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+add wave -position end  sim:/code_storage/is_write
+add wave -position end  sim:/code_storage/write_line
+add wave -position end  sim:/code_storage/write_data
+add wave -position end  sim:/code_storage/code
+add wave -position end  sim:/code_storage/code_index
+add wave -position end  sim:/code_storage/active
+add wave -position end  sim:/code_storage/reset
+wave export -file G:/neural-burning/code_storage/testbench/testbench -starttime 0 -endtime 2000 -format vlog -designunit code_storage
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
