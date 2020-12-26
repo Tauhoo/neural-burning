@@ -1,0 +1,10 @@
+|matrix_storage_locator
+layer_index <= layer_reg.DB_MAX_OUTPUT_PORT_TYPE
+row_index <= row_reg.DB_MAX_OUTPUT_PORT_TYPE
+is_load => row_reg.OUTPUTSELECT
+reset => row_reg.OUTPUTSELECT
+reset => layer_reg.ENA
+clk => row_reg.CLK
+clk => layer_reg.CLK
+
+
