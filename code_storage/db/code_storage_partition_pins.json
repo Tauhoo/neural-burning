@@ -180,11 +180,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "is_write",
+					"name" : "clk_out",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "is_write",
 					"strict" : false
 				},
 				{

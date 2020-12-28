@@ -172,6 +172,7 @@ write_data[10] => storage.data_a[10].DATAIN
 write_data[10] => storage.DATAIN10
 write_data[11] => storage.data_a[11].DATAIN
 write_data[11] => storage.DATAIN11
+clk => clk_out.IN1
 clk => storage.we_a.CLK
 clk => storage.waddr_a[6].CLK
 clk => storage.waddr_a[5].CLK
@@ -224,6 +225,8 @@ clk => code_line[28].CLK
 clk => code_line[29].CLK
 clk => code_line[30].CLK
 clk => code_line[31].CLK
+clk => temp.CLK
 clk => storage.CLK0
+clk_out <= clk_out.DB_MAX_OUTPUT_PORT_TYPE
 
 

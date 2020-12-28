@@ -1,10 +1,12 @@
+`timescale 1ps / 1ps
 module parse(
     code,
     op,
     act_type,
     dense_type,
     cost_type,
-    clk
+    clk,
+    clk_out
 );
 
     parameter op_size = 4;
@@ -18,6 +20,7 @@ module parse(
     output [param_a_size - 1:0] act_type;
     output [param_b_size - 1:0] dense_type;
     output [param_a_size + param_b_size - 1:0] cost_type;
+    output reg clk_out;
 
     reg [op_size - 1:0] op_reg;
     reg [param_a_size - 1:0] act_type_reg;
@@ -29,10 +32,15 @@ module parse(
     assign dense_type = dense_type_reg;
     assign cost_type = cost_type_reg;
 
-    always @(posedge clk) begin
-        op_reg = code[param_a_size + param_b_size + op_size - 1 -:op_size];
-        act_type_reg = code[param_a_size + param_b_size - 1 -:param_a_size];
-        dense_type_reg = code[param_b_size - 1 -:param_b_size];
-        cost_type_reg = code[param_a_size + param_b_size - 1 -:param_a_size + param_b_size];
+    always @(clk) begin
+        if (clk) begin
+            op_reg = code[param_a_size + param_b_size + op_size - 1 -:op_size];
+            act_type_reg = code[param_a_size + param_b_size - 1 -:param_a_size];
+            dense_type_reg = code[param_b_size - 1 -:param_b_size];
+            cost_type_reg = code[param_a_size + param_b_size - 1 -:param_a_size + param_b_size];
+            clk_out = 1;
+        end else begin
+            clk_out = 0;
+        end
     end
 endmodule

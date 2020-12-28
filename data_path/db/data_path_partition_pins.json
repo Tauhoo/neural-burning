@@ -132,6 +132,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "parse_clock_source_clk",
+					"strict" : false
+				},
+				{
 					"name" : "parse_op_interface_op[0]",
 					"strict" : false
 				},

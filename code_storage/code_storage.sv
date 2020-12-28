@@ -1,3 +1,4 @@
+`timescale 1ps / 1ps
 module code_storage(
     code, 
     code_index, 
@@ -6,7 +7,8 @@ module code_storage(
     is_write,
     write_line,
     write_data,
-    clk
+    clk,
+    clk_out
 );
     parameter code_size = 12;
     parameter max_code_line = 100;
@@ -21,9 +23,11 @@ module code_storage(
 
     output [code_size - 1:0] code;
     output [31:0] code_index;
+    output clk_out;
 
     reg [code_size - 1:0] storage [0:max_code_line];
     reg [31:0] code_line;
+    reg temp;
 
     assign code = storage[code_line];
     assign code_index = code_line;
@@ -35,15 +39,19 @@ module code_storage(
         code_line = 0;
     end
 
+    assign clk_out = clk & temp;
+
     always @(posedge clk) begin
+        temp = 0;
         if (reset) begin
-            code_line = 0;
+            code_line <= 0;
         end else if (active) begin
-            code_line = code_line + 1;
+            code_line <= code_line + 1;
         end
 
         if (is_write) begin
-            storage[write_line] = write_data;
+            storage[write_line] <= write_data;
         end
+        temp <= 1;
     end
 endmodule

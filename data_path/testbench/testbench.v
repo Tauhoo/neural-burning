@@ -54,6 +54,7 @@ module testbench  ;
    control_signal_file  = $fopen("G:/neural-burning/data_path/testbench/control_signal.hex", "r");
    repeat(100)
    begin
+     #1;
      $fscanf(code_storage_write_interface_write_line_file, "%d\n", write_line_temp);
      $fscanf(code_storage_write_interface_write_data_file, "%b\n", write_data_temp);
      $fscanf(control_signal_file, "%b %b %b %b\n", reset_reset_n, code_storage_code_control_interface_reset, code_storage_code_control_interface_active, code_storage_write_interface_is_write);
@@ -64,8 +65,8 @@ module testbench  ;
 
     //  $write("%d - %b - %b %b %b %b\n", write_line_temp, write_data_temp, reset_reset_n, code_storage_code_control_interface_reset, code_storage_code_control_interface_active, code_storage_write_interface_is_write);
     #50 ;
-     clk_clk  <= 1'b0  ;
-	  #50 ;
+     clk_clk  = 1'b0  ;
+	  #49 ;
 // 10 ns, repeat pattern in loop.
    end
   end

@@ -84,11 +84,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "code[8]",
+					"name" : "clk_out",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "code[8]",
 					"strict" : false
 				},
 				{

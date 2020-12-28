@@ -5,6 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+G:/neural-burning/register_delay/registers {G:/neural-burning/register_delay/registers/diff_backprop_reg.sv}
 vlog -sv -work work +incdir+G:/neural-burning/register_delay {G:/neural-burning/register_delay/delay.sv}
 

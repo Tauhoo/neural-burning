@@ -10,90 +10,37 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+G:/neural-burning/register_delay/registers {G:/neural-burning/register_delay/registers/diff_backprop_reg.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:54:41 on Dec 27,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/register_delay/registers" G:/neural-burning/register_delay/registers/diff_backprop_reg.sv 
-# -- Compiling module diff_backprop_reg
-# 
-# Top level modules:
-# 	diff_backprop_reg
-# End time: 17:54:42 on Dec 27,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+G:/neural-burning/register_delay {G:/neural-burning/register_delay/delay.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:54:42 on Dec 27,2020
+# Start time: 17:47:14 on Dec 28,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/register_delay" G:/neural-burning/register_delay/delay.sv 
 # -- Compiling module delay
 # 
 # Top level modules:
 # 	delay
-# End time: 17:54:42 on Dec 27,2020, Elapsed time: 0:00:00
+# End time: 17:47:14 on Dec 28,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vlog -reportprogress 300 -work work G:/neural-burning/register_delay/registers/fetch_decode_reg.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:55:00 on Dec 27,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/register_delay/registers/fetch_decode_reg.sv 
-# -- Compiling module fetch_decode_reg
-# 
-# Top level modules:
-# 	fetch_decode_reg
-# End time: 17:55:00 on Dec 27,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.fetch_decode_reg
-# vsim work.fetch_decode_reg 
-# Start time: 17:55:04 on Dec 27,2020
+vsim work.delay
+# vsim work.delay 
+# Start time: 17:47:19 on Dec 28,2020
 # Loading sv_std.std
-# Loading work.fetch_decode_reg
 # Loading work.delay
-add wave -position end  sim:/fetch_decode_reg/code_out
-add wave -position end  sim:/fetch_decode_reg/code_index_out
-add wave -position end  sim:/fetch_decode_reg/code
-add wave -position end  sim:/fetch_decode_reg/code_index
-wave create -driver freeze -pattern repeater -initialvalue z -period 50ps -sequence { 1 2 3  } -repeat forever -range 31 0 -starttime 0ps -endtime 1000ps sim:/fetch_decode_reg/code_index
+wave create -driver freeze -pattern repeater -initialvalue zzzzzzzzzzzzzzzz -period 500ps -sequence { 0001000100010001 0011001100110011  } -repeat forever -range 15 0 -starttime 0ps -endtime 1000ps sim:/delay/bus_in
 # Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
-# Invalid binary digit: 2.
-#Invalid value to -sequence switch:  1 2 3  
-# 
-# Invalid binary digit: 3.
-#Invalid value to -sequence switch:  1 2 3  
-# Usage:wave create -driver <freeze|deposit|drive|expectedOutput> -pattern repeater -initialvalue <value> -period <Time> -sequence {values} -repeat {<value>|forever|never} [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
-run
-run
-run
-run
-wave create -driver expectedOutput -pattern repeater -initialvalue 0 -period 100ps -sequence { 1 2 3  } -repeat forever -range 31 0 -starttime 0ps -endtime 1000ps sim:/fetch_decode_reg/code_index_out
-# Invalid binary digit: 2.
-#Invalid value to -sequence switch:  1 2 3  
-# 
-# Invalid binary digit: 3.
-#Invalid value to -sequence switch:  1 2 3  
-# Usage:wave create -driver <freeze|deposit|drive|expectedOutput> -pattern repeater -initialvalue <value> -period <Time> -sequence {values} -repeat {<value>|forever|never} [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
-wave create -driver freeze -pattern clock -initialvalue {Not Logged} -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/fetch_decode_reg/clk
-restart
-run
-run
-run
-wave create -driver freeze -pattern repeater -initialvalue z -period 100ps -sequence { 1 2 3  } -repeat forever -range 31 0 -starttime 0ps -endtime 1000ps sim:/fetch_decode_reg/code_index
-# Invalid binary digit: 2.
-#Invalid value to -sequence switch:  1 2 3  
-# 
-# Invalid binary digit: 3.
-#Invalid value to -sequence switch:  1 2 3  
-# Usage:wave create -driver <freeze|deposit|drive|expectedOutput> -pattern repeater -initialvalue <value> -period <Time> -sequence {values} -repeat {<value>|forever|never} [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
-wave create -driver freeze -pattern random -initialvalue z -period 100ps -random_type Uniform -seed 5 -range 31 0 -starttime 0ps -endtime 1000ps sim:/fetch_decode_reg/code_index
-wave create -driver freeze -pattern random -initialvalue zzzzzzzzzzzz -period 100ps -random_type Uniform -seed 5 -range 11 0 -starttime 0ps -endtime 1000ps sim:/fetch_decode_reg/code
-add wave -position end  sim:/fetch_decode_reg/code_index_out
-restart
-run
-run
-run
-restart
+wave create -driver freeze -pattern clock -initialvalue HiZ -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/delay/clk
+add wave -position end  sim:/delay/bus_out
+add wave -position end  sim:/delay/clk_out
+add wave -position end  sim:/delay/buffer
 run
 run
 run
 run
 run
-# End time: 18:03:13 on Dec 27,2020, Elapsed time: 0:08:09
+run
+run
+run
+run
+run
+# End time: 17:49:58 on Dec 28,2020, Elapsed time: 0:02:39
 # Errors: 0, Warnings: 0
