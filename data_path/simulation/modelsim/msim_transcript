@@ -1,0 +1,115 @@
+# Reading pref.tcl
+# do data_path_run_msim_rtl_systemverilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlib data_path
+# ** Warning: (vlib-34) Library already exists at "data_path".
+# vmap data_path data_path
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap data_path data_path 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis {G:/neural-burning/data_path/data_path/synthesis/data_path.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:58 on Dec 28,2020
+# vlog -reportprogress 300 -vlog01compat -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis" G:/neural-burning/data_path/data_path/synthesis/data_path.v 
+# -- Compiling module data_path
+# 
+# Top level modules:
+# 	data_path
+# End time: 14:55:58 on Dec 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:58 on Dec 28,2020
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv 
+# -- Compiling module parse
+# 
+# Top level modules:
+# 	parse
+# End time: 14:55:59 on Dec 28,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:59 on Dec 28,2020
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv 
+# -- Compiling module delay
+# 
+# Top level modules:
+# 	delay
+# End time: 14:55:59 on Dec 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:59 on Dec 28,2020
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv 
+# -- Compiling module fetch_decode_reg
+# 
+# Top level modules:
+# 	fetch_decode_reg
+# End time: 14:55:59 on Dec 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:59 on Dec 28,2020
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv 
+# -- Compiling module code_storage
+# 
+# Top level modules:
+# 	code_storage
+# End time: 14:55:59 on Dec 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim data_path.testbench
+# vsim data_path.testbench 
+# Start time: 14:56:03 on Dec 28,2020
+# Loading data_path.testbench
+# Loading data_path.data_path
+# Loading sv_std.std
+# Loading data_path.code_storage
+# Loading data_path.fetch_decode_reg
+# Loading data_path.delay
+# Loading data_path.parse
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 57
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 58
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 59
+add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/bus_in
+add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/clk
+add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/bus_out
+add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/buffer
+run
+run
+vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:14 on Dec 28,2020
+# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:02:14 on Dec 28,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading data_path.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 57
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 58
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 59
+run
+run
+run
+# End time: 15:31:02 on Dec 28,2020, Elapsed time: 0:34:59
+# Errors: 0, Warnings: 3

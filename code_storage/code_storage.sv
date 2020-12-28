@@ -35,7 +35,7 @@ module code_storage(
         code_line = 0;
     end
 
-    always @(posedge clk ) begin
+    always @(posedge clk) begin
         if (reset) begin
             code_line = 0;
         end else if (active) begin

@@ -1,0 +1,42 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate G:\neural-burning\data_path\data_path.qsys --block-symbol-file --output-directory=G:\neural-burning\data_path\data_path --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading data_path/data_path.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding code_storage [code_storage 1.0]
+Progress: Parameterizing module code_storage
+Progress: Adding fetch_to_decode_register [fetch_to_decode_register 1.0]
+Progress: Parameterizing module fetch_to_decode_register
+Progress: Adding parse [parse 1.0]
+Progress: Parameterizing module parse
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate G:\neural-burning\data_path\data_path.qsys --synthesis=VERILOG --output-directory=G:\neural-burning\data_path\data_path\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading data_path/data_path.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 20.1]
+Progress: Parameterizing module clk_0
+Progress: Adding code_storage [code_storage 1.0]
+Progress: Parameterizing module code_storage
+Progress: Adding fetch_to_decode_register [fetch_to_decode_register 1.0]
+Progress: Parameterizing module fetch_to_decode_register
+Progress: Adding parse [parse 1.0]
+Progress: Parameterizing module parse
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: data_path: Generating data_path "data_path" for QUARTUS_SYNTH
+Info: code_storage: "data_path" instantiated code_storage "code_storage"
+Info: fetch_to_decode_register: "data_path" instantiated fetch_to_decode_register "fetch_to_decode_register"
+Info: parse: "data_path" instantiated parse "parse"
+Info: data_path: Done "data_path" with 4 modules, 5 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

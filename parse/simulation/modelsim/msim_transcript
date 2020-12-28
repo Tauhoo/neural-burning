@@ -12,28 +12,23 @@
 # 
 # vlog -sv -work work +incdir+G:/neural-burning/parse {G:/neural-burning/parse/parse.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:07:50 on Dec 26,2020
+# Start time: 13:26:58 on Dec 28,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/parse" G:/neural-burning/parse/parse.sv 
 # -- Compiling module parse
 # 
 # Top level modules:
 # 	parse
-# End time: 20:07:50 on Dec 26,2020, Elapsed time: 0:00:00
+# End time: 13:26:58 on Dec 28,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.parse
 # vsim work.parse 
-# Start time: 20:08:03 on Dec 26,2020
+# Start time: 13:28:08 on Dec 28,2020
 # Loading sv_std.std
 # Loading work.parse
-wave create -driver freeze -pattern constant -value 0001001001 -range 11 0 -starttime 0ps -endtime 1000ps sim:/parse/code
+wave create -driver freeze -pattern clock -initialvalue HiZ -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/parse/clk
 # Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
-add wave -position end  sim:/parse/op
-add wave -position end  sim:/parse/act_type
-add wave -position end  sim:/parse/dense_type
-add wave -position end  sim:/parse/cost_type
-wave create -driver freeze -pattern constant -value 000100010001 -range 11 0 -starttime 0ps -endtime 1000ps sim:/parse/code
-wave create -driver freeze -pattern constant -value 000100010001 -range 11 0 -starttime 0ps -endtime 1000ps sim:/parse/code
+wave create -driver freeze -pattern repeater -initialvalue zzzzzzzzzzzz -period 500ps -sequence { 100010001000 111011101110  } -repeat forever -range 11 0 -starttime 0ps -endtime 1000ps sim:/parse/code
 add wave -position end  sim:/parse/op
 add wave -position end  sim:/parse/act_type
 add wave -position end  sim:/parse/dense_type
@@ -43,24 +38,7 @@ run
 run
 run
 run
-vlog -reportprogress 300 -work work G:/neural-burning/parse/parse.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:13:51 on Dec 26,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/parse/parse.sv 
-# -- Compiling module parse
-# 
-# Top level modules:
-# 	parse
-# End time: 20:13:52 on Dec 26,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-restart
-# Loading work.parse
 run
 run
-run
-run
-run
-run
-run
-# End time: 20:14:13 on Dec 26,2020, Elapsed time: 0:06:10
+# End time: 13:29:35 on Dec 28,2020, Elapsed time: 0:01:27
 # Errors: 0, Warnings: 0

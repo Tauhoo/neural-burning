@@ -60,7 +60,7 @@ module weight_storage (
         
     end
 
-    always @(posedge clk ) begin
+    always @(posedge clk) begin
         //wrtie
         if (is_write) begin
             for (index = 0; index < size; index = index + 1) begin
