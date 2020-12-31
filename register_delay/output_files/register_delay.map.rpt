@@ -1,5 +1,5 @@
 Analysis & Synthesis report for register_delay
-Mon Dec 28 18:34:15 2020
+Sat Dec 26 14:49:49 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,12 +13,21 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |delay
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |diff_backprop_reg
+ 10. Parameter Settings for User Entity Instance: delay:delay_inst_w_layer_index
+ 11. Parameter Settings for User Entity Instance: delay:delay_inst_w_row_index
+ 12. Parameter Settings for User Entity Instance: delay:delay_inst_backprop_cost
+ 13. Parameter Settings for User Entity Instance: delay:delay_inst_diff_to_all
+ 14. Parameter Settings for User Entity Instance: delay:delay_inst_diff_start
+ 15. Parameter Settings for User Entity Instance: delay:delay_inst_diff_dense
+ 16. Parameter Settings for User Entity Instance: delay:delay_inst_diff_cost
+ 17. Parameter Settings for User Entity Instance: delay:delay_inst_dense_type
+ 18. Parameter Settings for User Entity Instance: delay:delay_inst_is_update
+ 19. Port Connectivity Checks: "delay:delay_inst_dense_type"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +54,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 28 18:34:15 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sat Dec 26 14:49:49 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; register_delay                              ;
-; Top-level Entity Name           ; delay                                       ;
+; Top-level Entity Name           ; diff_backprop_reg                           ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 34                                          ;
+; Total registers                 ; 524                                         ;
+; Total pins                      ; 581                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -71,7 +80,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; delay              ; register_delay     ;
+; Top-level entity name                                                           ; diff_backprop_reg  ; register_delay     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -165,17 +174,19 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path              ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------+---------+
-; delay.sv                         ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/register_delay/delay.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; registers/diff_backprop_reg.sv   ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/register_delay/registers/diff_backprop_reg.sv ;         ;
+; delay.sv                         ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/register_delay/delay.sv                       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -183,78 +194,45 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 16        ;
+; Estimate of Logic utilization (ALMs needed) ; 262       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 32        ;
+; Combinational ALUT usage for logic          ; 0         ;
 ;     -- 7 input functions                    ; 0         ;
 ;     -- 6 input functions                    ; 0         ;
 ;     -- 5 input functions                    ; 0         ;
 ;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 32        ;
+;     -- <=3 input functions                  ; 0         ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 0         ;
+; Dedicated logic registers                   ; 524       ;
 ;                                             ;           ;
-; I/O pins                                    ; 34        ;
+; I/O pins                                    ; 581       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 33        ;
-; Total fan-out                               ; 147       ;
-; Average fan-out                             ; 1.47      ;
+; Maximum fan-out                             ; 524       ;
+; Total fan-out                               ; 1891      ;
+; Average fan-out                             ; 1.12      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |delay                     ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 34   ; 0            ; |delay              ; delay       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name       ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-------------------+--------------+
+; |diff_backprop_reg                  ; 0 (0)               ; 524 (0)                   ; 0                 ; 0          ; 581  ; 0            ; |diff_backprop_reg                                ; diff_backprop_reg ; work         ;
+;    |delay:delay_inst_backprop_cost| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_backprop_cost ; delay             ; work         ;
+;    |delay:delay_inst_dense_type|    ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_dense_type    ; delay             ; work         ;
+;    |delay:delay_inst_diff_cost|     ; 0 (0)               ; 96 (96)                   ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_diff_cost     ; delay             ; work         ;
+;    |delay:delay_inst_diff_dense|    ; 0 (0)               ; 96 (96)                   ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_diff_dense    ; delay             ; work         ;
+;    |delay:delay_inst_diff_start|    ; 0 (0)               ; 96 (96)                   ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_diff_start    ; delay             ; work         ;
+;    |delay:delay_inst_diff_to_all|   ; 0 (0)               ; 96 (96)                   ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_diff_to_all   ; delay             ; work         ;
+;    |delay:delay_inst_is_update|     ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_is_update     ; delay             ; work         ;
+;    |delay:delay_inst_w_layer_index| ; 0 (0)               ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_w_layer_index ; delay             ; work         ;
+;    |delay:delay_inst_w_row_index|   ; 0 (0)               ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |diff_backprop_reg|delay:delay_inst_w_row_index   ; delay             ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; buffer[0][0]                                        ; clk                 ; yes                    ;
-; buffer[0][1]                                        ; clk                 ; yes                    ;
-; buffer[0][2]                                        ; clk                 ; yes                    ;
-; buffer[0][3]                                        ; clk                 ; yes                    ;
-; buffer[0][4]                                        ; clk                 ; yes                    ;
-; buffer[0][5]                                        ; clk                 ; yes                    ;
-; buffer[0][6]                                        ; clk                 ; yes                    ;
-; buffer[0][7]                                        ; clk                 ; yes                    ;
-; buffer[0][8]                                        ; clk                 ; yes                    ;
-; buffer[0][9]                                        ; clk                 ; yes                    ;
-; buffer[0][10]                                       ; clk                 ; yes                    ;
-; buffer[0][11]                                       ; clk                 ; yes                    ;
-; buffer[0][12]                                       ; clk                 ; yes                    ;
-; buffer[0][13]                                       ; clk                 ; yes                    ;
-; buffer[0][14]                                       ; clk                 ; yes                    ;
-; buffer[0][15]                                       ; clk                 ; yes                    ;
-; buffer[1][0]                                        ; clk                 ; yes                    ;
-; buffer[1][1]                                        ; clk                 ; yes                    ;
-; buffer[1][2]                                        ; clk                 ; yes                    ;
-; buffer[1][3]                                        ; clk                 ; yes                    ;
-; buffer[1][4]                                        ; clk                 ; yes                    ;
-; buffer[1][5]                                        ; clk                 ; yes                    ;
-; buffer[1][6]                                        ; clk                 ; yes                    ;
-; buffer[1][7]                                        ; clk                 ; yes                    ;
-; buffer[1][8]                                        ; clk                 ; yes                    ;
-; buffer[1][9]                                        ; clk                 ; yes                    ;
-; buffer[1][10]                                       ; clk                 ; yes                    ;
-; buffer[1][11]                                       ; clk                 ; yes                    ;
-; buffer[1][12]                                       ; clk                 ; yes                    ;
-; buffer[1][13]                                       ; clk                 ; yes                    ;
-; buffer[1][14]                                       ; clk                 ; yes                    ;
-; buffer[1][15]                                       ; clk                 ; yes                    ;
-; Number of user-specified and inferred latches = 32  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -262,7 +240,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 524   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -272,16 +250,135 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |delay ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; data_size      ; 16    ; Signed Integer                               ;
-; size           ; 1     ; Signed Integer                               ;
-; cycle          ; 1     ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |diff_backprop_reg ;
++-----------------+-------+---------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                    ;
++-----------------+-------+---------------------------------------------------------+
+; size            ; 3     ; Signed Integer                                          ;
+; data_size       ; 16    ; Signed Integer                                          ;
+; dense_type_size ; 4     ; Signed Integer                                          ;
+; act_type_size   ; 4     ; Signed Integer                                          ;
++-----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_w_layer_index ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; data_size      ; 32    ; Signed Integer                                     ;
+; size           ; 1     ; Signed Integer                                     ;
+; cycle          ; 1     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_w_row_index ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; data_size      ; 32    ; Signed Integer                                   ;
+; size           ; 1     ; Signed Integer                                   ;
+; cycle          ; 1     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_backprop_cost ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; data_size      ; 1     ; Signed Integer                                     ;
+; size           ; 1     ; Signed Integer                                     ;
+; cycle          ; 1     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_diff_to_all ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                   ;
+; size           ; 3     ; Signed Integer                                   ;
+; cycle          ; 1     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_diff_start ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                  ;
+; size           ; 3     ; Signed Integer                                  ;
+; cycle          ; 1     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_diff_dense ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                  ;
+; size           ; 3     ; Signed Integer                                  ;
+; cycle          ; 1     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_diff_cost ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                 ;
+; size           ; 3     ; Signed Integer                                 ;
+; cycle          ; 1     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_dense_type ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; data_size      ; 4     ; Signed Integer                                  ;
+; size           ; 1     ; Signed Integer                                  ;
+; cycle          ; 1     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay:delay_inst_is_update ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; data_size      ; 1     ; Signed Integer                                 ;
+; size           ; 1     ; Signed Integer                                 ;
+; cycle          ; 1     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "delay:delay_inst_dense_type"                                                                                                                                                          ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bus_in  ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; bus_out ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (32 bits) it drives.  The 28 most-significant bit(s) in the port expression will be connected to GND.            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -289,13 +386,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 32                          ;
-;     normal            ; 32                          ;
-;         3 data inputs ; 32                          ;
-; boundary_port         ; 34                          ;
+; arriav_ff             ; 524                         ;
+;     plain             ; 524                         ;
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 581                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -314,7 +413,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 28 18:34:08 2020
+    Info: Processing started: Sat Dec 26 14:49:41 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off register_delay -c register_delay
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -329,55 +428,84 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
 Info (12021): Found 1 design units, including 1 entities, in source file registers/activate_diff_reg.sv
     Info (12023): Found entity 1: activate_diff_reg File: G:/neural-burning/register_delay/registers/activate_diff_reg.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file delay.sv
-    Info (12023): Found entity 1: delay File: G:/neural-burning/register_delay/delay.sv Line: 2
+    Info (12023): Found entity 1: delay File: G:/neural-burning/register_delay/delay.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_delay.sv
     Info (12023): Found entity 1: register_delay File: G:/neural-burning/register_delay/register_delay.sv Line: 1
-Info (12127): Elaborating entity "delay" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at delay.sv(30): variable "bus_in" is read inside the Always Construct but isn't in the Always Construct's Event Control File: G:/neural-burning/register_delay/delay.sv Line: 30
-Warning (10240): Verilog HDL Always Construct warning at delay.sv(25): inferring latch(es) for variable "index", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/register_delay/delay.sv Line: 25
-Info (10041): Inferred latch for "buffer[1][0]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][1]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][2]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][3]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][4]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][5]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][6]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][7]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][8]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][9]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][10]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][11]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][12]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][13]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][14]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[1][15]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][0]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][1]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][2]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][3]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][4]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][5]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][6]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][7]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][8]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][9]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][10]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][11]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][12]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][13]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][14]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
-Info (10041): Inferred latch for "buffer[0][15]" at delay.sv(33) File: G:/neural-burning/register_delay/delay.sv Line: 33
+Info (12127): Elaborating entity "diff_backprop_reg" for the top level hierarchy
+Info (12128): Elaborating entity "delay" for hierarchy "delay:delay_inst_w_layer_index" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 53
+Info (12128): Elaborating entity "delay" for hierarchy "delay:delay_inst_backprop_cost" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 59
+Info (12128): Elaborating entity "delay" for hierarchy "delay:delay_inst_diff_to_all" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 62
+Info (12128): Elaborating entity "delay" for hierarchy "delay:delay_inst_dense_type" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 74
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dense_type_out[4]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[5]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[6]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[7]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[8]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[9]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[10]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[11]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[12]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[13]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[14]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[15]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[16]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[17]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[18]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[19]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[20]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[21]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[22]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[23]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[24]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[25]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[26]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[27]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[28]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[29]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[30]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
+    Warning (13410): Pin "dense_type_out[31]" is stuck at GND File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 49
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 17 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 32 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Mon Dec 28 18:34:15 2020
-    Info: Elapsed time: 00:00:07
+Warning (21074): Design contains 28 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dense_type[4]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[5]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[6]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[7]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[8]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[9]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[10]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[11]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[12]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[13]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[14]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[15]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[16]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[17]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[18]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[19]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[20]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[21]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[22]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[23]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[24]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[25]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[26]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[27]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[28]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[29]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[30]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+    Warning (15610): No output dependent on input pin "dense_type[31]" File: G:/neural-burning/register_delay/registers/diff_backprop_reg.sv Line: 37
+Info (21057): Implemented 1105 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 291 input pins
+    Info (21059): Implemented 290 output pins
+    Info (21061): Implemented 524 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Sat Dec 26 14:49:49 2020
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:15
 
 

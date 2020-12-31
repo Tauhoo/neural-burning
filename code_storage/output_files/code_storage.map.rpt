@@ -1,5 +1,5 @@
 Analysis & Synthesis report for code_storage
-Mon Dec 28 20:56:12 2020
+Mon Dec 28 16:02:59 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,19 +14,17 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Registers Added for RAM Pass-Through Logic
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated
- 15. Parameter Settings for User Entity Instance: Top-level Entity: |code_storage
- 16. Parameter Settings for Inferred Entity Instance: altsyncram:storage_rtl_0
- 17. altsyncram Parameter Settings by Entity Instance
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Registers Added for RAM Pass-Through Logic
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |code_storage
+ 15. Parameter Settings for Inferred Entity Instance: altsyncram:storage_rtl_0
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -53,14 +51,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 28 20:56:12 2020       ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 28 16:02:59 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; code_storage                                ;
 ; Top-level Entity Name           ; code_storage                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 71                                          ;
-; Total pins                      ; 93                                          ;
+; Total pins                      ; 92                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,212                                       ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -213,15 +211,15 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 71        ;
 ;                                             ;           ;
-; I/O pins                                    ; 93        ;
+; I/O pins                                    ; 92        ;
 ; Total MLAB memory bits                      ; 0         ;
 ; Total block memory bits                     ; 1212      ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 84        ;
-; Total fan-out                               ; 702       ;
+; Maximum fan-out                             ; 83        ;
+; Total fan-out                               ; 700       ;
 ; Average fan-out                             ; 2.17      ;
 +---------------------------------------------+-----------+
 
@@ -231,7 +229,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name     ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
-; |code_storage                          ; 55 (55)             ; 71 (71)                   ; 1212              ; 0          ; 93   ; 0            ; |code_storage                                                         ; code_storage    ; work         ;
+; |code_storage                          ; 55 (55)             ; 71 (71)                   ; 1212              ; 0          ; 92   ; 0            ; |code_storage                                                         ; code_storage    ; work         ;
 ;    |altsyncram:storage_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1212              ; 0          ; 0    ; 0            ; |code_storage|altsyncram:storage_rtl_0                                ; altsyncram      ; work         ;
 ;       |altsyncram_37o1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1212              ; 0          ; 0    ; 0            ; |code_storage|altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated ; altsyncram_37o1 ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
@@ -245,16 +243,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------+
 ; altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 101          ; 12           ; 101          ; 12           ; 1212 ; db/code_storage.ram0_code_storage_15842c54.hdl.mif ;
 +--------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; temp                                  ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -467,7 +455,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 8                           ;
 ;         5 data inputs ; 1                           ;
 ;         6 data inputs ; 13                          ;
-; boundary_port         ; 93                          ;
+; boundary_port         ; 92                          ;
 ; stratixv_ram_block    ; 12                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
@@ -490,12 +478,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 28 20:56:05 2020
+    Info: Processing started: Mon Dec 28 16:02:52 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off code_storage -c code_storage
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file code_storage.sv
-    Info (12023): Found entity 1: code_storage File: G:/neural-burning/code_storage/code_storage.sv Line: 2
+    Info (12023): Found entity 1: code_storage File: G:/neural-burning/code_storage/code_storage.sv Line: 1
 Info (12127): Elaborating entity "code_storage" for the top level hierarchy
 Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (101) in the Memory Initialization File "G:/neural-burning/code_storage/db/code_storage.ram0_code_storage_15842c54.hdl.mif" -- setting initial value for remaining addresses to 0
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "G:/neural-burning/code_storage/db/code_storage.ram0_code_storage_15842c54.hdl.mif" contains "don't care" values -- overwriting them with 0s
@@ -537,50 +525,43 @@ Info (12133): Instantiated megafunction "altsyncram:storage_rtl_0" with the foll
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_37o1.tdf
     Info (12023): Found entity 1: altsyncram_37o1 File: G:/neural-burning/code_storage/db/altsyncram_37o1.tdf Line: 28
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file G:/neural-burning/code_storage/output_files/code_storage.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 25 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "write_line[7]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[8]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[9]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[10]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[11]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[12]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[13]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[14]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[15]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[16]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[17]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[18]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[19]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[20]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[21]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[22]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[23]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[24]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[25]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[26]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[27]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[28]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[29]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[30]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "write_line[31]" File: G:/neural-burning/code_storage/code_storage.sv Line: 21
-Info (21057): Implemented 206 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "write_line[7]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[8]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[9]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[10]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[11]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[12]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[13]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[14]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[15]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[16]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[17]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[18]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[19]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[20]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[21]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[22]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[23]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[24]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[25]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[26]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[27]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[28]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[29]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[30]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+    Warning (15610): No output dependent on input pin "write_line[31]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
+Info (21057): Implemented 205 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 48 input pins
-    Info (21059): Implemented 45 output pins
+    Info (21059): Implemented 44 output pins
     Info (21061): Implemented 101 logic cells
     Info (21064): Implemented 12 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
     Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Mon Dec 28 20:56:12 2020
+    Info: Processing ended: Mon Dec 28 16:02:59 2020
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in G:/neural-burning/code_storage/output_files/code_storage.map.smsg.
+    Info: Total CPU time (on all processors): 00:00:15
 
 

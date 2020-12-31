@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2020.12.28.20:58:04"
+ date="2020.12.28.14:44:22"
  outputDirectory="G:/neural-burning/data_path/data_path/">
  <perimeter>
   <parameter
@@ -58,7 +58,7 @@
    <port name="clk_clk" direction="input" role="clk" width="1" />
   </interface>
   <interface name="code_storage_code_control_interface" kind="conduit" start="0">
-   <property name="associatedClock" value="" />
+   <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="" />
    <port
        name="code_storage_code_control_interface_active"
@@ -72,7 +72,7 @@
        width="1" />
   </interface>
   <interface name="code_storage_write_interface" kind="conduit" start="0">
-   <property name="associatedClock" value="" />
+   <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="" />
    <port
        name="code_storage_write_interface_write_data"
@@ -94,7 +94,7 @@
      name="fetch_to_decode_register_code_index_out_interface"
      kind="conduit"
      start="0">
-   <property name="associatedClock" value="" />
+   <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="" />
    <port
        name="fetch_to_decode_register_code_index_out_interface_code_index"
@@ -102,21 +102,13 @@
        role="code_index"
        width="32" />
   </interface>
-  <interface name="parse_clock_source" kind="clock" start="1">
-   <property name="associatedDirectClock" value="" />
-   <property name="clockRate" value="0" />
-   <property name="clockRateKnown" value="false" />
-   <property name="externallyDriven" value="false" />
-   <property name="ptfSchematicName" value="" />
-   <port name="parse_clock_source_clk" direction="output" role="clk" width="1" />
-  </interface>
   <interface name="parse_op_interface" kind="conduit" start="0">
-   <property name="associatedClock" value="" />
+   <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="" />
    <port name="parse_op_interface_op" direction="output" role="op" width="4" />
   </interface>
   <interface name="parse_parameter_type_interface" kind="conduit" start="0">
-   <property name="associatedClock" value="" />
+   <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="" />
    <port
        name="parse_parameter_type_interface_act_type"
@@ -142,13 +134,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="data_path:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1609163883,AUTO_UNIQUE_ID=(clock_source:20.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(code_storage:1.0:code_size=12,max_code_line=100)(fetch_to_decode_register:1.0:code_size=12)(parse:1.0:op_size=4,param_a_size=4,param_b_size=4)(clock:20.1:)(clock:20.1:)(clock:20.1:)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)"
+   parameterizationKey="data_path:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1609141462,AUTO_UNIQUE_ID=(clock_source:20.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(code_storage:1.0:code_size=12,max_code_line=100)(fetch_to_decode_register:1.0:code_size=12)(parse:1.0:op_size=4,param_a_size=4,param_b_size=4)(clock:20.1:)(clock:20.1:)(clock:20.1:)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)"
    instancePathKey="data_path"
    kind="data_path"
    version="1.0"
    name="data_path">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1609163883" />
+  <parameter name="AUTO_GENERATION_ID" value="1609141462" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />

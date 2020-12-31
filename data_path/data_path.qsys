@@ -54,62 +54,6 @@
          type = "String";
       }
    }
-   element data_path
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element data_path
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element data_path
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element data_path
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element data_path
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element data_path
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
-   element data_path
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Cyclone V";
-         type = "String";
-      }
-   }
    element fetch_to_decode_register
    {
       datum _sortIndex
@@ -164,11 +108,6 @@
    type="conduit"
    dir="end" />
  <interface
-   name="parse_clock_source"
-   internal="parse.clock_source"
-   type="clock"
-   dir="start" />
- <interface
    name="parse_op_interface"
    internal="parse.op_interface"
    type="conduit"
@@ -205,17 +144,13 @@
    kind="clock"
    version="20.1"
    start="clk_0.clk"
-   end="code_storage.clock" />
- <connection
-   kind="clock"
-   version="20.1"
-   start="fetch_to_decode_register.clock_source"
-   end="parse.clock" />
- <connection
-   kind="clock"
-   version="20.1"
-   start="code_storage.clock_source"
    end="fetch_to_decode_register.clock" />
+ <connection kind="clock" version="20.1" start="clk_0.clk" end="parse.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="code_storage.clock" />
  <connection
    kind="conduit"
    version="20.1"
