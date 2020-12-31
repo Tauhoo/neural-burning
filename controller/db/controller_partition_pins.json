@@ -44,15 +44,67 @@
 					"strict" : false
 				},
 				{
-					"name" : "code_count[3]",
+					"name" : "code_count[28]",
 					"strict" : false
 				},
 				{
-					"name" : "code_count[15]",
+					"name" : "code_count[29]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[30]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[31]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[22]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[23]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[24]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[25]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[26]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[27]",
 					"strict" : false
 				},
 				{
 					"name" : "code_count[16]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[17]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[18]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[19]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[20]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[21]",
 					"strict" : false
 				},
 				{
@@ -100,7 +152,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "code_count[0]",
+					"name" : "code_count[15]",
+					"strict" : false
+				},
+				{
+					"name" : "code_count[3]",
 					"strict" : false
 				},
 				{
@@ -112,63 +168,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "code_count[22]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[28]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[29]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[30]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[31]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[17]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[18]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[19]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[20]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[21]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[23]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[24]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[25]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[26]",
-					"strict" : false
-				},
-				{
-					"name" : "code_count[27]",
+					"name" : "code_count[0]",
 					"strict" : false
 				},
 				{
@@ -185,10 +185,6 @@
 				},
 				{
 					"name" : "op[3]",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
 					"strict" : false
 				},
 				{

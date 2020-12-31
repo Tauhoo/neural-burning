@@ -88,10 +88,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
 					"name" : "code[9]",
 					"strict" : false
 				},

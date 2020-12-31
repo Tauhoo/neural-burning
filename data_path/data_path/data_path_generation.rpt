@@ -4,8 +4,12 @@ Progress: Loading data_path/data_path.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 20.1]
 Progress: Parameterizing module clk_0
+Progress: Adding code_count [code_count 1.0]
+Progress: Parameterizing module code_count
 Progress: Adding code_storage [code_storage 1.0]
 Progress: Parameterizing module code_storage
+Progress: Adding controller [controller 1.0]
+Progress: Parameterizing module controller
 Progress: Adding fetch_to_decode_register [fetch_to_decode_register 1.0]
 Progress: Parameterizing module fetch_to_decode_register
 Progress: Adding parse [parse 1.0]
@@ -23,8 +27,12 @@ Progress: Loading data_path/data_path.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 20.1]
 Progress: Parameterizing module clk_0
+Progress: Adding code_count [code_count 1.0]
+Progress: Parameterizing module code_count
 Progress: Adding code_storage [code_storage 1.0]
 Progress: Parameterizing module code_storage
+Progress: Adding controller [controller 1.0]
+Progress: Parameterizing module controller
 Progress: Adding fetch_to_decode_register [fetch_to_decode_register 1.0]
 Progress: Parameterizing module fetch_to_decode_register
 Progress: Adding parse [parse 1.0]
@@ -34,9 +42,11 @@ Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: data_path: Generating data_path "data_path" for QUARTUS_SYNTH
+Info: code_count: "data_path" instantiated code_count "code_count"
 Info: code_storage: "data_path" instantiated code_storage "code_storage"
+Info: controller: "data_path" instantiated controller "controller"
 Info: fetch_to_decode_register: "data_path" instantiated fetch_to_decode_register "fetch_to_decode_register"
 Info: parse: "data_path" instantiated parse "parse"
-Info: data_path: Done "data_path" with 4 modules, 5 files
+Info: data_path: Done "data_path" with 6 modules, 7 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

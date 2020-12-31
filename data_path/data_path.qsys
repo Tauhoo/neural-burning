@@ -22,12 +22,100 @@
          type = "boolean";
       }
    }
+   element code_count
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
    element code_storage
    {
       datum _sortIndex
       {
          value = "1";
          type = "int";
+      }
+   }
+   element controller
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
       }
    }
    element data_path
@@ -93,8 +181,8 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="code_storage_code_control_interface"
-   internal="code_storage.code_control_interface"
+   name="code_storage_enable_interface"
+   internal="code_storage.enable_interface"
    type="conduit"
    dir="end" />
  <interface
@@ -103,17 +191,32 @@
    type="conduit"
    dir="end" />
  <interface
-   name="fetch_to_decode_register_code_index_out_interface"
-   internal="fetch_to_decode_register.code_index_out_interface"
+   name="controller_enable_interface"
+   internal="controller.enable_interface"
    type="conduit"
    dir="end" />
  <interface
-   name="parse_op_interface"
-   internal="parse.op_interface"
+   name="controller_forward_control_interface"
+   internal="controller.forward_control_interface"
    type="conduit"
    dir="end" />
  <interface
-   name="parse_parameter_type_interface"
+   name="controller_i_is_load_interface"
+   internal="controller.i_is_load_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="controller_use_z_interface"
+   internal="controller.use_z_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="controller_weigth_interface"
+   internal="controller.weigth_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="parse_0_parameter_type_interface"
    internal="parse.parameter_type_interface"
    type="conduit"
    dir="end" />
@@ -124,9 +227,14 @@
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
+ <module name="code_count" kind="code_count" version="1.0" enabled="1" />
  <module name="code_storage" kind="code_storage" version="1.0" enabled="1">
   <parameter name="code_size" value="12" />
   <parameter name="max_code_line" value="100" />
+ </module>
+ <module name="controller" kind="controller" version="1.0" enabled="1">
+  <parameter name="op_size" value="4" />
+  <parameter name="size" value="3" />
  </module>
  <module
    name="fetch_to_decode_register"
@@ -145,12 +253,45 @@
    version="20.1"
    start="clk_0.clk"
    end="fetch_to_decode_register.clock" />
- <connection kind="clock" version="20.1" start="clk_0.clk" end="parse.clock" />
  <connection
    kind="clock"
    version="20.1"
    start="clk_0.clk"
    end="code_storage.clock" />
+ <connection kind="clock" version="20.1" start="clk_0.clk" end="code_count.clock" />
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="controller.code_control_interface"
+   end="code_storage.code_control_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="controller.code_count_interface"
+   end="code_count.count_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="fetch_to_decode_register.code_index_out_interface"
+   end="controller.code_index_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
  <connection
    kind="conduit"
    version="20.1"
@@ -165,8 +306,41 @@
  <connection
    kind="conduit"
    version="20.1"
-   start="parse.code_interface"
-   end="fetch_to_decode_register.code_out_interface">
+   start="fetch_to_decode_register.code_out_interface"
+   end="parse.code_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="controller.op_interface"
+   end="parse.op_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="fetch_to_decode_register.reset_code_count_interface"
+   end="controller.code_count_reset_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="code_count.reset_interface"
+   end="fetch_to_decode_register.reset_code_count_out_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

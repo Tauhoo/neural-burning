@@ -1,5 +1,5 @@
 Analysis & Synthesis report for controller
-Sat Dec 26 18:37:52 2020
+Thu Dec 31 17:49:26 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
+  8. User-Specified and Inferred Latches
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: Top-level Entity: |controller
@@ -46,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Dec 26 18:37:52 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 31 17:49:26 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; controller                                  ;
 ; Top-level Entity Name           ; controller                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 9                                           ;
-; Total pins                      ; 80                                          ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 79                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -179,31 +179,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimate of Logic utilization (ALMs needed) ; 26       ;
-;                                             ;          ;
-; Combinational ALUT usage for logic          ; 39       ;
-;     -- 7 input functions                    ; 0        ;
-;     -- 6 input functions                    ; 13       ;
-;     -- 5 input functions                    ; 11       ;
-;     -- 4 input functions                    ; 6        ;
-;     -- <=3 input functions                  ; 9        ;
-;                                             ;          ;
-; Dedicated logic registers                   ; 9        ;
-;                                             ;          ;
-; I/O pins                                    ; 80       ;
-;                                             ;          ;
-; Total DSP Blocks                            ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; Equal3~0 ;
-; Maximum fan-out                             ; 13       ;
-; Total fan-out                               ; 296      ;
-; Average fan-out                             ; 1.42     ;
-+---------------------------------------------+----------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 29          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 41          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 16          ;
+;     -- 5 input functions                    ; 5           ;
+;     -- 4 input functions                    ; 6           ;
+;     -- <=3 input functions                  ; 14          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 79          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Selector1~3 ;
+; Maximum fan-out                             ; 9           ;
+; Total fan-out                               ; 273         ;
+; Average fan-out                             ; 1.37        ;
++---------------------------------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,20 +211,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |controller                ; 39 (39)             ; 9 (9)                     ; 0                 ; 0          ; 80   ; 0            ; |controller         ; controller  ; work         ;
+; |controller                ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 79   ; 0            ; |controller         ; controller  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; load_w_reg                            ; Merged with is_load_reg                ;
-; is_update_reg                         ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; reset_reg                                           ; Selector1           ; yes                    ;
+; w_layer_index_reg[0]                                ; Selector1           ; yes                    ;
+; w_row_index_reg[0]                                  ; Selector1           ; yes                    ;
+; is_load_reg                                         ; Selector1           ; yes                    ;
+; code_reset_reg                                      ; Selector1           ; yes                    ;
+; code_active_reg                                     ; Selector1           ; yes                    ;
+; use_z_reg                                           ; Selector1           ; yes                    ;
+; i_is_load_reg                                       ; Selector1           ; yes                    ;
+; load_w_reg                                          ; Selector1           ; yes                    ;
+; backprop_cost_reg                                   ; Selector1           ; yes                    ;
+; Number of user-specified and inferred latches = 10  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -232,12 +241,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 9     ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -247,8 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |controller|is_load_reg    ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |controller|use_z_reg      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |controller|use_z_reg      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -268,20 +276,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 9                           ;
-;     ENA               ; 9                           ;
-; arriav_lcell_comb     ; 40                          ;
-;     normal            ; 40                          ;
+; arriav_lcell_comb     ; 42                          ;
+;     normal            ; 42                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 4                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 11                          ;
 ;         4 data inputs ; 6                           ;
-;         5 data inputs ; 11                          ;
-;         6 data inputs ; 13                          ;
-; boundary_port         ; 80                          ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 16                          ;
+; boundary_port         ; 79                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.13                        ;
+; Average LUT depth     ; 3.72                        ;
 +-----------------------+-----------------------------+
 
 
@@ -300,29 +306,73 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Dec 26 18:37:44 2020
+    Info: Processing started: Thu Dec 31 17:49:19 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off controller -c controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
     Info (12023): Found entity 1: controller File: G:/neural-burning/controller/controller.sv Line: 2
 Info (12127): Elaborating entity "controller" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at controller.sv(59): truncated value with size 32 to match size of target (1) File: G:/neural-burning/controller/controller.sv Line: 59
-Warning (10230): Verilog HDL assignment warning at controller.sv(60): truncated value with size 32 to match size of target (1) File: G:/neural-burning/controller/controller.sv Line: 60
-Info (10264): Verilog HDL Case Statement information at controller.sv(88): all case item expressions in this case statement are onehot File: G:/neural-burning/controller/controller.sv Line: 88
+Warning (10230): Verilog HDL assignment warning at controller.sv(57): truncated value with size 32 to match size of target (1) File: G:/neural-burning/controller/controller.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at controller.sv(58): truncated value with size 32 to match size of target (1) File: G:/neural-burning/controller/controller.sv Line: 58
+Warning (10270): Verilog HDL Case Statement warning at controller.sv(86): incomplete case statement has no default case item File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10264): Verilog HDL Case Statement information at controller.sv(86): all case item expressions in this case statement are onehot File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "reset_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "w_layer_index_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "w_row_index_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "is_load_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "code_reset_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "code_active_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "is_update_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "i_is_load_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "load_w_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "backprop_cost_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "use_z_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(86): inferring latch(es) for variable "epoch_size_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "use_z_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "backprop_cost_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "load_w_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "i_is_load_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "is_update_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "code_active_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "code_reset_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "is_load_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "w_row_index_reg[0]" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "w_layer_index_reg[0]" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (10041): Inferred latch for "reset_reg" at controller.sv(86) File: G:/neural-burning/controller/controller.sv Line: 86
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "load_w_reg" merged with LATCH primitive "is_load_reg" File: G:/neural-burning/controller/controller.sv Line: 86
+Warning (13012): Latch reset_reg has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_count[4] File: G:/neural-burning/controller/controller.sv Line: 27
+Warning (13012): Latch w_layer_index_reg[0] has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal op[0] File: G:/neural-burning/controller/controller.sv Line: 26
+Warning (13012): Latch w_row_index_reg[0] has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_count[0] File: G:/neural-burning/controller/controller.sv Line: 27
+Warning (13012): Latch is_load_reg has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal op[0] File: G:/neural-burning/controller/controller.sv Line: 26
+Warning (13012): Latch code_reset_reg has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_count[0] File: G:/neural-burning/controller/controller.sv Line: 27
+Warning (13012): Latch code_active_reg has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal op[0] File: G:/neural-burning/controller/controller.sv Line: 26
+Warning (13012): Latch use_z_reg has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal op[0] File: G:/neural-burning/controller/controller.sv Line: 26
+Warning (13012): Latch i_is_load_reg has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal op[0] File: G:/neural-burning/controller/controller.sv Line: 26
+Warning (13012): Latch backprop_cost_reg has unsafe behavior File: G:/neural-burning/controller/controller.sv Line: 86
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal op[0] File: G:/neural-burning/controller/controller.sv Line: 26
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "is_update" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 38
+    Warning (13410): Pin "is_update" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 36
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 120 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 69 input pins
+    Info (21058): Implemented 68 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 40 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Sat Dec 26 18:37:52 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:15
+    Info (21061): Implemented 41 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Thu Dec 31 17:49:26 2020
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:14
 
 

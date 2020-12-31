@@ -1,5 +1,5 @@
 Analysis & Synthesis report for data_path
-Mon Dec 28 14:54:18 2020
+Thu Dec 31 21:49:16 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,22 +13,20 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
+  8. Analysis & Synthesis IP Cores Summary
+  9. User-Specified and Inferred Latches
  10. General Register Statistics
- 11. Registers Packed Into Inferred Megafunctions
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for code_storage:code_storage|altsyncram:storage_rtl_0|altsyncram_hfs1:auto_generated
- 14. Parameter Settings for User Entity Instance: code_storage:code_storage
- 15. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register
- 16. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code
- 17. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: code_storage:code_storage
+ 13. Parameter Settings for User Entity Instance: controller:controller
+ 14. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register
+ 15. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code
+ 16. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index
+ 17. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_reset_code_count
  18. Parameter Settings for User Entity Instance: parse:parse
- 19. Parameter Settings for Inferred Entity Instance: code_storage:code_storage|altsyncram:storage_rtl_0
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -55,16 +53,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 28 14:54:18 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 31 21:49:16 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; data_path                                   ;
 ; Top-level Entity Name           ; data_path                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 128                                         ;
-; Total pins                      ; 101                                         ;
+; Total registers                 ; 1321                                        ;
+; Total pins                      ; 73                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 1,212                                       ;
+; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -175,32 +173,27 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------+-----------+
-; File Name with User-Entered Path                   ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                   ; Library   ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------+-----------+
-; data_path/synthesis/data_path.v                    ; yes             ; User Verilog HDL File                                 ; G:/neural-burning/data_path/data_path/synthesis/data_path.v                    ; data_path ;
-; data_path/synthesis/submodules/parse.sv            ; yes             ; User SystemVerilog HDL File                           ; G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv            ; data_path ;
-; data_path/synthesis/submodules/delay.sv            ; yes             ; User SystemVerilog HDL File                           ; G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv            ; data_path ;
-; data_path/synthesis/submodules/fetch_decode_reg.sv ; yes             ; User SystemVerilog HDL File                           ; G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv ; data_path ;
-; data_path/synthesis/submodules/code_storage.sv     ; yes             ; User SystemVerilog HDL File                           ; G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv     ; data_path ;
-; altsyncram.tdf                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf          ;           ;
-; stratix_ram_block.inc                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;           ;
-; lpm_mux.inc                                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc             ;           ;
-; lpm_decode.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc          ;           ;
-; aglobal201.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc          ;           ;
-; a_rdenreg.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;           ;
-; altrom.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc              ;           ;
-; altram.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc              ;           ;
-; altdpram.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc            ;           ;
-; db/altsyncram_hfs1.tdf                             ; yes             ; Auto-Generated Megafunction                           ; G:/neural-burning/data_path/db/altsyncram_hfs1.tdf                             ;           ;
-; db/data_path.ram0_code_storage_5b31f3b9.hdl.mif    ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; G:/neural-burning/data_path/db/data_path.ram0_code_storage_5b31f3b9.hdl.mif    ;           ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------+-----------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+-----------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library   ;
++----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+-----------+
+; data_path/synthesis/data_path.v                    ; yes             ; User Verilog HDL File        ; G:/neural-burning/data_path/data_path/synthesis/data_path.v                    ; data_path ;
+; data_path/synthesis/submodules/parse.sv            ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv            ; data_path ;
+; data_path/synthesis/submodules/delay.sv            ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv            ; data_path ;
+; data_path/synthesis/submodules/fetch_decode_reg.sv ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv ; data_path ;
+; data_path/synthesis/submodules/controller.sv       ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv       ; data_path ;
+; data_path/synthesis/submodules/code_storage.sv     ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv     ; data_path ;
+; data_path/synthesis/submodules/code_count.sv       ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv       ; data_path ;
++----------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+-----------+
 
 
 +-------------------------------------------------------------+
@@ -208,54 +201,43 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 65            ;
+; Estimate of Logic utilization (ALMs needed) ; 1049          ;
 ;                                             ;               ;
-; Combinational ALUT usage for logic          ; 33            ;
-;     -- 7 input functions                    ; 0             ;
-;     -- 6 input functions                    ; 0             ;
-;     -- 5 input functions                    ; 0             ;
-;     -- 4 input functions                    ; 0             ;
-;     -- <=3 input functions                  ; 33            ;
+; Combinational ALUT usage for logic          ; 693           ;
+;     -- 7 input functions                    ; 288           ;
+;     -- 6 input functions                    ; 149           ;
+;     -- 5 input functions                    ; 16            ;
+;     -- 4 input functions                    ; 37            ;
+;     -- <=3 input functions                  ; 203           ;
 ;                                             ;               ;
-; Dedicated logic registers                   ; 128           ;
+; Dedicated logic registers                   ; 1321          ;
 ;                                             ;               ;
-; I/O pins                                    ; 101           ;
-; Total MLAB memory bits                      ; 0             ;
-; Total block memory bits                     ; 1212          ;
+; I/O pins                                    ; 73            ;
 ;                                             ;               ;
 ; Total DSP Blocks                            ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clk_clk~input ;
-; Maximum fan-out                             ; 140           ;
-; Total fan-out                               ; 742           ;
-; Average fan-out                             ; 1.98          ;
+; Maximum fan-out                             ; 1321          ;
+; Total fan-out                               ; 7786          ;
+; Average fan-out                             ; 3.60          ;
 +---------------------------------------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
-+------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Entity Name      ; Library Name ;
-+------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+------------------+--------------+
-; |data_path                                     ; 33 (0)              ; 128 (0)                   ; 1212              ; 0          ; 101  ; 0            ; |data_path                                                                                   ; data_path        ; data_path    ;
-;    |code_storage:code_storage|                 ; 33 (33)             ; 32 (32)                   ; 1212              ; 0          ; 0    ; 0            ; |data_path|code_storage:code_storage                                                         ; code_storage     ; data_path    ;
-;       |altsyncram:storage_rtl_0|               ; 0 (0)               ; 0 (0)                     ; 1212              ; 0          ; 0    ; 0            ; |data_path|code_storage:code_storage|altsyncram:storage_rtl_0                                ; altsyncram       ; work         ;
-;          |altsyncram_hfs1:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 1212              ; 0          ; 0    ; 0            ; |data_path|code_storage:code_storage|altsyncram:storage_rtl_0|altsyncram_hfs1:auto_generated ; altsyncram_hfs1  ; work         ;
-;    |fetch_decode_reg:fetch_to_decode_register| ; 0 (0)               ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register                                         ; fetch_decode_reg ; data_path    ;
-;       |delay:delay_inst_code_index|            ; 0 (0)               ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index             ; delay            ; data_path    ;
-;       |delay:delay_inst_code|                  ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code                   ; delay            ; data_path    ;
-;    |parse:parse|                               ; 0 (0)               ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|parse:parse                                                                       ; parse            ; data_path    ;
-+------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Entity Name      ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+------------------+--------------+
+; |data_path                                     ; 693 (0)             ; 1321 (0)                  ; 0                 ; 0          ; 73   ; 0            ; |data_path                                                                             ; data_path        ; data_path    ;
+;    |code_count:code_count|                     ; 33 (33)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|code_count:code_count                                                       ; code_count       ; data_path    ;
+;    |code_storage:code_storage|                 ; 599 (599)           ; 1244 (1244)               ; 0                 ; 0          ; 0    ; 0            ; |data_path|code_storage:code_storage                                                   ; code_storage     ; data_path    ;
+;    |controller:controller|                     ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |data_path|controller:controller                                                       ; controller       ; data_path    ;
+;    |fetch_decode_reg:fetch_to_decode_register| ; 1 (0)               ; 45 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register                                   ; fetch_decode_reg ; data_path    ;
+;       |delay:delay_inst_code_index|            ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index       ; delay            ; data_path    ;
+;       |delay:delay_inst_code|                  ; 1 (1)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code             ; delay            ; data_path    ;
+;       |delay:delay_inst_reset_code_count|      ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_reset_code_count ; delay            ; data_path    ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                            ;
-+----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-------------------------------------------------+
-; Name                                                                                         ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                             ;
-+----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-------------------------------------------------+
-; code_storage:code_storage|altsyncram:storage_rtl_0|altsyncram_hfs1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 101          ; 12           ; 101          ; 12           ; 1212 ; db/data_path.ram0_code_storage_5b31f3b9.hdl.mif ;
-+----------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -267,46 +249,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++-----------------------------------------------------+---------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal             ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------------+------------------------+
+; controller:controller|load_w_reg                    ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|backprop_cost_reg             ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|i_is_load_reg                 ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|use_z_reg                     ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|w_layer_index_reg[0]          ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|w_row_index_reg[0]            ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|is_load_reg                   ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|code_reset_reg                ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|reset_reg                     ; controller:controller|Selector8 ; yes                    ;
+; controller:controller|code_active_reg               ; controller:controller|Selector8 ; yes                    ;
+; Number of user-specified and inferred latches = 10  ;                                 ;                        ;
++-----------------------------------------------------+---------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 128   ;
-; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 1321  ;
+; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Load   ; 12    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 1244  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                                                                      ;
-+----------------------------------------------------------------------------------+-----------------------------------------+------+
-; Register Name                                                                    ; Megafunction                            ; Type ;
-+----------------------------------------------------------------------------------+-----------------------------------------+------+
-; fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[1][0..11] ; code_storage:code_storage|storage_rtl_0 ; RAM  ;
-+----------------------------------------------------------------------------------+-----------------------------------------+------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |data_path|code_storage:code_storage|code_line[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------+
-; Source assignments for code_storage:code_storage|altsyncram:storage_rtl_0|altsyncram_hfs1:auto_generated ;
-+---------------------------------+--------------------+------+--------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                         ;
-+---------------------------------+--------------------+------+--------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                          ;
-+---------------------------------+--------------------+------+--------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][3] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |data_path|controller:controller|use_z_reg                                              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |data_path|code_storage:code_storage|code_index[17]                                     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |data_path|controller:controller|Selector0                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -317,6 +304,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; code_size      ; 12    ; Signed Integer                                ;
 ; max_code_line  ; 100   ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controller:controller ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; op_size        ; 4     ; Signed Integer                            ;
+; size           ; 3     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -354,6 +352,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_reset_code_count ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; data_size      ; 1     ; Signed Integer                                                                                  ;
+; size           ; 1     ; Signed Integer                                                                                  ;
+; cycle          ; 1     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: parse:parse ;
 +----------------+-------+---------------------------------+
@@ -366,105 +376,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: code_storage:code_storage|altsyncram:storage_rtl_0   ;
-+------------------------------------+-------------------------------------------------+----------------+
-; Parameter Name                     ; Value                                           ; Type           ;
-+------------------------------------+-------------------------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                               ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                                              ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                             ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                                              ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                             ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                               ; Untyped        ;
-; OPERATION_MODE                     ; DUAL_PORT                                       ; Untyped        ;
-; WIDTH_A                            ; 12                                              ; Untyped        ;
-; WIDTHAD_A                          ; 7                                               ; Untyped        ;
-; NUMWORDS_A                         ; 101                                             ; Untyped        ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                    ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                                            ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                                            ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                                            ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                                            ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                                            ; Untyped        ;
-; WIDTH_B                            ; 12                                              ; Untyped        ;
-; WIDTHAD_B                          ; 7                                               ; Untyped        ;
-; NUMWORDS_B                         ; 101                                             ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                                          ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                          ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                          ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK0                                          ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                    ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                                          ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                                            ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                                            ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                                            ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                                            ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                                            ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                                            ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                                               ; Untyped        ;
-; WIDTH_BYTEENA_B                    ; 1                                               ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                            ; Untyped        ;
-; BYTE_SIZE                          ; 8                                               ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                        ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                            ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                            ; Untyped        ;
-; INIT_FILE                          ; db/data_path.ram0_code_storage_5b31f3b9.hdl.mif ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                          ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                                               ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                 ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                 ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                                           ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                           ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                               ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone V                                       ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_hfs1                                 ; Untyped        ;
-+------------------------------------+-------------------------------------------------+----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                               ;
-+-------------------------------------------+----------------------------------------------------+
-; Name                                      ; Value                                              ;
-+-------------------------------------------+----------------------------------------------------+
-; Number of entity instances                ; 1                                                  ;
-; Entity Instance                           ; code_storage:code_storage|altsyncram:storage_rtl_0 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                          ;
-;     -- WIDTH_A                            ; 12                                                 ;
-;     -- NUMWORDS_A                         ; 101                                                ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
-;     -- WIDTH_B                            ; 12                                                 ;
-;     -- NUMWORDS_B                         ; 101                                                ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                             ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                           ;
-+-------------------------------------------+----------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 128                         ;
-;     ENA SCLR          ; 32                          ;
-;     plain             ; 96                          ;
-; arriav_lcell_comb     ; 33                          ;
-;     arith             ; 32                          ;
-;         1 data inputs ; 32                          ;
-;     normal            ; 1                           ;
-;         2 data inputs ; 1                           ;
-; boundary_port         ; 101                         ;
-; stratixv_ram_block    ; 12                          ;
+; arriav_ff             ; 1321                        ;
+;     ENA               ; 1244                        ;
+;     SCLR SLD          ; 12                          ;
+;     plain             ; 65                          ;
+; arriav_lcell_comb     ; 694                         ;
+;     arith             ; 62                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 1                           ;
+;     extend            ; 288                         ;
+;         7 data inputs ; 288                         ;
+;     normal            ; 344                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 134                         ;
+;         4 data inputs ; 36                          ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 149                         ;
+; boundary_port         ; 73                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 1.29                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -473,7 +412,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -483,7 +422,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 28 14:54:10 2020
+    Info: Processing started: Thu Dec 31 21:49:08 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off data_path -c data_path
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -495,91 +434,87 @@ Info (12021): Found 1 design units, including 1 entities, in source file data_pa
     Info (12023): Found entity 1: delay File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file data_path/synthesis/submodules/fetch_decode_reg.sv
     Info (12023): Found entity 1: fetch_decode_reg File: G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file data_path/synthesis/submodules/controller.sv
+    Info (12023): Found entity 1: controller File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file data_path/synthesis/submodules/code_storage.sv
     Info (12023): Found entity 1: code_storage File: G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file data_path/synthesis/submodules/code_count.sv
+    Info (12023): Found entity 1: code_count File: G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv Line: 1
 Info (12127): Elaborating entity "data_path" for the top level hierarchy
-Info (12128): Elaborating entity "code_storage" for hierarchy "code_storage:code_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 37
-Info (12128): Elaborating entity "fetch_decode_reg" for hierarchy "fetch_decode_reg:fetch_to_decode_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 47
-Info (12128): Elaborating entity "delay" for hierarchy "fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code" File: G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv Line: 19
-Info (12128): Elaborating entity "delay" for hierarchy "fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index" File: G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv Line: 22
-Info (12128): Elaborating entity "parse" for hierarchy "parse:parse" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 60
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "code_storage:code_storage|storage_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 12
-        Info (286033): Parameter WIDTHAD_A set to 7
-        Info (286033): Parameter NUMWORDS_A set to 101
-        Info (286033): Parameter WIDTH_B set to 12
-        Info (286033): Parameter WIDTHAD_B set to 7
-        Info (286033): Parameter NUMWORDS_B set to 101
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/data_path.ram0_code_storage_5b31f3b9.hdl.mif
-        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
-Info (12130): Elaborated megafunction instantiation "code_storage:code_storage|altsyncram:storage_rtl_0"
-Info (12133): Instantiated megafunction "code_storage:code_storage|altsyncram:storage_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "12"
-    Info (12134): Parameter "WIDTHAD_A" = "7"
-    Info (12134): Parameter "NUMWORDS_A" = "101"
-    Info (12134): Parameter "WIDTH_B" = "12"
-    Info (12134): Parameter "WIDTHAD_B" = "7"
-    Info (12134): Parameter "NUMWORDS_B" = "101"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/data_path.ram0_code_storage_5b31f3b9.hdl.mif"
-    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hfs1.tdf
-    Info (12023): Found entity 1: altsyncram_hfs1 File: G:/neural-burning/data_path/db/altsyncram_hfs1.tdf Line: 28
+Info (12128): Elaborating entity "code_count" for hierarchy "code_count:code_count" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 42
+Info (12128): Elaborating entity "code_storage" for hierarchy "code_storage:code_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 57
+Warning (10230): Verilog HDL assignment warning at code_storage.sv(33): truncated value with size 32 to match size of target (12) File: G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv Line: 33
+Info (12128): Elaborating entity "controller" for hierarchy "controller:controller" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 78
+Warning (10230): Verilog HDL assignment warning at controller.sv(59): truncated value with size 32 to match size of target (1) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at controller.sv(60): truncated value with size 32 to match size of target (1) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 60
+Info (10264): Verilog HDL Case Statement information at controller.sv(88): all case item expressions in this case statement are onehot File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "reset_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "w_layer_index_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "w_row_index_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "is_load_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "code_reset_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "code_active_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "is_update_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "i_is_load_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "load_w_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "backprop_cost_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "use_z_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (10240): Verilog HDL Always Construct warning at controller.sv(88): inferring latch(es) for variable "epoch_size_reg", which holds its previous value in one or more paths through the always construct File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Info (10041): Inferred latch for "use_z_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "backprop_cost_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "load_w_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "i_is_load_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "is_update_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "code_active_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "code_reset_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "is_load_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "w_row_index_reg[0]" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "w_layer_index_reg[0]" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (10041): Inferred latch for "reset_reg" at controller.sv(182) File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Info (12128): Elaborating entity "fetch_decode_reg" for hierarchy "fetch_decode_reg:fetch_to_decode_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 90
+Info (12128): Elaborating entity "delay" for hierarchy "fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code" File: G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv Line: 23
+Info (12128): Elaborating entity "delay" for hierarchy "fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index" File: G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv Line: 26
+Info (12128): Elaborating entity "delay" for hierarchy "fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_reset_code_count" File: G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv Line: 29
+Info (12128): Elaborating entity "parse" for hierarchy "parse:parse" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 102
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "code_storage:code_storage|storage" is uninferred due to asynchronous read logic File: G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv Line: 27
+Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (101) in the Memory Initialization File "G:/neural-burning/data_path/db/data_path.ram0_code_storage_5b31f3b9.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "G:/neural-burning/data_path/db/data_path.ram0_code_storage_5b31f3b9.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "controller:controller|is_load_reg" merged with LATCH primitive "controller:controller|load_w_reg" File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+Warning (13012): Latch controller:controller|load_w_reg has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][11] File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 14
+Warning (13012): Latch controller:controller|backprop_cost_reg has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][11] File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 14
+Warning (13012): Latch controller:controller|i_is_load_reg has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][11] File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 14
+Warning (13012): Latch controller:controller|use_z_reg has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][11] File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 14
+Warning (13012): Latch controller:controller|w_layer_index_reg[0] has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][11] File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 14
+Warning (13012): Latch controller:controller|w_row_index_reg[0] has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][11] File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 14
+Warning (13012): Latch controller:controller|code_reset_reg has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal code_count:code_count|count_reg[1] File: G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv Line: 19
+Warning (13012): Latch controller:controller|reset_reg has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal controller:controller|WideNor0 File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 88
+Warning (13012): Latch controller:controller|code_active_reg has unsafe behavior File: G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv Line: 182
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][11] File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 14
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "controller_forward_control_interface_is_update" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 26 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[7]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[8]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[9]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[10]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[11]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[12]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[13]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[14]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[15]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[16]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[17]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[18]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[19]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[20]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[21]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[22]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[23]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[24]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[25]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[26]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[27]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[28]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[29]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[30]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "code_storage_write_interface_write_line[31]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 12
-    Warning (15610): No output dependent on input pin "reset_reset_n" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 19
-Info (21057): Implemented 242 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset_reset_n" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+Info (21057): Implemented 1992 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 49 input pins
-    Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 129 logic cells
-    Info (21064): Implemented 12 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4842 megabytes
-    Info: Processing ended: Mon Dec 28 14:54:18 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:15
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 1919 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Thu Dec 31 21:49:17 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:17
 
 

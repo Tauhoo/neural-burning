@@ -10,17 +10,13 @@ module code_count(
 
     reg [31:0] count_reg;
 
-    assign count = count_reg;
+    assign count = reset ? 0 : count_reg;
 
     initial begin
-        count_reg = 0;
+        count_reg <= 0;
     end
 
     always @(posedge clk ) begin
-        if (reset) begin
-            count_reg = 0;
-        end else begin
-            count_reg = count_reg + 1; 
-        end
+        count_reg <= count + 1; 
     end
 endmodule

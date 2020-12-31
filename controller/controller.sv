@@ -15,7 +15,7 @@ module controller(
     i_is_load,
     load_w,
     backprop_cost,
-    clk
+    enable
 );
     parameter op_size = 4;
     parameter size = 3;
@@ -27,7 +27,7 @@ module controller(
     input [op_size - 1:0] op; 
     input [31:0] code_count;
     input [31:0] code_index;
-    input clk;
+    input enable;
 
     output reset; //reset code count
     output w_layer_index; // w_layer use to load and backprop 
@@ -68,12 +68,12 @@ module controller(
     assign use_z = use_z_reg;
 
     initial begin
-        reset_reg = 0;
+        reset_reg = 1;
         w_layer_index_reg = 0;
         w_row_index_reg = 0;
         is_load_reg = 0;
         code_reset_reg = 0;
-        code_active_reg = 0;
+        code_active_reg = 1;
         is_update_reg = 0;
         i_is_load_reg = 0;
         load_w_reg = 0;
@@ -84,7 +84,7 @@ module controller(
     end
 
 
-    always @(posedge clk ) begin
+    always @(*) begin
         case (op)
             set_layer: begin
                 if (code_count < size) begin //load weight
@@ -125,7 +125,7 @@ module controller(
                         backprop_cost_reg = 0;
                         use_z_reg = 1;
                     end
-                end else if (code_count < 4*size - 1) begin
+                end else if (code_count < 4*size) begin
                     reset_reg = 0;
                     w_layer_index_reg = 0; 
                     w_row_index_reg = 0;
@@ -164,6 +164,33 @@ module controller(
                     end
                 end
             end
+            default: begin
+                reset_reg = 1;
+                w_layer_index_reg = 0;
+                w_row_index_reg = 0;
+                is_load_reg = 0;
+                code_reset_reg = 0;
+                code_active_reg = 1;
+                is_update_reg = 0;
+                i_is_load_reg = 0;
+                load_w_reg = 0;
+                backprop_cost_reg = 0;
+                use_z_reg = 0;
+            end
         endcase
+
+        if(~enable) begin
+            reset_reg = 1;
+            w_layer_index_reg = 0;
+            w_row_index_reg = 0;
+            is_load_reg = 0;
+            code_reset_reg = 1;
+            code_active_reg = 0;
+            is_update_reg = 0;
+            i_is_load_reg = 0;
+            load_w_reg = 0;
+            backprop_cost_reg = 0;
+            use_z_reg = 0;
+        end
     end
 endmodule

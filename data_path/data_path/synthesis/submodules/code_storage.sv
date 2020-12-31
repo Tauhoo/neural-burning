@@ -6,6 +6,7 @@ module code_storage(
     is_write,
     write_line,
     write_data,
+    enable,
     clk
 );
     parameter code_size = 12;
@@ -13,6 +14,7 @@ module code_storage(
 
     input active;
     input reset;
+    input enable;
     input clk;
 
     input is_write;
@@ -25,8 +27,15 @@ module code_storage(
     reg [code_size - 1:0] storage [0:max_code_line];
     reg [31:0] code_line;
 
-    assign code = storage[code_line];
-    assign code_index = code_line;
+    assign code_index = enable ? 
+                            reset ? 0 : 
+                            active ? code_line + 1 :
+                            code_line :
+                            0;
+    assign code = enable ? 
+                    is_write && write_line == code_index ? write_data : 
+                    storage[code_index] :
+                  0;
 
     initial begin
         for (code_line = 0; code_line < max_code_line; code_line = code_line + 1) begin
@@ -36,11 +45,7 @@ module code_storage(
     end
 
     always @(posedge clk) begin
-        if (reset) begin
-            code_line <= 0;
-        end else if (active) begin
-            code_line <= code_line + 1;
-        end
+        code_line <= code_index;
 
         if (is_write) begin
             storage[write_line] <= write_data;

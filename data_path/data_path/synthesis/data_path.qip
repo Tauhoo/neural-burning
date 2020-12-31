@@ -2,7 +2,7 @@ set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_NAM
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_VERSION "20.1"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "data_path" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../data_path.sopcinfo"]
-set_global_assignment -entity "data_path" -library "data_path" -name SLD_INFO "QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1609141462"
+set_global_assignment -entity "data_path" -library "data_path" -name SLD_INFO "QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1609426132"
 set_global_assignment -library "data_path" -name MISC_FILE [file join $::quartus(qip_path) "../data_path.cmp"]
 set_global_assignment -library "data_path" -name SLD_FILE [file join $::quartus(qip_path) "data_path.debuginfo"]
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
@@ -15,7 +15,7 @@ set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONEN
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwOTE0MTQ2Mg==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwOTQyNjEzMg==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -40,6 +40,15 @@ set_global_assignment -entity "fetch_decode_reg" -library "data_path" -name IP_C
 set_global_assignment -entity "fetch_decode_reg" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
 set_global_assignment -entity "fetch_decode_reg" -library "data_path" -name IP_COMPONENT_DESCRIPTION "UmVnaXN0ZXIgYmV0d2VlbiBmZXRjaCBhbmQgZGVjb2RlIGxheWVy"
 set_global_assignment -entity "fetch_decode_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29kZV9zaXpl::MTI=::Y29kZV9zaXpl"
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_NAME "Y29udHJvbGxlcg=="
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "Y29udHJvbGxlcg=="
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGlyYXdpdCBXYWNoYXJhaw=="
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_DESCRIPTION "VXNlIHRvIGRyaXZlIGNvbnRyb2wgc2lnbmFs"
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_PARAMETER "b3Bfc2l6ZQ==::NA==::b3Bfc2l6ZQ=="
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_NAME "Y29kZV9zdG9yYWdl"
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "Y29kZV9zdG9yYWdl"
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -49,9 +58,18 @@ set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPO
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_DESCRIPTION "VXNlIHRvIHN0b3JlIGluc3RydWN0aW9u"
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29kZV9zaXpl::MTI=::Y29kZV9zaXpl"
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "bWF4X2NvZGVfbGluZQ==::MTAw::bWF4X2NvZGVfbGluZQ=="
+set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONENT_NAME "Y29kZV9jb3VudA=="
+set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "Y29kZV9jb3VudA=="
+set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGlyYXdpdCBXYWNoYXJhaw=="
+set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONENT_DESCRIPTION "SW50ZWdlciBjb3VudGVy"
 
 set_global_assignment -library "data_path" -name VERILOG_FILE [file join $::quartus(qip_path) "data_path.v"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/parse.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/delay.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/fetch_decode_reg.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/controller.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/code_storage.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/code_count.sv"]

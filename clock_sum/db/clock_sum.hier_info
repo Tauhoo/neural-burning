@@ -1,0 +1,6 @@
+|clock_sum
+clk_a => clk_out.IN0
+clk_b => clk_out.IN1
+clk_out <= clk_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1052,11 +1052,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "w_layer_index[0]",
 					"strict" : false
 				},
 				{
-					"name" : "w_layer_index[0]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{

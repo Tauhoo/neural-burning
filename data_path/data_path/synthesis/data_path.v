@@ -4,46 +4,89 @@
 
 `timescale 1 ps / 1 ps
 module data_path (
-		input  wire        clk_clk,                                                      //                                               clk.clk
-		input  wire        code_storage_code_control_interface_active,                   //               code_storage_code_control_interface.active
-		input  wire        code_storage_code_control_interface_reset,                    //                                                  .reset
-		input  wire [11:0] code_storage_write_interface_write_data,                      //                      code_storage_write_interface.write_data
-		input  wire        code_storage_write_interface_is_write,                        //                                                  .is_write
-		input  wire [31:0] code_storage_write_interface_write_line,                      //                                                  .write_line
-		output wire [31:0] fetch_to_decode_register_code_index_out_interface_code_index, // fetch_to_decode_register_code_index_out_interface.code_index
-		output wire [3:0]  parse_op_interface_op,                                        //                                parse_op_interface.op
-		output wire [3:0]  parse_parameter_type_interface_act_type,                      //                    parse_parameter_type_interface.act_type
-		output wire [3:0]  parse_parameter_type_interface_dense_type,                    //                                                  .dense_type
-		output wire [7:0]  parse_parameter_type_interface_cost_type,                     //                                                  .cost_type
-		input  wire        reset_reset_n                                                 //                                             reset.reset_n
+		input  wire        clk_clk,                                            //                                  clk.clk
+		input  wire        code_storage_enable_interface_enable,               //        code_storage_enable_interface.enable
+		input  wire [11:0] code_storage_write_interface_write_data,            //         code_storage_write_interface.write_data
+		input  wire        code_storage_write_interface_is_write,              //                                     .is_write
+		input  wire [31:0] code_storage_write_interface_write_line,            //                                     .write_line
+		input  wire        controller_enable_interface_enable,                 //          controller_enable_interface.enable
+		output wire        controller_forward_control_interface_is_update,     // controller_forward_control_interface.is_update
+		output wire        controller_forward_control_interface_load_w,        //                                     .load_w
+		output wire        controller_forward_control_interface_backprop_cost, //                                     .backprop_cost
+		output wire        controller_i_is_load_interface_i_is_load,           //       controller_i_is_load_interface.i_is_load
+		output wire        controller_use_z_interface_use_z,                   //           controller_use_z_interface.use_z
+		output wire        controller_weigth_interface_w_layer_index,          //          controller_weigth_interface.w_layer_index
+		output wire        controller_weigth_interface_w_row_index,            //                                     .w_row_index
+		output wire        controller_weigth_interface_is_load,                //                                     .is_load
+		output wire [3:0]  parse_0_parameter_type_interface_act_type,          //     parse_0_parameter_type_interface.act_type
+		output wire [3:0]  parse_0_parameter_type_interface_dense_type,        //                                     .dense_type
+		output wire [7:0]  parse_0_parameter_type_interface_cost_type,         //                                     .cost_type
+		input  wire        reset_reset_n                                       //                                reset.reset_n
 	);
 
-	wire  [11:0] code_storage_code_interface_code;                 // code_storage:code -> fetch_to_decode_register:code
-	wire  [31:0] code_storage_code_interface_code_index;           // code_storage:code_index -> fetch_to_decode_register:code_index
-	wire  [11:0] fetch_to_decode_register_code_out_interface_code; // fetch_to_decode_register:code_out -> parse:code
+	wire         controller_code_control_interface_active;                      // controller:code_active -> code_storage:active
+	wire         controller_code_control_interface_reset;                       // controller:code_reset -> code_storage:reset
+	wire  [31:0] code_count_count_interface_code_count;                         // code_count:count -> controller:code_count
+	wire  [31:0] fetch_to_decode_register_code_index_out_interface_code_index;  // fetch_to_decode_register:code_index_out -> controller:code_index
+	wire  [11:0] code_storage_code_interface_code;                              // code_storage:code -> fetch_to_decode_register:code
+	wire  [31:0] code_storage_code_interface_code_index;                        // code_storage:code_index -> fetch_to_decode_register:code_index
+	wire  [11:0] fetch_to_decode_register_code_out_interface_code;              // fetch_to_decode_register:code_out -> parse:code
+	wire   [3:0] parse_op_interface_op;                                         // parse:op -> controller:op
+	wire         controller_code_count_reset_interface_reset;                   // controller:reset -> fetch_to_decode_register:reset_code_count
+	wire         fetch_to_decode_register_reset_code_count_out_interface_reset; // fetch_to_decode_register:reset_code_count_out -> code_count:reset
+
+	code_count code_count (
+		.clk   (clk_clk),                                                       //           clock.clk
+		.reset (fetch_to_decode_register_reset_code_count_out_interface_reset), // reset_interface.reset
+		.count (code_count_count_interface_code_count)                          // count_interface.code_count
+	);
 
 	code_storage #(
 		.code_size     (12),
 		.max_code_line (100)
 	) code_storage (
-		.clk        (clk_clk),                                    //                  clock.clk
-		.code       (code_storage_code_interface_code),           //         code_interface.code
-		.code_index (code_storage_code_interface_code_index),     //                       .code_index
-		.active     (code_storage_code_control_interface_active), // code_control_interface.active
-		.reset      (code_storage_code_control_interface_reset),  //                       .reset
-		.write_data (code_storage_write_interface_write_data),    //        write_interface.write_data
-		.is_write   (code_storage_write_interface_is_write),      //                       .is_write
-		.write_line (code_storage_write_interface_write_line)     //                       .write_line
+		.clk        (clk_clk),                                  //                  clock.clk
+		.code       (code_storage_code_interface_code),         //         code_interface.code
+		.code_index (code_storage_code_interface_code_index),   //                       .code_index
+		.active     (controller_code_control_interface_active), // code_control_interface.active
+		.reset      (controller_code_control_interface_reset),  //                       .reset
+		.write_data (code_storage_write_interface_write_data),  //        write_interface.write_data
+		.is_write   (code_storage_write_interface_is_write),    //                       .is_write
+		.write_line (code_storage_write_interface_write_line),  //                       .write_line
+		.enable     (code_storage_enable_interface_enable)      //       enable_interface.enable
+	);
+
+	controller #(
+		.op_size (4),
+		.size    (3)
+	) controller (
+		.is_update     (controller_forward_control_interface_is_update),               //  forward_control_interface.is_update
+		.load_w        (controller_forward_control_interface_load_w),                  //                           .load_w
+		.backprop_cost (controller_forward_control_interface_backprop_cost),           //                           .backprop_cost
+		.i_is_load     (controller_i_is_load_interface_i_is_load),                     //        i_is_load_interface.i_is_load
+		.w_layer_index (controller_weigth_interface_w_layer_index),                    //           weigth_interface.w_layer_index
+		.w_row_index   (controller_weigth_interface_w_row_index),                      //                           .w_row_index
+		.is_load       (controller_weigth_interface_is_load),                          //                           .is_load
+		.reset         (controller_code_count_reset_interface_reset),                  // code_count_reset_interface.reset
+		.use_z         (controller_use_z_interface_use_z),                             //            use_z_interface.use_z
+		.code_index    (fetch_to_decode_register_code_index_out_interface_code_index), //       code_index_interface.code_index
+		.code_count    (code_count_count_interface_code_count),                        //       code_count_interface.code_count
+		.op            (parse_op_interface_op),                                        //               op_interface.op
+		.code_active   (controller_code_control_interface_active),                     //     code_control_interface.active
+		.code_reset    (controller_code_control_interface_reset),                      //                           .reset
+		.enable        (controller_enable_interface_enable)                            //           enable_interface.enable
 	);
 
 	fetch_decode_reg #(
 		.code_size (12)
 	) fetch_to_decode_register (
-		.clk            (clk_clk),                                                      //                    clock.clk
-		.code           (code_storage_code_interface_code),                             //           code_interface.code
-		.code_index     (code_storage_code_interface_code_index),                       //                         .code_index
-		.code_out       (fetch_to_decode_register_code_out_interface_code),             //       code_out_interface.code
-		.code_index_out (fetch_to_decode_register_code_index_out_interface_code_index)  // code_index_out_interface.code_index
+		.clk                  (clk_clk),                                                       //                          clock.clk
+		.code                 (code_storage_code_interface_code),                              //                 code_interface.code
+		.code_index           (code_storage_code_interface_code_index),                        //                               .code_index
+		.code_out             (fetch_to_decode_register_code_out_interface_code),              //             code_out_interface.code
+		.code_index_out       (fetch_to_decode_register_code_index_out_interface_code_index),  //       code_index_out_interface.code_index
+		.reset_code_count     (controller_code_count_reset_interface_reset),                   //     reset_code_count_interface.reset
+		.reset_code_count_out (fetch_to_decode_register_reset_code_count_out_interface_reset)  // reset_code_count_out_interface.reset
 	);
 
 	parse #(
@@ -52,11 +95,10 @@ module data_path (
 		.param_b_size (4)
 	) parse (
 		.code       (fetch_to_decode_register_code_out_interface_code), //           code_interface.code
-		.act_type   (parse_parameter_type_interface_act_type),          // parameter_type_interface.act_type
-		.dense_type (parse_parameter_type_interface_dense_type),        //                         .dense_type
-		.cost_type  (parse_parameter_type_interface_cost_type),         //                         .cost_type
-		.op         (parse_op_interface_op),                            //             op_interface.op
-		.clk        (clk_clk)                                           //                    clock.clk
+		.act_type   (parse_0_parameter_type_interface_act_type),        // parameter_type_interface.act_type
+		.dense_type (parse_0_parameter_type_interface_dense_type),      //                         .dense_type
+		.cost_type  (parse_0_parameter_type_interface_cost_type),       //                         .cost_type
+		.op         (parse_op_interface_op)                             //             op_interface.op
 	);
 
 endmodule

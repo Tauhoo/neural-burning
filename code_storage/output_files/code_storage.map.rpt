@@ -1,5 +1,5 @@
 Analysis & Synthesis report for code_storage
-Mon Dec 28 16:02:59 2020
+Thu Dec 31 16:12:29 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 28 16:02:59 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 31 16:12:29 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; code_storage                                ;
 ; Top-level Entity Name           ; code_storage                                ;
@@ -195,33 +195,33 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 44        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 55        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 13        ;
-;     -- 5 input functions                    ; 1         ;
-;     -- 4 input functions                    ; 8         ;
-;     -- <=3 input functions                  ; 33        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 71        ;
-;                                             ;           ;
-; I/O pins                                    ; 92        ;
-; Total MLAB memory bits                      ; 0         ;
-; Total block memory bits                     ; 1212      ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 83        ;
-; Total fan-out                               ; 700       ;
-; Average fan-out                             ; 2.17      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 85           ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 124          ;
+;     -- 7 input functions                    ; 1            ;
+;     -- 6 input functions                    ; 34           ;
+;     -- 5 input functions                    ; 21           ;
+;     -- 4 input functions                    ; 31           ;
+;     -- <=3 input functions                  ; 37           ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 71           ;
+;                                             ;              ;
+; I/O pins                                    ; 92           ;
+; Total MLAB memory bits                      ; 0            ;
+; Total block memory bits                     ; 1212         ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; active~input ;
+; Maximum fan-out                             ; 94           ;
+; Total fan-out                               ; 1104         ;
+; Average fan-out                             ; 2.82         ;
++---------------------------------------------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -229,7 +229,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name     ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
-; |code_storage                          ; 55 (55)             ; 71 (71)                   ; 1212              ; 0          ; 92   ; 0            ; |code_storage                                                         ; code_storage    ; work         ;
+; |code_storage                          ; 124 (124)           ; 71 (71)                   ; 1212              ; 0          ; 92   ; 0            ; |code_storage                                                         ; code_storage    ; work         ;
 ;    |altsyncram:storage_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1212              ; 0          ; 0    ; 0            ; |code_storage|altsyncram:storage_rtl_0                                ; altsyncram      ; work         ;
 ;       |altsyncram_37o1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1212              ; 0          ; 0    ; 0            ; |code_storage|altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated ; altsyncram_37o1 ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
@@ -251,11 +251,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 71    ;
-; Number of registers using Synchronous Clear  ; 25    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Clear  ; 39    ;
+; Number of registers using Synchronous Load   ; 39    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -328,14 +328,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------+-----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |code_storage|code_line[13] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |code_storage|code_line     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |code_storage|code_index   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -445,21 +444,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 71                          ;
-;     ENA SCLR          ; 25                          ;
-;     plain             ; 46                          ;
-; arriav_lcell_comb     ; 55                          ;
+;     SCLR SLD          ; 39                          ;
+;     plain             ; 32                          ;
+; arriav_lcell_comb     ; 124                         ;
 ;     arith             ; 32                          ;
 ;         1 data inputs ; 32                          ;
-;     normal            ; 23                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 91                          ;
 ;         2 data inputs ; 1                           ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 13                          ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 31                          ;
+;         5 data inputs ; 21                          ;
+;         6 data inputs ; 34                          ;
 ; boundary_port         ; 92                          ;
 ; stratixv_ram_block    ; 12                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.15                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -478,7 +480,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 28 16:02:52 2020
+    Info: Processing started: Thu Dec 31 16:12:21 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off code_storage -c code_storage
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -527,41 +529,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 25 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "write_line[7]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[8]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[9]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[10]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[11]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[12]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[13]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[14]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[15]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[16]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[17]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[18]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[19]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[20]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[21]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[22]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[23]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[24]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[25]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[26]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[27]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[28]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[29]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[30]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-    Warning (15610): No output dependent on input pin "write_line[31]" File: G:/neural-burning/code_storage/code_storage.sv Line: 19
-Info (21057): Implemented 205 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 299 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 48 input pins
     Info (21059): Implemented 44 output pins
-    Info (21061): Implemented 101 logic cells
+    Info (21061): Implemented 195 logic cells
     Info (21064): Implemented 12 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Mon Dec 28 16:02:59 2020
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Thu Dec 31 16:12:29 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:14
 
 

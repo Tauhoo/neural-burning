@@ -1,8 +1,29 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)unsaved.reset) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace inst data_path.controller -pg 1 -lvl 2 -y 470
+preplace inst data_path.fetch_to_decode_register -pg 1 -lvl 2 -y 250
+preplace inst data_path.code_count -pg 1 -lvl 2 -y 170
+preplace inst data_path -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst data_path.parse -pg 1 -lvl 2 -y 390
+preplace inst data_path.code_storage -pg 1 -lvl 2 -y 70
+preplace inst data_path.clk_0 -pg 1 -lvl 1 -y 30
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)code_storage.code_interface,(SLAVE)fetch_to_decode_register.code_interface) 1 1 1 470
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)fetch_to_decode_register.reset_code_count_out_interface,(SLAVE)code_count.reset_interface) 1 1 1 490
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parse.code_interface,(SLAVE)fetch_to_decode_register.code_out_interface) 1 1 1 530
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parse.op_interface,(SLAVE)controller.op_interface) 1 1 1 490
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.controller_weigth_interface,(SLAVE)controller.weigth_interface) 1 0 2 NJ 640 NJ
+preplace netloc FAN_OUT<net_container>data_path</net_container>(SLAVE)fetch_to_decode_register.clock,(MASTER)clk_0.clk,(SLAVE)code_count.clock,(SLAVE)code_storage.clock) 1 1 1 410
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)parse.parameter_type_interface,(SLAVE)data_path.parse_0_parameter_type_interface) 1 0 2 NJ 440 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.code_index_interface,(SLAVE)fetch_to_decode_register.code_index_out_interface) 1 1 1 450
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)code_storage.write_interface,(SLAVE)data_path.code_storage_write_interface) 1 0 2 NJ 140 NJ
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)code_storage.code_control_interface,(SLAVE)data_path.code_storage_code_control_interface) 1 0 2 NJ 100 NJ
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)controller.forward_control_interface,(SLAVE)data_path.controller_forward_control_interface) 1 0 2 NJ 560 NJ
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.controller_i_is_load_interface,(SLAVE)controller.i_is_load_interface) 1 0 2 NJ 580 NJ
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.controller_use_z_interface,(SLAVE)controller.use_z_interface) 1 0 2 NJ 620 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)code_count.count_interface,(SLAVE)controller.code_count_interface) 1 1 1 430
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.code_count_reset_interface,(SLAVE)fetch_to_decode_register.reset_code_count_interface) 1 1 1 510
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.controller_code_control_interface,(SLAVE)controller.code_control_interface) 1 0 2 NJ 480 NJ
+levelinfo -pg 1 0 200 790
+levelinfo -hier data_path 210 240 560 780
