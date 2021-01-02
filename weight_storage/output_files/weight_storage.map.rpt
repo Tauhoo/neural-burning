@@ -1,5 +1,5 @@
 Analysis & Synthesis report for weight_storage
-Fri Dec 25 11:13:54 2020
+Fri Jan 01 14:49:06 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,15 +10,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |weight_storage
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -42,27 +34,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec 25 11:13:54 2020       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; weight_storage                              ;
-; Top-level Entity Name           ; weight_storage                              ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 768                                         ;
-; Total pins                      ; 340                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Fri Jan 01 14:49:06 2021           ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; weight_storage                              ;
+; Top-level Entity Name       ; weight_storage                              ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -162,136 +149,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+-------------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path    ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
-+-------------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
-; ../general_data_operator/src/gdo.sv ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo.sv ;         ;
-; weight_storage.sv                   ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/weight_storage/weight_storage.sv ;         ;
-+-------------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1653      ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1933      ;
-;     -- 7 input functions                    ; 48        ;
-;     -- 6 input functions                    ; 652       ;
-;     -- 5 input functions                    ; 190       ;
-;     -- 4 input functions                    ; 9         ;
-;     -- <=3 input functions                  ; 1034      ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 768       ;
-;                                             ;           ;
-; I/O pins                                    ; 340       ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 768       ;
-; Total fan-out                               ; 11781     ;
-; Average fan-out                             ; 3.48      ;
-+---------------------------------------------+-----------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; |weight_storage            ; 1933 (1933)         ; 768 (768)                 ; 0                 ; 0          ; 340  ; 0            ; |weight_storage     ; weight_storage ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 768   ;
-; Number of registers using Synchronous Clear  ; 48    ;
-; Number of registers using Synchronous Load   ; 720   ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 26:1               ; 48 bits   ; 816 LEs       ; 480 LEs              ; 336 LEs                ; Yes        ; |weight_storage|w_reg[36]  ;
-; 25:1               ; 48 bits   ; 768 LEs       ; 672 LEs              ; 96 LEs                 ; No         ; |weight_storage|Mux179     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |weight_storage ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; data_size      ; 16    ; Signed Integer                                        ;
-; size           ; 3     ; Signed Integer                                        ;
-; layer_size     ; 5     ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 768                         ;
-;     SCLR              ; 48                          ;
-;     SLD               ; 720                         ;
-; arriav_lcell_comb     ; 1933                        ;
-;     arith             ; 51                          ;
-;         0 data inputs ; 3                           ;
-;         5 data inputs ; 48                          ;
-;     extend            ; 48                          ;
-;         7 data inputs ; 48                          ;
-;     normal            ; 1834                        ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 1025                        ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 142                         ;
-;         6 data inputs ; 652                         ;
-; boundary_port         ; 340                         ;
-;                       ;                             ;
-; Max LUT depth         ; 12.10                       ;
-; Average LUT depth     ; 9.84                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:03     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -300,7 +162,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Dec 25 11:13:43 2020
+    Info: Processing started: Fri Jan 01 14:49:00 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off weight_storage -c weight_storage
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -308,79 +170,12 @@ Info (12021): Found 1 design units, including 0 entities, in source file /neural
     Info (12022): Found design unit 1: gdo (SystemVerilog) File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file weight_storage.sv
     Info (12023): Found entity 1: weight_storage File: G:/neural-burning/weight_storage/weight_storage.sv Line: 1
-Info (12127): Elaborating entity "weight_storage" for the top level hierarchy
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "storage" into its bus
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 59 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "w_layer_index[3]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[4]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[5]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[6]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[7]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[8]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[9]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[10]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[11]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[12]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[13]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[14]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[15]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[16]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[17]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[18]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[19]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[20]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[21]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[22]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[23]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[24]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[25]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[26]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[27]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[28]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[29]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[30]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_layer_index[31]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 24
-    Warning (15610): No output dependent on input pin "w_row_index[2]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[3]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[4]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[5]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[6]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[7]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[8]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[9]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[10]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[11]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[12]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[13]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[14]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[15]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[16]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[17]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[18]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[19]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[20]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[21]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[22]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[23]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[24]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[25]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[26]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[27]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[28]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[29]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[30]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-    Warning (15610): No output dependent on input pin "w_row_index[31]" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 25
-Info (21057): Implemented 2993 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 292 input pins
-    Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 2653 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
-    Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Fri Dec 25 11:13:54 2020
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:18
+Error (10231): Verilog HDL error at weight_storage.sv(47): value cannot be assigned to input "layer_index" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 47
+Error (10560): Verilog HDL Expression error at weight_storage.sv(57): indexed name specifies too many indices for array "w_reg" File: G:/neural-burning/weight_storage/weight_storage.sv Line: 57
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4755 megabytes
+    Error: Processing ended: Fri Jan 01 14:49:07 2021
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:14
 
 

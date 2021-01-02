@@ -1,5 +1,5 @@
 Flow report for data_path
-Thu Dec 31 21:49:16 2020
+Sat Jan 02 16:05:59 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Dec 31 21:49:16 2020       ;
+; Flow Status                     ; Successful - Sat Jan 02 16:05:58 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; data_path                                   ;
 ; Top-level Entity Name           ; data_path                                   ;
@@ -49,8 +49,8 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1321                                        ;
-; Total pins                      ; 73                                          ;
+; Total registers                 ; 2764                                        ;
+; Total pins                      ; 395                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/31/2020 21:49:08 ;
+; Start date & time ; 01/02/2021 16:05:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; data_path           ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 66504332206614.160942614802432                              ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 66504332206614.160957834602628                              ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                         ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -98,7 +98,7 @@ https://fpgasoftware.intel.com/eula.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --          ; --                                ;
 ; SLD_FILE                            ; data_path/synthesis/data_path.debuginfo                     ; --            ; --          ; --                                ;
-; SLD_INFO                            ; QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1609426132 ; --            ; --          ; --                                ;
+; SLD_INFO                            ; QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1609577692 ; --            ; --          ; --                                ;
 ; SOPCINFO_FILE                       ; data_path/synthesis/../../data_path.sopcinfo                ; --            ; --          ; --                                ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --          ; --                                ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+-----------------------------------+
@@ -109,8 +109,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4854 MB             ; 00:00:16                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4869 MB             ; 00:00:20                           ;
+; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

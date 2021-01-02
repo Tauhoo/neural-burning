@@ -138,7 +138,7 @@ module controller(
                     backprop_cost_reg = 0;
                     use_z_reg = 0;
 
-                    if(code_count < 4*size) begin
+                    if(code_count == 4*size - 1) begin
                         reset_reg = 1;
                         code_active_reg = 1;
                     end
@@ -180,7 +180,7 @@ module controller(
         endcase
 
         if(~enable) begin
-            reset_reg = 1;
+            reset_reg = 1 ;
             w_layer_index_reg = 0;
             w_row_index_reg = 0;
             is_load_reg = 0;

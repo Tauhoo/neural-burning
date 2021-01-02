@@ -1,5 +1,5 @@
 Analysis & Synthesis report for matrix_storage
-Fri Dec 25 23:52:53 2020
+Fri Jan 01 14:49:28 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Dec 25 23:52:53 2020       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jan 01 14:49:28 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; matrix_storage                              ;
 ; Top-level Entity Name           ; matrix_storage                              ;
@@ -183,13 +183,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 488       ;
+; Estimate of Logic utilization (ALMs needed) ; 537       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 325       ;
+; Combinational ALUT usage for logic          ; 391       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 215       ;
+;     -- 6 input functions                    ; 329       ;
 ;     -- 5 input functions                    ; 5         ;
-;     -- 4 input functions                    ; 98        ;
+;     -- 4 input functions                    ; 50        ;
 ;     -- <=3 input functions                  ; 7         ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 720       ;
@@ -200,8 +200,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 720       ;
-; Total fan-out                               ; 4162      ;
-; Average fan-out                             ; 2.78      ;
+; Total fan-out                               ; 4654      ;
+; Average fan-out                             ; 2.97      ;
 +---------------------------------------------+-----------+
 
 
@@ -210,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; |matrix_storage            ; 325 (325)           ; 720 (720)                 ; 0                 ; 0          ; 227  ; 0            ; |matrix_storage     ; matrix_storage ; work         ;
+; |matrix_storage            ; 391 (391)           ; 720 (720)                 ; 0                 ; 0          ; 227  ; 0            ; |matrix_storage     ; matrix_storage ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -235,7 +235,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 25:1               ; 48 bits   ; 768 LEs       ; 672 LEs              ; 96 LEs                 ; No         ; |matrix_storage|Mux191     ;
+; 26:1               ; 48 bits   ; 816 LEs       ; 720 LEs              ; 96 LEs                 ; No         ; |matrix_storage|read_data  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -258,17 +258,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 720                         ;
 ;     ENA               ; 720                         ;
-; arriav_lcell_comb     ; 325                         ;
-;     normal            ; 325                         ;
+; arriav_lcell_comb     ; 391                         ;
+;     normal            ; 391                         ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 6                           ;
-;         4 data inputs ; 98                          ;
+;         4 data inputs ; 50                          ;
 ;         5 data inputs ; 5                           ;
-;         6 data inputs ; 215                         ;
+;         6 data inputs ; 329                         ;
 ; boundary_port         ; 227                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.48                        ;
+; Average LUT depth     ; 2.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -287,7 +287,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Dec 25 23:52:45 2020
+    Info: Processing started: Fri Jan 01 14:49:20 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off matrix_storage -c matrix_storage
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -298,7 +298,7 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 61 input pin(s) that do not drive logic
+Warning (21074): Design contains 31 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "is_write" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 19
     Warning (15610): No output dependent on input pin "read_layer_index[3]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 20
     Warning (15610): No output dependent on input pin "read_layer_index[4]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 20
@@ -329,45 +329,15 @@ Warning (21074): Design contains 61 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "read_layer_index[29]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 20
     Warning (15610): No output dependent on input pin "read_layer_index[30]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 20
     Warning (15610): No output dependent on input pin "read_layer_index[31]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 20
-    Warning (15610): No output dependent on input pin "read_row_index[2]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[3]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[4]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[5]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[6]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[7]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[8]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[9]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[10]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[11]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[12]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[13]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[14]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[15]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[16]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[17]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[18]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[19]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[20]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[21]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[22]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[23]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[24]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[25]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[26]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[27]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[28]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[29]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[30]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
-    Warning (15610): No output dependent on input pin "read_row_index[31]" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 21
     Warning (15610): No output dependent on input pin "is_read" File: G:/neural-burning/matrix_storage/matrix_storage.sv Line: 22
-Info (21057): Implemented 1272 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1338 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 179 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 1045 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Fri Dec 25 23:52:53 2020
+    Info (21061): Implemented 1111 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Fri Jan 01 14:49:28 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
 
 

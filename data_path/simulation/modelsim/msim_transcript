@@ -18,78 +18,118 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis {G:/neural-burning/data_path/data_path/synthesis/data_path.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:24 on Dec 31,2020
+# Start time: 16:06:12 on Jan 02,2021
 # vlog -reportprogress 300 -vlog01compat -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis" G:/neural-burning/data_path/data_path/synthesis/data_path.v 
 # -- Compiling module data_path
 # 
 # Top level modules:
 # 	data_path
-# End time: 21:49:24 on Dec 31,2020, Elapsed time: 0:00:00
+# End time: 16:06:13 on Jan 02,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:25 on Dec 31,2020
+# Start time: 16:06:13 on Jan 02,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv 
 # -- Compiling module parse
 # 
 # Top level modules:
 # 	parse
-# End time: 21:49:25 on Dec 31,2020, Elapsed time: 0:00:00
+# End time: 16:06:13 on Jan 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage_locator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:13 on Jan 02,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage_locator.sv 
+# -- Compiling module matrix_storage_locator
+# 
+# Top level modules:
+# 	matrix_storage_locator
+# End time: 16:06:13 on Jan 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:13 on Jan 02,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv 
+# -- Compiling module spreader
+# 
+# Top level modules:
+# 	spreader
+# End time: 16:06:13 on Jan 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_location_spreader.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:13 on Jan 02,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_location_spreader.sv 
+# -- Compiling module matrix_location_spreader
+# 
+# Top level modules:
+# 	matrix_location_spreader
+# End time: 16:06:13 on Jan 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:13 on Jan 02,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv 
+# -- Compiling module matrix_storage
+# 
+# Top level modules:
+# 	matrix_storage
+# End time: 16:06:13 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:25 on Dec 31,2020
+# Start time: 16:06:13 on Jan 02,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv 
 # -- Compiling module delay
 # 
 # Top level modules:
 # 	delay
-# End time: 21:49:25 on Dec 31,2020, Elapsed time: 0:00:00
+# End time: 16:06:13 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:25 on Dec 31,2020
+# Start time: 16:06:13 on Jan 02,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv 
 # -- Compiling module fetch_decode_reg
 # 
 # Top level modules:
 # 	fetch_decode_reg
-# End time: 21:49:25 on Dec 31,2020, Elapsed time: 0:00:00
+# End time: 16:06:14 on Jan 02,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:25 on Dec 31,2020
+# Start time: 16:06:14 on Jan 02,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 21:49:25 on Dec 31,2020, Elapsed time: 0:00:00
+# End time: 16:06:14 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:25 on Dec 31,2020
+# Start time: 16:06:14 on Jan 02,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv 
 # -- Compiling module code_storage
 # 
 # Top level modules:
 # 	code_storage
-# End time: 21:49:25 on Dec 31,2020, Elapsed time: 0:00:00
+# End time: 16:06:14 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:49:25 on Dec 31,2020
+# Start time: 16:06:14 on Jan 02,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv 
 # -- Compiling module code_count
 # 
 # Top level modules:
 # 	code_count
-# End time: 21:49:25 on Dec 31,2020, Elapsed time: 0:00:00
+# End time: 16:06:14 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim data_path.testbench
 # vsim data_path.testbench 
-# Start time: 21:49:30 on Dec 31,2020
+# Start time: 16:06:27 on Jan 02,2021
 # Loading data_path.testbench
 # Loading data_path.data_path
 # Loading sv_std.std
@@ -98,815 +138,374 @@ vsim data_path.testbench
 # Loading data_path.controller
 # Loading data_path.fetch_decode_reg
 # Loading data_path.delay
+# Loading data_path.matrix_storage
+# Loading data_path.spreader
+# Loading data_path.matrix_location_spreader
+# Loading data_path.matrix_storage_locator
 # Loading data_path.parse
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 123
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 124
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-add wave -position end  sim:/testbench/DUT/code_storage/active
-add wave -position end  sim:/testbench/DUT/code_storage/reset
-add wave -position end  sim:/testbench/DUT/code_storage/enable
-add wave -position end  sim:/testbench/DUT/code_storage/clk
-add wave -position end  sim:/testbench/DUT/code_storage/is_write
-add wave -position end  sim:/testbench/DUT/code_storage/write_line
-add wave -position end  sim:/testbench/DUT/code_storage/write_data
-add wave -position end  sim:/testbench/DUT/code_storage/code
-add wave -position end  sim:/testbench/DUT/code_storage/code_index
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/bus_in
-add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/clk
-add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/bus_out
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 126
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 127
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 130
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-add wave -position end  sim:/testbench/DUT/controller/op
-add wave -position end  sim:/testbench/DUT/controller/code_count
-add wave -position end  sim:/testbench/DUT/controller/code_index
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 131
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-add wave -position end  sim:/testbench/DUT/code_storage/active
-add wave -position end  sim:/testbench/DUT/code_storage/reset
-add wave -position end  sim:/testbench/DUT/code_storage/enable
-add wave -position end  sim:/testbench/DUT/code_storage/clk
-add wave -position end  sim:/testbench/DUT/code_storage/is_write
-add wave -position end  sim:/testbench/DUT/code_storage/write_line
-add wave -position end  sim:/testbench/DUT/code_storage/write_data
-add wave -position end  sim:/testbench/DUT/code_storage/code
-add wave -position end  sim:/testbench/DUT/code_storage/code_index
-add wave -position end  sim:/testbench/DUT/code_count/count
-add wave -position end  sim:/testbench/DUT/controller/code_active
-add wave -position end  sim:/testbench/DUT/code_count/reset
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 134
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_data' not found in the connected module (1st connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_layer_index' not found in the connected module (7th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_row_index' not found in the connected module (13th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_is_write_interface_is_write' not found in the connected module (14th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_read_data_interface_read_data' not found in the connected module (23rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# Error loading design
+# End time: 16:06:27 on Jan 02,2021, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 7
+vlog -work data_path G:/neural-burning/data_path/testbench/testbench.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:43:45 on Dec 31,2020
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv 
-# -- Compiling module code_count
+# Start time: 16:06:41 on Jan 02,2021
+# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v 
+# -- Compiling module \testbench.v 
 # 
 # Top level modules:
-# 	code_count
-# End time: 22:43:45 on Dec 31,2020, Elapsed time: 0:00:00
+# 	\testbench.v 
+# End time: 16:06:41 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading data_path.code_count
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-add wave -position 9  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/bus_in
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:33:05 on Dec 31,2020
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv 
-# -- Compiling module code_count
-# 
-# Top level modules:
-# 	code_count
-# End time: 23:33:05 on Dec 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:33:07 on Dec 31,2020
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv 
-# -- Compiling module code_storage
-# 
-# Top level modules:
-# 	code_storage
-# End time: 23:33:07 on Dec 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:33:10 on Dec 31,2020
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv 
-# -- Compiling module controller
-# 
-# Top level modules:
-# 	controller
-# End time: 23:33:10 on Dec 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:33:12 on Dec 31,2020
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv 
-# -- Compiling module delay
-# 
-# Top level modules:
-# 	delay
-# End time: 23:33:13 on Dec 31,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:33:14 on Dec 31,2020
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv 
-# -- Compiling module fetch_decode_reg
-# 
-# Top level modules:
-# 	fetch_decode_reg
-# End time: 23:33:15 on Dec 31,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:33:16 on Dec 31,2020
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv 
-# -- Compiling module parse
-# 
-# Top level modules:
-# 	parse
-# End time: 23:33:16 on Dec 31,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+vsim data_path.testbench
+# vsim data_path.testbench 
+# Start time: 16:06:43 on Jan 02,2021
+# Loading data_path.testbench
+# Loading data_path.data_path
+# Loading sv_std.std
 # Loading data_path.code_count
 # Loading data_path.code_storage
 # Loading data_path.controller
 # Loading data_path.fetch_decode_reg
 # Loading data_path.delay
+# Loading data_path.matrix_storage
+# Loading data_path.spreader
+# Loading data_path.matrix_location_spreader
+# Loading data_path.matrix_storage_locator
 # Loading data_path.parse
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 123
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 124
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 126
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 127
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 130
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-add wave -position end  sim:/testbench/DUT/code_count/clk
-add wave -position end  sim:/testbench/DUT/code_count/reset
-add wave -position end  sim:/testbench/DUT/code_count/count
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 131
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-add wave -position end  sim:/testbench/DUT/code_storage/active
-add wave -position end  sim:/testbench/DUT/code_storage/reset
-add wave -position end  sim:/testbench/DUT/code_storage/enable
-add wave -position end  sim:/testbench/DUT/code_storage/clk
-add wave -position end  sim:/testbench/DUT/code_storage/is_write
-add wave -position end  sim:/testbench/DUT/code_storage/write_line
-add wave -position end  sim:/testbench/DUT/code_storage/write_data
-add wave -position end  sim:/testbench/DUT/code_storage/code
-add wave -position end  sim:/testbench/DUT/code_storage/code_index
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code_index/bus_in
-add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code_index/clk
-add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code_index/bus_out
-add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code_index/buffer
-add wave -position 9  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code_index/cycle
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-add wave -position end  sim:/testbench/DUT/controller/op
-run
-# 1
-run
-# 1
-# WARNING: No extended dataflow license exists
-add wave -position end sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/*
-run
-# 1
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-run
-# 1
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-restart
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-add wave -position end  sim:/testbench/DUT/fetch_to_decode_register/delay_inst_code/buffer
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 69
-add wave -position end  sim:/testbench/DUT/code_storage/storage
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 134
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_data' not found in the connected module (1st connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_layer_index' not found in the connected module (7th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_row_index' not found in the connected module (13th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_is_write_interface_is_write' not found in the connected module (14th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_read_data_interface_read_data' not found in the connected module (23rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# Error loading design
+# End time: 16:06:43 on Jan 02,2021, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 7
+vlog -work data_path G:/neural-burning/data_path/testbench/testbench.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:14:38 on Jan 01,2021
+# Start time: 16:07:04 on Jan 02,2021
 # vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v 
-# -- Compiling module testbench
+# -- Compiling module \testbench.v 
 # 
 # Top level modules:
-# 	testbench
-# End time: 00:14:38 on Jan 01,2021, Elapsed time: 0:00:00
+# 	\testbench.v 
+# End time: 16:07:04 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+vsim data_path.testbench
+# vsim data_path.testbench 
+# Start time: 16:07:06 on Jan 02,2021
 # Loading data_path.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 70
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 71
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 72
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-add wave -position 3  sim:/testbench/DUT/controller/enable
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 70
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 71
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 72
-run
-# 0
-# 0
-run
-# 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 70
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 71
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 72
-run
-# 0
-# 0
-# Load canceled
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:16:53 on Jan 01,2021
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 00:16:53 on Jan 01,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading data_path.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 70
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 71
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 72
-run
-# 0
-# 0
-run
-# 0
-run
-# 1
-run
-# 1
-run
-# 1
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:19:17 on Jan 01,2021
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv 
-# -- Compiling module code_storage
-# 
-# Top level modules:
-# 	code_storage
-# End time: 00:19:17 on Jan 01,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading data_path.data_path
+# Loading sv_std.std
+# Loading data_path.code_count
 # Loading data_path.code_storage
+# Loading data_path.controller
+# Loading data_path.fetch_decode_reg
+# Loading data_path.delay
+# Loading data_path.matrix_storage
+# Loading data_path.spreader
+# Loading data_path.matrix_location_spreader
+# Loading data_path.matrix_storage_locator
+# Loading data_path.parse
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 70
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 123
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 71
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 124
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 72
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 126
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 127
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 130
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 131
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 134
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_data' not found in the connected module (1st connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_layer_index' not found in the connected module (7th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_write_interface_write_row_index' not found in the connected module (13th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_is_write_interface_is_write' not found in the connected module (14th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# ** Error: (vsim-3063) Port 'weight_storage_read_data_interface_read_data' not found in the connected module (23rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 34
+# Error loading design
+# End time: 16:07:07 on Jan 02,2021, Elapsed time: 0:00:01
+# Errors: 5, Warnings: 7
+vlog -work data_path G:/neural-burning/data_path/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:11:40 on Jan 02,2021
+# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:11:41 on Jan 02,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim data_path.testbench
+# vsim data_path.testbench 
+# Start time: 16:11:42 on Jan 02,2021
+# Loading data_path.testbench
+# Loading data_path.data_path
+# Loading sv_std.std
+# Loading data_path.code_count
+# Loading data_path.code_storage
+# Loading data_path.controller
+# Loading data_path.fetch_decode_reg
+# Loading data_path.delay
+# Loading data_path.matrix_storage
+# Loading data_path.spreader
+# Loading data_path.matrix_location_spreader
+# Loading data_path.matrix_storage_locator
+# Loading data_path.parse
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 104
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 107
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 108
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 111
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 112
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 115
+add wave -position end  sim:/testbench/input_storage_write_interface_write_data
+add wave -position end  sim:/testbench/label_storage_write_interface_write_data
+add wave -position end  sim:/testbench/DUT/label_storage/write_data
+add wave -position end  sim:/testbench/DUT/label_storage/write_layer_index
+add wave -position end  sim:/testbench/DUT/label_storage/write_row_index
+add wave -position end  sim:/testbench/DUT/label_storage/is_write
+add wave -position end  sim:/testbench/DUT/label_storage/read_layer_index
+add wave -position end  sim:/testbench/DUT/label_storage/read_row_index
+add wave -position end  sim:/testbench/DUT/label_storage/is_read
+add wave -position end  sim:/testbench/DUT/label_storage/read_data
+add wave -position end  sim:/testbench/DUT/label_storage/clk
 run
-# 0
-# 0
 run
-# 0
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-add wave -position end  sim:/testbench/DUT/controller/reset
+add wave -position end  sim:/testbench/DUT/controller/op
 add wave -position end  sim:/testbench/DUT/controller/w_layer_index
 add wave -position end  sim:/testbench/DUT/controller/w_row_index
 add wave -position end  sim:/testbench/DUT/controller/is_load
-add wave -position end  sim:/testbench/DUT/controller/code_reset
-add wave -position end  sim:/testbench/DUT/controller/code_active
-add wave -position end  sim:/testbench/DUT/controller/is_update
 add wave -position end  sim:/testbench/DUT/controller/i_is_load
-add wave -position end  sim:/testbench/DUT/controller/load_w
-add wave -position end  sim:/testbench/DUT/controller/backprop_cost
-add wave -position end  sim:/testbench/DUT/controller/use_z
+run
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 70
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 104
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 71
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 105
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 72
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 107
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 108
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 111
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 112
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 115
 run
-# 0
-# 0
 run
-# 0
 run
-# 1
 run
-# 1
 run
-# 1
-add wave -position end  sim:/testbench/DUT/code_count/count
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
+add wave -position end  sim:/testbench/DUT/input_storage/write_data
+add wave -position end  sim:/testbench/DUT/label_storage/read_layer_index
+add wave -position end  sim:/testbench/DUT/label_storage/read_row_index
+add wave -position end  sim:/testbench/DUT/label_storage/is_read
+add wave -position end  sim:/testbench/DUT/label_storage/read_data
+add wave -position end  sim:/testbench/DUT/label_storage/storage[0][0]
+add wave -position end  sim:/testbench/DUT/label_storage/storage[0][1]
+add wave -position end  sim:/testbench/DUT/label_storage/storage[0][2]
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 104
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 107
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 108
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 111
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 112
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 115
 run
-# 1
-vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/testbench/DUT/label_storage/write_data
+add wave -position end  sim:/testbench/DUT/label_storage/write_layer_index
+add wave -position end  sim:/testbench/DUT/label_storage/write_row_index
+add wave -position end  sim:/testbench/DUT/label_storage/is_write
+vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:35:10 on Jan 01,2021
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv 
-# -- Compiling module controller
+# Start time: 16:23:58 on Jan 02,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv 
+# -- Compiling module matrix_storage
 # 
 # Top level modules:
-# 	controller
-# End time: 00:35:10 on Jan 01,2021, Elapsed time: 0:00:00
+# 	matrix_storage
+# End time: 16:23:58 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+run
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading data_path.controller
+# Loading data_path.matrix_storage
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 70
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 104
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 71
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 105
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 72
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 107
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 108
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 111
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 112
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 115
 run
-# 0
-# 0
 run
-# 0
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# 1
-run
-# ** Note: $stop    : G:/neural-burning/data_path/testbench/testbench.v(98)
-#    Time: 4 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at G:/neural-burning/data_path/testbench/testbench.v line 98
-run
-# 1
-# 1
+add wave -position end  sim:/testbench/DUT/label_storage/write_data
+add wave -position end  sim:/testbench/DUT/label_storage/write_layer_index
+add wave -position end  sim:/testbench/DUT/label_storage/write_row_index
+add wave -position end  sim:/testbench/DUT/label_storage/is_write
+add wave -position end  sim:/testbench/DUT/label_storage/read_layer_index
+add wave -position end  sim:/testbench/DUT/label_storage/read_row_index
+add wave -position end  sim:/testbench/DUT/label_storage/is_read
+add wave -position end  sim:/testbench/DUT/label_storage/read_data
+add wave -position end  sim:/testbench/DUT/input_storage/write_data
+add wave -position end  sim:/testbench/DUT/input_storage/write_layer_index
+add wave -position end  sim:/testbench/DUT/input_storage/write_row_index
+add wave -position end  sim:/testbench/DUT/input_storage/is_write
+add wave -position end  sim:/testbench/DUT/input_storage/read_layer_index
+add wave -position end  sim:/testbench/DUT/input_storage/read_row_index
+add wave -position end  sim:/testbench/DUT/input_storage/is_read
+add wave -position end  sim:/testbench/DUT/input_storage/read_data
 restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 104
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 107
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 108
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 111
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 112
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 115
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
 run
-# 1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 104
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 107
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 108
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 111
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 112
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 115
+# End time: 16:28:34 on Jan 02,2021, Elapsed time: 0:16:52
+# Errors: 0, Warnings: 7

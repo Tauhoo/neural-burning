@@ -4,36 +4,57 @@
 
 `timescale 1 ps / 1 ps
 module data_path (
-		input  wire        clk_clk,                                            //                                  clk.clk
-		input  wire        code_storage_enable_interface_enable,               //        code_storage_enable_interface.enable
-		input  wire [11:0] code_storage_write_interface_write_data,            //         code_storage_write_interface.write_data
-		input  wire        code_storage_write_interface_is_write,              //                                     .is_write
-		input  wire [31:0] code_storage_write_interface_write_line,            //                                     .write_line
-		input  wire        controller_enable_interface_enable,                 //          controller_enable_interface.enable
-		output wire        controller_forward_control_interface_is_update,     // controller_forward_control_interface.is_update
-		output wire        controller_forward_control_interface_load_w,        //                                     .load_w
-		output wire        controller_forward_control_interface_backprop_cost, //                                     .backprop_cost
-		output wire        controller_i_is_load_interface_i_is_load,           //       controller_i_is_load_interface.i_is_load
-		output wire        controller_use_z_interface_use_z,                   //           controller_use_z_interface.use_z
-		output wire        controller_weigth_interface_w_layer_index,          //          controller_weigth_interface.w_layer_index
-		output wire        controller_weigth_interface_w_row_index,            //                                     .w_row_index
-		output wire        controller_weigth_interface_is_load,                //                                     .is_load
-		output wire [3:0]  parse_0_parameter_type_interface_act_type,          //     parse_0_parameter_type_interface.act_type
-		output wire [3:0]  parse_0_parameter_type_interface_dense_type,        //                                     .dense_type
-		output wire [7:0]  parse_0_parameter_type_interface_cost_type,         //                                     .cost_type
-		input  wire        reset_reset_n                                       //                                reset.reset_n
+		input  wire        clk_clk,                                            //                                    clk.clk
+		input  wire        code_storage_enable_interface_enable,               //          code_storage_enable_interface.enable
+		input  wire [11:0] code_storage_write_interface_write_data,            //           code_storage_write_interface.write_data
+		input  wire        code_storage_write_interface_is_write,              //                                       .is_write
+		input  wire [31:0] code_storage_write_interface_write_line,            //                                       .write_line
+		input  wire        controller_enable_interface_enable,                 //            controller_enable_interface.enable
+		output wire        controller_forward_control_interface_is_update,     //   controller_forward_control_interface.is_update
+		output wire        controller_forward_control_interface_load_w,        //                                       .load_w
+		output wire        controller_forward_control_interface_backprop_cost, //                                       .backprop_cost
+		output wire        controller_use_z_interface_use_z,                   //             controller_use_z_interface.use_z
+		output wire        controller_weigth_interface_w_layer_index,          //            controller_weigth_interface.w_layer_index
+		output wire        controller_weigth_interface_w_row_index,            //                                       .w_row_index
+		output wire        controller_weigth_interface_is_load,                //                                       .is_load
+		input  wire        input_storage_is_write_interface_is_write,          //       input_storage_is_write_interface.is_write
+		output wire [47:0] input_storage_read_data_interface_read_data,        //      input_storage_read_data_interface.read_data
+		input  wire [31:0] input_storage_write_interface_write_layer_index,    //          input_storage_write_interface.write_layer_index
+		input  wire [31:0] input_storage_write_interface_write_row_index,      //                                       .write_row_index
+		input  wire [47:0] input_storage_write_interface_write_data,           //                                       .write_data
+		input  wire        label_storage_is_write_interface_is_write,          //       label_storage_is_write_interface.is_write
+		output wire [47:0] label_storage_read_data_interface_read_data,        //      label_storage_read_data_interface.read_data
+		input  wire [31:0] label_storage_write_interface_write_layer_index,    //          label_storage_write_interface.write_layer_index
+		input  wire [31:0] label_storage_write_interface_write_row_index,      //                                       .write_row_index
+		input  wire [47:0] label_storage_write_interface_write_data,           //                                       .write_data
+		input  wire        matrix_storage_locator_reset_interface_reset,       // matrix_storage_locator_reset_interface.reset
+		output wire [3:0]  parse_0_parameter_type_interface_act_type,          //       parse_0_parameter_type_interface.act_type
+		output wire [3:0]  parse_0_parameter_type_interface_dense_type,        //                                       .dense_type
+		output wire [7:0]  parse_0_parameter_type_interface_cost_type,         //                                       .cost_type
+		input  wire        reset_reset_n                                       //                                  reset.reset_n
 	);
 
-	wire         controller_code_control_interface_active;                      // controller:code_active -> code_storage:active
-	wire         controller_code_control_interface_reset;                       // controller:code_reset -> code_storage:reset
-	wire  [31:0] code_count_count_interface_code_count;                         // code_count:count -> controller:code_count
-	wire  [31:0] fetch_to_decode_register_code_index_out_interface_code_index;  // fetch_to_decode_register:code_index_out -> controller:code_index
-	wire  [11:0] code_storage_code_interface_code;                              // code_storage:code -> fetch_to_decode_register:code
-	wire  [31:0] code_storage_code_interface_code_index;                        // code_storage:code_index -> fetch_to_decode_register:code_index
-	wire  [11:0] fetch_to_decode_register_code_out_interface_code;              // fetch_to_decode_register:code_out -> parse:code
-	wire   [3:0] parse_op_interface_op;                                         // parse:op -> controller:op
-	wire         controller_code_count_reset_interface_reset;                   // controller:reset -> fetch_to_decode_register:reset_code_count
-	wire         fetch_to_decode_register_reset_code_count_out_interface_reset; // fetch_to_decode_register:reset_code_count_out -> code_count:reset
+	wire         controller_code_control_interface_active;                             // controller:code_active -> code_storage:active
+	wire         controller_code_control_interface_reset;                              // controller:code_reset -> code_storage:reset
+	wire  [31:0] code_count_count_interface_code_count;                                // code_count:count -> controller:code_count
+	wire  [31:0] fetch_to_decode_register_code_index_out_interface_code_index;         // fetch_to_decode_register:code_index_out -> controller:code_index
+	wire  [11:0] code_storage_code_interface_code;                                     // code_storage:code -> fetch_to_decode_register:code
+	wire  [31:0] code_storage_code_interface_code_index;                               // code_storage:code_index -> fetch_to_decode_register:code_index
+	wire  [11:0] fetch_to_decode_register_code_out_interface_code;                     // fetch_to_decode_register:code_out -> parse:code
+	wire         controller_i_is_load_interface_is_load;                               // controller:i_is_load -> is_load_spreader_0:data_in
+	wire   [0:0] is_load_spreader_0_is_load_1_is_load;                                 // is_load_spreader_0:data_out_a -> is_load_spreader_1:data_in
+	wire   [0:0] is_load_spreader_1_is_load_2_is_load;                                 // is_load_spreader_1:data_out_b -> label_storage:is_read
+	wire   [0:0] is_load_spreader_0_is_load_2_is_load;                                 // is_load_spreader_0:data_out_b -> matrix_storage_locator:is_load
+	wire   [0:0] is_load_spreader_1_is_load_1_is_load;                                 // is_load_spreader_1:data_out_a -> input_storage:is_read
+	wire  [31:0] matrix_storage_locator_matrix_location_interface_row_index;           // matrix_storage_locator:row_index -> matrix_location_spreader:read_row_index
+	wire  [31:0] matrix_storage_locator_matrix_location_interface_layer_index;         // matrix_storage_locator:layer_index -> matrix_location_spreader:read_layer_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_row_index;   // matrix_location_spreader:read_row_index_1 -> input_storage:read_row_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_layer_index; // matrix_location_spreader:read_layer_index_1 -> input_storage:read_layer_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_row_index;   // matrix_location_spreader:read_row_index_2 -> label_storage:read_row_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_layer_index; // matrix_location_spreader:read_layer_index_2 -> label_storage:read_layer_index
+	wire   [3:0] parse_op_interface_op;                                                // parse:op -> controller:op
+	wire         controller_code_count_reset_interface_reset;                          // controller:reset -> fetch_to_decode_register:reset_code_count
+	wire         fetch_to_decode_register_reset_code_count_out_interface_reset;        // fetch_to_decode_register:reset_code_count_out -> code_count:reset
 
 	code_count code_count (
 		.clk   (clk_clk),                                                       //           clock.clk
@@ -63,7 +84,7 @@ module data_path (
 		.is_update     (controller_forward_control_interface_is_update),               //  forward_control_interface.is_update
 		.load_w        (controller_forward_control_interface_load_w),                  //                           .load_w
 		.backprop_cost (controller_forward_control_interface_backprop_cost),           //                           .backprop_cost
-		.i_is_load     (controller_i_is_load_interface_i_is_load),                     //        i_is_load_interface.i_is_load
+		.i_is_load     (controller_i_is_load_interface_is_load),                       //        i_is_load_interface.is_load
 		.w_layer_index (controller_weigth_interface_w_layer_index),                    //           weigth_interface.w_layer_index
 		.w_row_index   (controller_weigth_interface_w_row_index),                      //                           .w_row_index
 		.is_load       (controller_weigth_interface_is_load),                          //                           .is_load
@@ -87,6 +108,76 @@ module data_path (
 		.code_index_out       (fetch_to_decode_register_code_index_out_interface_code_index),  //       code_index_out_interface.code_index
 		.reset_code_count     (controller_code_count_reset_interface_reset),                   //     reset_code_count_interface.reset
 		.reset_code_count_out (fetch_to_decode_register_reset_code_count_out_interface_reset)  // reset_code_count_out_interface.reset
+	);
+
+	matrix_storage #(
+		.size      (3),
+		.data_size (16),
+		.max_layer (5)
+	) input_storage (
+		.clk               (clk_clk),                                                              //                     clock.clk
+		.read_layer_index  (matrix_location_spreader_matrix_location_out_1_interface_layer_index), // matrix_location_interface.layer_index
+		.read_row_index    (matrix_location_spreader_matrix_location_out_1_interface_row_index),   //                          .row_index
+		.write_layer_index (input_storage_write_interface_write_layer_index),                      //           write_interface.write_layer_index
+		.write_row_index   (input_storage_write_interface_write_row_index),                        //                          .write_row_index
+		.write_data        (input_storage_write_interface_write_data),                             //                          .write_data
+		.read_data         (input_storage_read_data_interface_read_data),                          //       read_data_interface.read_data
+		.is_write          (input_storage_is_write_interface_is_write),                            //        is_write_interface.is_write
+		.is_read           (is_load_spreader_1_is_load_1_is_load)                                  //         is_read_interface.is_load
+	);
+
+	spreader #(
+		.size (1)
+	) is_load_spreader_0 (
+		.data_out_b (is_load_spreader_0_is_load_2_is_load),   // is_load_2.is_load
+		.data_out_a (is_load_spreader_0_is_load_1_is_load),   // is_load_1.is_load
+		.data_in    (controller_i_is_load_interface_is_load)  //   is_load.is_load
+	);
+
+	spreader #(
+		.size (1)
+	) is_load_spreader_1 (
+		.data_out_b (is_load_spreader_1_is_load_2_is_load), // is_load_2.is_load
+		.data_out_a (is_load_spreader_1_is_load_1_is_load), // is_load_1.is_load
+		.data_in    (is_load_spreader_0_is_load_1_is_load)  //   is_load.is_load
+	);
+
+	matrix_storage #(
+		.size      (3),
+		.data_size (16),
+		.max_layer (5)
+	) label_storage (
+		.clk               (clk_clk),                                                              //                     clock.clk
+		.read_layer_index  (matrix_location_spreader_matrix_location_out_2_interface_layer_index), // matrix_location_interface.layer_index
+		.read_row_index    (matrix_location_spreader_matrix_location_out_2_interface_row_index),   //                          .row_index
+		.write_layer_index (label_storage_write_interface_write_layer_index),                      //           write_interface.write_layer_index
+		.write_row_index   (label_storage_write_interface_write_row_index),                        //                          .write_row_index
+		.write_data        (label_storage_write_interface_write_data),                             //                          .write_data
+		.read_data         (label_storage_read_data_interface_read_data),                          //       read_data_interface.read_data
+		.is_write          (label_storage_is_write_interface_is_write),                            //        is_write_interface.is_write
+		.is_read           (is_load_spreader_1_is_load_2_is_load)                                  //         is_read_interface.is_load
+	);
+
+	matrix_location_spreader #(
+		.layer_index_size (32),
+		.row_index_size   (32)
+	) matrix_location_spreader (
+		.read_row_index     (matrix_storage_locator_matrix_location_interface_row_index),           //       matrix_location_interface.row_index
+		.read_layer_index   (matrix_storage_locator_matrix_location_interface_layer_index),         //                                .layer_index
+		.read_row_index_1   (matrix_location_spreader_matrix_location_out_1_interface_row_index),   // matrix_location_out_1_interface.row_index
+		.read_layer_index_1 (matrix_location_spreader_matrix_location_out_1_interface_layer_index), //                                .layer_index
+		.read_layer_index_2 (matrix_location_spreader_matrix_location_out_2_interface_layer_index), // matrix_location_out_2_interface.layer_index
+		.read_row_index_2   (matrix_location_spreader_matrix_location_out_2_interface_row_index)    //                                .row_index
+	);
+
+	matrix_storage_locator #(
+		.size (3)
+	) matrix_storage_locator (
+		.clk         (clk_clk),                                                      //                     clock.clk
+		.reset       (matrix_storage_locator_reset_interface_reset),                 //           reset_interface.reset
+		.layer_index (matrix_storage_locator_matrix_location_interface_layer_index), // matrix_location_interface.layer_index
+		.row_index   (matrix_storage_locator_matrix_location_interface_row_index),   //                          .row_index
+		.is_load     (is_load_spreader_0_is_load_2_is_load)                          //         is_load_interface.is_load
 	);
 
 	parse #(

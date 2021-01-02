@@ -33,7 +33,6 @@ module code_storage(
                             code_line :
                             0;
     assign code = enable ? 
-                    reset ? 0 :
                     is_write && write_line == code_index ? write_data : 
                     storage[code_index] :
                   0;

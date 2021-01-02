@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat Dec 26 21:21:55 2020
+Analysis & Synthesis Status : Successful - Fri Jan 01 14:43:51 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : matrix_storage_locator
 Top-level Entity Name : matrix_storage_locator
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1
-Total pins : 5
+Total registers : 64
+Total pins : 67
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

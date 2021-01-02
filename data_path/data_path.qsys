@@ -142,11 +142,75 @@
          type = "String";
       }
    }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element fetch_to_decode_register
    {
       datum _sortIndex
       {
          value = "2";
+         type = "int";
+      }
+   }
+   element input_storage
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element is_load_spreader_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element is_load_spreader_1
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element label_storage
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element matrix_location_spreader
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element matrix_storage_locator
+   {
+      datum _sortIndex
+      {
+         value = "8";
          type = "int";
       }
    }
@@ -201,11 +265,6 @@
    type="conduit"
    dir="end" />
  <interface
-   name="controller_i_is_load_interface"
-   internal="controller.i_is_load_interface"
-   type="conduit"
-   dir="end" />
- <interface
    name="controller_use_z_interface"
    internal="controller.use_z_interface"
    type="conduit"
@@ -213,6 +272,41 @@
  <interface
    name="controller_weigth_interface"
    internal="controller.weigth_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="input_storage_is_write_interface"
+   internal="input_storage.is_write_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="input_storage_read_data_interface"
+   internal="input_storage.read_data_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="input_storage_write_interface"
+   internal="input_storage.write_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="label_storage_is_write_interface"
+   internal="label_storage.is_write_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="label_storage_read_data_interface"
+   internal="label_storage.read_data_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="label_storage_write_interface"
+   internal="label_storage.write_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="matrix_storage_locator_reset_interface"
+   internal="matrix_storage_locator.reset_interface"
    type="conduit"
    dir="end" />
  <interface
@@ -243,6 +337,45 @@
    enabled="1">
   <parameter name="code_size" value="12" />
  </module>
+ <module name="input_storage" kind="matrix_storage" version="1.0" enabled="1">
+  <parameter name="data_size" value="16" />
+  <parameter name="max_layer" value="5" />
+  <parameter name="size" value="3" />
+ </module>
+ <module
+   name="is_load_spreader_0"
+   kind="is_load_spreader"
+   version="1.0"
+   enabled="1">
+  <parameter name="size" value="1" />
+ </module>
+ <module
+   name="is_load_spreader_1"
+   kind="is_load_spreader"
+   version="1.0"
+   enabled="1">
+  <parameter name="size" value="1" />
+ </module>
+ <module name="label_storage" kind="matrix_storage" version="1.0" enabled="1">
+  <parameter name="data_size" value="16" />
+  <parameter name="max_layer" value="5" />
+  <parameter name="size" value="3" />
+ </module>
+ <module
+   name="matrix_location_spreader"
+   kind="matrix_location_spreader"
+   version="1.0"
+   enabled="1">
+  <parameter name="layer_index_size" value="32" />
+  <parameter name="row_index_size" value="32" />
+ </module>
+ <module
+   name="matrix_storage_locator"
+   kind="matrix_storage_locator"
+   version="1.0"
+   enabled="1">
+  <parameter name="size" value="3" />
+ </module>
  <module name="parse" kind="parse" version="1.0" enabled="1">
   <parameter name="op_size" value="4" />
   <parameter name="param_a_size" value="4" />
@@ -259,6 +392,21 @@
    start="clk_0.clk"
    end="code_storage.clock" />
  <connection kind="clock" version="20.1" start="clk_0.clk" end="code_count.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="matrix_storage_locator.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="input_storage.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="label_storage.clock" />
  <connection
    kind="conduit"
    version="20.1"
@@ -308,6 +456,94 @@
    version="20.1"
    start="fetch_to_decode_register.code_out_interface"
    end="parse.code_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="is_load_spreader_0.is_load"
+   end="controller.i_is_load_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="is_load_spreader_1.is_load"
+   end="is_load_spreader_0.is_load_1">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="is_load_spreader_1.is_load_2"
+   end="label_storage.is_read_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="matrix_storage_locator.is_load_interface"
+   end="is_load_spreader_0.is_load_2">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="input_storage.is_read_interface"
+   end="is_load_spreader_1.is_load_1">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="matrix_storage_locator.matrix_location_interface"
+   end="matrix_location_spreader.matrix_location_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="matrix_location_spreader.matrix_location_out_1_interface"
+   end="input_storage.matrix_location_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="matrix_location_spreader.matrix_location_out_2_interface"
+   end="label_storage.matrix_location_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
