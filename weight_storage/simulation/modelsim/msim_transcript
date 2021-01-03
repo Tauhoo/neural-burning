@@ -12,359 +12,43 @@
 # 
 # vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src {G:/neural-burning/general_data_operator/src/gdo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:40:14 on Dec 25,2020
+# Start time: 17:42:38 on Jan 02,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
 # -- Compiling package gdo
 # 
 # Top level modules:
 # 	--none--
-# End time: 19:40:14 on Dec 25,2020, Elapsed time: 0:00:00
+# End time: 17:42:39 on Jan 02,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+G:/neural-burning/weight_storage {G:/neural-burning/weight_storage/weight_storage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:40:15 on Dec 25,2020
+# Start time: 17:42:39 on Jan 02,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/weight_storage" G:/neural-burning/weight_storage/weight_storage.sv 
 # -- Compiling module weight_storage
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	weight_storage
-# End time: 19:40:15 on Dec 25,2020, Elapsed time: 0:00:00
+# End time: 17:42:39 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:40:29 on Dec 25,2020
+# Start time: 17:43:08 on Jan 02,2021
 # vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 19:40:29 on Dec 25,2020, Elapsed time: 0:00:00
+# End time: 17:43:08 on Jan 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 19:40:39 on Dec 25,2020
+# Start time: 17:43:12 on Jan 02,2021
 # Loading work.testbench
 # Loading sv_std.std
 # Loading work.gdo
 # Loading work.weight_storage
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-# Error loading design
-# End time: 19:40:40 on Dec 25,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 1
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:41:42 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 19:41:42 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.testbench
-# vsim work.testbench 
-# Start time: 19:41:44 on Dec 25,2020
-# Loading work.testbench
-# Loading sv_std.std
-# Loading work.gdo
-# Loading work.weight_storage
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-run
-# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "G:/neural-burning/weight_storage/testbench/testbench.hex" for reading.
-# No such file or directory. (errno = ENOENT)    : G:/neural-burning/weight_storage/testbench/testbench.v(43)
-#    Time: 0 ps  Iteration: 0  Instance: /testbench
-# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
-#    Time: 0 ps  Iteration: 0  Process: /testbench/#INITIAL#41 File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-#          x          x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -          x          x x -          x          x x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
-#    Time: 100 ps  Iteration: 0  Process: /testbench/#INITIAL#41 File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-#          x          x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -          x          x x -          x          x x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:42:58 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 19:42:58 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-run
-# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "G:
-# eural-burningweight_storage	estbenchinput.hex" for reading.
-# Invalid argument. (errno = EINVAL)    : G:/neural-burning/weight_storage/testbench/testbench.v(43)
-#    Time: 0 ps  Iteration: 0  Instance: /testbench
-# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
-#    Time: 0 ps  Iteration: 0  Process: /testbench/#INITIAL#41 File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-#          x          x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -          x          x x -          x          x x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# ** Error (suppressible): (vsim-PLI-3084) $fscanf : Argument 1 is not a valid file descriptor.
-#    Time: 100 ps  Iteration: 0  Process: /testbench/#INITIAL#41 File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-#          x          x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -          x          x x -          x          x x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:43:48 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 19:43:48 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 59
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:00:05 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 20:00:05 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 61
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 64
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 72
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 74
-run
-#          0          0 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx -          x          x x -          x          x x 0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#          0          1 1xxxxxxxxxxxxxxx1xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx -          x          x x -          x          x x 0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#          0          1 1xxxxxxxxxxxxxxx1xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx -          x          x x -          x          x x 0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#          0          1 1xxxxxxxxxxxxxxx1xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx -          x          x x -          x          x x 0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#          0          1 1xxxxxxxxxxxxxxx1xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx -          x          x x -          x          x x 0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:08:18 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 20:08:18 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/weight_storage.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:08:21 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/weight_storage.sv 
-# -- Compiling module weight_storage
-# -- Importing package gdo
-# ** Error (suppressible): G:/neural-burning/weight_storage/weight_storage.sv(57): (vlog-10008) Too many indices (2) for array type w_reg (dimensionality 1).
-# End time: 20:08:22 on Dec 25,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 61
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 64
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 72
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 74
-run
-#          0          0 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx -          x          x x -          x          x x 0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#          0          1 1xxxxxxxxxxxxxxx1xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx -          x          x x -          x          x x 0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-run
-#          0          1 1xxxxxxxxxxxxxxx1xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxx -          x          x x -          x          x x 0xxxxxxxxxxxxxxx0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 61
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 64
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 67
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 68
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 72
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 74
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:43:43 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 21:43:43 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 75
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 78
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 81
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 82
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 86
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 88
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-#          0          1 100000000000000010000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:48:45 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 21:48:45 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 75
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 80
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 82
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 83
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 92
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-run
-#        555          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 000000000000000000000000000000000000000000000000
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:50:51 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 21:50:51 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 75
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 78
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 81
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 82
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 86
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 88
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-#          0          1 100000000000000010000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-run
-#          0          1 100000000000000010000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-run
-#          0          1 100000000000000010000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-run
-#          0          1 100000000000000010000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-run
-#          0          1 100000000000000010000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-run
-#          0          1 100000000000000010000000000000000000000000000000 -          0          0 0 -          0          0 0 000000000000000000000000000000000000000000000000
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:55:38 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 21:55:39 on Dec 25,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 75
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
@@ -375,58 +59,5 @@ restart
 #    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 80
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 82
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:01:08 on Dec 25,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/weight_storage/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 22:01:08 on Dec 25,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 75
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 77
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 79
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 80
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/weight_storage/testbench/testbench.v Line: 82
-run
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-#          0          0 000000000000000000000000000000000000000000000000 -          0          0 0 -          0          1 1 100000000000000010000000000000001000000000000000
-# End time: 22:02:55 on Dec 25,2020, Elapsed time: 2:21:11
+# End time: 17:43:29 on Jan 02,2021, Elapsed time: 0:00:17
 # Errors: 0, Warnings: 5

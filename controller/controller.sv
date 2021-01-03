@@ -30,8 +30,8 @@ module controller(
     input enable;
 
     output reset; //reset code count
-    output w_layer_index; // w_layer use to load and backprop 
-    output w_row_index; // w_row use to load and backprop 
+    output [31:0] w_layer_index; // w_layer use to load and backprop 
+    output [31:0] w_row_index; // w_row use to load and backprop 
     output is_load; //load weight from weight storage
     output code_reset; // reset code line
     output code_active; // change code line

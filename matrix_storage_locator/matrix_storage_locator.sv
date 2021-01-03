@@ -21,23 +21,31 @@ module matrix_storage_locator (
     wire is_last_row; 
 
     assign is_last_row = row_reg == size - 1;
-    assign layer_index = reset ? 0 : 
-                         is_load && is_last_row ? layer_reg + 1 :
-                         layer_reg;
+    assign layer_index = reset ? 0 : layer_reg;
 
-    assign row_index = reset ? 0 : 
-                       is_load ? 
-                        is_last_row ? 0 : 
-                        row_reg + 1 :
-                       row_reg;
+    assign row_index = reset ? 0 : row_reg;
     
     initial begin
         layer_reg = 0;
-        row_reg = 2; 
+        row_reg = 0; 
     end
 
     always @(posedge clk ) begin
-        layer_reg = layer_index;
-        row_reg = row_index;
+        if (reset) begin
+            layer_reg = 0;
+            row_reg = 0; 
+        end else begin       
+            if (is_load && is_last_row) begin
+                layer_reg = layer_index + 1;
+            end
+
+            if (is_load) begin
+                if (is_last_row) begin
+                    row_reg = 0;
+                end else begin
+                    row_reg = row_index + 1;
+                end
+            end
+        end
     end
 endmodule

@@ -2,7 +2,7 @@ set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_NAM
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_VERSION "20.1"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "data_path" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../data_path.sopcinfo"]
-set_global_assignment -entity "data_path" -library "data_path" -name SLD_INFO "QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1609579429"
+set_global_assignment -entity "data_path" -library "data_path" -name SLD_INFO "QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1609678661"
 set_global_assignment -library "data_path" -name MISC_FILE [file join $::quartus(qip_path) "../data_path.cmp"]
 set_global_assignment -library "data_path" -name SLD_FILE [file join $::quartus(qip_path) "data_path.debuginfo"]
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
@@ -15,13 +15,30 @@ set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONEN
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwOTU3OTQyOQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYwOTY3ODY2MQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_NAME "d2VpZ2h0X3N0b3JhZ2U="
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "d2VpZ2h0X3N0b3JhZ2U="
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGFyYXdpdCBXYWNoYXJhaw=="
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_DESCRIPTION "VXNlIHRvIHN0b3JlIHdlaWdodA=="
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
+set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "bGF5ZXJfc2l6ZQ==::NQ==::bGF5ZXJfc2l6ZQ=="
+set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_NAME "d2VpZ2h0X2ludGVyZmFjZV9zcHJlYWRlcg=="
+set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "d2VpZ2h0X2ludGVyZmFjZV9zcHJlYWRlcg=="
+set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGlyYXdpdCBXYWNoYXJhaw=="
+set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_DESCRIPTION "U3BsaXQgd2VpZ2h0IGludGVyZmFjZSBzaWduYWw="
 set_global_assignment -entity "parse" -library "data_path" -name IP_COMPONENT_NAME "cGFyc2U="
 set_global_assignment -entity "parse" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "cGFyc2U="
 set_global_assignment -entity "parse" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -73,6 +90,18 @@ set_global_assignment -entity "fetch_decode_reg" -library "data_path" -name IP_C
 set_global_assignment -entity "fetch_decode_reg" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
 set_global_assignment -entity "fetch_decode_reg" -library "data_path" -name IP_COMPONENT_DESCRIPTION "UmVnaXN0ZXIgYmV0d2VlbiBmZXRjaCBhbmQgZGVjb2RlIGxheWVy"
 set_global_assignment -entity "fetch_decode_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29kZV9zaXpl::MTI=::Y29kZV9zaXpl"
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_NAME "ZGVjb2RlX2RlbnNlX3JlZw=="
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "ZGVjb2RlX3RvX2RlbnNlX3JlZ2lzdGVy"
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGlyYXdpdCBXYWNoYXJhaw=="
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_DESCRIPTION "QnVmZmVyIGRhdGEgYmV0d2VlbiBkZWNvZGUgYW5kIGRlbnNl"
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29zdF90eXBlX3NpemU=::OA==::Y29zdF90eXBlX3NpemU="
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGVuc2VfdHlwZV9zaXpl::NA==::ZGVuc2VfdHlwZV9zaXpl"
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YWN0X3R5cGVfc2l6ZQ==::NA==::YWN0X3R5cGVfc2l6ZQ=="
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_NAME "Y29udHJvbGxlcg=="
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "Y29udHJvbGxlcg=="
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -100,13 +129,17 @@ set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONE
 set_global_assignment -entity "code_count" -library "data_path" -name IP_COMPONENT_DESCRIPTION "SW50ZWdlciBjb3VudGVy"
 
 set_global_assignment -library "data_path" -name VERILOG_FILE [file join $::quartus(qip_path) "data_path.v"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/gdo.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/weight_storage.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/weight_interface_spreader.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/parse.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/matrix_storage_locator.sv"]
-set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/matrix_location_spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/matrix_storage.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/delay.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/fetch_decode_reg.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/decode_dense_reg.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/controller.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/code_storage.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/code_count.sv"]

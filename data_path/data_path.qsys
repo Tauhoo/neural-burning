@@ -158,6 +158,46 @@
          type = "String";
       }
    }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element decode_to_dense_register_0
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
    element fetch_to_decode_register
    {
       datum _sortIndex
@@ -170,7 +210,7 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "11";
          type = "int";
       }
    }
@@ -178,7 +218,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "7";
          type = "int";
       }
    }
@@ -186,7 +226,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "8";
          type = "int";
       }
    }
@@ -194,7 +234,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "12";
          type = "int";
       }
    }
@@ -202,7 +242,7 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "10";
          type = "int";
       }
    }
@@ -210,7 +250,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "9";
          type = "int";
       }
    }
@@ -219,6 +259,22 @@
       datum _sortIndex
       {
          value = "3";
+         type = "int";
+      }
+   }
+   element weight_interface_spreader_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element weight_storage
+   {
+      datum _sortIndex
+      {
+         value = "13";
          type = "int";
       }
    }
@@ -260,28 +316,38 @@
    type="conduit"
    dir="end" />
  <interface
-   name="controller_forward_control_interface"
-   internal="controller.forward_control_interface"
-   type="conduit"
-   dir="end" />
- <interface
    name="controller_use_z_interface"
    internal="controller.use_z_interface"
    type="conduit"
    dir="end" />
  <interface
-   name="controller_weigth_interface"
-   internal="controller.weigth_interface"
+   name="decode_to_dense_register_0_out_dense_type_interface"
+   internal="decode_to_dense_register_0.out_dense_type_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode_to_dense_register_0_out_forward_interface"
+   internal="decode_to_dense_register_0.out_forward_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode_to_dense_register_0_out_input_interface"
+   internal="decode_to_dense_register_0.out_input_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode_to_dense_register_0_out_load_w_interface"
+   internal="decode_to_dense_register_0.out_load_w_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode_to_dense_register_0_out_weight_interface"
+   internal="decode_to_dense_register_0.out_weight_interface"
    type="conduit"
    dir="end" />
  <interface
    name="input_storage_is_write_interface"
    internal="input_storage.is_write_interface"
-   type="conduit"
-   dir="end" />
- <interface
-   name="input_storage_read_data_interface"
-   internal="input_storage.read_data_interface"
    type="conduit"
    dir="end" />
  <interface
@@ -295,11 +361,6 @@
    type="conduit"
    dir="end" />
  <interface
-   name="label_storage_read_data_interface"
-   internal="label_storage.read_data_interface"
-   type="conduit"
-   dir="end" />
- <interface
    name="label_storage_write_interface"
    internal="label_storage.write_interface"
    type="conduit"
@@ -309,12 +370,27 @@
    internal="matrix_storage_locator.reset_interface"
    type="conduit"
    dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="parse_0_parameter_type_interface"
-   internal="parse.parameter_type_interface"
+   name="weight_storage_is_update_interface"
+   internal="weight_storage.is_update_interface"
    type="conduit"
    dir="end" />
- <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="weight_storage_is_write_interface"
+   internal="weight_storage.is_write_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="weight_storage_update_weight_interface"
+   internal="weight_storage.update_weight_interface"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="weight_storage_write_interface"
+   internal="weight_storage.write_interface"
+   type="conduit"
+   dir="end" />
  <module name="clk_0" kind="clock_source" version="20.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -328,6 +404,17 @@
  </module>
  <module name="controller" kind="controller" version="1.0" enabled="1">
   <parameter name="op_size" value="4" />
+  <parameter name="size" value="3" />
+ </module>
+ <module
+   name="decode_to_dense_register_0"
+   kind="decode_to_dense_register"
+   version="1.0"
+   enabled="1">
+  <parameter name="act_type_size" value="4" />
+  <parameter name="cost_type_size" value="8" />
+  <parameter name="data_size" value="16" />
+  <parameter name="dense_type_size" value="4" />
   <parameter name="size" value="3" />
  </module>
  <module
@@ -381,6 +468,16 @@
   <parameter name="param_a_size" value="4" />
   <parameter name="param_b_size" value="4" />
  </module>
+ <module
+   name="weight_interface_spreader_0"
+   kind="weight_interface_spreader"
+   version="1.0"
+   enabled="1" />
+ <module name="weight_storage" kind="weight_storage" version="1.0" enabled="1">
+  <parameter name="data_size" value="16" />
+  <parameter name="layer_size" value="5" />
+  <parameter name="size" value="3" />
+ </module>
  <connection
    kind="clock"
    version="20.1"
@@ -407,6 +504,16 @@
    version="20.1"
    start="clk_0.clk"
    end="label_storage.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="weight_storage.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="decode_to_dense_register_0.clock" />
  <connection
    kind="conduit"
    version="20.1"
@@ -456,6 +563,28 @@
    version="20.1"
    start="fetch_to_decode_register.code_out_interface"
    end="parse.code_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="weight_interface_spreader_0.forward_interface"
+   end="decode_to_dense_register_0.in_weight_location_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="decode_to_dense_register_0.in_control_interface"
+   end="controller.forward_control_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -564,6 +693,39 @@
  <connection
    kind="conduit"
    version="20.1"
+   start="parse.parameter_type_interface"
+   end="decode_to_dense_register_0.in_typel_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="input_storage.read_data_interface"
+   end="decode_to_dense_register_0.in_input_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="label_storage.read_data_interface"
+   end="decode_to_dense_register_0.in_label_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
    start="fetch_to_decode_register.reset_code_count_interface"
    end="controller.code_count_reset_interface">
   <parameter name="endPort" value="" />
@@ -577,6 +739,39 @@
    version="20.1"
    start="code_count.reset_interface"
    end="fetch_to_decode_register.reset_code_count_out_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="weight_interface_spreader_0.weight_control_out_interface"
+   end="weight_storage.load_weight_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="weight_storage.weight_output_interface"
+   end="decode_to_dense_register_0.in_weight_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="controller.weigth_interface"
+   end="weight_interface_spreader_0.weight_control_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

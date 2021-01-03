@@ -31,7 +31,7 @@ module matrix_storage(
 	generate
 		for (gen_index = 0; gen_index < size; gen_index = gen_index + 1) begin : set_up_output
 			assign read_data[(size - gen_index)*data_size - 1 -: data_size] = is_read ? 
-				read_row_index == write_layer_index && read_row_index == write_row_index ? write_data[(size - gen_index)*data_size - 1 -: data_size] : 
+				read_layer_index == write_layer_index && read_row_index == write_row_index && is_write ? write_data[(size - gen_index)*data_size - 1 -: data_size] : 
 				storage[gen_index][read_row_index][read_layer_index]:
 			0;
 		end

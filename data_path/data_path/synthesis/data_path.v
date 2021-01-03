@@ -4,57 +4,82 @@
 
 `timescale 1 ps / 1 ps
 module data_path (
-		input  wire        clk_clk,                                            //                                    clk.clk
-		input  wire        code_storage_enable_interface_enable,               //          code_storage_enable_interface.enable
-		input  wire [11:0] code_storage_write_interface_write_data,            //           code_storage_write_interface.write_data
-		input  wire        code_storage_write_interface_is_write,              //                                       .is_write
-		input  wire [31:0] code_storage_write_interface_write_line,            //                                       .write_line
-		input  wire        controller_enable_interface_enable,                 //            controller_enable_interface.enable
-		output wire        controller_forward_control_interface_is_update,     //   controller_forward_control_interface.is_update
-		output wire        controller_forward_control_interface_load_w,        //                                       .load_w
-		output wire        controller_forward_control_interface_backprop_cost, //                                       .backprop_cost
-		output wire        controller_use_z_interface_use_z,                   //             controller_use_z_interface.use_z
-		output wire        controller_weigth_interface_w_layer_index,          //            controller_weigth_interface.w_layer_index
-		output wire        controller_weigth_interface_w_row_index,            //                                       .w_row_index
-		output wire        controller_weigth_interface_is_load,                //                                       .is_load
-		input  wire        input_storage_is_write_interface_is_write,          //       input_storage_is_write_interface.is_write
-		output wire [47:0] input_storage_read_data_interface_read_data,        //      input_storage_read_data_interface.read_data
-		input  wire [31:0] input_storage_write_interface_write_layer_index,    //          input_storage_write_interface.write_layer_index
-		input  wire [31:0] input_storage_write_interface_write_row_index,      //                                       .write_row_index
-		input  wire [47:0] input_storage_write_interface_write_data,           //                                       .write_data
-		input  wire        label_storage_is_write_interface_is_write,          //       label_storage_is_write_interface.is_write
-		output wire [47:0] label_storage_read_data_interface_read_data,        //      label_storage_read_data_interface.read_data
-		input  wire [31:0] label_storage_write_interface_write_layer_index,    //          label_storage_write_interface.write_layer_index
-		input  wire [31:0] label_storage_write_interface_write_row_index,      //                                       .write_row_index
-		input  wire [47:0] label_storage_write_interface_write_data,           //                                       .write_data
-		input  wire        matrix_storage_locator_reset_interface_reset,       // matrix_storage_locator_reset_interface.reset
-		output wire [3:0]  parse_0_parameter_type_interface_act_type,          //       parse_0_parameter_type_interface.act_type
-		output wire [3:0]  parse_0_parameter_type_interface_dense_type,        //                                       .dense_type
-		output wire [7:0]  parse_0_parameter_type_interface_cost_type,         //                                       .cost_type
-		input  wire        reset_reset_n                                       //                                  reset.reset_n
+		input  wire        clk_clk,                                                            //                                                 clk.clk
+		input  wire        code_storage_enable_interface_enable,                               //                       code_storage_enable_interface.enable
+		input  wire [11:0] code_storage_write_interface_write_data,                            //                        code_storage_write_interface.write_data
+		input  wire        code_storage_write_interface_is_write,                              //                                                    .is_write
+		input  wire [31:0] code_storage_write_interface_write_line,                            //                                                    .write_line
+		input  wire        controller_enable_interface_enable,                                 //                         controller_enable_interface.enable
+		output wire        controller_use_z_interface_use_z,                                   //                          controller_use_z_interface.use_z
+		output wire [3:0]  decode_to_dense_register_0_out_dense_type_interface_dense_type_out, // decode_to_dense_register_0_out_dense_type_interface.dense_type_out
+		output wire [3:0]  decode_to_dense_register_0_out_forward_interface_act_type_out,      //    decode_to_dense_register_0_out_forward_interface.act_type_out
+		output wire [7:0]  decode_to_dense_register_0_out_forward_interface_cost_type_out,     //                                                    .cost_type_out
+		output wire [31:0] decode_to_dense_register_0_out_forward_interface_w_layer_index_out, //                                                    .w_layer_index_out
+		output wire [31:0] decode_to_dense_register_0_out_forward_interface_w_row_index_out,   //                                                    .w_row_index_out
+		output wire        decode_to_dense_register_0_out_forward_interface_is_update_out,     //                                                    .is_update_out
+		output wire        decode_to_dense_register_0_out_forward_interface_backprop_cost_out, //                                                    .backprop_cost_out
+		output wire [47:0] decode_to_dense_register_0_out_forward_interface_label_out,         //                                                    .label_out
+		output wire [47:0] decode_to_dense_register_0_out_input_interface_x_out,               //      decode_to_dense_register_0_out_input_interface.x_out
+		output wire        decode_to_dense_register_0_out_load_w_interface_load_w_out,         //     decode_to_dense_register_0_out_load_w_interface.load_w_out
+		output wire [47:0] decode_to_dense_register_0_out_weight_interface_w_out,              //     decode_to_dense_register_0_out_weight_interface.w_out
+		input  wire        input_storage_is_write_interface_is_write,                          //                    input_storage_is_write_interface.is_write
+		input  wire [31:0] input_storage_write_interface_write_layer_index,                    //                       input_storage_write_interface.write_layer_index
+		input  wire [31:0] input_storage_write_interface_write_row_index,                      //                                                    .write_row_index
+		input  wire [47:0] input_storage_write_interface_write_data,                           //                                                    .write_data
+		input  wire        label_storage_is_write_interface_is_write,                          //                    label_storage_is_write_interface.is_write
+		input  wire [31:0] label_storage_write_interface_write_layer_index,                    //                       label_storage_write_interface.write_layer_index
+		input  wire [31:0] label_storage_write_interface_write_row_index,                      //                                                    .write_row_index
+		input  wire [47:0] label_storage_write_interface_write_data,                           //                                                    .write_data
+		input  wire        matrix_storage_locator_reset_interface_reset,                       //              matrix_storage_locator_reset_interface.reset
+		input  wire        reset_reset_n,                                                      //                                               reset.reset_n
+		input  wire        weight_storage_is_update_interface_is_update,                       //                  weight_storage_is_update_interface.is_update
+		input  wire        weight_storage_is_write_interface_is_write,                         //                   weight_storage_is_write_interface.is_write
+		input  wire [47:0] weight_storage_update_weight_interface_dc_dw,                       //              weight_storage_update_weight_interface.dc_dw
+		input  wire [31:0] weight_storage_update_weight_interface_layer_index,                 //                                                    .layer_index
+		input  wire [31:0] weight_storage_update_weight_interface_row_index,                   //                                                    .row_index
+		input  wire [31:0] weight_storage_write_interface_write_layer_index,                   //                      weight_storage_write_interface.write_layer_index
+		input  wire [31:0] weight_storage_write_interface_write_row_index,                     //                                                    .write_row_index
+		input  wire [47:0] weight_storage_write_interface_write_data                           //                                                    .write_data
 	);
 
-	wire         controller_code_control_interface_active;                             // controller:code_active -> code_storage:active
-	wire         controller_code_control_interface_reset;                              // controller:code_reset -> code_storage:reset
-	wire  [31:0] code_count_count_interface_code_count;                                // code_count:count -> controller:code_count
-	wire  [31:0] fetch_to_decode_register_code_index_out_interface_code_index;         // fetch_to_decode_register:code_index_out -> controller:code_index
-	wire  [11:0] code_storage_code_interface_code;                                     // code_storage:code -> fetch_to_decode_register:code
-	wire  [31:0] code_storage_code_interface_code_index;                               // code_storage:code_index -> fetch_to_decode_register:code_index
-	wire  [11:0] fetch_to_decode_register_code_out_interface_code;                     // fetch_to_decode_register:code_out -> parse:code
-	wire         controller_i_is_load_interface_is_load;                               // controller:i_is_load -> is_load_spreader_0:data_in
-	wire   [0:0] is_load_spreader_0_is_load_1_is_load;                                 // is_load_spreader_0:data_out_a -> is_load_spreader_1:data_in
-	wire   [0:0] is_load_spreader_1_is_load_2_is_load;                                 // is_load_spreader_1:data_out_b -> label_storage:is_read
-	wire   [0:0] is_load_spreader_0_is_load_2_is_load;                                 // is_load_spreader_0:data_out_b -> matrix_storage_locator:is_load
-	wire   [0:0] is_load_spreader_1_is_load_1_is_load;                                 // is_load_spreader_1:data_out_a -> input_storage:is_read
-	wire  [31:0] matrix_storage_locator_matrix_location_interface_row_index;           // matrix_storage_locator:row_index -> matrix_location_spreader:read_row_index
-	wire  [31:0] matrix_storage_locator_matrix_location_interface_layer_index;         // matrix_storage_locator:layer_index -> matrix_location_spreader:read_layer_index
-	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_row_index;   // matrix_location_spreader:read_row_index_1 -> input_storage:read_row_index
-	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_layer_index; // matrix_location_spreader:read_layer_index_1 -> input_storage:read_layer_index
-	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_row_index;   // matrix_location_spreader:read_row_index_2 -> label_storage:read_row_index
-	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_layer_index; // matrix_location_spreader:read_layer_index_2 -> label_storage:read_layer_index
-	wire   [3:0] parse_op_interface_op;                                                // parse:op -> controller:op
-	wire         controller_code_count_reset_interface_reset;                          // controller:reset -> fetch_to_decode_register:reset_code_count
-	wire         fetch_to_decode_register_reset_code_count_out_interface_reset;        // fetch_to_decode_register:reset_code_count_out -> code_count:reset
+	wire         controller_code_control_interface_active;                               // controller:code_active -> code_storage:active
+	wire         controller_code_control_interface_reset;                                // controller:code_reset -> code_storage:reset
+	wire  [31:0] code_count_count_interface_code_count;                                  // code_count:count -> controller:code_count
+	wire  [31:0] fetch_to_decode_register_code_index_out_interface_code_index;           // fetch_to_decode_register:code_index_out -> controller:code_index
+	wire  [11:0] code_storage_code_interface_code;                                       // code_storage:code -> fetch_to_decode_register:code
+	wire  [31:0] code_storage_code_interface_code_index;                                 // code_storage:code_index -> fetch_to_decode_register:code_index
+	wire  [11:0] fetch_to_decode_register_code_out_interface_code;                       // fetch_to_decode_register:code_out -> parse:code
+	wire  [31:0] weight_interface_spreader_0_forward_interface_w_layer_index;            // weight_interface_spreader_0:w_layer_index_out_forward -> decode_to_dense_register_0:w_layer_index
+	wire  [31:0] weight_interface_spreader_0_forward_interface_w_row_index;              // weight_interface_spreader_0:w_row_index_out_forward -> decode_to_dense_register_0:w_row_index
+	wire         controller_forward_control_interface_is_update;                         // controller:is_update -> decode_to_dense_register_0:is_update
+	wire         controller_forward_control_interface_load_w;                            // controller:load_w -> decode_to_dense_register_0:load_w
+	wire         controller_forward_control_interface_backprop_cost;                     // controller:backprop_cost -> decode_to_dense_register_0:backprop_cost
+	wire         controller_i_is_load_interface_is_load;                                 // controller:i_is_load -> is_load_spreader_0:data_in
+	wire   [0:0] is_load_spreader_0_is_load_1_is_load;                                   // is_load_spreader_0:data_out_a -> is_load_spreader_1:data_in
+	wire   [0:0] is_load_spreader_1_is_load_2_is_load;                                   // is_load_spreader_1:data_out_b -> label_storage:is_read
+	wire   [0:0] is_load_spreader_0_is_load_2_is_load;                                   // is_load_spreader_0:data_out_b -> matrix_storage_locator:is_load
+	wire   [0:0] is_load_spreader_1_is_load_1_is_load;                                   // is_load_spreader_1:data_out_a -> input_storage:is_read
+	wire  [31:0] matrix_storage_locator_matrix_location_interface_row_index;             // matrix_storage_locator:row_index -> matrix_location_spreader:read_row_index
+	wire  [31:0] matrix_storage_locator_matrix_location_interface_layer_index;           // matrix_storage_locator:layer_index -> matrix_location_spreader:read_layer_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_row_index;     // matrix_location_spreader:read_row_index_1 -> input_storage:read_row_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_layer_index;   // matrix_location_spreader:read_layer_index_1 -> input_storage:read_layer_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_row_index;     // matrix_location_spreader:read_row_index_2 -> label_storage:read_row_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_layer_index;   // matrix_location_spreader:read_layer_index_2 -> label_storage:read_layer_index
+	wire   [3:0] parse_op_interface_op;                                                  // parse:op -> controller:op
+	wire   [3:0] parse_parameter_type_interface_dense_type;                              // parse:dense_type -> decode_to_dense_register_0:dense_type
+	wire   [7:0] parse_parameter_type_interface_cost_type;                               // parse:cost_type -> decode_to_dense_register_0:cost_type
+	wire   [3:0] parse_parameter_type_interface_act_type;                                // parse:act_type -> decode_to_dense_register_0:act_type
+	wire  [47:0] input_storage_read_data_interface_read_data;                            // input_storage:read_data -> decode_to_dense_register_0:x
+	wire  [47:0] label_storage_read_data_interface_read_data;                            // label_storage:read_data -> decode_to_dense_register_0:label_in
+	wire         controller_code_count_reset_interface_reset;                            // controller:reset -> fetch_to_decode_register:reset_code_count
+	wire         fetch_to_decode_register_reset_code_count_out_interface_reset;          // fetch_to_decode_register:reset_code_count_out -> code_count:reset
+	wire         weight_interface_spreader_0_weight_control_out_interface_is_load;       // weight_interface_spreader_0:is_load_out -> weight_storage:is_read
+	wire  [31:0] weight_interface_spreader_0_weight_control_out_interface_w_row_index;   // weight_interface_spreader_0:w_row_index_out -> weight_storage:w_row_index
+	wire  [31:0] weight_interface_spreader_0_weight_control_out_interface_w_layer_index; // weight_interface_spreader_0:w_layer_index_out -> weight_storage:w_layer_index
+	wire  [47:0] weight_storage_weight_output_interface_weight;                          // weight_storage:w -> decode_to_dense_register_0:w
+	wire         controller_weigth_interface_is_load;                                    // controller:is_load -> weight_interface_spreader_0:is_load
+	wire  [31:0] controller_weigth_interface_w_layer_index;                              // controller:w_layer_index -> weight_interface_spreader_0:w_layer_index
+	wire  [31:0] controller_weigth_interface_w_row_index;                                // controller:w_row_index -> weight_interface_spreader_0:w_row_index
 
 	code_count code_count (
 		.clk   (clk_clk),                                                       //           clock.clk
@@ -96,6 +121,38 @@ module data_path (
 		.code_active   (controller_code_control_interface_active),                     //     code_control_interface.active
 		.code_reset    (controller_code_control_interface_reset),                      //                           .reset
 		.enable        (controller_enable_interface_enable)                            //           enable_interface.enable
+	);
+
+	decode_dense_reg #(
+		.size            (3),
+		.data_size       (16),
+		.cost_type_size  (8),
+		.dense_type_size (4),
+		.act_type_size   (4)
+	) decode_to_dense_register_0 (
+		.clk               (clk_clk),                                                            //                        clock.clk
+		.w_out             (decode_to_dense_register_0_out_weight_interface_w_out),              //         out_weight_interface.w_out
+		.w                 (weight_storage_weight_output_interface_weight),                      //          in_weight_interface.weight
+		.label_in          (label_storage_read_data_interface_read_data),                        //           in_label_interface.read_data
+		.x                 (input_storage_read_data_interface_read_data),                        //           in_input_interface.read_data
+		.x_out             (decode_to_dense_register_0_out_input_interface_x_out),               //          out_input_interface.x_out
+		.load_w_out        (decode_to_dense_register_0_out_load_w_interface_load_w_out),         //         out_load_w_interface.load_w_out
+		.w_layer_index     (weight_interface_spreader_0_forward_interface_w_layer_index),        // in_weight_location_interface.w_layer_index
+		.w_row_index       (weight_interface_spreader_0_forward_interface_w_row_index),          //                             .w_row_index
+		.act_type_out      (decode_to_dense_register_0_out_forward_interface_act_type_out),      //        out_forward_interface.act_type_out
+		.cost_type_out     (decode_to_dense_register_0_out_forward_interface_cost_type_out),     //                             .cost_type_out
+		.w_layer_index_out (decode_to_dense_register_0_out_forward_interface_w_layer_index_out), //                             .w_layer_index_out
+		.w_row_index_out   (decode_to_dense_register_0_out_forward_interface_w_row_index_out),   //                             .w_row_index_out
+		.is_update_out     (decode_to_dense_register_0_out_forward_interface_is_update_out),     //                             .is_update_out
+		.backprop_cost_out (decode_to_dense_register_0_out_forward_interface_backprop_cost_out), //                             .backprop_cost_out
+		.label_out         (decode_to_dense_register_0_out_forward_interface_label_out),         //                             .label_out
+		.dense_type_out    (decode_to_dense_register_0_out_dense_type_interface_dense_type_out), //     out_dense_type_interface.dense_type_out
+		.act_type          (parse_parameter_type_interface_act_type),                            //           in_typel_interface.act_type
+		.cost_type         (parse_parameter_type_interface_cost_type),                           //                             .cost_type
+		.dense_type        (parse_parameter_type_interface_dense_type),                          //                             .dense_type
+		.backprop_cost     (controller_forward_control_interface_backprop_cost),                 //         in_control_interface.backprop_cost
+		.is_update         (controller_forward_control_interface_is_update),                     //                             .is_update
+		.load_w            (controller_forward_control_interface_load_w)                         //                             .load_w
 	);
 
 	fetch_decode_reg #(
@@ -186,10 +243,41 @@ module data_path (
 		.param_b_size (4)
 	) parse (
 		.code       (fetch_to_decode_register_code_out_interface_code), //           code_interface.code
-		.act_type   (parse_0_parameter_type_interface_act_type),        // parameter_type_interface.act_type
-		.dense_type (parse_0_parameter_type_interface_dense_type),      //                         .dense_type
-		.cost_type  (parse_0_parameter_type_interface_cost_type),       //                         .cost_type
+		.act_type   (parse_parameter_type_interface_act_type),          // parameter_type_interface.act_type
+		.dense_type (parse_parameter_type_interface_dense_type),        //                         .dense_type
+		.cost_type  (parse_parameter_type_interface_cost_type),         //                         .cost_type
 		.op         (parse_op_interface_op)                             //             op_interface.op
+	);
+
+	weight_interface_spreader weight_interface_spreader_0 (
+		.w_layer_index_out_forward (weight_interface_spreader_0_forward_interface_w_layer_index),            //            forward_interface.w_layer_index
+		.w_row_index_out_forward   (weight_interface_spreader_0_forward_interface_w_row_index),              //                             .w_row_index
+		.is_load_out               (weight_interface_spreader_0_weight_control_out_interface_is_load),       // weight_control_out_interface.is_load
+		.w_row_index_out           (weight_interface_spreader_0_weight_control_out_interface_w_row_index),   //                             .w_row_index
+		.w_layer_index_out         (weight_interface_spreader_0_weight_control_out_interface_w_layer_index), //                             .w_layer_index
+		.is_load                   (controller_weigth_interface_is_load),                                    //     weight_control_interface.is_load
+		.w_layer_index             (controller_weigth_interface_w_layer_index),                              //                             .w_layer_index
+		.w_row_index               (controller_weigth_interface_w_row_index)                                 //                             .w_row_index
+	);
+
+	weight_storage #(
+		.data_size  (16),
+		.size       (3),
+		.layer_size (5)
+	) weight_storage (
+		.clk               (clk_clk),                                                                //                   clock.clk
+		.write_layer_index (weight_storage_write_interface_write_layer_index),                       //         write_interface.write_layer_index
+		.write_row_index   (weight_storage_write_interface_write_row_index),                         //                        .write_row_index
+		.write_data        (weight_storage_write_interface_write_data),                              //                        .write_data
+		.is_update         (weight_storage_is_update_interface_is_update),                           //     is_update_interface.is_update
+		.is_write          (weight_storage_is_write_interface_is_write),                             //      is_write_interface.is_write
+		.w                 (weight_storage_weight_output_interface_weight),                          // weight_output_interface.weight
+		.dc_dw             (weight_storage_update_weight_interface_dc_dw),                           // update_weight_interface.dc_dw
+		.layer_index       (weight_storage_update_weight_interface_layer_index),                     //                        .layer_index
+		.row_index         (weight_storage_update_weight_interface_row_index),                       //                        .row_index
+		.is_read           (weight_interface_spreader_0_weight_control_out_interface_is_load),       //   load_weight_interface.is_load
+		.w_layer_index     (weight_interface_spreader_0_weight_control_out_interface_w_layer_index), //                        .w_layer_index
+		.w_row_index       (weight_interface_spreader_0_weight_control_out_interface_w_row_index)    //                        .w_row_index
 	);
 
 endmodule
