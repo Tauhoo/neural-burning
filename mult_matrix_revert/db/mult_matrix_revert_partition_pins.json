@@ -56,10 +56,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
 					"name" : "input_stream[1]",
 					"strict" : false
 				},
@@ -73,6 +69,10 @@
 				},
 				{
 					"name" : "input_stream[4]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				},
 				{

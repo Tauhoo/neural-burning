@@ -1,5 +1,5 @@
 Flow report for mult_matrix_prep
-Tue Dec 22 20:50:38 2020
+Sun Jan 03 21:19:27 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Dec 22 20:50:38 2020       ;
+; Flow Status                     ; Successful - Sun Jan 03 21:19:27 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mult_matrix_prep                            ;
 ; Top-level Entity Name           ; mult_matrix_prep                            ;
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 24                                          ;
+; Total registers                 ; 4                                           ;
 ; Total pins                      ; 25                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/22/2020 20:50:31 ;
+; Start date & time ; 01/03/2021 21:19:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mult_matrix_prep    ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 66504332206614.160864503100436         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 66504332206614.160968356003988         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -106,8 +106,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4832 MB             ; 00:00:14                           ;
-; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:14                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4822 MB             ; 00:00:15                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

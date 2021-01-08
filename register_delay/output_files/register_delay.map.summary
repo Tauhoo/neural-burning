@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Dec 31 16:11:54 2020
+Analysis & Synthesis Status : Successful - Tue Jan 05 20:45:59 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : register_delay
-Top-level Entity Name : diff_backprop_reg
+Top-level Entity Name : delay
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 262
-Total pins : 581
+Total registers : 16
+Total pins : 33
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

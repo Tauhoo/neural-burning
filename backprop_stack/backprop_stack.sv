@@ -15,7 +15,7 @@ module backprop_stack(backprop_dense,
     
     import gdo::gdo_add;
     import gdo::gdo_mult;
-	 import gdo::gdo_size;
+	import gdo::gdo_size;
 
     input clk;
     input reset;

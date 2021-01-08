@@ -14,7 +14,7 @@ module delay(bus_in, bus_out, clk);
     always @(posedge clk ) begin
         buffer[0] <= bus_in;
         for (int index = 1; index  < cycle; index = index + 1) begin
-            buffer[index - 1] <= buffer[index];
+            buffer[index] <= buffer[index - 1];
         end
     end
 endmodule

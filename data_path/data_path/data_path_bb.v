@@ -25,17 +25,17 @@ module data_path (
 	weight_storage_write_interface_write_layer_index,
 	weight_storage_write_interface_write_row_index,
 	weight_storage_write_interface_write_data,
-	decode_to_dense_register_0_out_weight_interface_w_out,
-	decode_to_dense_register_0_out_input_interface_x_out,
-	decode_to_dense_register_0_out_load_w_interface_load_w_out,
-	decode_to_dense_register_0_out_forward_interface_act_type_out,
-	decode_to_dense_register_0_out_forward_interface_cost_type_out,
-	decode_to_dense_register_0_out_forward_interface_w_layer_index_out,
-	decode_to_dense_register_0_out_forward_interface_w_row_index_out,
-	decode_to_dense_register_0_out_forward_interface_is_update_out,
-	decode_to_dense_register_0_out_forward_interface_backprop_cost_out,
-	decode_to_dense_register_0_out_forward_interface_label_out,
-	decode_to_dense_register_0_out_dense_type_interface_dense_type_out);	
+	activate_to_diff_register_out_forward_interface_label,
+	activate_to_diff_register_out_forward_interface_dense_type,
+	activate_to_diff_register_out_forward_interface_backprop_cost,
+	activate_to_diff_register_out_forward_interface_w_row_index,
+	activate_to_diff_register_out_forward_interface_is_update,
+	activate_to_diff_register_out_forward_interface_w_layer_index,
+	activate_to_diff_register_out_cost_type_interface_cost_type,
+	activate_to_diff_register_out_z_interface_z,
+	activate_to_diff_register_out_x_interface_x,
+	activate_to_diff_register_out_w_interface_w,
+	activate_to_diff_register_clock_clk);	
 
 	input		clk_clk;
 	input		code_storage_enable_interface_enable;
@@ -62,15 +62,15 @@ module data_path (
 	input	[31:0]	weight_storage_write_interface_write_layer_index;
 	input	[31:0]	weight_storage_write_interface_write_row_index;
 	input	[47:0]	weight_storage_write_interface_write_data;
-	output	[47:0]	decode_to_dense_register_0_out_weight_interface_w_out;
-	output	[47:0]	decode_to_dense_register_0_out_input_interface_x_out;
-	output		decode_to_dense_register_0_out_load_w_interface_load_w_out;
-	output	[3:0]	decode_to_dense_register_0_out_forward_interface_act_type_out;
-	output	[7:0]	decode_to_dense_register_0_out_forward_interface_cost_type_out;
-	output	[31:0]	decode_to_dense_register_0_out_forward_interface_w_layer_index_out;
-	output	[31:0]	decode_to_dense_register_0_out_forward_interface_w_row_index_out;
-	output		decode_to_dense_register_0_out_forward_interface_is_update_out;
-	output		decode_to_dense_register_0_out_forward_interface_backprop_cost_out;
-	output	[47:0]	decode_to_dense_register_0_out_forward_interface_label_out;
-	output	[3:0]	decode_to_dense_register_0_out_dense_type_interface_dense_type_out;
+	output	[47:0]	activate_to_diff_register_out_forward_interface_label;
+	output	[3:0]	activate_to_diff_register_out_forward_interface_dense_type;
+	output		activate_to_diff_register_out_forward_interface_backprop_cost;
+	output	[31:0]	activate_to_diff_register_out_forward_interface_w_row_index;
+	output		activate_to_diff_register_out_forward_interface_is_update;
+	output	[31:0]	activate_to_diff_register_out_forward_interface_w_layer_index;
+	output	[7:0]	activate_to_diff_register_out_cost_type_interface_cost_type;
+	output	[47:0]	activate_to_diff_register_out_z_interface_z;
+	output	[47:0]	activate_to_diff_register_out_x_interface_x;
+	output	[47:0]	activate_to_diff_register_out_w_interface_w;
+	input		activate_to_diff_register_clock_clk;
 endmodule

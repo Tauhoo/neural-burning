@@ -55,13 +55,13 @@ module decode_dense_reg (
     output [data_size*size - 1:0] x_out;
     output [data_size*size - 1:0] label_out;
 
-    delay #(.data_size(32), .size(1)) 
+    delay #(.data_size(act_type_size), .size(1)) 
     delay_inst_act_type(.bus_in(act_type), .bus_out(act_type_out), .clk(clk));
     
-    delay #(.data_size(32), .size(1)) 
+    delay #(.data_size(dense_type_size), .size(1)) 
     delay_inst_dense_type(.bus_in(dense_type), .bus_out(dense_type_out), .clk(clk));
     
-    delay #(.data_size(32), .size(1)) 
+    delay #(.data_size(cost_type_size), .size(1)) 
     delay_inst_cost_type(.bus_in(cost_type), .bus_out(cost_type_out), .clk(clk));
     
     delay #(.data_size(data_size), .size(size)) 

@@ -12,31 +12,38 @@
 # 
 # vlog -sv -work work +incdir+G:/neural-burning/mult_matrix_revert {G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:56:01 on Dec 22,2020
+# Start time: 13:49:28 on Jan 04,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/mult_matrix_revert" G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv 
 # -- Compiling module mult_matrix_revert
 # 
 # Top level modules:
 # 	mult_matrix_revert
-# End time: 20:56:01 on Dec 22,2020, Elapsed time: 0:00:00
+# End time: 13:49:28 on Jan 04,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/testbench/testbench.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:56:12 on Dec 22,2020
+# Start time: 13:49:45 on Jan 04,2021
 # vlog -reportprogress 300 -work work G:/neural-burning/mult_matrix_revert/testbench/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 20:56:12 on Dec 22,2020, Elapsed time: 0:00:00
+# End time: 13:49:45 on Jan 04,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 20:56:17 on Dec 22,2020
+# Start time: 13:49:48 on Jan 04,2021
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.mult_matrix_revert
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.sv Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.sv Line: 36
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
 #    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.sv Line: 34
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
@@ -50,6 +57,28 @@ run
 run
 run
 run
+vlog -sv -work work +incdir+G:/neural-burning/mult_matrix_revert G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:02:14 on Jan 04,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/mult_matrix_revert" G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv 
+# -- Compiling module mult_matrix_revert
+# 
+# Top level modules:
+# 	mult_matrix_revert
+# End time: 14:02:14 on Jan 04,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mult_matrix_revert
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.sv Line: 34
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/mult_matrix_revert/testbench/testbench.sv Line: 36
 run
-# End time: 20:57:18 on Dec 22,2020, Elapsed time: 0:01:01
+run
+run
+run
+run
+run
+# End time: 14:02:39 on Jan 04,2021, Elapsed time: 0:12:51
 # Errors: 0, Warnings: 2

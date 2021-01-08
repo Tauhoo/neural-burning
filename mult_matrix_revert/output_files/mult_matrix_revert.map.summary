@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Dec 22 20:55:51 2020
+Analysis & Synthesis Status : Successful - Mon Jan 04 13:49:13 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : mult_matrix_revert
 Top-level Entity Name : mult_matrix_revert
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 24
+Total registers : 12
 Total pins : 25
 Total virtual pins : 0
 Total block memory bits : 0

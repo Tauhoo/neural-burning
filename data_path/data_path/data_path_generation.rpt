@@ -2,6 +2,10 @@ Info: Starting: Create block symbol file (.bsf)
 Info: qsys-generate G:\neural-burning\data_path\data_path.qsys --block-symbol-file --output-directory=G:\neural-burning\data_path\data_path --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading data_path/data_path.qsys
 Progress: Reading input file
+Progress: Adding activate_to_diff_register [activate_to_diff_register 1.0]
+Progress: Parameterizing module activate_to_diff_register
+Progress: Adding activation [activation 1.0]
+Progress: Parameterizing module activation
 Progress: Adding clk_0 [clock_source 20.1]
 Progress: Parameterizing module clk_0
 Progress: Adding code_count [code_count 1.0]
@@ -10,8 +14,12 @@ Progress: Adding code_storage [code_storage 1.0]
 Progress: Parameterizing module code_storage
 Progress: Adding controller [controller 1.0]
 Progress: Parameterizing module controller
-Progress: Adding decode_to_dense_register_0 [decode_to_dense_register 1.0]
-Progress: Parameterizing module decode_to_dense_register_0
+Progress: Adding decode_to_dense_register [decode_to_dense_register 1.0]
+Progress: Parameterizing module decode_to_dense_register
+Progress: Adding dense_layer_delay_reg [dense_layer_delay_reg 1.0]
+Progress: Parameterizing module dense_layer_delay_reg
+Progress: Adding dense_to_activate_register [dense_to_activate_register 1.0]
+Progress: Parameterizing module dense_to_activate_register
 Progress: Adding fetch_to_decode_register [fetch_to_decode_register 1.0]
 Progress: Parameterizing module fetch_to_decode_register
 Progress: Adding input_storage [matrix_storage 1.0]
@@ -26,10 +34,18 @@ Progress: Adding matrix_location_spreader [matrix_location_spreader 1.0]
 Progress: Parameterizing module matrix_location_spreader
 Progress: Adding matrix_storage_locator [matrix_storage_locator 1.0]
 Progress: Parameterizing module matrix_storage_locator
+Progress: Adding mult_matrix_prep [mult_matrix_prep 1.0]
+Progress: Parameterizing module mult_matrix_prep
+Progress: Adding mult_matrix_revert [mult_matrix_revert 1.0]
+Progress: Parameterizing module mult_matrix_revert
 Progress: Adding parse [parse 1.0]
 Progress: Parameterizing module parse
-Progress: Adding weight_interface_spreader_0 [weight_interface_spreader 1.0]
-Progress: Parameterizing module weight_interface_spreader_0
+Progress: Adding systolic [systolic 1.0]
+Progress: Parameterizing module systolic
+Progress: Adding w_and_x_spreader [w_and_x_spreader 1.0]
+Progress: Parameterizing module w_and_x_spreader
+Progress: Adding weight_interface_spreader [weight_interface_spreader 1.0]
+Progress: Parameterizing module weight_interface_spreader
 Progress: Adding weight_storage [weight_storage 1.0]
 Progress: Parameterizing module weight_storage
 Progress: Building connections
@@ -43,6 +59,10 @@ Info: Starting: Create HDL design files for synthesis
 Info: qsys-generate G:\neural-burning\data_path\data_path.qsys --synthesis=VERILOG --output-directory=G:\neural-burning\data_path\data_path\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading data_path/data_path.qsys
 Progress: Reading input file
+Progress: Adding activate_to_diff_register [activate_to_diff_register 1.0]
+Progress: Parameterizing module activate_to_diff_register
+Progress: Adding activation [activation 1.0]
+Progress: Parameterizing module activation
 Progress: Adding clk_0 [clock_source 20.1]
 Progress: Parameterizing module clk_0
 Progress: Adding code_count [code_count 1.0]
@@ -51,8 +71,12 @@ Progress: Adding code_storage [code_storage 1.0]
 Progress: Parameterizing module code_storage
 Progress: Adding controller [controller 1.0]
 Progress: Parameterizing module controller
-Progress: Adding decode_to_dense_register_0 [decode_to_dense_register 1.0]
-Progress: Parameterizing module decode_to_dense_register_0
+Progress: Adding decode_to_dense_register [decode_to_dense_register 1.0]
+Progress: Parameterizing module decode_to_dense_register
+Progress: Adding dense_layer_delay_reg [dense_layer_delay_reg 1.0]
+Progress: Parameterizing module dense_layer_delay_reg
+Progress: Adding dense_to_activate_register [dense_to_activate_register 1.0]
+Progress: Parameterizing module dense_to_activate_register
 Progress: Adding fetch_to_decode_register [fetch_to_decode_register 1.0]
 Progress: Parameterizing module fetch_to_decode_register
 Progress: Adding input_storage [matrix_storage 1.0]
@@ -67,10 +91,18 @@ Progress: Adding matrix_location_spreader [matrix_location_spreader 1.0]
 Progress: Parameterizing module matrix_location_spreader
 Progress: Adding matrix_storage_locator [matrix_storage_locator 1.0]
 Progress: Parameterizing module matrix_storage_locator
+Progress: Adding mult_matrix_prep [mult_matrix_prep 1.0]
+Progress: Parameterizing module mult_matrix_prep
+Progress: Adding mult_matrix_revert [mult_matrix_revert 1.0]
+Progress: Parameterizing module mult_matrix_revert
 Progress: Adding parse [parse 1.0]
 Progress: Parameterizing module parse
-Progress: Adding weight_interface_spreader_0 [weight_interface_spreader 1.0]
-Progress: Parameterizing module weight_interface_spreader_0
+Progress: Adding systolic [systolic 1.0]
+Progress: Parameterizing module systolic
+Progress: Adding w_and_x_spreader [w_and_x_spreader 1.0]
+Progress: Parameterizing module w_and_x_spreader
+Progress: Adding weight_interface_spreader [weight_interface_spreader 1.0]
+Progress: Parameterizing module weight_interface_spreader
 Progress: Adding weight_storage [weight_storage 1.0]
 Progress: Parameterizing module weight_storage
 Progress: Building connections
@@ -78,10 +110,15 @@ Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: data_path: Generating data_path "data_path" for QUARTUS_SYNTH
+Info: activate_to_diff_register: "data_path" instantiated activate_to_diff_register "activate_to_diff_register"
+Info: activation: "data_path" instantiated activation "activation"
 Info: code_count: "data_path" instantiated code_count "code_count"
 Info: code_storage: "data_path" instantiated code_storage "code_storage"
 Info: controller: "data_path" instantiated controller "controller"
-Info: decode_to_dense_register_0: "data_path" instantiated decode_to_dense_register "decode_to_dense_register_0"
+Info: decode_to_dense_register: "data_path" instantiated decode_to_dense_register "decode_to_dense_register"
+Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv
+Info: dense_layer_delay_reg: "data_path" instantiated dense_layer_delay_reg "dense_layer_delay_reg"
+Info: dense_to_activate_register: "data_path" instantiated dense_to_activate_register "dense_to_activate_register"
 Info: fetch_to_decode_register: "data_path" instantiated fetch_to_decode_register "fetch_to_decode_register"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv
 Info: input_storage: "data_path" instantiated matrix_storage "input_storage"
@@ -89,10 +126,15 @@ Info: is_load_spreader_0: "data_path" instantiated is_load_spreader "is_load_spr
 Info: matrix_location_spreader: "data_path" instantiated matrix_location_spreader "matrix_location_spreader"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv
 Info: matrix_storage_locator: "data_path" instantiated matrix_storage_locator "matrix_storage_locator"
+Info: mult_matrix_prep: "data_path" instantiated mult_matrix_prep "mult_matrix_prep"
+Info: mult_matrix_revert: "data_path" instantiated mult_matrix_revert "mult_matrix_revert"
 Info: parse: "data_path" instantiated parse "parse"
-Info: weight_interface_spreader_0: "data_path" instantiated weight_interface_spreader "weight_interface_spreader_0"
+Info: systolic: "data_path" instantiated systolic "systolic"
+Info: w_and_x_spreader: "data_path" instantiated w_and_x_spreader "w_and_x_spreader"
+Info: weight_interface_spreader: "data_path" instantiated weight_interface_spreader "weight_interface_spreader"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv
 Info: weight_storage: "data_path" instantiated weight_storage "weight_storage"
-Info: data_path: Done "data_path" with 13 modules, 15 files
+Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv
+Info: data_path: Done "data_path" with 21 modules, 23 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
