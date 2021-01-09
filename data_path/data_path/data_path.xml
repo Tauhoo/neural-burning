@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2021.01.07.23:21:22"
+ date="2021.01.09.14:45:50"
  outputDirectory="G:/neural-burning/data_path/data_path/">
  <perimeter>
   <parameter
@@ -34,24 +34,6 @@
      onHdl="0"
      affectsHdl="1" />
   <parameter
-     name="AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_CLOCK_RATE"
-     type="Long"
-     defaultValue="-1"
-     onHdl="0"
-     affectsHdl="1" />
-  <parameter
-     name="AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_CLOCK_DOMAIN"
-     type="Integer"
-     defaultValue="-1"
-     onHdl="0"
-     affectsHdl="1" />
-  <parameter
-     name="AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_RESET_DOMAIN"
-     type="Integer"
-     defaultValue="-1"
-     onHdl="0"
-     affectsHdl="1" />
-  <parameter
      name="AUTO_CLK_CLOCK_RATE"
      type="Long"
      defaultValue="-1"
@@ -69,99 +51,16 @@
      defaultValue="-1"
      onHdl="0"
      affectsHdl="1" />
-  <interface name="activate_to_diff_register_clock" kind="clock" start="0">
-   <property name="clockRate" value="0" />
-   <property name="externallyDriven" value="false" />
-   <property name="ptfSchematicName" value="" />
-   <port
-       name="activate_to_diff_register_clock_clk"
-       direction="input"
-       role="clk"
-       width="1" />
-  </interface>
   <interface
-     name="activate_to_diff_register_out_cost_type_interface"
+     name="backpropagator_0_dc_dw_stream_interface"
      kind="conduit"
      start="0">
-   <property name="associatedClock" value="" />
+   <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="" />
    <port
-       name="activate_to_diff_register_out_cost_type_interface_cost_type"
+       name="backpropagator_0_dc_dw_stream_interface_dc_dw_stream"
        direction="output"
-       role="cost_type"
-       width="8" />
-  </interface>
-  <interface
-     name="activate_to_diff_register_out_forward_interface"
-     kind="conduit"
-     start="0">
-   <property name="associatedClock" value="" />
-   <property name="associatedReset" value="" />
-   <port
-       name="activate_to_diff_register_out_forward_interface_dense_type"
-       direction="output"
-       role="dense_type"
-       width="4" />
-   <port
-       name="activate_to_diff_register_out_forward_interface_backprop_cost"
-       direction="output"
-       role="backprop_cost"
-       width="1" />
-   <port
-       name="activate_to_diff_register_out_forward_interface_w_row_index"
-       direction="output"
-       role="w_row_index"
-       width="32" />
-   <port
-       name="activate_to_diff_register_out_forward_interface_is_update"
-       direction="output"
-       role="is_update"
-       width="1" />
-   <port
-       name="activate_to_diff_register_out_forward_interface_w_layer_index"
-       direction="output"
-       role="w_layer_index"
-       width="32" />
-   <port
-       name="activate_to_diff_register_out_forward_interface_label"
-       direction="output"
-       role="label"
-       width="48" />
-  </interface>
-  <interface
-     name="activate_to_diff_register_out_w_interface"
-     kind="conduit"
-     start="0">
-   <property name="associatedClock" value="" />
-   <property name="associatedReset" value="" />
-   <port
-       name="activate_to_diff_register_out_w_interface_w"
-       direction="output"
-       role="w"
-       width="48" />
-  </interface>
-  <interface
-     name="activate_to_diff_register_out_x_interface"
-     kind="conduit"
-     start="0">
-   <property name="associatedClock" value="" />
-   <property name="associatedReset" value="" />
-   <port
-       name="activate_to_diff_register_out_x_interface_x"
-       direction="output"
-       role="x"
-       width="48" />
-  </interface>
-  <interface
-     name="activate_to_diff_register_out_z_interface"
-     kind="conduit"
-     start="0">
-   <property name="associatedClock" value="" />
-   <property name="associatedReset" value="" />
-   <port
-       name="activate_to_diff_register_out_z_interface_z"
-       direction="output"
-       role="z"
+       role="dc_dw_stream"
        width="48" />
   </interface>
   <interface name="clk" kind="clock" start="0">
@@ -351,19 +250,16 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="data_path:1.0:AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_CLOCK_DOMAIN=-1,AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_CLOCK_RATE=-1,AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_RESET_DOMAIN=-1,AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1610036481,AUTO_UNIQUE_ID=(activate_to_diff_register:1.0:cost_type_size=8,data_size=16,dense_type_size=4,size=3)(activation:1.0:activate_size=4,data_size=16,size=3)(clock_source:20.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(code_count:1.0:)(code_storage:1.0:code_size=12,max_code_line=100)(controller:1.0:op_size=4,size=3)(decode_to_dense_register:1.0:act_type_size=4,cost_type_size=8,data_size=16,dense_type_size=4,size=3)(dense_layer_delay_reg:1.0:act_type_size=4,cost_type_size=8,cycle=5,data_size=16,dense_type_size=4,size=3)(dense_to_activate_register:1.0:act_type_size=4,cost_type_size=8,data_size=16,dense_type_size=4,size=3)(fetch_to_decode_register:1.0:code_size=12)(matrix_storage:1.0:data_size=16,max_layer=5,size=3)(is_load_spreader:1.0:size=1)(is_load_spreader:1.0:size=1)(matrix_storage:1.0:data_size=16,max_layer=5,size=3)(matrix_location_spreader:1.0:layer_index_size=32,row_index_size=32)(matrix_storage_locator:1.0:size=3)(mult_matrix_prep:1.0:data_size=16,size=3)(mult_matrix_revert:1.0:data_size=16,size=3)(parse:1.0:op_size=4,param_a_size=4,param_b_size=4)(systolic:1.0:data_size=16,size=3)(w_and_x_spreader:1.0:data_size=16,size=3)(weight_interface_spreader:1.0:)(weight_storage:1.0:data_size=16,layer_size=5,size=3)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)"
+   parameterizationKey="data_path:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1610178349,AUTO_UNIQUE_ID=(activate_to_diff_register:1.0:cost_type_size=8,data_size=16,dense_type_size=4,size=3)(activation:1.0:activate_size=4,data_size=16,size=3)(backprop_controller:1.0:data_size=16,size=3)(backpropagator:1.0:data_size=16,max_layer_size=10,size=3)(clock_source:20.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(code_count:1.0:)(code_storage:1.0:code_size=12,max_code_line=100)(controller:1.0:op_size=4,size=3)(decode_to_dense_register:1.0:act_type_size=4,cost_type_size=8,data_size=16,dense_type_size=4,size=3)(dense_layer_delay_reg:1.0:act_type_size=4,cost_type_size=8,cycle=5,data_size=16,dense_type_size=4,size=3)(dense_to_activate_register:1.0:act_type_size=4,cost_type_size=8,data_size=16,dense_type_size=4,size=3)(diff_to_backprop_register:1.0:data_size=16,dense_type_size=4,size=3)(differ:1.0:cost_type_size=8,data_size=16,dense_type_size=4,size=3)(fetch_to_decode_register:1.0:code_size=12)(matrix_storage:1.0:data_size=16,max_layer=5,size=3)(is_load_spreader:1.0:size=1)(is_load_spreader:1.0:size=1)(matrix_storage:1.0:data_size=16,max_layer=5,size=3)(matrix_location_spreader:1.0:layer_index_size=32,row_index_size=32)(matrix_storage_locator:1.0:size=3)(mult_matrix_prep:1.0:data_size=16,size=3)(mult_matrix_revert:1.0:data_size=16,size=3)(parse:1.0:op_size=4,param_a_size=4,param_b_size=4)(systolic:1.0:data_size=16,size=3)(w_and_x_spreader:1.0:data_size=16,size=3)(weight_interface_spreader:1.0:)(weight_storage:1.0:data_size=16,layer_size=5,size=3)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(clock:20.1:)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:20.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)"
    instancePathKey="data_path"
    kind="data_path"
    version="1.0"
    name="data_path">
-  <parameter name="AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_CLOCK_RATE" value="-1" />
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1610036481" />
+  <parameter name="AUTO_GENERATION_ID" value="1610178349" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
-  <parameter name="AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_RESET_DOMAIN" value="-1" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
-  <parameter name="AUTO_ACTIVATE_TO_DIFF_REGISTER_CLOCK_CLOCK_DOMAIN" value="-1" />
   <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
   <parameter name="AUTO_UNIQUE_ID" value="" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
@@ -385,6 +281,18 @@
        path="G:/neural-burning/data_path/data_path/synthesis/submodules/activation.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack_controller.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
    <file
        path="G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv"
        type="SYSTEM_VERILOG"
@@ -413,6 +321,38 @@
        path="G:/neural-burning/data_path/data_path/synthesis/submodules/dense_activate_reg.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_backprop_reg.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_cost.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_dense.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_start.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_all.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
    <file
        path="G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv"
        type="SYSTEM_VERILOG"
@@ -488,12 +428,16 @@
   <childSourceFiles>
    <file path="G:/neural-burning/data_path/activate_register_hw.tcl" />
    <file path="G:/neural-burning/data_path/activation_hw.tcl" />
+   <file path="G:/neural-burning/data_path/dense_layer_hw.tcl" />
+   <file path="G:/neural-burning/data_path/backpropagator_hw.tcl" />
    <file path="G:/neural-burning/data_path/code_count_hw.tcl" />
    <file path="G:/neural-burning/data_path/code_storage_hw.tcl" />
    <file path="G:/neural-burning/data_path/controller_hw.tcl" />
    <file path="G:/neural-burning/data_path/decode_to_dense_register_hw.tcl" />
    <file path="G:/neural-burning/data_path/dense_layer_delay_reg_hw.tcl" />
    <file path="G:/neural-burning/data_path/dense_to_activate_register_hw.tcl" />
+   <file path="G:/neural-burning/data_path/diff_to_backprop_register_hw.tcl" />
+   <file path="G:/neural-burning/data_path/differ_hw.tcl" />
    <file path="G:/neural-burning/data_path/fetch_to_decode_register_hw.tcl" />
    <file path="G:/neural-burning/data_path/matrix_storage_hw.tcl" />
    <file path="G:/neural-burning/data_path/is_load_spreader_hw.tcl" />
@@ -514,7 +458,7 @@
    <message level="Progress" culprit="current"></message>
    <message level="Debug">Transform: CustomInstructionTransform</message>
    <message level="Debug">No custom instruction connections, skipping transform </message>
-   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>23</b> modules, <b>51</b> connections]]></message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>27</b> modules, <b>59</b> connections]]></message>
    <message level="Debug">Transform: MMTransform</message>
    <message level="Debug">Transform: InterruptMapperTransform</message>
    <message level="Debug">Transform: InterruptSyncTransform</message>
@@ -523,12 +467,16 @@
    <message level="Debug">Transform: ResetAdaptation</message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>activate_to_diff_register</b> "<b>submodules/activate_diff_reg</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>activation</b> "<b>submodules/activation</b>"]]></message>
+   <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>backprop_controller</b> "<b>submodules/backprop_stack_controller</b>"]]></message>
+   <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>backpropagator</b> "<b>submodules/backprop_stack</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>code_count</b> "<b>submodules/code_count</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>code_storage</b> "<b>submodules/code_storage</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>controller</b> "<b>submodules/controller</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>decode_to_dense_register</b> "<b>submodules/decode_dense_reg</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>dense_layer_delay_reg</b> "<b>submodules/dense_layer_delay_reg</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>dense_to_activate_register</b> "<b>submodules/dense_activate_reg</b>"]]></message>
+   <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>diff_to_backprop_register</b> "<b>submodules/diff_backprop_reg</b>"]]></message>
+   <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>differ</b> "<b>submodules/different</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>fetch_to_decode_register</b> "<b>submodules/fetch_decode_reg</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>matrix_storage</b> "<b>submodules/matrix_storage</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>is_load_spreader</b> "<b>submodules/spreader</b>"]]></message>
@@ -543,23 +491,33 @@
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>w_and_x_spreader</b> "<b>submodules/w_and_x_spreder</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>weight_interface_spreader</b> "<b>submodules/weight_interface_spreader</b>"]]></message>
    <message level="Debug" culprit="data_path"><![CDATA["<b>data_path</b>" reuses <b>weight_storage</b> "<b>submodules/weight_storage</b>"]]></message>
-   <message level="Debug" culprit="data_path">queue size: 21 starting:activate_to_diff_register "submodules/activate_diff_reg"</message>
+   <message level="Debug" culprit="data_path">queue size: 25 starting:activate_to_diff_register "submodules/activate_diff_reg"</message>
    <message level="Info" culprit="activate_to_diff_register"><![CDATA["<b>data_path</b>" instantiated <b>activate_to_diff_register</b> "<b>activate_to_diff_register</b>"]]></message>
-   <message level="Debug" culprit="data_path">queue size: 20 starting:activation "submodules/activation"</message>
+   <message level="Debug" culprit="data_path">queue size: 24 starting:activation "submodules/activation"</message>
    <message level="Info" culprit="activation"><![CDATA["<b>data_path</b>" instantiated <b>activation</b> "<b>activation</b>"]]></message>
-   <message level="Debug" culprit="data_path">queue size: 19 starting:code_count "submodules/code_count"</message>
+   <message level="Debug" culprit="data_path">queue size: 23 starting:backprop_controller "submodules/backprop_stack_controller"</message>
+   <message level="Info" culprit="backprop_controller"><![CDATA["<b>data_path</b>" instantiated <b>backprop_controller</b> "<b>backprop_controller</b>"]]></message>
+   <message level="Debug" culprit="data_path">queue size: 22 starting:backpropagator "submodules/backprop_stack"</message>
+   <message level="Info" culprit="backpropagator"><![CDATA["<b>data_path</b>" instantiated <b>backpropagator</b> "<b>backpropagator</b>"]]></message>
+   <message level="Debug" culprit="data_path">queue size: 21 starting:code_count "submodules/code_count"</message>
    <message level="Info" culprit="code_count"><![CDATA["<b>data_path</b>" instantiated <b>code_count</b> "<b>code_count</b>"]]></message>
-   <message level="Debug" culprit="data_path">queue size: 18 starting:code_storage "submodules/code_storage"</message>
+   <message level="Debug" culprit="data_path">queue size: 20 starting:code_storage "submodules/code_storage"</message>
    <message level="Info" culprit="code_storage"><![CDATA["<b>data_path</b>" instantiated <b>code_storage</b> "<b>code_storage</b>"]]></message>
-   <message level="Debug" culprit="data_path">queue size: 17 starting:controller "submodules/controller"</message>
+   <message level="Debug" culprit="data_path">queue size: 19 starting:controller "submodules/controller"</message>
    <message level="Info" culprit="controller"><![CDATA["<b>data_path</b>" instantiated <b>controller</b> "<b>controller</b>"]]></message>
-   <message level="Debug" culprit="data_path">queue size: 16 starting:decode_to_dense_register "submodules/decode_dense_reg"</message>
+   <message level="Debug" culprit="data_path">queue size: 18 starting:decode_to_dense_register "submodules/decode_dense_reg"</message>
    <message level="Info" culprit="decode_to_dense_register"><![CDATA["<b>data_path</b>" instantiated <b>decode_to_dense_register</b> "<b>decode_to_dense_register</b>"]]></message>
    <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv</b>]]></message>
-   <message level="Debug" culprit="data_path">queue size: 15 starting:dense_layer_delay_reg "submodules/dense_layer_delay_reg"</message>
+   <message level="Debug" culprit="data_path">queue size: 17 starting:dense_layer_delay_reg "submodules/dense_layer_delay_reg"</message>
    <message level="Info" culprit="dense_layer_delay_reg"><![CDATA["<b>data_path</b>" instantiated <b>dense_layer_delay_reg</b> "<b>dense_layer_delay_reg</b>"]]></message>
-   <message level="Debug" culprit="data_path">queue size: 14 starting:dense_to_activate_register "submodules/dense_activate_reg"</message>
+   <message level="Debug" culprit="data_path">queue size: 16 starting:dense_to_activate_register "submodules/dense_activate_reg"</message>
    <message level="Info" culprit="dense_to_activate_register"><![CDATA["<b>data_path</b>" instantiated <b>dense_to_activate_register</b> "<b>dense_to_activate_register</b>"]]></message>
+   <message level="Debug" culprit="data_path">queue size: 15 starting:diff_to_backprop_register "submodules/diff_backprop_reg"</message>
+   <message level="Info" culprit="diff_to_backprop_register"><![CDATA["<b>data_path</b>" instantiated <b>diff_to_backprop_register</b> "<b>diff_to_backprop_register</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv</b>]]></message>
+   <message level="Debug" culprit="data_path">queue size: 14 starting:differ "submodules/different"</message>
+   <message level="Info" culprit="differ"><![CDATA["<b>data_path</b>" instantiated <b>differ</b> "<b>differ</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv</b>]]></message>
    <message level="Debug" culprit="data_path">queue size: 13 starting:fetch_to_decode_register "submodules/fetch_decode_reg"</message>
    <message level="Info" culprit="fetch_to_decode_register"><![CDATA["<b>data_path</b>" instantiated <b>fetch_to_decode_register</b> "<b>fetch_to_decode_register</b>"]]></message>
    <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv</b>]]></message>
@@ -580,6 +538,7 @@
    <message level="Info" culprit="parse"><![CDATA["<b>data_path</b>" instantiated <b>parse</b> "<b>parse</b>"]]></message>
    <message level="Debug" culprit="data_path">queue size: 3 starting:systolic "submodules/systolic"</message>
    <message level="Info" culprit="systolic"><![CDATA["<b>data_path</b>" instantiated <b>systolic</b> "<b>systolic</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv</b>]]></message>
    <message level="Debug" culprit="data_path">queue size: 2 starting:w_and_x_spreader "submodules/w_and_x_spreder"</message>
    <message level="Info" culprit="w_and_x_spreader"><![CDATA["<b>data_path</b>" instantiated <b>w_and_x_spreader</b> "<b>w_and_x_spreader</b>"]]></message>
    <message level="Debug" culprit="data_path">queue size: 1 starting:weight_interface_spreader "submodules/weight_interface_spreader"</message>
@@ -618,7 +577,7 @@
   <childSourceFiles/>
   <instantiator instantiator="data_path" as="activate_to_diff_register" />
   <messages>
-   <message level="Debug" culprit="data_path">queue size: 21 starting:activate_to_diff_register "submodules/activate_diff_reg"</message>
+   <message level="Debug" culprit="data_path">queue size: 25 starting:activate_to_diff_register "submodules/activate_diff_reg"</message>
    <message level="Info" culprit="activate_to_diff_register"><![CDATA["<b>data_path</b>" instantiated <b>activate_to_diff_register</b> "<b>activate_to_diff_register</b>"]]></message>
   </messages>
  </entity>
@@ -645,8 +604,65 @@
   <childSourceFiles/>
   <instantiator instantiator="data_path" as="activation" />
   <messages>
-   <message level="Debug" culprit="data_path">queue size: 20 starting:activation "submodules/activation"</message>
+   <message level="Debug" culprit="data_path">queue size: 24 starting:activation "submodules/activation"</message>
    <message level="Info" culprit="activation"><![CDATA["<b>data_path</b>" instantiated <b>activation</b> "<b>activation</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="backprop_controller:1.0:data_size=16,size=3"
+   instancePathKey="data_path:.:backprop_controller"
+   kind="backprop_controller"
+   version="1.0"
+   name="backprop_stack_controller">
+  <parameter name="data_size" value="16" />
+  <parameter name="size" value="3" />
+  <generatedFiles>
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack_controller.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file path="G:/neural-burning/data_path/dense_layer_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="data_path" as="backprop_controller" />
+  <messages>
+   <message level="Debug" culprit="data_path">queue size: 23 starting:backprop_controller "submodules/backprop_stack_controller"</message>
+   <message level="Info" culprit="backprop_controller"><![CDATA["<b>data_path</b>" instantiated <b>backprop_controller</b> "<b>backprop_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="backpropagator:1.0:data_size=16,max_layer_size=10,size=3"
+   instancePathKey="data_path:.:backpropagator"
+   kind="backpropagator"
+   version="1.0"
+   name="backprop_stack">
+  <parameter name="data_size" value="16" />
+  <parameter name="size" value="3" />
+  <parameter name="max_layer_size" value="10" />
+  <generatedFiles>
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file path="G:/neural-burning/data_path/backpropagator_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="data_path" as="backpropagator" />
+  <messages>
+   <message level="Debug" culprit="data_path">queue size: 22 starting:backpropagator "submodules/backprop_stack"</message>
+   <message level="Info" culprit="backpropagator"><![CDATA["<b>data_path</b>" instantiated <b>backpropagator</b> "<b>backpropagator</b>"]]></message>
   </messages>
  </entity>
  <entity
@@ -669,7 +685,7 @@
   <childSourceFiles/>
   <instantiator instantiator="data_path" as="code_count" />
   <messages>
-   <message level="Debug" culprit="data_path">queue size: 19 starting:code_count "submodules/code_count"</message>
+   <message level="Debug" culprit="data_path">queue size: 21 starting:code_count "submodules/code_count"</message>
    <message level="Info" culprit="code_count"><![CDATA["<b>data_path</b>" instantiated <b>code_count</b> "<b>code_count</b>"]]></message>
   </messages>
  </entity>
@@ -695,7 +711,7 @@
   <childSourceFiles/>
   <instantiator instantiator="data_path" as="code_storage" />
   <messages>
-   <message level="Debug" culprit="data_path">queue size: 18 starting:code_storage "submodules/code_storage"</message>
+   <message level="Debug" culprit="data_path">queue size: 20 starting:code_storage "submodules/code_storage"</message>
    <message level="Info" culprit="code_storage"><![CDATA["<b>data_path</b>" instantiated <b>code_storage</b> "<b>code_storage</b>"]]></message>
   </messages>
  </entity>
@@ -721,7 +737,7 @@
   <childSourceFiles/>
   <instantiator instantiator="data_path" as="controller" />
   <messages>
-   <message level="Debug" culprit="data_path">queue size: 17 starting:controller "submodules/controller"</message>
+   <message level="Debug" culprit="data_path">queue size: 19 starting:controller "submodules/controller"</message>
    <message level="Info" culprit="controller"><![CDATA["<b>data_path</b>" instantiated <b>controller</b> "<b>controller</b>"]]></message>
   </messages>
  </entity>
@@ -754,7 +770,7 @@
   <childSourceFiles/>
   <instantiator instantiator="data_path" as="decode_to_dense_register" />
   <messages>
-   <message level="Debug" culprit="data_path">queue size: 16 starting:decode_to_dense_register "submodules/decode_dense_reg"</message>
+   <message level="Debug" culprit="data_path">queue size: 18 starting:decode_to_dense_register "submodules/decode_dense_reg"</message>
    <message level="Info" culprit="decode_to_dense_register"><![CDATA["<b>data_path</b>" instantiated <b>decode_to_dense_register</b> "<b>decode_to_dense_register</b>"]]></message>
    <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv</b>]]></message>
   </messages>
@@ -785,7 +801,7 @@
   <childSourceFiles/>
   <instantiator instantiator="data_path" as="dense_layer_delay_reg" />
   <messages>
-   <message level="Debug" culprit="data_path">queue size: 15 starting:dense_layer_delay_reg "submodules/dense_layer_delay_reg"</message>
+   <message level="Debug" culprit="data_path">queue size: 17 starting:dense_layer_delay_reg "submodules/dense_layer_delay_reg"</message>
    <message level="Info" culprit="dense_layer_delay_reg"><![CDATA["<b>data_path</b>" instantiated <b>dense_layer_delay_reg</b> "<b>dense_layer_delay_reg</b>"]]></message>
   </messages>
  </entity>
@@ -814,8 +830,89 @@
   <childSourceFiles/>
   <instantiator instantiator="data_path" as="dense_to_activate_register" />
   <messages>
-   <message level="Debug" culprit="data_path">queue size: 14 starting:dense_to_activate_register "submodules/dense_activate_reg"</message>
+   <message level="Debug" culprit="data_path">queue size: 16 starting:dense_to_activate_register "submodules/dense_activate_reg"</message>
    <message level="Info" culprit="dense_to_activate_register"><![CDATA["<b>data_path</b>" instantiated <b>dense_to_activate_register</b> "<b>dense_to_activate_register</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="diff_to_backprop_register:1.0:data_size=16,dense_type_size=4,size=3"
+   instancePathKey="data_path:.:diff_to_backprop_register"
+   kind="diff_to_backprop_register"
+   version="1.0"
+   name="diff_backprop_reg">
+  <parameter name="data_size" value="16" />
+  <parameter name="size" value="3" />
+  <parameter name="dense_type_size" value="4" />
+  <generatedFiles>
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_backprop_reg.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file path="G:/neural-burning/data_path/diff_to_backprop_register_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="data_path" as="diff_to_backprop_register" />
+  <messages>
+   <message level="Debug" culprit="data_path">queue size: 15 starting:diff_to_backprop_register "submodules/diff_backprop_reg"</message>
+   <message level="Info" culprit="diff_to_backprop_register"><![CDATA["<b>data_path</b>" instantiated <b>diff_to_backprop_register</b> "<b>diff_to_backprop_register</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv</b>]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="differ:1.0:cost_type_size=8,data_size=16,dense_type_size=4,size=3"
+   instancePathKey="data_path:.:differ"
+   kind="differ"
+   version="1.0"
+   name="different">
+  <parameter name="data_size" value="16" />
+  <parameter name="size" value="3" />
+  <parameter name="dense_type_size" value="4" />
+  <parameter name="cost_type_size" value="8" />
+  <generatedFiles>
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_cost.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_dense.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_start.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_all.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv"
+       type="SYSTEM_VERILOG"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file path="G:/neural-burning/data_path/differ_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="data_path" as="differ" />
+  <messages>
+   <message level="Debug" culprit="data_path">queue size: 14 starting:differ "submodules/different"</message>
+   <message level="Info" culprit="differ"><![CDATA["<b>data_path</b>" instantiated <b>differ</b> "<b>differ</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv</b>]]></message>
   </messages>
  </entity>
  <entity
@@ -1063,6 +1160,7 @@
   <messages>
    <message level="Debug" culprit="data_path">queue size: 3 starting:systolic "submodules/systolic"</message>
    <message level="Info" culprit="systolic"><![CDATA["<b>data_path</b>" instantiated <b>systolic</b> "<b>systolic</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv</b>]]></message>
   </messages>
  </entity>
  <entity

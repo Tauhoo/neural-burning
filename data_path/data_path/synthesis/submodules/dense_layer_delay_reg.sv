@@ -6,6 +6,7 @@ module dense_layer_delay_reg (
     predict_value,
     w_layer_index,
     w_row_index,
+    is_cost_layer,
 
     dense_type,
 
@@ -19,6 +20,7 @@ module dense_layer_delay_reg (
     predict_value_out,
     w_layer_index_out,
     w_row_index_out,
+    is_cost_layer_out,
 
     dense_type_out,
     
@@ -45,7 +47,8 @@ module dense_layer_delay_reg (
     input [data_size*size - 1:0] predict_value;
     input [31:0] w_layer_index;
     input [31:0] w_row_index;
-
+    input is_cost_layer;
+    
     input [dense_type_size - 1:0] dense_type;
 
     input [data_size*size - 1:0] x;
@@ -64,6 +67,8 @@ module dense_layer_delay_reg (
     output [data_size*size - 1:0] x_out;
     output [data_size*size - 1:0] w_out;
 
+    output is_cost_layer_out;
+
     wire [bundle_size - 1:0] bundle;
     wire [bundle_size - 1:0] bundle_out;
 
@@ -72,6 +77,9 @@ module dense_layer_delay_reg (
 
     delay #(.data_size(bundle_size), .size(1), .cycle(cycle)) 
     delay_inst_is_update(.bus_in(bundle), .bus_out(bundle_out), .clk(clk));
+
+    delay #(.data_size(1), .size(1))
+    delay_inst_is_cost_layer(.bus_in(is_cost_layer), .bus_out(is_cost_layer_out), .clk(clk));
 
 
 endmodule

@@ -8,6 +8,7 @@ module activate_diff_reg (
     w_layer_index, 
     w_row_index, 
     is_update,
+    is_cost_layer,
 
     z,
     
@@ -21,6 +22,7 @@ module activate_diff_reg (
     w_row_index_out,
     is_update_out,
     z_out,
+    is_cost_layer_out,
     clk
 );
     parameter size = 3;
@@ -37,6 +39,7 @@ module activate_diff_reg (
     input [31:0] w_layer_index;
     input [31:0] w_row_index;
     input is_update;
+    input is_cost_layer;
 
     input [data_size*size - 1:0] z;
 
@@ -54,7 +57,9 @@ module activate_diff_reg (
 
     output [data_size*size - 1:0] z_out;
 
-    delay #(.data_size(1), .size(1)) 
+    output is_cost_layer_out;
+
+    delay #(.data_size(data_size), .size(size)) 
     delay_inst_predict_value(.bus_in(predict_value), .bus_out(predict_value_out), .clk(clk));
 
     delay #(.data_size(cost_type_size), .size(1)) 
@@ -83,5 +88,8 @@ module activate_diff_reg (
 
     delay #(.data_size(data_size), .size(size))
     delay_inst_z(.bus_in(z), .bus_out(z_out), .clk(clk));
+
+    delay #(.data_size(1), .size(1))
+    delay_inst_is_cost_layer(.bus_in(is_cost_layer), .bus_out(is_cost_layer_out), .clk(clk));
 
 endmodule

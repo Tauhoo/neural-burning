@@ -25,17 +25,7 @@ module data_path (
 	weight_storage_write_interface_write_layer_index,
 	weight_storage_write_interface_write_row_index,
 	weight_storage_write_interface_write_data,
-	activate_to_diff_register_out_forward_interface_label,
-	activate_to_diff_register_out_forward_interface_dense_type,
-	activate_to_diff_register_out_forward_interface_backprop_cost,
-	activate_to_diff_register_out_forward_interface_w_row_index,
-	activate_to_diff_register_out_forward_interface_is_update,
-	activate_to_diff_register_out_forward_interface_w_layer_index,
-	activate_to_diff_register_out_cost_type_interface_cost_type,
-	activate_to_diff_register_out_z_interface_z,
-	activate_to_diff_register_out_x_interface_x,
-	activate_to_diff_register_out_w_interface_w,
-	activate_to_diff_register_clock_clk);	
+	backpropagator_0_dc_dw_stream_interface_dc_dw_stream);	
 
 	input		clk_clk;
 	input		code_storage_enable_interface_enable;
@@ -62,15 +52,5 @@ module data_path (
 	input	[31:0]	weight_storage_write_interface_write_layer_index;
 	input	[31:0]	weight_storage_write_interface_write_row_index;
 	input	[47:0]	weight_storage_write_interface_write_data;
-	output	[47:0]	activate_to_diff_register_out_forward_interface_label;
-	output	[3:0]	activate_to_diff_register_out_forward_interface_dense_type;
-	output		activate_to_diff_register_out_forward_interface_backprop_cost;
-	output	[31:0]	activate_to_diff_register_out_forward_interface_w_row_index;
-	output		activate_to_diff_register_out_forward_interface_is_update;
-	output	[31:0]	activate_to_diff_register_out_forward_interface_w_layer_index;
-	output	[7:0]	activate_to_diff_register_out_cost_type_interface_cost_type;
-	output	[47:0]	activate_to_diff_register_out_z_interface_z;
-	output	[47:0]	activate_to_diff_register_out_x_interface_x;
-	output	[47:0]	activate_to_diff_register_out_w_interface_w;
-	input		activate_to_diff_register_clock_clk;
+	output	[47:0]	backpropagator_0_dc_dw_stream_interface_dc_dw_stream;
 endmodule

@@ -18,341 +18,353 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis {G:/neural-burning/data_path/data_path/synthesis/data_path.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:39 on Jan 07,2021
+# Start time: 14:47:49 on Jan 09,2021
 # vlog -reportprogress 300 -vlog01compat -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis" G:/neural-burning/data_path/data_path/synthesis/data_path.v 
 # -- Compiling module data_path
 # 
 # Top level modules:
 # 	data_path
-# End time: 23:30:39 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:50 on Jan 09,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+G:/neural-burning/data_path/db {G:/neural-burning/data_path/db/mult_de01.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:50 on Jan 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+G:/neural-burning/data_path/db" G:/neural-burning/data_path/db/mult_de01.v 
+# -- Compiling module mult_de01
+# 
+# Top level modules:
+# 	mult_de01
+# End time: 14:47:50 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:39 on Jan 07,2021
+# Start time: 14:47:50 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv 
 # -- Compiling package gdo
 # 
 # Top level modules:
 # 	--none--
-# End time: 23:30:39 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:50 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/weight_interface_spreader.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:39 on Jan 07,2021
+# Start time: 14:47:50 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/weight_interface_spreader.sv 
 # -- Compiling module weight_interface_spreader
 # 
 # Top level modules:
 # 	weight_interface_spreader
-# End time: 23:30:39 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:50 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:39 on Jan 07,2021
+# Start time: 14:47:50 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv 
 # -- Compiling module spreader
 # 
 # Top level modules:
 # 	spreader
-# End time: 23:30:39 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:50 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/w_and_x_spreader.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:39 on Jan 07,2021
+# Start time: 14:47:50 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/w_and_x_spreader.sv 
 # -- Compiling module w_and_x_spreder
 # 
 # Top level modules:
 # 	w_and_x_spreder
-# End time: 23:30:39 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:51 on Jan 09,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:39 on Jan 07,2021
+# Start time: 14:47:51 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv 
 # -- Compiling module parse
 # 
 # Top level modules:
 # 	parse
-# End time: 23:30:40 on Jan 07,2021, Elapsed time: 0:00:01
+# End time: 14:47:51 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/mult_matrix_revert.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:40 on Jan 07,2021
+# Start time: 14:47:51 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/mult_matrix_revert.sv 
 # -- Compiling module mult_matrix_revert
 # 
 # Top level modules:
 # 	mult_matrix_revert
-# End time: 23:30:40 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:51 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/mult_matrix_prep.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:40 on Jan 07,2021
+# Start time: 14:47:51 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/mult_matrix_prep.sv 
 # -- Compiling module mult_matrix_prep
 # 
 # Top level modules:
 # 	mult_matrix_prep
-# End time: 23:30:40 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:51 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage_locator.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:40 on Jan 07,2021
+# Start time: 14:47:51 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage_locator.sv 
 # -- Compiling module matrix_storage_locator
 # 
 # Top level modules:
 # 	matrix_storage_locator
-# End time: 23:30:40 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:51 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_location_spreader.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:40 on Jan 07,2021
+# Start time: 14:47:51 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_location_spreader.sv 
 # -- Compiling module matrix_location_spreader
 # 
 # Top level modules:
 # 	matrix_location_spreader
-# End time: 23:30:40 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:51 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:40 on Jan 07,2021
+# Start time: 14:47:51 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv 
 # -- Compiling module matrix_storage
 # 
 # Top level modules:
 # 	matrix_storage
-# End time: 23:30:40 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:51 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:40 on Jan 07,2021
+# Start time: 14:47:51 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv 
 # -- Compiling module delay
 # 
 # Top level modules:
 # 	delay
-# End time: 23:30:40 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:52 on Jan 09,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:40 on Jan 07,2021
+# Start time: 14:47:52 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv 
 # -- Compiling module fetch_decode_reg
 # 
 # Top level modules:
 # 	fetch_decode_reg
-# End time: 23:30:41 on Jan 07,2021, Elapsed time: 0:00:01
+# End time: 14:47:52 on Jan 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_dense.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:52 on Jan 09,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_dense.sv 
+# -- Compiling module diff_dense
+# 
+# Top level modules:
+# 	diff_dense
+# End time: 14:47:52 on Jan 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_start.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:52 on Jan 09,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_start.sv 
+# -- Compiling module diff_start
+# 
+# Top level modules:
+# 	diff_start
+# End time: 14:47:52 on Jan 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_all.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:52 on Jan 09,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_all.sv 
+# -- Compiling module diff_to_all
+# 
+# Top level modules:
+# 	diff_to_all
+# End time: 14:47:52 on Jan 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:52 on Jan 09,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv 
+# -- Compiling module different
+# 
+# Top level modules:
+# 	different
+# End time: 14:47:52 on Jan 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_backprop_reg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:52 on Jan 09,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_backprop_reg.sv 
+# -- Compiling module diff_backprop_reg
+# 
+# Top level modules:
+# 	diff_backprop_reg
+# End time: 14:47:52 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/dense_activate_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:41 on Jan 07,2021
+# Start time: 14:47:52 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/dense_activate_reg.sv 
 # -- Compiling module dense_activate_reg
 # 
 # Top level modules:
 # 	dense_activate_reg
-# End time: 23:30:41 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:53 on Jan 09,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:41 on Jan 07,2021
+# Start time: 14:47:53 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv 
 # -- Compiling module dense_layer_delay_reg
 # 
 # Top level modules:
 # 	dense_layer_delay_reg
-# End time: 23:30:41 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:53 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/decode_dense_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:41 on Jan 07,2021
+# Start time: 14:47:53 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/decode_dense_reg.sv 
 # -- Compiling module decode_dense_reg
 # 
 # Top level modules:
 # 	decode_dense_reg
-# End time: 23:30:41 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:53 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:41 on Jan 07,2021
+# Start time: 14:47:53 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 23:30:41 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:53 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:41 on Jan 07,2021
+# Start time: 14:47:53 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv 
 # -- Compiling module code_storage
 # 
 # Top level modules:
 # 	code_storage
-# End time: 23:30:41 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:53 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:41 on Jan 07,2021
+# Start time: 14:47:53 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv 
 # -- Compiling module code_count
 # 
 # Top level modules:
 # 	code_count
-# End time: 23:30:41 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:53 on Jan 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack_controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:53 on Jan 09,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack_controller.sv 
+# -- Compiling module backprop_stack_controller
+# 
+# Top level modules:
+# 	backprop_stack_controller
+# End time: 14:47:53 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/activation.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:41 on Jan 07,2021
+# Start time: 14:47:53 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/activation.sv 
 # -- Compiling module activation
 # 
 # Top level modules:
 # 	activation
-# End time: 23:30:42 on Jan 07,2021, Elapsed time: 0:00:01
+# End time: 14:47:54 on Jan 09,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:42 on Jan 07,2021
+# Start time: 14:47:54 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv 
 # -- Compiling module activate_diff_reg
 # 
 # Top level modules:
 # 	activate_diff_reg
-# End time: 23:30:42 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:54 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:42 on Jan 07,2021
+# Start time: 14:47:54 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv 
 # -- Compiling module weight_storage
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	weight_storage
-# End time: 23:30:42 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:54 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/systolic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:30:42 on Jan 07,2021
+# Start time: 14:47:54 on Jan 09,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/systolic.sv 
 # -- Compiling module systolic
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	systolic
-# End time: 23:30:42 on Jan 07,2021, Elapsed time: 0:00:00
+# End time: 14:47:54 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-vsim data_path.testbench
-# vsim data_path.testbench 
-# Start time: 23:31:03 on Jan 07,2021
-# Loading data_path.testbench
-# Loading data_path.data_path
-# Loading sv_std.std
-# Loading data_path.activate_diff_reg
-# Loading data_path.delay
-# Loading data_path.activation
-# Loading data_path.code_count
-# Loading data_path.code_storage
-# Loading data_path.controller
-# Loading data_path.decode_dense_reg
-# Loading data_path.dense_layer_delay_reg
-# Loading data_path.dense_activate_reg
-# Loading data_path.fetch_decode_reg
-# Loading data_path.matrix_storage
-# Loading data_path.spreader
-# Loading data_path.matrix_location_spreader
-# Loading data_path.matrix_storage_locator
-# Loading data_path.mult_matrix_prep
-# Loading data_path.mult_matrix_revert
-# Loading data_path.parse
-# Loading data_path.gdo
-# Loading data_path.systolic
-# Loading data_path.w_and_x_spreder
-# Loading data_path.weight_interface_spreader
-# Loading data_path.weight_storage
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 130
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 132
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 134
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 136
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 138
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 139
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 141
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 142
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 145
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 146
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 149
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_backprop_cost_out' not found in the connected module (2nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_is_update_out' not found in the connected module (10th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_dense_type_out' not found in the connected module (18th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_w_layer_index_out' not found in the connected module (20th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_cost_type_out' not found in the connected module (22nd connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_w_row_index_out' not found in the connected module (25th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_activate_interface_act_type_out' not found in the connected module (28th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_activate_interface_y_out' not found in the connected module (29th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_w_out' not found in the connected module (30th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_x_out' not found in the connected module (34th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Error: (vsim-3063) Port 'dense_to_activate_register_out_forward_interface_label' not found in the connected module (36th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (48) for port 'bus_in'. The port definition is at: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/activate_to_diff_register/delay_inst_predict_value File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (48) for port 'bus_out'. The port definition is at: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/activate_to_diff_register/delay_inst_predict_value File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 58
-# Error loading design
-# End time: 23:31:03 on Jan 07,2021, Elapsed time: 0:00:00
-# Errors: 11, Warnings: 13
-vlog -work data_path G:/neural-burning/data_path/testbench/testbench.v
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_cost.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:31:05 on Jan 07,2021
-# vlog -reportprogress 300 -work data_path G:/neural-burning/data_path/testbench/testbench.v 
-# -- Compiling module testbench
+# Start time: 14:47:54 on Jan 09,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_cost.sv 
+# -- Compiling module diff_cost
+# -- Importing package gdo
 # 
 # Top level modules:
-# 	testbench
-# End time: 23:31:06 on Jan 07,2021, Elapsed time: 0:00:01
+# 	diff_cost
+# End time: 14:47:54 on Jan 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:54 on Jan 09,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 14:47:54 on Jan 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
 vsim data_path.testbench
 # vsim data_path.testbench 
-# Start time: 23:31:07 on Jan 07,2021
+# Start time: 14:48:08 on Jan 09,2021
 # Loading data_path.testbench
 # Loading data_path.data_path
 # Loading sv_std.std
 # Loading data_path.activate_diff_reg
 # Loading data_path.delay
 # Loading data_path.activation
+# Loading data_path.backprop_stack_controller
+# Loading data_path.gdo
+# Loading data_path.backprop_stack
 # Loading data_path.code_count
 # Loading data_path.code_storage
 # Loading data_path.controller
 # Loading data_path.decode_dense_reg
 # Loading data_path.dense_layer_delay_reg
 # Loading data_path.dense_activate_reg
+# Loading data_path.diff_backprop_reg
+# Loading data_path.different
+# Loading data_path.diff_dense
+# Loading data_path.diff_start
+# Loading data_path.diff_to_all
+# Loading data_path.diff_cost
 # Loading data_path.fetch_decode_reg
 # Loading data_path.matrix_storage
 # Loading data_path.spreader
@@ -361,59 +373,1050 @@ vsim data_path.testbench
 # Loading data_path.mult_matrix_prep
 # Loading data_path.mult_matrix_revert
 # Loading data_path.parse
-# Loading data_path.gdo
 # Loading data_path.systolic
 # Loading data_path.w_and_x_spreder
 # Loading data_path.weight_interface_spreader
 # Loading data_path.weight_storage
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 131
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 109
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 133
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 111
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 135
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 113
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 137
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 115
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 139
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 117
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 140
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 118
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 142
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 120
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 143
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 121
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 146
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 124
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 147
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 125
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 150
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (48) for port 'bus_in'. The port definition is at: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/activate_to_diff_register/delay_inst_predict_value File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (48) for port 'bus_out'. The port definition is at: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/activate_to_diff_register/delay_inst_predict_value File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 58
-add wave -position end  sim:/testbench/DUT/dense_to_activate_register/y
-add wave -position end  sim:/testbench/DUT/activation/in_data
-add wave -position end  sim:/testbench/DUT/activation/activtion
-add wave -position end  sim:/testbench/DUT/activation/out_data
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 128
+add wave -position end  sim:/testbench/DUT/backprop_controller/diff_start
+add wave -position end  sim:/testbench/DUT/backprop_controller/diff_to_all
+add wave -position end  sim:/testbench/DUT/backprop_controller/diff_dense
+add wave -position end  sim:/testbench/DUT/backprop_controller/diff_cost
+add wave -position end  sim:/testbench/DUT/backprop_controller/reset
+add wave -position end  sim:/testbench/DUT/backprop_controller/current_layer_index
+add wave -position end  sim:/testbench/DUT/backprop_controller/dc_dw_layer_index
+add wave -position end  sim:/testbench/DUT/backprop_controller/copy
+add wave -position end  sim:/testbench/DUT/backprop_controller/cal_dy_dy_old
+add wave -position end  sim:/testbench/DUT/backprop_controller/diff_start_out
+add wave -position end  sim:/testbench/DUT/backprop_controller/diff_to_all_out
+add wave -position end  sim:/testbench/DUT/backprop_controller/diff_dense_out
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 0.500000 0.500000 0.500000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.500000 0.500000 0.500000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.500000 0.500000 0.500000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 2.000000 2.000000 2.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 2.000000 2.000000 2.000000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# 2.000000 2.000000 2.000000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
-add wave -position end  sim:/testbench/DUT/activate_to_diff_register/z
-# End time: 23:33:47 on Jan 07,2021, Elapsed time: 0:02:40
-# Errors: 0, Warnings: 13
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 3.000000 3.000000 3.000000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 3.000000 3.000000 3.000000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 3.000000 3.000000 3.000000 | 1.000000 1.000000 1.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+run
+#  ==  ==  ==  ==  ==  ==  == 
+# layer :           0
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 3.000000 3.000000 3.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           1
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           2
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           3
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           4
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           5
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           6
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           7
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           8
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# layer :           9
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+# End time: 15:02:33 on Jan 09,2021, Elapsed time: 0:14:25
+# Errors: 0, Warnings: 11

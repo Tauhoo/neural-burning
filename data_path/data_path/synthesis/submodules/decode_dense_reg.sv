@@ -10,6 +10,8 @@ module decode_dense_reg (
     backprop_cost, //control
     x, // single
     label_in, // single
+    is_cost_layer,
+
     act_type_out,
     dense_type_out,
     cost_type_out,
@@ -21,6 +23,7 @@ module decode_dense_reg (
     backprop_cost_out,
     x_out,
     label_out,
+    is_cost_layer_out,
     clk
 );
     parameter size = 3;
@@ -40,6 +43,7 @@ module decode_dense_reg (
     input backprop_cost;
     input [data_size*size - 1:0] x;
     input [data_size*size - 1:0] label_in;
+    input is_cost_layer;
 
     input clk;
 
@@ -54,6 +58,7 @@ module decode_dense_reg (
     output backprop_cost_out;
     output [data_size*size - 1:0] x_out;
     output [data_size*size - 1:0] label_out;
+    output is_cost_layer_out;
 
     delay #(.data_size(act_type_size), .size(1)) 
     delay_inst_act_type(.bus_in(act_type), .bus_out(act_type_out), .clk(clk));
@@ -87,5 +92,8 @@ module decode_dense_reg (
     
     delay #(.data_size(data_size), .size(size)) 
     delay_inst_label(.bus_in(label_in), .bus_out(label_out), .clk(clk));
+
+    delay #(.data_size(1), .size(1))
+    delay_inst_is_cost_layer(.bus_in(is_cost_layer), .bus_out(is_cost_layer_out), .clk(clk));
 
 endmodule

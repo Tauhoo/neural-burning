@@ -10,6 +10,7 @@ module dense_activate_reg (
     is_update,
     predict_value,
     backprop_cost,
+    is_cost_layer,
 
     act_type_out,
     dense_type_out,
@@ -22,6 +23,7 @@ module dense_activate_reg (
     is_update_out,
     predict_value_out,
     backprop_cost_out,
+    is_cost_layer_out,
     clk
 );
 
@@ -42,6 +44,7 @@ module dense_activate_reg (
     input is_update;
     input [data_size*size - 1:0] predict_value;
     input backprop_cost;
+    input is_cost_layer;
 
     input clk;
 
@@ -56,6 +59,7 @@ module dense_activate_reg (
     output is_update_out;
     output [data_size*size - 1:0] predict_value_out;
     output backprop_cost_out;
+    output is_cost_layer_out;
 
     delay #(.data_size(act_type_size), .size(1)) 
     delay_inst_act_type(.bus_in(act_type), .bus_out(act_type_out), .clk(clk));
@@ -89,5 +93,8 @@ module dense_activate_reg (
     
     delay #(.data_size(1), .size(1)) 
     delay_inst_backprop_cost(.bus_in(backprop_cost), .bus_out(backprop_cost_out), .clk(clk));
+
+    delay #(.data_size(1), .size(1))
+    delay_inst_is_cost_layer(.bus_in(is_cost_layer), .bus_out(is_cost_layer_out), .clk(clk));
 
 endmodule

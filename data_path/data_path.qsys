@@ -16,12 +16,33 @@
          value = "22";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element activation
    {
       datum _sortIndex
       {
          value = "21";
+         type = "int";
+      }
+   }
+   element backprop_controller
+   {
+      datum _sortIndex
+      {
+         value = "25";
+         type = "int";
+      }
+   }
+   element backpropagator
+   {
+      datum _sortIndex
+      {
+         value = "26";
          type = "int";
       }
    }
@@ -366,6 +387,150 @@
          type = "String";
       }
    }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element decode_to_dense_register
    {
       datum _sortIndex
@@ -387,6 +552,22 @@
       datum _sortIndex
       {
          value = "20";
+         type = "int";
+      }
+   }
+   element diff_to_backprop_register
+   {
+      datum _sortIndex
+      {
+         value = "24";
+         type = "int";
+      }
+   }
+   element differ
+   {
+      datum _sortIndex
+      {
+         value = "23";
          type = "int";
       }
    }
@@ -524,33 +705,20 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
-   name="activate_to_diff_register_clock"
-   internal="activate_to_diff_register.clock"
-   type="clock"
-   dir="end" />
- <interface
    name="activate_to_diff_register_out_cost_type_interface"
-   internal="activate_to_diff_register.out_cost_type_interface"
-   type="conduit"
-   dir="end" />
- <interface
-   name="activate_to_diff_register_out_forward_interface"
-   internal="activate_to_diff_register.out_forward_interface"
-   type="conduit"
-   dir="end" />
+   internal="activate_to_diff_register.out_cost_type_interface" />
  <interface
    name="activate_to_diff_register_out_w_interface"
-   internal="activate_to_diff_register.out_w_interface"
-   type="conduit"
-   dir="end" />
+   internal="activate_to_diff_register.out_w_interface" />
  <interface
    name="activate_to_diff_register_out_x_interface"
-   internal="activate_to_diff_register.out_x_interface"
-   type="conduit"
-   dir="end" />
+   internal="activate_to_diff_register.out_x_interface" />
  <interface
    name="activate_to_diff_register_out_z_interface"
-   internal="activate_to_diff_register.out_z_interface"
+   internal="activate_to_diff_register.out_z_interface" />
+ <interface
+   name="backpropagator_0_dc_dw_stream_interface"
+   internal="backpropagator.dc_dw_stream_interface"
    type="conduit"
    dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -577,6 +745,9 @@
  <interface
    name="decode_to_dense_register_0_out_load_w_interface"
    internal="decode_to_dense_register.out_load_w_interface" />
+ <interface
+   name="diff_to_backprop_register_out_is_update_interface"
+   internal="diff_to_backprop_register.out_is_update_interface" />
  <interface
    name="input_storage_is_write_interface"
    internal="input_storage.is_write_interface"
@@ -638,6 +809,19 @@
   <parameter name="data_size" value="16" />
   <parameter name="size" value="3" />
  </module>
+ <module
+   name="backprop_controller"
+   kind="backprop_controller"
+   version="1.0"
+   enabled="1">
+  <parameter name="data_size" value="16" />
+  <parameter name="size" value="3" />
+ </module>
+ <module name="backpropagator" kind="backpropagator" version="1.0" enabled="1">
+  <parameter name="data_size" value="16" />
+  <parameter name="max_layer_size" value="10" />
+  <parameter name="size" value="3" />
+ </module>
  <module name="clk_0" kind="clock_source" version="20.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -682,6 +866,21 @@
    version="1.0"
    enabled="1">
   <parameter name="act_type_size" value="4" />
+  <parameter name="cost_type_size" value="8" />
+  <parameter name="data_size" value="16" />
+  <parameter name="dense_type_size" value="4" />
+  <parameter name="size" value="3" />
+ </module>
+ <module
+   name="diff_to_backprop_register"
+   kind="diff_to_backprop_register"
+   version="1.0"
+   enabled="1">
+  <parameter name="data_size" value="16" />
+  <parameter name="dense_type_size" value="4" />
+  <parameter name="size" value="3" />
+ </module>
+ <module name="differ" kind="differ" version="1.0" enabled="1">
   <parameter name="cost_type_size" value="8" />
   <parameter name="data_size" value="16" />
   <parameter name="dense_type_size" value="4" />
@@ -834,6 +1033,32 @@
    start="clk_0.clk"
    end="dense_layer_delay_reg.clock" />
  <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="activate_to_diff_register.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="diff_to_backprop_register.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="backpropagator.clock" />
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="backpropagator.backprop_interface"
+   end="backprop_controller.backpropagator_signal_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
    kind="conduit"
    version="20.1"
    start="controller.code_control_interface"
@@ -937,6 +1162,17 @@
    version="20.1"
    start="dense_layer_delay_reg.in_dense_type_interface"
    end="decode_to_dense_register.out_dense_type_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="diff_to_backprop_register.in_diff_interface"
+   end="differ.diff_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -1078,6 +1314,17 @@
  <connection
    kind="conduit"
    version="20.1"
+   start="diff_to_backprop_register.out_backprop_interface"
+   end="backprop_controller.parameter_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
    start="activation.out_data_interface"
    end="activate_to_diff_register.in_z_interface">
   <parameter name="endPort" value="" />
@@ -1089,8 +1336,30 @@
  <connection
    kind="conduit"
    version="20.1"
+   start="activate_to_diff_register.out_differ_interface"
+   end="differ.in_parameter_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
    start="dense_to_activate_register.out_forward_interface"
    end="activate_to_diff_register.in_forward_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="activate_to_diff_register.out_forward_interface"
+   end="diff_to_backprop_register.in_forward_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

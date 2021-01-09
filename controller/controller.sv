@@ -15,7 +15,8 @@ module controller(
     i_is_load,
     load_w,
     backprop_cost,
-    enable
+    enable,
+    is_cost_layer
 );
     parameter op_size = 4;
     parameter size = 3;
@@ -35,11 +36,12 @@ module controller(
     output is_load; //load weight from weight storage
     output code_reset; // reset code line
     output code_active; // change code line
-    output is_update; // update weight storage by dc_dw
+    output is_update; // is stall or not backpropagator
     output i_is_load; // get next data set
     output load_w; // set weight to systolic
-    output backprop_cost; // use cost to backprop
+    output backprop_cost; // use cost to backprop and update weight storage by dc_dw
     output use_z; // use z as data set
+    output is_cost_layer; // use for backprop 
 
     reg reset_reg;
     reg [31:0] w_layer_index_reg;
@@ -52,6 +54,7 @@ module controller(
     reg load_w_reg;
     reg backprop_cost_reg;
     reg use_z_reg;
+    reg is_cost_layer_reg;
 
     reg [31:0] epoch_size_reg;
 
@@ -66,6 +69,7 @@ module controller(
     assign load_w = load_w_reg;
     assign backprop_cost = backprop_cost_reg;
     assign use_z = use_z_reg;
+    assign is_cost_layer = is_cost_layer_reg;
 
     initial begin
         reset_reg = 1;
@@ -85,6 +89,7 @@ module controller(
 
 
     always @(*) begin
+        is_cost_layer_reg = 0;
         case (op)
             set_layer: begin
                 if (code_count < size) begin //load weight
@@ -104,10 +109,10 @@ module controller(
                         reset_reg = 0;
                         w_layer_index_reg = code_index; 
                         w_row_index_reg = code_count - size;
-                        is_load_reg = 0;
+                        is_load_reg = 1;
                         code_reset_reg = 0;
                         code_active_reg = 0;
-                        is_update_reg = 0;
+                        is_update_reg = 1;
                         i_is_load_reg = 1;
                         load_w_reg = 0;
                         backprop_cost_reg = 0;
@@ -116,16 +121,16 @@ module controller(
                         reset_reg = 0;
                         w_layer_index_reg = code_index; 
                         w_row_index_reg = code_count - size;
-                        is_load_reg = 0;
+                        is_load_reg = 1;
                         code_reset_reg = 0;
                         code_active_reg = 0;
-                        is_update_reg = 0;
+                        is_update_reg = 1;
                         i_is_load_reg = 0;
                         load_w_reg = 0;
                         backprop_cost_reg = 0;
                         use_z_reg = 1;
                     end
-                end else if (code_count < 4*size) begin
+                end else if (code_count < 4*size + 3) begin
                     reset_reg = 0;
                     w_layer_index_reg = 0; 
                     w_row_index_reg = 0;
@@ -138,7 +143,7 @@ module controller(
                     backprop_cost_reg = 0;
                     use_z_reg = 0;
 
-                    if(code_count == 4*size - 1) begin
+                    if(code_count == 4*size + 2) begin
                         reset_reg = 1;
                         code_active_reg = 1;
                     end
