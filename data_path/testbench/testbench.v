@@ -2,66 +2,53 @@
 `timescale 1ps / 1ps
 module testbench  ; 
  
-  reg  [31:0]  weight_storage_update_weight_interface_layer_index   ; 
   reg  [47:0]  weight_storage_write_interface_write_data   ; 
   reg  [47:0]  input_storage_write_interface_write_data   ; 
   reg    reset_reset_n   ; 
   reg  [31:0]  code_storage_write_interface_write_line   ; 
   reg  [31:0]  weight_storage_write_interface_write_layer_index   ; 
-  reg  [31:0]  weight_storage_update_weight_interface_row_index   ; 
   reg  [31:0]  input_storage_write_interface_write_layer_index   ; 
   reg  [11:0]  code_storage_write_interface_write_data   ; 
-  reg  [47:0]  weight_storage_update_weight_interface_dc_dw   ; 
-  wire  [47:0]  backpropagator_0_dc_dw_stream_interface_dc_dw_stream   ; 
   reg  [31:0]  weight_storage_write_interface_write_row_index   ; 
   reg    weight_storage_is_write_interface_is_write   ; 
-  wire    controller_use_z_interface_use_z   ; 
   reg    input_storage_is_write_interface_is_write   ; 
   reg  [31:0]  input_storage_write_interface_write_row_index   ; 
   reg    matrix_storage_locator_reset_interface_reset   ; 
   reg    controller_enable_interface_enable   ; 
   reg  [47:0]  label_storage_write_interface_write_data   ; 
-  reg  [31:0]  label_storage_write_interface_write_layer_index   ; 
   reg    clk_clk   ; 
   reg    code_storage_enable_interface_enable   ; 
-  reg    weight_storage_is_update_interface_is_update   ; 
+  reg  [31:0]  label_storage_write_interface_write_layer_index   ; 
   reg  [31:0]  label_storage_write_interface_write_row_index   ; 
-  reg    label_storage_is_write_interface_is_write   ; 
   reg    code_storage_write_interface_is_write   ; 
+  reg    label_storage_is_write_interface_is_write   ; 
   data_path  
    DUT  ( 
-       .weight_storage_update_weight_interface_layer_index (weight_storage_update_weight_interface_layer_index ) ,
-      .weight_storage_write_interface_write_data (weight_storage_write_interface_write_data ) ,
+       .weight_storage_write_interface_write_data (weight_storage_write_interface_write_data ) ,
       .input_storage_write_interface_write_data (input_storage_write_interface_write_data ) ,
       .reset_reset_n (reset_reset_n ) ,
       .code_storage_write_interface_write_line (code_storage_write_interface_write_line ) ,
       .weight_storage_write_interface_write_layer_index (weight_storage_write_interface_write_layer_index ) ,
-      .weight_storage_update_weight_interface_row_index (weight_storage_update_weight_interface_row_index ) ,
       .input_storage_write_interface_write_layer_index (input_storage_write_interface_write_layer_index ) ,
       .code_storage_write_interface_write_data (code_storage_write_interface_write_data ) ,
-      .weight_storage_update_weight_interface_dc_dw (weight_storage_update_weight_interface_dc_dw ) ,
-      .backpropagator_0_dc_dw_stream_interface_dc_dw_stream (backpropagator_0_dc_dw_stream_interface_dc_dw_stream ) ,
       .weight_storage_write_interface_write_row_index (weight_storage_write_interface_write_row_index ) ,
       .weight_storage_is_write_interface_is_write (weight_storage_is_write_interface_is_write ) ,
-      .controller_use_z_interface_use_z (controller_use_z_interface_use_z ) ,
       .input_storage_is_write_interface_is_write (input_storage_is_write_interface_is_write ) ,
       .input_storage_write_interface_write_row_index (input_storage_write_interface_write_row_index ) ,
       .matrix_storage_locator_reset_interface_reset (matrix_storage_locator_reset_interface_reset ) ,
       .controller_enable_interface_enable (controller_enable_interface_enable ) ,
       .label_storage_write_interface_write_data (label_storage_write_interface_write_data ) ,
-      .label_storage_write_interface_write_layer_index (label_storage_write_interface_write_layer_index ) ,
       .clk_clk (clk_clk ) ,
       .code_storage_enable_interface_enable (code_storage_enable_interface_enable ) ,
-      .weight_storage_is_update_interface_is_update (weight_storage_is_update_interface_is_update ) ,
+      .label_storage_write_interface_write_layer_index (label_storage_write_interface_write_layer_index ) ,
       .label_storage_write_interface_write_row_index (label_storage_write_interface_write_row_index ) ,
-      .label_storage_is_write_interface_is_write (label_storage_is_write_interface_is_write ) ,
-      .code_storage_write_interface_is_write (code_storage_write_interface_is_write ) ); 
+      .code_storage_write_interface_is_write (code_storage_write_interface_is_write ) ,
+      .label_storage_is_write_interface_is_write (label_storage_is_write_interface_is_write ) ); 
+
+
 
   integer weight_storage_write_interface_write_data_file;
   integer weight_storage_write_interface_write_control_file;
-
-  integer weight_storage_update_weight_interface_dc_dw_file;
-  integer weight_storage_update_weight_interface_control_file;
 
   integer code_storage_write_interface_write_data_file;
   integer code_storage_write_interface_write_line_file;
@@ -90,9 +77,6 @@ module testbench  ;
    weight_storage_write_interface_write_data_file = $fopen("G:/neural-burning/data_path/testbench/weight_storage_write_interface_write_data.hex", "r");
    weight_storage_write_interface_write_control_file  = $fopen("G:/neural-burning/data_path/testbench/weight_storage_write_interface_write_control.hex", "r");
 
-   weight_storage_update_weight_interface_dc_dw_file = $fopen("G:/neural-burning/data_path/testbench/weight_storage_update_weight_interface_dc_dw.hex", "r");
-   weight_storage_update_weight_interface_control_file  = $fopen("G:/neural-burning/data_path/testbench/weight_storage_update_weight_interface_control.hex", "r");
-
    code_storage_write_interface_write_data_file = $fopen("G:/neural-burning/data_path/testbench/code_storage_write_interface_write_data.hex", "r");
    code_storage_write_interface_write_line_file  = $fopen("G:/neural-burning/data_path/testbench/code_storage_write_interface_write_line.hex", "r");
    control_signal_file  = $fopen("G:/neural-burning/data_path/testbench/control_signal.hex", "r");
@@ -109,10 +93,6 @@ module testbench  ;
      $fscanf(weight_storage_write_interface_write_data_file, "%b %b %b\n", temp_data_1, temp_data_2, temp_data_3);
      weight_storage_write_interface_write_data <= {temp_data_1, temp_data_2, temp_data_3};
      $fscanf(weight_storage_write_interface_write_control_file, "%d %d %b\n", weight_storage_write_interface_write_layer_index, weight_storage_write_interface_write_row_index, weight_storage_is_write_interface_is_write);
-
-     $fscanf(weight_storage_update_weight_interface_dc_dw_file, "%b %b %b\n", temp_data_1, temp_data_2, temp_data_3);
-     weight_storage_update_weight_interface_dc_dw <= {temp_data_1, temp_data_2, temp_data_3};
-     $fscanf(weight_storage_update_weight_interface_control_file, "%d %d %b\n", weight_storage_update_weight_interface_layer_index, weight_storage_update_weight_interface_row_index, weight_storage_is_update_interface_is_update);
 
      $fscanf(code_storage_write_interface_write_data_file, "%b\n", write_data_temp);
      $fscanf(code_storage_write_interface_write_line_file, "%d\n", write_line_temp);

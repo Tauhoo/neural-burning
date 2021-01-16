@@ -2,7 +2,7 @@ set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_NAM
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_VERSION "20.1"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "data_path" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../data_path.sopcinfo"]
-set_global_assignment -entity "data_path" -library "data_path" -name SLD_INFO "QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1610178349"
+set_global_assignment -entity "data_path" -library "data_path" -name SLD_INFO "QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1610187786"
 set_global_assignment -library "data_path" -name MISC_FILE [file join $::quartus(qip_path) "../data_path.cmp"]
 set_global_assignment -library "data_path" -name SLD_FILE [file join $::quartus(qip_path) "data_path.debuginfo"]
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
@@ -15,7 +15,7 @@ set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONEN
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxMDE3ODM0OQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxMDE4Nzc4Ng==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -48,6 +48,15 @@ set_global_assignment -entity "w_and_x_spreder" -library "data_path" -name IP_CO
 set_global_assignment -entity "w_and_x_spreder" -library "data_path" -name IP_COMPONENT_DESCRIPTION "U3ByZWFkIHcgYW5kIGEgc2lnbmFs"
 set_global_assignment -entity "w_and_x_spreder" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
 set_global_assignment -entity "w_and_x_spreder" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_NAME "dHJhaW5fZGF0YV9tdXg="
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "dHJhaW5fZGF0YV9tdXg="
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGlyYXdpdCBXYWNoYXJhaw=="
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_DESCRIPTION "U2VsZWN0IGRhdGEgYmV0d2VlbiB6IGFuZCB4"
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
+set_global_assignment -entity "train_data_mux" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
 set_global_assignment -entity "systolic" -library "data_path" -name IP_COMPONENT_NAME "c3lzdG9saWM="
 set_global_assignment -entity "systolic" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "c3lzdG9saWM="
 set_global_assignment -entity "systolic" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -137,6 +146,15 @@ set_global_assignment -entity "different" -library "data_path" -name IP_COMPONEN
 set_global_assignment -entity "different" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
 set_global_assignment -entity "different" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29zdF90eXBlX3NpemU=::OA==::Y29zdF90eXBlX3NpemU="
 set_global_assignment -entity "different" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGVuc2VfdHlwZV9zaXpl::NA==::ZGVuc2VfdHlwZV9zaXpl"
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_NAME "ZGlmZl90b19kZWNvZGVfcmVnaXN0ZXI="
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "ZGlmZl90b19kZWNvZGVfcmVnaXN0ZXI="
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGlyYXdpdCBXYWNoYXJhaw=="
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_DESCRIPTION "QnVmZmVyIGRhdGFiZXR3ZWVuIGRpZmYgdG8gZGVjb2Rl"
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
+set_global_assignment -entity "diff_to_decode_register" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
 set_global_assignment -entity "diff_backprop_reg" -library "data_path" -name IP_COMPONENT_NAME "ZGlmZl9iYWNrcHJvcF9yZWc="
 set_global_assignment -entity "diff_backprop_reg" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "ZGlmZl90b19iYWNrcHJvcF9yZWdpc3Rlcg=="
 set_global_assignment -entity "diff_backprop_reg" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -256,6 +274,7 @@ set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/weight_interface_spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/w_and_x_spreader.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/train_data_mux.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/systolic.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/parse.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/mult_matrix_revert.sv"]
@@ -270,6 +289,7 @@ set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/diff_start.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/diff_to_all.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/different.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/diff_to_decode_register.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/diff_backprop_reg.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/dense_activate_reg.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/dense_layer_delay_reg.sv"]

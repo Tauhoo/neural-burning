@@ -1,0 +1,1165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "data_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[32]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[33]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[34]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[35]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[36]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[37]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[38]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[39]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[40]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[41]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[42]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[43]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[44]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[45]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[46]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[47]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[32]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[33]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[34]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[35]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[36]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[37]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[38]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[39]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[40]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[41]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[42]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[43]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[44]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[45]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[46]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_out[47]",
+					"strict" : false
+				},
+				{
+					"name" : "use_z",
+					"strict" : false
+				},
+				{
+					"name" : "z[0]",
+					"strict" : false
+				},
+				{
+					"name" : "x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "z[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x[1]",
+					"strict" : false
+				},
+				{
+					"name" : "z[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x[2]",
+					"strict" : false
+				},
+				{
+					"name" : "z[3]",
+					"strict" : false
+				},
+				{
+					"name" : "x[3]",
+					"strict" : false
+				},
+				{
+					"name" : "z[4]",
+					"strict" : false
+				},
+				{
+					"name" : "x[4]",
+					"strict" : false
+				},
+				{
+					"name" : "z[5]",
+					"strict" : false
+				},
+				{
+					"name" : "x[5]",
+					"strict" : false
+				},
+				{
+					"name" : "z[6]",
+					"strict" : false
+				},
+				{
+					"name" : "x[6]",
+					"strict" : false
+				},
+				{
+					"name" : "z[7]",
+					"strict" : false
+				},
+				{
+					"name" : "x[7]",
+					"strict" : false
+				},
+				{
+					"name" : "z[8]",
+					"strict" : false
+				},
+				{
+					"name" : "x[8]",
+					"strict" : false
+				},
+				{
+					"name" : "z[9]",
+					"strict" : false
+				},
+				{
+					"name" : "x[9]",
+					"strict" : false
+				},
+				{
+					"name" : "z[10]",
+					"strict" : false
+				},
+				{
+					"name" : "x[10]",
+					"strict" : false
+				},
+				{
+					"name" : "z[11]",
+					"strict" : false
+				},
+				{
+					"name" : "x[11]",
+					"strict" : false
+				},
+				{
+					"name" : "z[12]",
+					"strict" : false
+				},
+				{
+					"name" : "x[12]",
+					"strict" : false
+				},
+				{
+					"name" : "z[13]",
+					"strict" : false
+				},
+				{
+					"name" : "x[13]",
+					"strict" : false
+				},
+				{
+					"name" : "z[14]",
+					"strict" : false
+				},
+				{
+					"name" : "x[14]",
+					"strict" : false
+				},
+				{
+					"name" : "z[15]",
+					"strict" : false
+				},
+				{
+					"name" : "x[15]",
+					"strict" : false
+				},
+				{
+					"name" : "z[16]",
+					"strict" : false
+				},
+				{
+					"name" : "x[16]",
+					"strict" : false
+				},
+				{
+					"name" : "z[17]",
+					"strict" : false
+				},
+				{
+					"name" : "x[17]",
+					"strict" : false
+				},
+				{
+					"name" : "z[18]",
+					"strict" : false
+				},
+				{
+					"name" : "x[18]",
+					"strict" : false
+				},
+				{
+					"name" : "z[19]",
+					"strict" : false
+				},
+				{
+					"name" : "x[19]",
+					"strict" : false
+				},
+				{
+					"name" : "z[20]",
+					"strict" : false
+				},
+				{
+					"name" : "x[20]",
+					"strict" : false
+				},
+				{
+					"name" : "z[21]",
+					"strict" : false
+				},
+				{
+					"name" : "x[21]",
+					"strict" : false
+				},
+				{
+					"name" : "z[22]",
+					"strict" : false
+				},
+				{
+					"name" : "x[22]",
+					"strict" : false
+				},
+				{
+					"name" : "z[23]",
+					"strict" : false
+				},
+				{
+					"name" : "x[23]",
+					"strict" : false
+				},
+				{
+					"name" : "z[24]",
+					"strict" : false
+				},
+				{
+					"name" : "x[24]",
+					"strict" : false
+				},
+				{
+					"name" : "z[25]",
+					"strict" : false
+				},
+				{
+					"name" : "x[25]",
+					"strict" : false
+				},
+				{
+					"name" : "z[26]",
+					"strict" : false
+				},
+				{
+					"name" : "x[26]",
+					"strict" : false
+				},
+				{
+					"name" : "z[27]",
+					"strict" : false
+				},
+				{
+					"name" : "x[27]",
+					"strict" : false
+				},
+				{
+					"name" : "z[28]",
+					"strict" : false
+				},
+				{
+					"name" : "x[28]",
+					"strict" : false
+				},
+				{
+					"name" : "z[29]",
+					"strict" : false
+				},
+				{
+					"name" : "x[29]",
+					"strict" : false
+				},
+				{
+					"name" : "z[30]",
+					"strict" : false
+				},
+				{
+					"name" : "x[30]",
+					"strict" : false
+				},
+				{
+					"name" : "z[31]",
+					"strict" : false
+				},
+				{
+					"name" : "x[31]",
+					"strict" : false
+				},
+				{
+					"name" : "z[32]",
+					"strict" : false
+				},
+				{
+					"name" : "x[32]",
+					"strict" : false
+				},
+				{
+					"name" : "z[33]",
+					"strict" : false
+				},
+				{
+					"name" : "x[33]",
+					"strict" : false
+				},
+				{
+					"name" : "z[34]",
+					"strict" : false
+				},
+				{
+					"name" : "x[34]",
+					"strict" : false
+				},
+				{
+					"name" : "z[35]",
+					"strict" : false
+				},
+				{
+					"name" : "x[35]",
+					"strict" : false
+				},
+				{
+					"name" : "z[36]",
+					"strict" : false
+				},
+				{
+					"name" : "x[36]",
+					"strict" : false
+				},
+				{
+					"name" : "z[37]",
+					"strict" : false
+				},
+				{
+					"name" : "x[37]",
+					"strict" : false
+				},
+				{
+					"name" : "z[38]",
+					"strict" : false
+				},
+				{
+					"name" : "x[38]",
+					"strict" : false
+				},
+				{
+					"name" : "z[39]",
+					"strict" : false
+				},
+				{
+					"name" : "x[39]",
+					"strict" : false
+				},
+				{
+					"name" : "z[40]",
+					"strict" : false
+				},
+				{
+					"name" : "x[40]",
+					"strict" : false
+				},
+				{
+					"name" : "z[41]",
+					"strict" : false
+				},
+				{
+					"name" : "x[41]",
+					"strict" : false
+				},
+				{
+					"name" : "z[42]",
+					"strict" : false
+				},
+				{
+					"name" : "x[42]",
+					"strict" : false
+				},
+				{
+					"name" : "z[43]",
+					"strict" : false
+				},
+				{
+					"name" : "x[43]",
+					"strict" : false
+				},
+				{
+					"name" : "z[44]",
+					"strict" : false
+				},
+				{
+					"name" : "x[44]",
+					"strict" : false
+				},
+				{
+					"name" : "z[45]",
+					"strict" : false
+				},
+				{
+					"name" : "x[45]",
+					"strict" : false
+				},
+				{
+					"name" : "z[46]",
+					"strict" : false
+				},
+				{
+					"name" : "x[46]",
+					"strict" : false
+				},
+				{
+					"name" : "z[47]",
+					"strict" : false
+				},
+				{
+					"name" : "x[47]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[0]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[0]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[1]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[1]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[2]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[2]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[3]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[3]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[4]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[4]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[5]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[5]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[6]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[6]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[7]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[7]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[8]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[8]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[9]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[9]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[10]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[10]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[11]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[11]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[12]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[12]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[13]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[13]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[14]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[14]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[15]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[15]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[16]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[16]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[17]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[17]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[18]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[18]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[19]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[19]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[20]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[20]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[21]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[21]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[22]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[22]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[23]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[23]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[24]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[24]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[25]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[25]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[26]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[26]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[27]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[27]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[28]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[28]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[29]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[29]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[30]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[30]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[31]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[31]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[32]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[32]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[33]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[33]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[34]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[34]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[35]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[35]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[36]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[36]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[37]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[37]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[38]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[38]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[39]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[39]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[40]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[40]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[41]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[41]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[42]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[42]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[43]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[43]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[44]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[44]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[45]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[45]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[46]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[46]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value_old[47]",
+					"strict" : false
+				},
+				{
+					"name" : "predict_value[47]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

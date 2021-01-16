@@ -13,14 +13,16 @@ module diff_cost (
     import gdo::gdo_sub;
     import gdo::gdo_mult;
 
-    function [data_size - 1:0] diff_square_sum;
-        input [data_size - 1:0] z;
-        input [data_size - 1:0] predict_value;
+    function reg [size*data_size - 1:0] diff_square_sum;
+        input reg signed [size*data_size - 1:0] z;
+        input reg signed [size*data_size - 1:0] predict_value;
         begin
-            diff_square_sum = gdo_mult(
-                {{(data_size/2 - 2){1'b0}}, 2'b10, {(data_size/2){1'b0}}},
-                gdo_sub(predict_value, z)
-            );
+            for (int index = 0; index < size; index = index + 1) begin   
+                diff_square_sum[(size - index)*data_size - 1 -: data_size] = gdo_mult(
+                    {{(data_size/2 - 2){1'b0}}, 2'b10, {(data_size/2){1'b0}}},
+                    gdo_sub(predict_value[(size - index)*data_size - 1 -: data_size], z[(size - index)*data_size - 1 -: data_size])
+                );
+            end
         end
     endfunction
 

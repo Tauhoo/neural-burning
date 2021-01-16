@@ -13,7 +13,7 @@
    {
       datum _sortIndex
       {
-         value = "22";
+         value = "23";
          type = "int";
       }
       datum sopceditor_expanded
@@ -26,7 +26,7 @@
    {
       datum _sortIndex
       {
-         value = "21";
+         value = "22";
          type = "int";
       }
    }
@@ -34,7 +34,7 @@
    {
       datum _sortIndex
       {
-         value = "25";
+         value = "26";
          type = "int";
       }
    }
@@ -42,7 +42,7 @@
    {
       datum _sortIndex
       {
-         value = "26";
+         value = "27";
          type = "int";
       }
    }
@@ -531,11 +531,123 @@
          type = "String";
       }
    }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element data_path
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element decode_to_dense_register
    {
       datum _sortIndex
       {
-         value = "14";
+         value = "15";
          type = "int";
       }
    }
@@ -543,7 +655,7 @@
    {
       datum _sortIndex
       {
-         value = "19";
+         value = "20";
          type = "int";
       }
    }
@@ -551,7 +663,7 @@
    {
       datum _sortIndex
       {
-         value = "20";
+         value = "21";
          type = "int";
       }
    }
@@ -559,7 +671,15 @@
    {
       datum _sortIndex
       {
-         value = "24";
+         value = "25";
+         type = "int";
+      }
+   }
+   element diff_to_decode_register
+   {
+      datum _sortIndex
+      {
+         value = "28";
          type = "int";
       }
    }
@@ -567,7 +687,7 @@
    {
       datum _sortIndex
       {
-         value = "23";
+         value = "24";
          type = "int";
       }
    }
@@ -631,7 +751,7 @@
    {
       datum _sortIndex
       {
-         value = "16";
+         value = "17";
          type = "int";
       }
    }
@@ -639,7 +759,7 @@
    {
       datum _sortIndex
       {
-         value = "18";
+         value = "19";
          type = "int";
       }
    }
@@ -655,7 +775,15 @@
    {
       datum _sortIndex
       {
-         value = "17";
+         value = "18";
+         type = "int";
+      }
+   }
+   element train_data_mux
+   {
+      datum _sortIndex
+      {
+         value = "13";
          type = "int";
       }
    }
@@ -663,7 +791,7 @@
    {
       datum _sortIndex
       {
-         value = "15";
+         value = "16";
          type = "int";
       }
    }
@@ -679,7 +807,7 @@
    {
       datum _sortIndex
       {
-         value = "13";
+         value = "14";
          type = "int";
       }
    }
@@ -716,11 +844,6 @@
  <interface
    name="activate_to_diff_register_out_z_interface"
    internal="activate_to_diff_register.out_z_interface" />
- <interface
-   name="backpropagator_0_dc_dw_stream_interface"
-   internal="backpropagator.dc_dw_stream_interface"
-   type="conduit"
-   dir="end" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
    name="code_storage_enable_interface"
@@ -735,11 +858,6 @@
  <interface
    name="controller_enable_interface"
    internal="controller.enable_interface"
-   type="conduit"
-   dir="end" />
- <interface
-   name="controller_use_z_interface"
-   internal="controller.use_z_interface"
    type="conduit"
    dir="end" />
  <interface
@@ -775,20 +893,13 @@
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="weight_storage_is_update_interface"
-   internal="weight_storage.is_update_interface"
-   type="conduit"
-   dir="end" />
- <interface
    name="weight_storage_is_write_interface"
    internal="weight_storage.is_write_interface"
    type="conduit"
    dir="end" />
  <interface
    name="weight_storage_update_weight_interface"
-   internal="weight_storage.update_weight_interface"
-   type="conduit"
-   dir="end" />
+   internal="weight_storage.update_weight_interface" />
  <interface
    name="weight_storage_write_interface"
    internal="weight_storage.write_interface"
@@ -880,6 +991,14 @@
   <parameter name="dense_type_size" value="4" />
   <parameter name="size" value="3" />
  </module>
+ <module
+   name="diff_to_decode_register"
+   kind="diff_to_decode_register"
+   version="1.0"
+   enabled="1">
+  <parameter name="data_size" value="16" />
+  <parameter name="size" value="3" />
+ </module>
  <module name="differ" kind="differ" version="1.0" enabled="1">
   <parameter name="cost_type_size" value="8" />
   <parameter name="data_size" value="16" />
@@ -954,6 +1073,10 @@
   <parameter name="param_b_size" value="4" />
  </module>
  <module name="systolic" kind="systolic" version="1.0" enabled="1">
+  <parameter name="data_size" value="16" />
+  <parameter name="size" value="3" />
+ </module>
+ <module name="train_data_mux" kind="train_data_mux" version="1.0" enabled="1">
   <parameter name="data_size" value="16" />
   <parameter name="size" value="3" />
  </module>
@@ -1047,6 +1170,11 @@
    version="20.1"
    start="clk_0.clk"
    end="backpropagator.clock" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="diff_to_decode_register.clock" />
  <connection
    kind="conduit"
    version="20.1"
@@ -1182,8 +1310,41 @@
  <connection
    kind="conduit"
    version="20.1"
+   start="differ.in_forward_interface"
+   end="diff_to_backprop_register.in_x_and_label_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
    start="dense_layer_delay_reg.in_forward_signal_interface"
    end="decode_to_dense_register.out_forward_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="decode_to_dense_register.in_train_data_interface"
+   end="train_data_mux.select_data_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="diff_to_decode_register.in_x_and_label_interface"
+   end="diff_to_backprop_register.out_x_and_label_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -1206,6 +1367,17 @@
    version="20.1"
    start="mult_matrix_prep.input_stream_interface"
    end="w_and_x_spreader.x_out_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="backprop_controller.is_cost_layer_interface"
+   end="diff_to_decode_register.in_is_cost_layer_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -1261,6 +1433,17 @@
    version="20.1"
    start="input_storage.is_read_interface"
    end="is_load_spreader_1.is_load_1">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="weight_storage.is_update_interface"
+   end="diff_to_decode_register.out_is_cost_layer_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -1380,30 +1563,30 @@
  <connection
    kind="conduit"
    version="20.1"
+   start="diff_to_decode_register.out_weight_location_interface"
+   end="weight_storage.update_weight_location_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="diff_to_decode_register.out_x_and_label_interface"
+   end="train_data_mux.use_z_data_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
    start="parse.parameter_type_interface"
    end="decode_to_dense_register.in_typel_interface">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="20.1"
-   start="input_storage.read_data_interface"
-   end="decode_to_dense_register.in_input_interface">
-  <parameter name="endPort" value="" />
-  <parameter name="endPortLSB" value="0" />
-  <parameter name="startPort" value="" />
-  <parameter name="startPortLSB" value="0" />
-  <parameter name="width" value="0" />
- </connection>
- <connection
-   kind="conduit"
-   version="20.1"
-   start="label_storage.read_data_interface"
-   end="decode_to_dense_register.in_label_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -1426,6 +1609,50 @@
    version="20.1"
    start="code_count.reset_interface"
    end="fetch_to_decode_register.reset_code_count_out_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="weight_storage.update_weight_dc_dw_interface"
+   end="backpropagator.dc_dw_stream_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="train_data_mux.use_x_data_label_interface"
+   end="label_storage.read_data_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="train_data_mux.use_x_data_x_interface"
+   end="input_storage.read_data_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="train_data_mux.use_z_interface"
+   end="controller.use_z_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -1459,6 +1686,17 @@
    version="20.1"
    start="systolic.weight_interface"
    end="w_and_x_spreader.w_out_interface">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="20.1"
+   start="backprop_controller.weight_location_interface"
+   end="diff_to_decode_register.in_weight_location_interface">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

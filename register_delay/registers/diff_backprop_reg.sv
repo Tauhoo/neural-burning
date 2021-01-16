@@ -8,6 +8,8 @@ module diff_backprop_reg (
     diff_cost,
     is_update,
     is_cost_layer,
+    z,
+    predict_value,
 
     w_layer_index_out,
     w_row_index_out,
@@ -18,6 +20,8 @@ module diff_backprop_reg (
     diff_cost_out,
     is_update_out,
     is_cost_layer_out,
+    z_out,
+    predict_value_out,
 
     clk
 );
@@ -35,6 +39,8 @@ module diff_backprop_reg (
     input [size*data_size - 1:0] diff_cost;
     input is_update;
     input is_cost_layer;
+    input [size*data_size - 1:0] z;
+    input [size*data_size - 1:0] predict_value;
 
     input clk;
 
@@ -47,6 +53,8 @@ module diff_backprop_reg (
     output [size*data_size - 1:0] diff_cost_out;
     output is_update_out;
     output is_cost_layer_out;
+    output [size*data_size - 1:0] z_out;
+    output [size*data_size - 1:0] predict_value_out;
     
     delay #(.data_size(32), .size(1)) 
     delay_inst_w_layer_index(.bus_in(w_layer_index), .bus_out(w_layer_index_out), .clk(clk));
@@ -74,5 +82,11 @@ module diff_backprop_reg (
 
     delay #(.data_size(1), .size(1))
     delay_inst_is_cost_layer(.bus_in(is_cost_layer), .bus_out(is_cost_layer_out), .clk(clk));
+
+    delay #(.data_size(data_size), .size(size))
+    delay_inst_z(.bus_in(z), .bus_out(z_out), .clk(clk));
+
+    delay #(.data_size(data_size), .size(size))
+    delay_inst_predict_value(.bus_in(predict_value), .bus_out(predict_value_out), .clk(clk));
     
 endmodule

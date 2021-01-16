@@ -89,7 +89,6 @@ module controller(
 
 
     always @(*) begin
-        is_cost_layer_reg = 0;
         case (op)
             set_layer: begin
                 if (code_count < size) begin //load weight
@@ -104,7 +103,9 @@ module controller(
                     load_w_reg = 1;
                     backprop_cost_reg = 0;
                     use_z_reg = 0;
+                    is_cost_layer_reg = 0;
                 end else if (code_count < 2*size) begin //start train
+                    $write("code_index : %d\n", code_index);
                     if (code_index == 0) begin
                         reset_reg = 0;
                         w_layer_index_reg = code_index; 
@@ -117,6 +118,7 @@ module controller(
                         load_w_reg = 0;
                         backprop_cost_reg = 0;
                         use_z_reg = 0;
+                        is_cost_layer_reg = 0;
                     end else begin
                         reset_reg = 0;
                         w_layer_index_reg = code_index; 
@@ -129,8 +131,9 @@ module controller(
                         load_w_reg = 0;
                         backprop_cost_reg = 0;
                         use_z_reg = 1;
+                        is_cost_layer_reg = 0;
                     end
-                end else if (code_count < 4*size + 3) begin
+                end else if (code_count < 3*size + 1) begin
                     reset_reg = 0;
                     w_layer_index_reg = 0; 
                     w_row_index_reg = 0;
@@ -142,8 +145,9 @@ module controller(
                     load_w_reg = 0;
                     backprop_cost_reg = 0;
                     use_z_reg = 0;
+                    is_cost_layer_reg = 0;
 
-                    if(code_count == 4*size + 2) begin
+                    if(code_count == 3*size ) begin
                         reset_reg = 1;
                         code_active_reg = 1;
                     end
@@ -152,20 +156,59 @@ module controller(
             set_cost: begin
                 if (code_count < size) begin //load weight
                     reset_reg = 0;
-                    w_layer_index_reg = code_index; 
-                    w_row_index_reg = code_count;
+                    w_layer_index_reg = 0; 
+                    w_row_index_reg = 0;
                     is_load_reg = 0;
                     code_reset_reg = 0;
                     code_active_reg = 0;
                     is_update_reg = 0;
                     i_is_load_reg = 0;
                     load_w_reg = 0;
+                    backprop_cost_reg = 0;
+                    use_z_reg = 0;
+                    is_cost_layer_reg = 0;
+                end else if (code_count < 2*size) begin //update cost layer in backprop stack
+                    // output reset; //reset code count
+                    // output [31:0] w_layer_index; // w_layer use to load and backprop 
+                    // output [31:0] w_row_index; // w_row use to load and backprop 
+                    // output is_load; //load weight from weight storage
+                    // output code_reset; // reset code line
+                    // output code_active; // change code line
+                    // output is_update; // is stall or not backpropagator
+                    // output i_is_load; // get next data set
+                    // output load_w; // set weight to systolic
+                    // output backprop_cost; // use cost to backprop and update weight storage by dc_dw
+                    // output use_z; // use z as data set
+                    // output is_cost_layer; // use for backprop 
+                    reset_reg = 0;
+                    w_layer_index_reg = code_index; 
+                    w_row_index_reg = code_count - size;
+                    is_load_reg = 0;
+                    code_reset_reg = 0;
+                    code_active_reg = 0;
+                    is_update_reg = 1;
+                    i_is_load_reg = 0;
+                    load_w_reg = 0;
                     backprop_cost_reg = 1;
                     use_z_reg = 1;
-                    if (code_count == size - 1) begin
-                        epoch_size_reg = epoch_size_reg - 1;
-                        code_reset_reg = 1;
+                    is_cost_layer_reg = 0;
+                end else if (code_count < (2 + code_index)*size + 1) begin // calculate dc/dw
+                    reset_reg = 0;
+                    w_layer_index_reg = code_count / size - 2; 
+                    w_row_index_reg = code_count % size;
+                    is_load_reg = 0;
+                    code_reset_reg = 0;
+                    code_active_reg = 0;
+                    is_update_reg = 1;
+                    i_is_load_reg = 0;
+                    load_w_reg = 0;
+                    backprop_cost_reg = 0;
+                    use_z_reg = 0;
+                    is_cost_layer_reg = 1;
+
+                    if(code_count == (2 + code_index)*size ) begin
                         reset_reg = 1;
+                        code_active_reg = 1;
                     end
                 end
             end

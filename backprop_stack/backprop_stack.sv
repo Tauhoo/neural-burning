@@ -11,7 +11,7 @@ module backprop_stack(backprop_dense,
     
     parameter data_size      = 16;
     parameter size           = 3;
-    parameter max_layer_size = 10;
+    parameter max_layer_size = 4;
     
     import gdo::gdo_add;
     import gdo::gdo_mult;

@@ -26,6 +26,8 @@ Progress: Adding dense_to_activate_register [dense_to_activate_register 1.0]
 Progress: Parameterizing module dense_to_activate_register
 Progress: Adding diff_to_backprop_register [diff_to_backprop_register 1.0]
 Progress: Parameterizing module diff_to_backprop_register
+Progress: Adding diff_to_decode_register [diff_to_decode_register 1.0]
+Progress: Parameterizing module diff_to_decode_register
 Progress: Adding differ [differ 1.0]
 Progress: Parameterizing module differ
 Progress: Adding fetch_to_decode_register [fetch_to_decode_register 1.0]
@@ -50,6 +52,8 @@ Progress: Adding parse [parse 1.0]
 Progress: Parameterizing module parse
 Progress: Adding systolic [systolic 1.0]
 Progress: Parameterizing module systolic
+Progress: Adding train_data_mux [train_data_mux 1.0]
+Progress: Parameterizing module train_data_mux
 Progress: Adding w_and_x_spreader [w_and_x_spreader 1.0]
 Progress: Parameterizing module w_and_x_spreader
 Progress: Adding weight_interface_spreader [weight_interface_spreader 1.0]
@@ -91,6 +95,8 @@ Progress: Adding dense_to_activate_register [dense_to_activate_register 1.0]
 Progress: Parameterizing module dense_to_activate_register
 Progress: Adding diff_to_backprop_register [diff_to_backprop_register 1.0]
 Progress: Parameterizing module diff_to_backprop_register
+Progress: Adding diff_to_decode_register [diff_to_decode_register 1.0]
+Progress: Parameterizing module diff_to_decode_register
 Progress: Adding differ [differ 1.0]
 Progress: Parameterizing module differ
 Progress: Adding fetch_to_decode_register [fetch_to_decode_register 1.0]
@@ -115,6 +121,8 @@ Progress: Adding parse [parse 1.0]
 Progress: Parameterizing module parse
 Progress: Adding systolic [systolic 1.0]
 Progress: Parameterizing module systolic
+Progress: Adding train_data_mux [train_data_mux 1.0]
+Progress: Parameterizing module train_data_mux
 Progress: Adding w_and_x_spreader [w_and_x_spreader 1.0]
 Progress: Parameterizing module w_and_x_spreader
 Progress: Adding weight_interface_spreader [weight_interface_spreader 1.0]
@@ -139,6 +147,8 @@ Info: dense_layer_delay_reg: "data_path" instantiated dense_layer_delay_reg "den
 Info: dense_to_activate_register: "data_path" instantiated dense_to_activate_register "dense_to_activate_register"
 Info: diff_to_backprop_register: "data_path" instantiated diff_to_backprop_register "diff_to_backprop_register"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv
+Info: diff_to_decode_register: "data_path" instantiated diff_to_decode_register "diff_to_decode_register"
+Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv
 Info: differ: "data_path" instantiated differ "differ"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv
 Info: fetch_to_decode_register: "data_path" instantiated fetch_to_decode_register "fetch_to_decode_register"
@@ -153,11 +163,12 @@ Info: mult_matrix_revert: "data_path" instantiated mult_matrix_revert "mult_matr
 Info: parse: "data_path" instantiated parse "parse"
 Info: systolic: "data_path" instantiated systolic "systolic"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv
+Info: train_data_mux: "data_path" instantiated train_data_mux "train_data_mux"
 Info: w_and_x_spreader: "data_path" instantiated w_and_x_spreader "w_and_x_spreader"
 Info: weight_interface_spreader: "data_path" instantiated weight_interface_spreader "weight_interface_spreader"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv
 Info: weight_storage: "data_path" instantiated weight_storage "weight_storage"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv
-Info: data_path: Done "data_path" with 25 modules, 31 files
+Info: data_path: Done "data_path" with 27 modules, 33 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

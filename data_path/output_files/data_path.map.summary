@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sat Jan 09 14:47:08 2021
+Analysis & Synthesis Status : Successful - Sun Jan 10 22:56:48 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : data_path
 Top-level Entity Name : data_path
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 5548
-Total pins : 551
+Total registers : 0
+Total pins : 389
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 174
+Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

@@ -4,32 +4,26 @@
 
 `timescale 1 ps / 1 ps
 module data_path (
-		output wire [47:0] backpropagator_0_dc_dw_stream_interface_dc_dw_stream, // backpropagator_0_dc_dw_stream_interface.dc_dw_stream
-		input  wire        clk_clk,                                              //                                     clk.clk
-		input  wire        code_storage_enable_interface_enable,                 //           code_storage_enable_interface.enable
-		input  wire [11:0] code_storage_write_interface_write_data,              //            code_storage_write_interface.write_data
-		input  wire        code_storage_write_interface_is_write,                //                                        .is_write
-		input  wire [31:0] code_storage_write_interface_write_line,              //                                        .write_line
-		input  wire        controller_enable_interface_enable,                   //             controller_enable_interface.enable
-		output wire        controller_use_z_interface_use_z,                     //              controller_use_z_interface.use_z
-		input  wire        input_storage_is_write_interface_is_write,            //        input_storage_is_write_interface.is_write
-		input  wire [31:0] input_storage_write_interface_write_layer_index,      //           input_storage_write_interface.write_layer_index
-		input  wire [31:0] input_storage_write_interface_write_row_index,        //                                        .write_row_index
-		input  wire [47:0] input_storage_write_interface_write_data,             //                                        .write_data
-		input  wire        label_storage_is_write_interface_is_write,            //        label_storage_is_write_interface.is_write
-		input  wire [31:0] label_storage_write_interface_write_layer_index,      //           label_storage_write_interface.write_layer_index
-		input  wire [31:0] label_storage_write_interface_write_row_index,        //                                        .write_row_index
-		input  wire [47:0] label_storage_write_interface_write_data,             //                                        .write_data
-		input  wire        matrix_storage_locator_reset_interface_reset,         //  matrix_storage_locator_reset_interface.reset
-		input  wire        reset_reset_n,                                        //                                   reset.reset_n
-		input  wire        weight_storage_is_update_interface_is_update,         //      weight_storage_is_update_interface.is_update
-		input  wire        weight_storage_is_write_interface_is_write,           //       weight_storage_is_write_interface.is_write
-		input  wire [47:0] weight_storage_update_weight_interface_dc_dw,         //  weight_storage_update_weight_interface.dc_dw
-		input  wire [31:0] weight_storage_update_weight_interface_layer_index,   //                                        .layer_index
-		input  wire [31:0] weight_storage_update_weight_interface_row_index,     //                                        .row_index
-		input  wire [31:0] weight_storage_write_interface_write_layer_index,     //          weight_storage_write_interface.write_layer_index
-		input  wire [31:0] weight_storage_write_interface_write_row_index,       //                                        .write_row_index
-		input  wire [47:0] weight_storage_write_interface_write_data             //                                        .write_data
+		input  wire        clk_clk,                                          //                                    clk.clk
+		input  wire        code_storage_enable_interface_enable,             //          code_storage_enable_interface.enable
+		input  wire [11:0] code_storage_write_interface_write_data,          //           code_storage_write_interface.write_data
+		input  wire        code_storage_write_interface_is_write,            //                                       .is_write
+		input  wire [31:0] code_storage_write_interface_write_line,          //                                       .write_line
+		input  wire        controller_enable_interface_enable,               //            controller_enable_interface.enable
+		input  wire        input_storage_is_write_interface_is_write,        //       input_storage_is_write_interface.is_write
+		input  wire [31:0] input_storage_write_interface_write_layer_index,  //          input_storage_write_interface.write_layer_index
+		input  wire [31:0] input_storage_write_interface_write_row_index,    //                                       .write_row_index
+		input  wire [47:0] input_storage_write_interface_write_data,         //                                       .write_data
+		input  wire        label_storage_is_write_interface_is_write,        //       label_storage_is_write_interface.is_write
+		input  wire [31:0] label_storage_write_interface_write_layer_index,  //          label_storage_write_interface.write_layer_index
+		input  wire [31:0] label_storage_write_interface_write_row_index,    //                                       .write_row_index
+		input  wire [47:0] label_storage_write_interface_write_data,         //                                       .write_data
+		input  wire        matrix_storage_locator_reset_interface_reset,     // matrix_storage_locator_reset_interface.reset
+		input  wire        reset_reset_n,                                    //                                  reset.reset_n
+		input  wire        weight_storage_is_write_interface_is_write,       //      weight_storage_is_write_interface.is_write
+		input  wire [31:0] weight_storage_write_interface_write_layer_index, //         weight_storage_write_interface.write_layer_index
+		input  wire [31:0] weight_storage_write_interface_write_row_index,   //                                       .write_row_index
+		input  wire [47:0] weight_storage_write_interface_write_data         //                                       .write_data
 	);
 
 	wire  [31:0] backprop_controller_backpropagator_signal_interface_current_layer_index; // backprop_controller:current_layer_index -> backpropagator:current_layer_index
@@ -61,6 +55,8 @@ module data_path (
 	wire  [47:0] differ_diff_interface_diff_dense;                                        // differ:diff_dense_out -> diff_to_backprop_register:diff_dense
 	wire  [47:0] differ_diff_interface_diff_to_all;                                       // differ:diff_to_all_out -> diff_to_backprop_register:diff_to_all
 	wire  [47:0] differ_diff_interface_diff_cost;                                         // differ:diff_cost_out -> diff_to_backprop_register:diff_cost
+	wire  [47:0] differ_in_forward_interface_z;                                           // differ:z_out -> diff_to_backprop_register:z
+	wire  [47:0] differ_in_forward_interface_label;                                       // differ:predict_value_out -> diff_to_backprop_register:predict_value
 	wire   [7:0] decode_to_dense_register_out_forward_interface_cost_type;                // decode_to_dense_register:cost_type_out -> dense_layer_delay_reg:cost_type
 	wire         decode_to_dense_register_out_forward_interface_is_update;                // decode_to_dense_register:is_update_out -> dense_layer_delay_reg:is_update
 	wire         decode_to_dense_register_out_forward_interface_is_cost_layer;            // decode_to_dense_register:is_cost_layer_out -> dense_layer_delay_reg:is_cost_layer
@@ -69,13 +65,19 @@ module data_path (
 	wire  [31:0] decode_to_dense_register_out_forward_interface_w_layer_index;            // decode_to_dense_register:w_layer_index_out -> dense_layer_delay_reg:w_layer_index
 	wire  [31:0] decode_to_dense_register_out_forward_interface_w_row_index;              // decode_to_dense_register:w_row_index_out -> dense_layer_delay_reg:w_row_index
 	wire         decode_to_dense_register_out_forward_interface_backprop_cost;            // decode_to_dense_register:backprop_cost_out -> dense_layer_delay_reg:backprop_cost
+	wire  [47:0] train_data_mux_select_data_interface_x;                                  // train_data_mux:data_out -> decode_to_dense_register:x
+	wire  [47:0] train_data_mux_select_data_interface_label;                              // train_data_mux:predict_value_out -> decode_to_dense_register:label_in
+	wire  [47:0] diff_to_backprop_register_out_x_and_label_interface_z;                   // diff_to_backprop_register:z_out -> diff_to_decode_register:z
+	wire  [47:0] diff_to_backprop_register_out_x_and_label_interface_label;               // diff_to_backprop_register:predict_value_out -> diff_to_decode_register:predict_value
 	wire  [47:0] mult_matrix_revert_output_stream_interface_y_stream;                     // mult_matrix_revert:output_stream -> dense_to_activate_register:y
 	wire  [47:0] w_and_x_spreader_x_out_interface_data_stream;                            // w_and_x_spreader:x_out -> mult_matrix_prep:input_stream
+	wire         backprop_controller_is_cost_layer_interface_is_cost_layer;               // backprop_controller:is_cost_layer_out -> diff_to_decode_register:is_cost_layer
 	wire         controller_i_is_load_interface_is_load;                                  // controller:i_is_load -> is_load_spreader_0:data_in
 	wire   [0:0] is_load_spreader_0_is_load_1_is_load;                                    // is_load_spreader_0:data_out_a -> is_load_spreader_1:data_in
 	wire   [0:0] is_load_spreader_1_is_load_2_is_load;                                    // is_load_spreader_1:data_out_b -> label_storage:is_read
 	wire   [0:0] is_load_spreader_0_is_load_2_is_load;                                    // is_load_spreader_0:data_out_b -> matrix_storage_locator:is_load
 	wire   [0:0] is_load_spreader_1_is_load_1_is_load;                                    // is_load_spreader_1:data_out_a -> input_storage:is_read
+	wire         diff_to_decode_register_out_is_cost_layer_interface_is_cost_layer;       // diff_to_decode_register:is_cost_layer_out -> weight_storage:is_update
 	wire  [31:0] matrix_storage_locator_matrix_location_interface_row_index;              // matrix_storage_locator:row_index -> matrix_location_spreader:read_row_index
 	wire  [31:0] matrix_storage_locator_matrix_location_interface_layer_index;            // matrix_storage_locator:layer_index -> matrix_location_spreader:read_layer_index
 	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_row_index;      // matrix_location_spreader:read_row_index_1 -> input_storage:read_row_index
@@ -125,13 +127,19 @@ module data_path (
 	wire  [31:0] dense_layer_delay_reg_out_forward_signal_interface_w_layer_index;        // dense_layer_delay_reg:w_layer_index_out -> dense_to_activate_register:w_layer_index
 	wire  [31:0] dense_layer_delay_reg_out_forward_signal_interface_w_row_index;          // dense_layer_delay_reg:w_row_index_out -> dense_to_activate_register:w_row_index
 	wire         dense_layer_delay_reg_out_forward_signal_interface_backprop_cost;        // dense_layer_delay_reg:backprop_cost_out -> dense_to_activate_register:backprop_cost
+	wire  [31:0] diff_to_decode_register_out_weight_location_interface_row_index;         // diff_to_decode_register:w_row_index_out -> weight_storage:row_index
+	wire  [31:0] diff_to_decode_register_out_weight_location_interface_layer_index;       // diff_to_decode_register:w_layer_index_out -> weight_storage:layer_index
+	wire  [47:0] diff_to_decode_register_out_x_and_label_interface_z;                     // diff_to_decode_register:z_out -> train_data_mux:z
+	wire  [47:0] diff_to_decode_register_out_x_and_label_interface_label;                 // diff_to_decode_register:predict_value_out -> train_data_mux:predict_value_old
 	wire   [3:0] parse_parameter_type_interface_dense_type;                               // parse:dense_type -> decode_to_dense_register:dense_type
 	wire   [7:0] parse_parameter_type_interface_cost_type;                                // parse:cost_type -> decode_to_dense_register:cost_type
 	wire   [3:0] parse_parameter_type_interface_act_type;                                 // parse:act_type -> decode_to_dense_register:act_type
-	wire  [47:0] input_storage_read_data_interface_read_data;                             // input_storage:read_data -> decode_to_dense_register:x
-	wire  [47:0] label_storage_read_data_interface_read_data;                             // label_storage:read_data -> decode_to_dense_register:label_in
 	wire         controller_code_count_reset_interface_reset;                             // controller:reset -> fetch_to_decode_register:reset_code_count
 	wire         fetch_to_decode_register_reset_code_count_out_interface_reset;           // fetch_to_decode_register:reset_code_count_out -> code_count:reset
+	wire  [47:0] backpropagator_dc_dw_stream_interface_dc_dw;                             // backpropagator:dc_dw_stream -> weight_storage:dc_dw
+	wire  [47:0] label_storage_read_data_interface_read_data;                             // label_storage:read_data -> train_data_mux:predict_value
+	wire  [47:0] input_storage_read_data_interface_read_data;                             // input_storage:read_data -> train_data_mux:x
+	wire         controller_use_z_interface_use_z;                                        // controller:use_z -> train_data_mux:use_z
 	wire  [47:0] decode_to_dense_register_out_weight_interface_w_stream;                  // decode_to_dense_register:w_out -> w_and_x_spreader:w
 	wire         decode_to_dense_register_out_weight_interface_set_w;                     // decode_to_dense_register:load_w_out -> w_and_x_spreader:set_w
 	wire         weight_interface_spreader_weight_control_out_interface_is_load;          // weight_interface_spreader:is_load_out -> weight_storage:is_read
@@ -139,6 +147,8 @@ module data_path (
 	wire  [31:0] weight_interface_spreader_weight_control_out_interface_w_layer_index;    // weight_interface_spreader:w_layer_index_out -> weight_storage:w_layer_index
 	wire  [47:0] w_and_x_spreader_w_out_interface_w_stream;                               // w_and_x_spreader:w_out -> systolic:w_stream
 	wire         w_and_x_spreader_w_out_interface_set_w;                                  // w_and_x_spreader:set_w_out -> systolic:set_w
+	wire  [31:0] backprop_controller_weight_location_interface_w_layer_index;             // backprop_controller:w_layer_index_out -> diff_to_decode_register:w_layer_index
+	wire  [31:0] backprop_controller_weight_location_interface_w_row_index;               // backprop_controller:w_row_index_out -> diff_to_decode_register:w_row_index
 	wire  [47:0] weight_storage_weight_output_interface_weight;                           // weight_storage:w -> decode_to_dense_register:w
 	wire         controller_weigth_interface_is_load;                                     // controller:is_load -> weight_interface_spreader:is_load
 	wire  [31:0] controller_weigth_interface_w_layer_index;                               // controller:w_layer_index -> weight_interface_spreader:w_layer_index
@@ -209,13 +219,16 @@ module data_path (
 		.diff_cost           (diff_to_backprop_register_out_backprop_interface_diff_cost),              //                                .diff_cost
 		.diff_dense          (diff_to_backprop_register_out_backprop_interface_diff_dense),             //                                .diff_dense
 		.diff_start          (diff_to_backprop_register_out_backprop_interface_diff_start),             //                                .diff_start
-		.diff_to_all         (diff_to_backprop_register_out_backprop_interface_diff_to_all)             //                                .diff_to_all
+		.diff_to_all         (diff_to_backprop_register_out_backprop_interface_diff_to_all),            //                                .diff_to_all
+		.is_cost_layer_out   (backprop_controller_is_cost_layer_interface_is_cost_layer),               //         is_cost_layer_interface.is_cost_layer
+		.w_layer_index_out   (backprop_controller_weight_location_interface_w_layer_index),             //       weight_location_interface.w_layer_index
+		.w_row_index_out     (backprop_controller_weight_location_interface_w_row_index)                //                                .w_row_index
 	);
 
 	backprop_stack #(
 		.data_size      (16),
 		.size           (3),
-		.max_layer_size (10)
+		.max_layer_size (4)
 	) backpropagator (
 		.clk                 (clk_clk),                                                                 //                  clock.clk
 		.current_layer_index (backprop_controller_backpropagator_signal_interface_current_layer_index), //     backprop_interface.current_layer_index
@@ -226,7 +239,7 @@ module data_path (
 		.backprop_dense      (backprop_controller_backpropagator_signal_interface_diff_dense),          //                       .diff_dense
 		.backprop_start      (backprop_controller_backpropagator_signal_interface_diff_start),          //                       .diff_start
 		.backprop_to_all     (backprop_controller_backpropagator_signal_interface_diff_to_all),         //                       .diff_to_all
-		.dc_dw_stream        (backpropagator_0_dc_dw_stream_interface_dc_dw_stream)                     // dc_dw_stream_interface.dc_dw_stream
+		.dc_dw_stream        (backpropagator_dc_dw_stream_interface_dc_dw)                              // dc_dw_stream_interface.dc_dw
 	);
 
 	code_count code_count (
@@ -283,8 +296,6 @@ module data_path (
 		.w_out             (decode_to_dense_register_out_weight_interface_w_stream),       //         out_weight_interface.w_stream
 		.load_w_out        (decode_to_dense_register_out_weight_interface_set_w),          //                             .set_w
 		.w                 (weight_storage_weight_output_interface_weight),                //          in_weight_interface.weight
-		.label_in          (label_storage_read_data_interface_read_data),                  //           in_label_interface.read_data
-		.x                 (input_storage_read_data_interface_read_data),                  //           in_input_interface.read_data
 		.x_out             (decode_to_dense_register_out_input_interface_data_stream),     //          out_input_interface.data_stream
 		.w_layer_index     (weight_interface_spreader_forward_interface_w_layer_index),    // in_weight_location_interface.w_layer_index
 		.w_row_index       (weight_interface_spreader_forward_interface_w_row_index),      //                             .w_row_index
@@ -303,7 +314,9 @@ module data_path (
 		.backprop_cost     (controller_forward_control_interface_backprop_cost),           //         in_control_interface.backprop_cost
 		.is_update         (controller_forward_control_interface_is_update),               //                             .is_update
 		.load_w            (controller_forward_control_interface_load_w),                  //                             .load_w
-		.is_cost_layer     (controller_forward_control_interface_is_cost_layer)            //                             .is_cost_layer
+		.is_cost_layer     (controller_forward_control_interface_is_cost_layer),           //                             .is_cost_layer
+		.x                 (train_data_mux_select_data_interface_x),                       //      in_train_data_interface.x
+		.label_in          (train_data_mux_select_data_interface_label)                    //                             .label
 	);
 
 	dense_layer_delay_reg #(
@@ -378,25 +391,46 @@ module data_path (
 		.data_size       (16),
 		.dense_type_size (4)
 	) diff_to_backprop_register (
-		.clk               (clk_clk),                                                        //                  clock.clk
-		.backprop_cost     (activate_to_diff_register_out_forward_interface_backprop_cost),  //   in_forward_interface.backprop_cost
-		.is_update         (activate_to_diff_register_out_forward_interface_is_update),      //                       .is_update
-		.w_layer_index     (activate_to_diff_register_out_forward_interface_w_layer_index),  //                       .w_layer_index
-		.w_row_index       (activate_to_diff_register_out_forward_interface_w_row_index),    //                       .w_row_index
-		.is_cost_layer     (activate_to_diff_register_out_forward_interface_is_cost_layer),  //                       .is_cost_layer
-		.diff_cost         (differ_diff_interface_diff_cost),                                //      in_diff_interface.diff_cost
-		.diff_dense        (differ_diff_interface_diff_dense),                               //                       .diff_dense
-		.diff_start        (differ_diff_interface_diff_start),                               //                       .diff_start
-		.diff_to_all       (differ_diff_interface_diff_to_all),                              //                       .diff_to_all
-		.w_layer_index_out (diff_to_backprop_register_out_backprop_interface_w_layer_index), // out_backprop_interface.w_layer_index
-		.w_row_index_out   (diff_to_backprop_register_out_backprop_interface_w_row_index),   //                       .w_row_index
-		.backprop_cost_out (diff_to_backprop_register_out_backprop_interface_backprop_cost), //                       .backprop_cost
-		.diff_to_all_out   (diff_to_backprop_register_out_backprop_interface_diff_to_all),   //                       .diff_to_all
-		.diff_start_out    (diff_to_backprop_register_out_backprop_interface_diff_start),    //                       .diff_start
-		.diff_dense_out    (diff_to_backprop_register_out_backprop_interface_diff_dense),    //                       .diff_dense
-		.diff_cost_out     (diff_to_backprop_register_out_backprop_interface_diff_cost),     //                       .diff_cost
-		.is_cost_layer_out (diff_to_backprop_register_out_backprop_interface_is_cost_layer), //                       .is_cost_layer
-		.is_update_out     (diff_to_backprop_register_out_backprop_interface_is_update)      //                       .is_update
+		.clk               (clk_clk),                                                        //                     clock.clk
+		.backprop_cost     (activate_to_diff_register_out_forward_interface_backprop_cost),  //      in_forward_interface.backprop_cost
+		.is_update         (activate_to_diff_register_out_forward_interface_is_update),      //                          .is_update
+		.w_layer_index     (activate_to_diff_register_out_forward_interface_w_layer_index),  //                          .w_layer_index
+		.w_row_index       (activate_to_diff_register_out_forward_interface_w_row_index),    //                          .w_row_index
+		.is_cost_layer     (activate_to_diff_register_out_forward_interface_is_cost_layer),  //                          .is_cost_layer
+		.diff_cost         (differ_diff_interface_diff_cost),                                //         in_diff_interface.diff_cost
+		.diff_dense        (differ_diff_interface_diff_dense),                               //                          .diff_dense
+		.diff_start        (differ_diff_interface_diff_start),                               //                          .diff_start
+		.diff_to_all       (differ_diff_interface_diff_to_all),                              //                          .diff_to_all
+		.w_layer_index_out (diff_to_backprop_register_out_backprop_interface_w_layer_index), //    out_backprop_interface.w_layer_index
+		.w_row_index_out   (diff_to_backprop_register_out_backprop_interface_w_row_index),   //                          .w_row_index
+		.backprop_cost_out (diff_to_backprop_register_out_backprop_interface_backprop_cost), //                          .backprop_cost
+		.diff_to_all_out   (diff_to_backprop_register_out_backprop_interface_diff_to_all),   //                          .diff_to_all
+		.diff_start_out    (diff_to_backprop_register_out_backprop_interface_diff_start),    //                          .diff_start
+		.diff_dense_out    (diff_to_backprop_register_out_backprop_interface_diff_dense),    //                          .diff_dense
+		.diff_cost_out     (diff_to_backprop_register_out_backprop_interface_diff_cost),     //                          .diff_cost
+		.is_cost_layer_out (diff_to_backprop_register_out_backprop_interface_is_cost_layer), //                          .is_cost_layer
+		.is_update_out     (diff_to_backprop_register_out_backprop_interface_is_update),     //                          .is_update
+		.predict_value     (differ_in_forward_interface_label),                              //  in_x_and_label_interface.label
+		.z                 (differ_in_forward_interface_z),                                  //                          .z
+		.z_out             (diff_to_backprop_register_out_x_and_label_interface_z),          // out_x_and_label_interface.z
+		.predict_value_out (diff_to_backprop_register_out_x_and_label_interface_label)       //                          .label
+	);
+
+	diff_to_decode_register #(
+		.size      (3),
+		.data_size (16)
+	) diff_to_decode_register (
+		.clk               (clk_clk),                                                           //                         clock.clk
+		.z                 (diff_to_backprop_register_out_x_and_label_interface_z),             //      in_x_and_label_interface.z
+		.predict_value     (diff_to_backprop_register_out_x_and_label_interface_label),         //                              .label
+		.is_cost_layer     (backprop_controller_is_cost_layer_interface_is_cost_layer),         //    in_is_cost_layer_interface.is_cost_layer
+		.z_out             (diff_to_decode_register_out_x_and_label_interface_z),               //     out_x_and_label_interface.z
+		.predict_value_out (diff_to_decode_register_out_x_and_label_interface_label),           //                              .label
+		.is_cost_layer_out (diff_to_decode_register_out_is_cost_layer_interface_is_cost_layer), //   out_is_cost_layer_interface.is_cost_layer
+		.w_layer_index     (backprop_controller_weight_location_interface_w_layer_index),       //  in_weight_location_interface.w_layer_index
+		.w_row_index       (backprop_controller_weight_location_interface_w_row_index),         //                              .w_row_index
+		.w_layer_index_out (diff_to_decode_register_out_weight_location_interface_layer_index), // out_weight_location_interface.layer_index
+		.w_row_index_out   (diff_to_decode_register_out_weight_location_interface_row_index)    //                              .row_index
 	);
 
 	different #(
@@ -405,16 +439,18 @@ module data_path (
 		.cost_type_size  (8),
 		.dense_type_size (4)
 	) differ (
-		.cost_type       (activate_to_diff_register_out_differ_interface_cost_type),  // in_parameter_interface.cost_type
-		.predict_value   (activate_to_diff_register_out_differ_interface_label),      //                       .label
-		.weight          (activate_to_diff_register_out_differ_interface_w),          //                       .w
-		.x               (activate_to_diff_register_out_differ_interface_x),          //                       .x
-		.z               (activate_to_diff_register_out_differ_interface_z),          //                       .z
-		.dense_type      (activate_to_diff_register_out_differ_interface_dense_type), //                       .dense_type
-		.diff_dense_out  (differ_diff_interface_diff_dense),                          //         diff_interface.diff_dense
-		.diff_start_out  (differ_diff_interface_diff_start),                          //                       .diff_start
-		.diff_to_all_out (differ_diff_interface_diff_to_all),                         //                       .diff_to_all
-		.diff_cost_out   (differ_diff_interface_diff_cost)                            //                       .diff_cost
+		.cost_type         (activate_to_diff_register_out_differ_interface_cost_type),  // in_parameter_interface.cost_type
+		.predict_value     (activate_to_diff_register_out_differ_interface_label),      //                       .label
+		.weight            (activate_to_diff_register_out_differ_interface_w),          //                       .w
+		.x                 (activate_to_diff_register_out_differ_interface_x),          //                       .x
+		.z                 (activate_to_diff_register_out_differ_interface_z),          //                       .z
+		.dense_type        (activate_to_diff_register_out_differ_interface_dense_type), //                       .dense_type
+		.diff_dense_out    (differ_diff_interface_diff_dense),                          //         diff_interface.diff_dense
+		.diff_start_out    (differ_diff_interface_diff_start),                          //                       .diff_start
+		.diff_to_all_out   (differ_diff_interface_diff_to_all),                         //                       .diff_to_all
+		.diff_cost_out     (differ_diff_interface_diff_cost),                           //                       .diff_cost
+		.z_out             (differ_in_forward_interface_z),                             //   in_forward_interface.z
+		.predict_value_out (differ_in_forward_interface_label)                          //                       .label
 	);
 
 	fetch_decode_reg #(
@@ -540,6 +576,19 @@ module data_path (
 		.y_stream    (systolic_y_stream_interface_y_stream)                  //    y_stream_interface.y_stream
 	);
 
+	train_data_mux #(
+		.data_size (16),
+		.size      (3)
+	) train_data_mux (
+		.use_z             (controller_use_z_interface_use_z),                        //            use_z_interface.use_z
+		.z                 (diff_to_decode_register_out_x_and_label_interface_z),     //       use_z_data_interface.z
+		.predict_value_old (diff_to_decode_register_out_x_and_label_interface_label), //                           .label
+		.data_out          (train_data_mux_select_data_interface_x),                  //      select_data_interface.x
+		.predict_value_out (train_data_mux_select_data_interface_label),              //                           .label
+		.x                 (input_storage_read_data_interface_read_data),             //     use_x_data_x_interface.read_data
+		.predict_value     (label_storage_read_data_interface_read_data)              // use_x_data_label_interface.read_data
+	);
+
 	w_and_x_spreder #(
 		.size      (3),
 		.data_size (16)
@@ -570,19 +619,19 @@ module data_path (
 		.size       (3),
 		.layer_size (5)
 	) weight_storage (
-		.clk               (clk_clk),                                                              //                   clock.clk
-		.write_layer_index (weight_storage_write_interface_write_layer_index),                     //         write_interface.write_layer_index
-		.write_row_index   (weight_storage_write_interface_write_row_index),                       //                        .write_row_index
-		.write_data        (weight_storage_write_interface_write_data),                            //                        .write_data
-		.is_update         (weight_storage_is_update_interface_is_update),                         //     is_update_interface.is_update
-		.is_write          (weight_storage_is_write_interface_is_write),                           //      is_write_interface.is_write
-		.w                 (weight_storage_weight_output_interface_weight),                        // weight_output_interface.weight
-		.dc_dw             (weight_storage_update_weight_interface_dc_dw),                         // update_weight_interface.dc_dw
-		.layer_index       (weight_storage_update_weight_interface_layer_index),                   //                        .layer_index
-		.row_index         (weight_storage_update_weight_interface_row_index),                     //                        .row_index
-		.is_read           (weight_interface_spreader_weight_control_out_interface_is_load),       //   load_weight_interface.is_load
-		.w_layer_index     (weight_interface_spreader_weight_control_out_interface_w_layer_index), //                        .w_layer_index
-		.w_row_index       (weight_interface_spreader_weight_control_out_interface_w_row_index)    //                        .w_row_index
+		.clk               (clk_clk),                                                              //                            clock.clk
+		.write_layer_index (weight_storage_write_interface_write_layer_index),                     //                  write_interface.write_layer_index
+		.write_row_index   (weight_storage_write_interface_write_row_index),                       //                                 .write_row_index
+		.write_data        (weight_storage_write_interface_write_data),                            //                                 .write_data
+		.is_update         (diff_to_decode_register_out_is_cost_layer_interface_is_cost_layer),    //              is_update_interface.is_cost_layer
+		.is_write          (weight_storage_is_write_interface_is_write),                           //               is_write_interface.is_write
+		.w                 (weight_storage_weight_output_interface_weight),                        //          weight_output_interface.weight
+		.is_read           (weight_interface_spreader_weight_control_out_interface_is_load),       //            load_weight_interface.is_load
+		.w_layer_index     (weight_interface_spreader_weight_control_out_interface_w_layer_index), //                                 .w_layer_index
+		.w_row_index       (weight_interface_spreader_weight_control_out_interface_w_row_index),   //                                 .w_row_index
+		.dc_dw             (backpropagator_dc_dw_stream_interface_dc_dw),                          //    update_weight_dc_dw_interface.dc_dw
+		.layer_index       (diff_to_decode_register_out_weight_location_interface_layer_index),    // update_weight_location_interface.layer_index
+		.row_index         (diff_to_decode_register_out_weight_location_interface_row_index)       //                                 .row_index
 	);
 
 endmodule
