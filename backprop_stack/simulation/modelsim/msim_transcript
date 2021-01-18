@@ -12,326 +12,1993 @@
 # 
 # vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src {G:/neural-burning/general_data_operator/src/gdo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:01:56 on Dec 22,2020
+# Start time: 20:03:40 on Jan 17,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
 # -- Compiling package gdo
 # 
 # Top level modules:
 # 	--none--
-# End time: 21:01:56 on Dec 22,2020, Elapsed time: 0:00:00
+# End time: 20:03:40 on Jan 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+G:/neural-burning/backprop_stack {G:/neural-burning/backprop_stack/backprop_stack.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:01:56 on Dec 22,2020
+# Start time: 20:03:40 on Jan 17,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/backprop_stack.sv 
 # -- Compiling module backprop_stack
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	backprop_stack
-# End time: 21:01:56 on Dec 22,2020, Elapsed time: 0:00:00
+# End time: 20:03:40 on Jan 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.sv
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:02:11 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.sv 
+# Start time: 20:03:56 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 21:02:11 on Dec 22,2020, Elapsed time: 0:00:00
+# End time: 20:03:56 on Jan 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 21:02:30 on Dec 22,2020
-# Loading sv_std.std
+# Start time: 20:04:00 on Jan 17,2021
 # Loading work.testbench
+# Loading sv_std.std
 # Loading work.gdo
 # Loading work.backprop_stack
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 53
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 55
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 61
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 63
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 69
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 71
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 76
-# ** Error: (vsim-3043) Unresolved reference to 'gdo_size'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 159
-# Error loading design
-# End time: 21:02:30 on Dec 22,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 7
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+add wave -position end  sim:/testbench/backprop_to_all
+add wave -position end  sim:/testbench/backprop_start
+add wave -position end  sim:/testbench/backprop_dense
+add wave -position end  sim:/testbench/backprop_cost
+run
+run
+run
+run
+run
+add wave -position end  sim:/testbench/update_dy_dy_old
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/testbench/dc_dw_row
+add wave -position end  sim:/testbench/dc_dw_stream
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -sv -work work +incdir+G:/neural-burning/backprop_stack G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:22:13 on Jan 17,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 21:22:14 on Jan 17,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -sv -work work +incdir+G:/neural-burning/backprop_stack G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:26:07 on Jan 17,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 21:26:07 on Jan 17,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/testbench/DUT/dc_dw
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:03:36 on Dec 22,2020
+# Start time: 21:29:24 on Jan 17,2021
 # vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
 # -- Compiling module backprop_stack
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	backprop_stack
-# End time: 21:03:36 on Dec 22,2020, Elapsed time: 0:00:00
+# End time: 21:29:24 on Jan 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.sv
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/testbench/DUT/cal_dc_dw
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:03:49 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.sv 
+# Start time: 21:34:12 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 21:34:12 on Jan 17,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+#   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+run
+#   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+run
+#   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+run
+#   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+run
+#   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:34:50 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 21:34:50 on Jan 17,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Error: (vsim-3043) Unresolved reference to 'data_set_index'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 128
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:36:19 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# ** Error: (vlog-13069) G:/neural-burning/backprop_stack/backprop_stack.sv(112): near "[": syntax error, unexpected '['.
+# ** Error: (vlog-13069) G:/neural-burning/backprop_stack/backprop_stack.sv(114): near "[": syntax error, unexpected '['.
+# ** Error: (vlog-13069) G:/neural-burning/backprop_stack/backprop_stack.sv(125): near "[": syntax error, unexpected '[', expecting ')' or ','.
+# End time: 21:36:19 on Jan 17,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:05 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 21:37:05 on Jan 17,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work G:/neural-burning/backprop_stack/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:15 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 21:03:50 on Dec 22,2020, Elapsed time: 0:00:01
+# End time: 21:37:15 on Jan 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 21:03:52 on Dec 22,2020
-# Loading sv_std.std
+# Start time: 20:04:00 on Jan 17,2021
 # Loading work.testbench
+# Loading sv_std.std
 # Loading work.gdo
 # Loading work.backprop_stack
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 53
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 55
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 61
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 63
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 69
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 71
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.sv Line: 76
-add wave -position end  sim:/testbench/dc_dw_stream
-add wave -position end  sim:/testbench/backprop_to_all
-add wave -position end  sim:/testbench/backprop_dense
-add wave -position end  sim:/testbench/backprop_start
-add wave -position end  sim:/testbench/dc_dw_layer_index
-add wave -position end  sim:/testbench/current_layer_index
-add wave -position end  sim:/testbench/reset
-add wave -position end  sim:/testbench/clk
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.062500 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.000000 0.062500 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.000000 0.062500 0.000000 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.062500 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.000000 0.062500 0.000000 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.062500 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.000000 0.062500 0.000000 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.062500 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.125000 0.125000 0.125000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.003906 0.000000 0.003906 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.011719 0.000000 0.011719 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.003906 0.000000 0.003906 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.187500 0.187500 0.187500 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.003906 0.000000 0.003906 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.011719 0.000000 0.011719 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.003906 0.000000 0.003906 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.187500 0.187500 0.187500 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+#   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.003906 0.000000 0.003906 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.011719 0.000000 0.011719 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.003906 0.000000 0.003906 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.187500 0.187500 0.187500 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.062500 0.000000 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+#   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.187500 0.187500 0.187500 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.125000 0.125000 0.125000 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
+#   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+restart
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:38:15 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 21:38:15 on Jan 17,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.187500 0.187500 0.187500 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.125000 0.125000 0.125000 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.187500 0.187500 0.187500 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.125000 0.125000 0.125000 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
 run
-#  ==  ==  ==  ==  ==  ==  == 
-# layer :           0
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# layer :           1
-# 0.187500 0.187500 0.187500 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# 0.187500 0.187500 0.187500 | 0.007813 0.007813 0.007813 | 0.000000 0.000000 0.000000 
-# layer :           2
-# 0.125000 0.125000 0.125000 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.125000 0.125000 0.125000 | 0.062500 0.062500 0.062500 | 0.000000 0.000000 0.000000 
-# layer :           3
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 | 0.000000 0.000000 0.000000 
-# End time: 21:04:44 on Dec 22,2020, Elapsed time: 0:00:52
-# Errors: 0, Warnings: 7
+run
+run
+run
+#           0           1           2           3           4           5           6           7           8           9          10          11          12          13          14          15 
+run
+#           0           1           2           3           4           5           6           7           8           9          10          11          12          13          14          15 
+run
+#           0           1           2           3           4           5           6           7           8           9          10          11          12          13          14          15 
+run
+#           0           1           2           3           4           5           6           7           8           9          10          11          12          13          14          15 
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:39:47 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 21:39:47 on Jan 17,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_to_all'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_start'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_dense'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'backprop_cost'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (64) does not match connection size (48) for port 'dc_dw_stream'. The port definition is at: G:/neural-burning/backprop_stack/backprop_stack.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 23
+run
+run
+run
+run
+run
+run
+#           0           1           2           3           4           5           6           7           8           9          10          11          12          13          14          15 
+run
+#           0           1           2           3           4           5           6           7           8           9          10          11          12          13          14          15 
+run
+#           0           1           2           3           4           5           6           7           8           9          10          11          12          13          14          15 
+run
+#           0           1           2           3           4           5           6           7           8           9          10          11          12          13          14          15 
+vlog -work work G:/neural-burning/backprop_stack/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:40:18 on Jan 17,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 21:40:18 on Jan 17,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+#           0           1           2 
+run
+#           0           1           2 
+run
+#           0           1           2 
+run
+#           0           1           2 
+run
+#           0           1           2 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+#           0           1           2 
+run
+#           0           1           2 
+run
+#           0           1           2 
+run
+#           0           1           2 
+run
+#           0           1           2 
+run
+#           0           1           2 
+run
+run
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:29:38 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:29:39 on Jan 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:31:29 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:31:29 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+#      2 
+run
+#      2 
+run
+#      2 
+run
+#      x 
+run
+#      x 
+run
+#      x 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:33:42 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# ** Error: (vlog-13069) G:/neural-burning/backprop_stack/backprop_stack.sv(122): near "end": syntax error, unexpected end, expecting ';'.
+# ** Error: (vlog-13069) G:/neural-burning/backprop_stack/backprop_stack.sv(124): near ")": syntax error, unexpected ')', expecting ';'.
+# End time: 00:33:42 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+#      2 
+run
+#      2 
+run
+#      2 
+run
+#      x 
+run
+#      x 
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:34:40 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:34:40 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+# dataset_          0      1     16     16
+# dataset_          0      1      0      0
+# dataset_          0      2     16     16
+# dataset_          1      0      8     16
+# dataset_          1      0      0      0
+# dataset_          1      0      8     16
+# dataset_          2      1     16     16
+# dataset_          2      1      0      0
+# dataset_          2      2     16     16
+#      2 
+run
+# dataset_          0      1     16     16
+# dataset_          0      1      0      0
+# dataset_          0      2     16     16
+# dataset_          1      0      8     16
+# dataset_          1      0      0      0
+# dataset_          1      0      8     16
+# dataset_          2      1     16     16
+# dataset_          2      1      0      0
+# dataset_          2      2     16     16
+#      2 
+run
+# dataset_          0      1     16     16
+# dataset_          0      1      0      0
+# dataset_          0      2     16     16
+# dataset_          1      0      8     16
+# dataset_          1      0      0      0
+# dataset_          1      0      8     16
+# dataset_          2      1     16     16
+# dataset_          2      1      0      0
+# dataset_          2      2     16     16
+#      2 
+run
+# dataset_          0      x     16      x
+# dataset_          0      x      0      x
+# dataset_          0      x     16      x
+# dataset_          1      x      8      x
+# dataset_          1      x      0      x
+# dataset_          1      x      8      x
+# dataset_          2      x     16      x
+# dataset_          2      x      0      x
+# dataset_          2      x     16      x
+#      x 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:39:46 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:39:46 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+# dataset_          0      1     16     16
+# dataset_          0     1
+# dataset_          0      1      0      0
+# dataset_          0     0
+# dataset_          0      2     16     16
+# dataset_          0     1
+# dataset_          1      0      8     16
+# dataset_          1     0
+# dataset_          1      0      0      0
+# dataset_          1     0
+# dataset_          1      0      8     16
+# dataset_          1     0
+# dataset_          2      1     16     16
+# dataset_          2     1
+# dataset_          2      1      0      0
+# dataset_          2     0
+# dataset_          2      2     16     16
+# dataset_          2     1
+#      2 
+run
+# dataset_          0      1     16     16
+# dataset_          0     1
+# dataset_          0      1      0      0
+# dataset_          0     0
+# dataset_          0      2     16     16
+# dataset_          0     1
+# dataset_          1      0      8     16
+# dataset_          1     0
+# dataset_          1      0      0      0
+# dataset_          1     0
+# dataset_          1      0      8     16
+# dataset_          1     0
+# dataset_          2      1     16     16
+# dataset_          2     1
+# dataset_          2      1      0      0
+# dataset_          2     0
+# dataset_          2      2     16     16
+# dataset_          2     1
+#      2 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:40:50 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:40:51 on Jan 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+# dataset_          0      1     16     16
+# dataset_          0     1 =     16 +     16
+# dataset_          0      1      0      0
+# dataset_          0     0 =      0 +      0
+# dataset_          0      2     16     16
+# dataset_          0     1 =     16 +     16
+# dataset_          1      0      8     16
+# dataset_          1     0 =      8 +     16
+# dataset_          1      0      0      0
+# dataset_          1     0 =      0 +      0
+# dataset_          1      0      8     16
+# dataset_          1     0 =      8 +     16
+# dataset_          2      1     16     16
+# dataset_          2     1 =     16 +     16
+# dataset_          2      1      0      0
+# dataset_          2     0 =      0 +      0
+# dataset_          2      2     16     16
+# dataset_          2     1 =     16 +     16
+#      2 
+run
+# dataset_          0      1     16     16
+# dataset_          0     1 =     16 +     16
+# dataset_          0      1      0      0
+# dataset_          0     0 =      0 +      0
+# dataset_          0      2     16     16
+# dataset_          0     1 =     16 +     16
+# dataset_          1      0      8     16
+# dataset_          1     0 =      8 +     16
+# dataset_          1      0      0      0
+# dataset_          1     0 =      0 +      0
+# dataset_          1      0      8     16
+# dataset_          1     0 =      8 +     16
+# dataset_          2      1     16     16
+# dataset_          2     1 =     16 +     16
+# dataset_          2      1      0      0
+# dataset_          2     0 =      0 +      0
+# dataset_          2      2     16     16
+# dataset_          2     1 =     16 +     16
+#      2 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:41:15 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:41:15 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+# dataset_          0     1 =     16 +     16
+# dataset_          0     0 =      0 +      0
+# dataset_          0     1 =     16 +     16
+# dataset_          1     0 =      8 +     16
+# dataset_          1     0 =      0 +      0
+# dataset_          1     0 =      8 +     16
+# dataset_          2     1 =     16 +     16
+# dataset_          2     0 =      0 +      0
+# dataset_          2     1 =     16 +     16
+#      2 
+run
+# dataset_          0     1 =     16 +     16
+# dataset_          0     0 =      0 +      0
+# dataset_          0     1 =     16 +     16
+# dataset_          1     0 =      8 +     16
+# dataset_          1     0 =      0 +      0
+# dataset_          1     0 =      8 +     16
+# dataset_          2     1 =     16 +     16
+# dataset_          2     0 =      0 +      0
+# dataset_          2     1 =     16 +     16
+#      2 
+run
+# dataset_          0     1 =     16 +     16
+# dataset_          0     0 =      0 +      0
+# dataset_          0     1 =     16 +     16
+# dataset_          1     0 =      8 +     16
+# dataset_          1     0 =      0 +      0
+# dataset_          1     0 =      8 +     16
+# dataset_          2     1 =     16 +     16
+# dataset_          2     0 =      0 +      0
+# dataset_          2     1 =     16 +     16
+#      2 
+run
+# dataset_          0     x =     16 +      x
+# dataset_          0     x =      0 +      x
+# dataset_          0     x =     16 +      x
+# dataset_          1     x =      8 +      x
+# dataset_          1     x =      0 +      x
+# dataset_          1     x =      8 +      x
+# dataset_          2     x =     16 +      x
+# dataset_          2     x =      0 +      x
+# dataset_          2     x =     16 +      x
+#      x 
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:42:21 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:42:21 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+# dataset_          0 0000000000000001 =     16 +     16
+# dataset_          0 0000000000000000 =      0 +      0
+# dataset_          0 0000000000000001 =     16 +     16
+# dataset_          1 0000000000000000 =      8 +     16
+# dataset_          1 0000000000000000 =      0 +      0
+# dataset_          1 0000000000000000 =      8 +     16
+# dataset_          2 0000000000000001 =     16 +     16
+# dataset_          2 0000000000000000 =      0 +      0
+# dataset_          2 0000000000000001 =     16 +     16
+#      2 
+run
+# dataset_          0 0000000000000001 =     16 +     16
+# dataset_          0 0000000000000000 =      0 +      0
+# dataset_          0 0000000000000001 =     16 +     16
+# dataset_          1 0000000000000000 =      8 +     16
+# dataset_          1 0000000000000000 =      0 +      0
+# dataset_          1 0000000000000000 =      8 +     16
+# dataset_          2 0000000000000001 =     16 +     16
+# dataset_          2 0000000000000000 =      0 +      0
+# dataset_          2 0000000000000001 =     16 +     16
+#      2 
+run
+# dataset_          0 0000000000000001 =     16 +     16
+# dataset_          0 0000000000000000 =      0 +      0
+# dataset_          0 0000000000000001 =     16 +     16
+# dataset_          1 0000000000000000 =      8 +     16
+# dataset_          1 0000000000000000 =      0 +      0
+# dataset_          1 0000000000000000 =      8 +     16
+# dataset_          2 0000000000000001 =     16 +     16
+# dataset_          2 0000000000000000 =      0 +      0
+# dataset_          2 0000000000000001 =     16 +     16
+#      2 
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:42:58 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:42:58 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+# dataset_          0 0000000000000001 = 0000000000010000 + 0000000000010000
+# dataset_          0 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          0 0000000000000001 = 0000000000010000 + 0000000000010000
+# dataset_          1 0000000000000000 = 0000000000001000 + 0000000000010000
+# dataset_          1 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          1 0000000000000000 = 0000000000001000 + 0000000000010000
+# dataset_          2 0000000000000001 = 0000000000010000 + 0000000000010000
+# dataset_          2 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          2 0000000000000001 = 0000000000010000 + 0000000000010000
+#      2 
+run
+# dataset_          0 0000000000000001 = 0000000000010000 + 0000000000010000
+# dataset_          0 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          0 0000000000000001 = 0000000000010000 + 0000000000010000
+# dataset_          1 0000000000000000 = 0000000000001000 + 0000000000010000
+# dataset_          1 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          1 0000000000000000 = 0000000000001000 + 0000000000010000
+# dataset_          2 0000000000000001 = 0000000000010000 + 0000000000010000
+# dataset_          2 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          2 0000000000000001 = 0000000000010000 + 0000000000010000
+#      2 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+# dataset_          0 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          0 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          0 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          1 0000000010000000 = 0000000010000000 + 0000000100000000
+# dataset_          1 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          1 0000000010000000 = 0000000010000000 + 0000000100000000
+# dataset_          2 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          2 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          2 0000000100000000 = 0000000100000000 + 0000000100000000
+#    512 
+run
+# dataset_          0 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          0 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          0 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          1 0000000010000000 = 0000000010000000 + 0000000100000000
+# dataset_          1 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          1 0000000010000000 = 0000000010000000 + 0000000100000000
+# dataset_          2 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          2 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          2 0000000100000000 = 0000000100000000 + 0000000100000000
+#    512 
+run
+# dataset_          0 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          0 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          0 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          1 0000000010000000 = 0000000010000000 + 0000000100000000
+# dataset_          1 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          1 0000000010000000 = 0000000010000000 + 0000000100000000
+# dataset_          2 0000000100000000 = 0000000100000000 + 0000000100000000
+# dataset_          2 0000000000000000 = 0000000000000000 + 0000000000000000
+# dataset_          2 0000000100000000 = 0000000100000000 + 0000000100000000
+#    512 
+run
+# dataset_          0 xxxxxxxxxxxxxxxx = 0000000100000000 + xxxxxxxxxxxxxxxx
+# dataset_          0 xxxxxxxxxxxxxxxx = 0000000000000000 + xxxxxxxxxxxxxxxx
+# dataset_          0 xxxxxxxxxxxxxxxx = 0000000100000000 + xxxxxxxxxxxxxxxx
+# dataset_          1 xxxxxxxxxxxxxxxx = 0000000010000000 + xxxxxxxxxxxxxxxx
+# dataset_          1 xxxxxxxxxxxxxxxx = 0000000000000000 + xxxxxxxxxxxxxxxx
+# dataset_          1 xxxxxxxxxxxxxxxx = 0000000010000000 + xxxxxxxxxxxxxxxx
+# dataset_          2 xxxxxxxxxxxxxxxx = 0000000100000000 + xxxxxxxxxxxxxxxx
+# dataset_          2 xxxxxxxxxxxxxxxx = 0000000000000000 + xxxxxxxxxxxxxxxx
+# dataset_          2 xxxxxxxxxxxxxxxx = 0000000100000000 + xxxxxxxxxxxxxxxx
+#      x 
+run
+# dataset_          0 xxxxxxxxxxxxxxxx = 0000000100000000 + xxxxxxxxxxxxxxxx
+# dataset_          0 xxxxxxxxxxxxxxxx = 0000000000000000 + xxxxxxxxxxxxxxxx
+# dataset_          0 xxxxxxxxxxxxxxxx = 0000000100000000 + xxxxxxxxxxxxxxxx
+# dataset_          1 xxxxxxxxxxxxxxxx = 0000000010000000 + xxxxxxxxxxxxxxxx
+# dataset_          1 xxxxxxxxxxxxxxxx = 0000000000000000 + xxxxxxxxxxxxxxxx
+# dataset_          1 xxxxxxxxxxxxxxxx = 0000000010000000 + xxxxxxxxxxxxxxxx
+# dataset_          2 xxxxxxxxxxxxxxxx = 0000000100000000 + xxxxxxxxxxxxxxxx
+# dataset_          2 xxxxxxxxxxxxxxxx = 0000000000000000 + xxxxxxxxxxxxxxxx
+# dataset_          2 xxxxxxxxxxxxxxxx = 0000000100000000 + xxxxxxxxxxxxxxxx
+#      x 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:46:16 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 00:46:16 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+# dataset_          0   256 =    256 +    256
+# dataset_          0     0 =      0 +      0
+# dataset_          0   256 =    256 +    256
+# dataset_          1   128 =    128 +    256
+# dataset_          1     0 =      0 +      0
+# dataset_          1   128 =    128 +    256
+# dataset_          2   256 =    256 +    256
+# dataset_          2     0 =      0 +      0
+# dataset_          2   256 =    256 +    256
+#    512 
+run
+# dataset_          0   256 =    256 +    256
+# dataset_          0     0 =      0 +      0
+# dataset_          0   256 =    256 +    256
+# dataset_          1   128 =    128 +    256
+# dataset_          1     0 =      0 +      0
+# dataset_          1   128 =    128 +    256
+# dataset_          2   256 =    256 +    256
+# dataset_          2     0 =      0 +      0
+# dataset_          2   256 =    256 +    256
+#    512 
+run
+# dataset_          0   256 =    256 +    256
+# dataset_          0     0 =      0 +      0
+# dataset_          0   256 =    256 +    256
+# dataset_          1   128 =    128 +    256
+# dataset_          1     0 =      0 +      0
+# dataset_          1   128 =    128 +    256
+# dataset_          2   256 =    256 +    256
+# dataset_          2     0 =      0 +      0
+# dataset_          2   256 =    256 +    256
+#    512 
+run
+# dataset_          0     x =    256 +      x
+# dataset_          0     x =      0 +      x
+# dataset_          0     x =    256 +      x
+# dataset_          1     x =    128 +      x
+# dataset_          1     x =      0 +      x
+# dataset_          1     x =    128 +      x
+# dataset_          2     x =    256 +      x
+# dataset_          2     x =      0 +      x
+# dataset_          2     x =    256 +      x
+#      x 
+run
+# dataset_          0     x =    256 +      x
+# dataset_          0     x =      0 +      x
+# dataset_          0     x =    256 +      x
+# dataset_          1     x =    128 +      x
+# dataset_          1     x =      0 +      x
+# dataset_          1     x =    128 +      x
+# dataset_          2     x =    256 +      x
+# dataset_          2     x =      0 +      x
+# dataset_          2     x =    256 +      x
+#      x 
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:35:57 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 01:35:57 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:49:10 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 01:49:11 on Jan 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+#    512    256    512 
+run
+#    512    256    512 
+run
+#    512    256    512 
+run
+run
+run
+run
+run
+run
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:08:25 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 02:08:25 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+#    512    256    512 
+run
+#    512    256    512 
+run
+#    512    256    512 
+run
+run
+run
+run
+run
+run
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:10:22 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 02:10:22 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+#    512    256    512 
+run
+#    512    256    512 
+run
+#    512    256    512 
+run
+run
+run
+run
+run
+run
+run
+vlog -work work G:/neural-burning/backprop_stack/backprop_stack.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:53 on Jan 18,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/backprop_stack.sv 
+# -- Compiling module backprop_stack
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	backprop_stack
+# End time: 02:15:53 on Jan 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.backprop_stack
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 79
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 87
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 89
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 103
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 119
+run
+run
+run
+run
+run
+run
+#    512    256    512 
+run
+#    512    256    512 
+run
+#    512    256    512 
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 02:25:38 on Jan 18,2021, Elapsed time: 6:21:38
+# Errors: 0, Warnings: 9

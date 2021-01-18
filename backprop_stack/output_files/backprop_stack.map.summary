@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Dec 22 21:03:24 2020
+Analysis & Synthesis Status : Successful - Mon Jan 18 02:16:57 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : backprop_stack
 Top-level Entity Name : backprop_stack
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 480
-Total pins : 166
+Total registers : 1520
+Total pins : 341
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 117
+Total DSP Blocks : 48
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
