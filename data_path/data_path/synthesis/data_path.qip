@@ -2,7 +2,7 @@ set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_NAM
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_VERSION "20.1"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "data_path" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../data_path.sopcinfo"]
-set_global_assignment -entity "data_path" -library "data_path" -name SLD_INFO "QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1610187786"
+set_global_assignment -entity "data_path" -library "data_path" -name SLD_INFO "QSYS_NAME data_path HAS_SOPCINFO 1 GENERATION_ID 1611820599"
 set_global_assignment -library "data_path" -name MISC_FILE [file join $::quartus(qip_path) "../data_path.cmp"]
 set_global_assignment -library "data_path" -name SLD_FILE [file join $::quartus(qip_path) "data_path.debuginfo"]
 set_global_assignment -entity "data_path" -library "data_path" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
@@ -15,7 +15,7 @@ set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONEN
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxMDE4Nzc4Ng==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxMTgyMDU5OQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "data_path" -library "data_path" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -32,13 +32,6 @@ set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COM
 set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
 set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
 set_global_assignment -entity "weight_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "bGF5ZXJfc2l6ZQ==::NQ==::bGF5ZXJfc2l6ZQ=="
-set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_NAME "d2VpZ2h0X2ludGVyZmFjZV9zcHJlYWRlcg=="
-set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "d2VpZ2h0X2ludGVyZmFjZV9zcHJlYWRlcg=="
-set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
-set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
-set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGlyYXdpdCBXYWNoYXJhaw=="
-set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "weight_interface_spreader" -library "data_path" -name IP_COMPONENT_DESCRIPTION "U3BsaXQgd2VpZ2h0IGludGVyZmFjZSBzaWduYWw="
 set_global_assignment -entity "w_and_x_spreder" -library "data_path" -name IP_COMPONENT_NAME "d19hbmRfeF9zcHJlZGVy"
 set_global_assignment -entity "w_and_x_spreder" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "d19hbmRfeF9zcHJlYWRlcg=="
 set_global_assignment -entity "w_and_x_spreder" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -76,6 +69,18 @@ set_global_assignment -entity "parse" -library "data_path" -name IP_COMPONENT_DE
 set_global_assignment -entity "parse" -library "data_path" -name IP_COMPONENT_PARAMETER "b3Bfc2l6ZQ==::NA==::b3Bfc2l6ZQ=="
 set_global_assignment -entity "parse" -library "data_path" -name IP_COMPONENT_PARAMETER "cGFyYW1fYV9zaXpl::NA==::cGFyYW1fYV9zaXpl"
 set_global_assignment -entity "parse" -library "data_path" -name IP_COMPONENT_PARAMETER "cGFyYW1fYl9zaXpl::NA==::cGFyYW1fYl9zaXpl"
+set_global_assignment -entity "parse" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_NAME "cGFyYW1ldGVyX3N0b3JhZ2U="
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "cGFyYW1ldGVyX3N0b3JhZ2U="
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_AUTHOR "V2FjaGFyYXdpdCBXYWNoYXJhaw=="
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_DESCRIPTION "U3RvcmUgcGFyYW1ldGVyIHZhbHVl"
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "YWN0X3R5cGVfc2l6ZQ==::NA==::YWN0X3R5cGVfc2l6ZQ=="
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGVuc2VfdHlwZV9zaXpl::NA==::ZGVuc2VfdHlwZV9zaXpl"
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29zdF90eXBlX3NpemU=::OA==::Y29zdF90eXBlX3NpemU="
+set_global_assignment -entity "parameter_storage" -library "data_path" -name IP_COMPONENT_PARAMETER "bGVhcm5pbmdfcmF0ZV9zaXpl::MTY=::bGVhcm5pbmdfcmF0ZV9zaXpl"
 set_global_assignment -entity "mult_matrix_revert" -library "data_path" -name IP_COMPONENT_NAME "bXVsdF9tYXRyaXhfcmV2ZXJ0"
 set_global_assignment -entity "mult_matrix_revert" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "bXVsdF9tYXRyaXhfcmV2ZXJ0"
 set_global_assignment -entity "mult_matrix_revert" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -165,6 +170,7 @@ set_global_assignment -entity "diff_backprop_reg" -library "data_path" -name IP_
 set_global_assignment -entity "diff_backprop_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
 set_global_assignment -entity "diff_backprop_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
 set_global_assignment -entity "diff_backprop_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGVuc2VfdHlwZV9zaXpl::NA==::ZGVuc2VfdHlwZV9zaXpl"
+set_global_assignment -entity "diff_backprop_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YmFja3Byb3BfY29udHJvbGxfc2l6ZQ==::MTAw::YmFja3Byb3BfY29udHJvbGxfc2l6ZQ=="
 set_global_assignment -entity "dense_activate_reg" -library "data_path" -name IP_COMPONENT_NAME "ZGVuc2VfYWN0aXZhdGVfcmVn"
 set_global_assignment -entity "dense_activate_reg" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "ZGVuc2VfdG9fYWN0aXZhdGVfcmVnaXN0ZXI="
 set_global_assignment -entity "dense_activate_reg" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -177,6 +183,7 @@ set_global_assignment -entity "dense_activate_reg" -library "data_path" -name IP
 set_global_assignment -entity "dense_activate_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29zdF90eXBlX3NpemU=::OA==::Y29zdF90eXBlX3NpemU="
 set_global_assignment -entity "dense_activate_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGVuc2VfdHlwZV9zaXpl::NA==::ZGVuc2VfdHlwZV9zaXpl"
 set_global_assignment -entity "dense_activate_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YWN0X3R5cGVfc2l6ZQ==::NA==::YWN0X3R5cGVfc2l6ZQ=="
+set_global_assignment -entity "dense_activate_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YmFja3Byb3BfY29udHJvbGxfc2l6ZQ==::MTAw::YmFja3Byb3BfY29udHJvbGxfc2l6ZQ=="
 set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name IP_COMPONENT_NAME "ZGVuc2VfbGF5ZXJfZGVsYXlfcmVn"
 set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "ZGVuc2VfbGF5ZXJfZGVsYXlfcmVn"
 set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -189,7 +196,7 @@ set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name
 set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29zdF90eXBlX3NpemU=::OA==::Y29zdF90eXBlX3NpemU="
 set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGVuc2VfdHlwZV9zaXpl::NA==::ZGVuc2VfdHlwZV9zaXpl"
 set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YWN0X3R5cGVfc2l6ZQ==::NA==::YWN0X3R5cGVfc2l6ZQ=="
-set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "Y3ljbGU=::NQ==::Y3ljbGU="
+set_global_assignment -entity "dense_layer_delay_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YmFja3Byb3BfY29udHJvbGxfc2l6ZQ==::MTAw::YmFja3Byb3BfY29udHJvbGxfc2l6ZQ=="
 set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_NAME "ZGVjb2RlX2RlbnNlX3JlZw=="
 set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "ZGVjb2RlX3RvX2RlbnNlX3JlZ2lzdGVy"
 set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -202,6 +209,7 @@ set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_C
 set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29zdF90eXBlX3NpemU=::OA==::Y29zdF90eXBlX3NpemU="
 set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGVuc2VfdHlwZV9zaXpl::NA==::ZGVuc2VfdHlwZV9zaXpl"
 set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YWN0X3R5cGVfc2l6ZQ==::NA==::YWN0X3R5cGVfc2l6ZQ=="
+set_global_assignment -entity "decode_dense_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YmFja3Byb3BfY29udHJvbGxfc2l6ZQ==::MTAw::YmFja3Byb3BfY29udHJvbGxfc2l6ZQ=="
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_NAME "Y29udHJvbGxlcg=="
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "Y29udHJvbGxlcg=="
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -211,6 +219,9 @@ set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONE
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_DESCRIPTION "VXNlIHRvIGRyaXZlIGNvbnRyb2wgc2lnbmFs"
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_PARAMETER "b3Bfc2l6ZQ==::NA==::b3Bfc2l6ZQ=="
 set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_PARAMETER "YmFja3Byb3BfY29udHJvbGxfc2l6ZQ==::MTAw::YmFja3Byb3BfY29udHJvbGxfc2l6ZQ=="
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_PARAMETER "cGFyYW1fYV9zaXpl::NA==::cGFyYW1fYV9zaXpl"
+set_global_assignment -entity "controller" -library "data_path" -name IP_COMPONENT_PARAMETER "cGFyYW1fYl9zaXpl::NA==::cGFyYW1fYl9zaXpl"
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_NAME "Y29kZV9zdG9yYWdl"
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "Y29kZV9zdG9yYWdl"
 set_global_assignment -entity "code_storage" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -246,6 +257,7 @@ set_global_assignment -entity "backprop_stack_controller" -library "data_path" -
 set_global_assignment -entity "backprop_stack_controller" -library "data_path" -name IP_COMPONENT_DESCRIPTION "Q3JlYXRlIGNvbnRyb2wgc3VnbmFsIGZvciBiYWNrcHJvcCBsYXllcg=="
 set_global_assignment -entity "backprop_stack_controller" -library "data_path" -name IP_COMPONENT_PARAMETER "c2l6ZQ==::Mw==::c2l6ZQ=="
 set_global_assignment -entity "backprop_stack_controller" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
+set_global_assignment -entity "backprop_stack_controller" -library "data_path" -name IP_COMPONENT_PARAMETER "YmFja3Byb3BfY29udHJvbGxfc2l6ZQ==::MTAw::YmFja3Byb3BfY29udHJvbGxfc2l6ZQ=="
 set_global_assignment -entity "activation" -library "data_path" -name IP_COMPONENT_NAME "YWN0aXZhdGlvbg=="
 set_global_assignment -entity "activation" -library "data_path" -name IP_COMPONENT_DISPLAY_NAME "YWN0aXZhdGlvbg=="
 set_global_assignment -entity "activation" -library "data_path" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -267,19 +279,20 @@ set_global_assignment -entity "activate_diff_reg" -library "data_path" -name IP_
 set_global_assignment -entity "activate_diff_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGF0YV9zaXpl::MTY=::ZGF0YV9zaXpl"
 set_global_assignment -entity "activate_diff_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "Y29zdF90eXBlX3NpemU=::OA==::Y29zdF90eXBlX3NpemU="
 set_global_assignment -entity "activate_diff_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "ZGVuc2VfdHlwZV9zaXpl::NA==::ZGVuc2VfdHlwZV9zaXpl"
+set_global_assignment -entity "activate_diff_reg" -library "data_path" -name IP_COMPONENT_PARAMETER "YmFja3Byb3BfY29udHJvbGxfc2l6ZQ==::MTAw::YmFja3Byb3BfY29udHJvbGxfc2l6ZQ=="
 
 set_global_assignment -library "data_path" -name VERILOG_FILE [file join $::quartus(qip_path) "data_path.v"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/gdo.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/weight_storage.sv"]
-set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/weight_interface_spreader.sv"]
-set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/w_and_x_spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/train_data_mux.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/systolic.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/parse.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/parameter_storage.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/mult_matrix_revert.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/mult_matrix_prep.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/matrix_storage_locator.sv"]
+set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/matrix_location_spreader.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/matrix_storage.sv"]
 set_global_assignment -library "data_path" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/delay.sv"]

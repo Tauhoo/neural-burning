@@ -18,336 +18,1280 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis {G:/neural-burning/data_path/data_path/synthesis/data_path.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:29 on Jan 17,2021
+# Start time: 14:57:08 on Jan 28,2021
 # vlog -reportprogress 300 -vlog01compat -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis" G:/neural-burning/data_path/data_path/synthesis/data_path.v 
 # -- Compiling module data_path
 # 
 # Top level modules:
 # 	data_path
-# End time: 14:45:29 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:09 on Jan 28,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:29 on Jan 17,2021
+# Start time: 14:57:09 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv 
 # -- Compiling package gdo
 # 
 # Top level modules:
 # 	--none--
-# End time: 14:45:29 on Jan 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/weight_interface_spreader.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:29 on Jan 17,2021
-# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/weight_interface_spreader.sv 
-# -- Compiling module weight_interface_spreader
-# 
-# Top level modules:
-# 	weight_interface_spreader
-# End time: 14:45:29 on Jan 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:29 on Jan 17,2021
-# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv 
-# -- Compiling module spreader
-# 
-# Top level modules:
-# 	spreader
-# End time: 14:45:29 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:09 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/w_and_x_spreader.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:29 on Jan 17,2021
+# Start time: 14:57:09 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/w_and_x_spreader.sv 
 # -- Compiling module w_and_x_spreder
 # 
 # Top level modules:
 # 	w_and_x_spreder
-# End time: 14:45:30 on Jan 17,2021, Elapsed time: 0:00:01
+# End time: 14:57:09 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/train_data_mux.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:30 on Jan 17,2021
+# Start time: 14:57:09 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/train_data_mux.sv 
 # -- Compiling module train_data_mux
 # 
 # Top level modules:
 # 	train_data_mux
-# End time: 14:45:30 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:09 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:30 on Jan 17,2021
+# Start time: 14:57:09 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/parse.sv 
 # -- Compiling module parse
 # 
 # Top level modules:
 # 	parse
-# End time: 14:45:30 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:10 on Jan 28,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/parameter_storage.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:57:10 on Jan 28,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/parameter_storage.sv 
+# -- Compiling module parameter_storage
+# 
+# Top level modules:
+# 	parameter_storage
+# End time: 14:57:10 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/mult_matrix_revert.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:30 on Jan 17,2021
+# Start time: 14:57:10 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/mult_matrix_revert.sv 
 # -- Compiling module mult_matrix_revert
 # 
 # Top level modules:
 # 	mult_matrix_revert
-# End time: 14:45:30 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:10 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/mult_matrix_prep.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:30 on Jan 17,2021
+# Start time: 14:57:10 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/mult_matrix_prep.sv 
 # -- Compiling module mult_matrix_prep
 # 
 # Top level modules:
 # 	mult_matrix_prep
-# End time: 14:45:30 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:10 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage_locator.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:30 on Jan 17,2021
+# Start time: 14:57:10 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage_locator.sv 
 # -- Compiling module matrix_storage_locator
 # 
 # Top level modules:
 # 	matrix_storage_locator
-# End time: 14:45:30 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:10 on Jan 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:57:11 on Jan 28,2021
+# vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/spreader.sv 
+# -- Compiling module spreader
+# 
+# Top level modules:
+# 	spreader
+# End time: 14:57:11 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_location_spreader.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:30 on Jan 17,2021
+# Start time: 14:57:11 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_location_spreader.sv 
 # -- Compiling module matrix_location_spreader
 # 
 # Top level modules:
 # 	matrix_location_spreader
-# End time: 14:45:31 on Jan 17,2021, Elapsed time: 0:00:01
+# End time: 14:57:11 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:31 on Jan 17,2021
+# Start time: 14:57:11 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv 
 # -- Compiling module matrix_storage
 # 
 # Top level modules:
 # 	matrix_storage
-# End time: 14:45:31 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:11 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:31 on Jan 17,2021
+# Start time: 14:57:11 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv 
 # -- Compiling module delay
 # 
 # Top level modules:
 # 	delay
-# End time: 14:45:31 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:11 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:31 on Jan 17,2021
+# Start time: 14:57:11 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv 
 # -- Compiling module fetch_decode_reg
 # 
 # Top level modules:
 # 	fetch_decode_reg
-# End time: 14:45:31 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:12 on Jan 28,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_dense.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:31 on Jan 17,2021
+# Start time: 14:57:12 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_dense.sv 
 # -- Compiling module diff_dense
 # 
 # Top level modules:
 # 	diff_dense
-# End time: 14:45:31 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:12 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_start.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:31 on Jan 17,2021
+# Start time: 14:57:12 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_start.sv 
 # -- Compiling module diff_start
 # 
 # Top level modules:
 # 	diff_start
-# End time: 14:45:31 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:12 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_all.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:31 on Jan 17,2021
+# Start time: 14:57:12 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_all.sv 
 # -- Compiling module diff_to_all
 # 
 # Top level modules:
 # 	diff_to_all
-# End time: 14:45:32 on Jan 17,2021, Elapsed time: 0:00:01
+# End time: 14:57:12 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:32 on Jan 17,2021
+# Start time: 14:57:12 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv 
 # -- Compiling module different
 # 
 # Top level modules:
 # 	different
-# End time: 14:45:32 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:12 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_decode_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:32 on Jan 17,2021
+# Start time: 14:57:12 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_decode_register.sv 
 # -- Compiling module diff_to_decode_register
 # 
 # Top level modules:
 # 	diff_to_decode_register
-# End time: 14:45:32 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:13 on Jan 28,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_backprop_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:32 on Jan 17,2021
+# Start time: 14:57:13 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_backprop_reg.sv 
 # -- Compiling module diff_backprop_reg
 # 
 # Top level modules:
 # 	diff_backprop_reg
-# End time: 14:45:32 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:13 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/dense_activate_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:32 on Jan 17,2021
+# Start time: 14:57:13 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/dense_activate_reg.sv 
 # -- Compiling module dense_activate_reg
 # 
 # Top level modules:
 # 	dense_activate_reg
-# End time: 14:45:32 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:13 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:32 on Jan 17,2021
+# Start time: 14:57:13 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv 
 # -- Compiling module dense_layer_delay_reg
 # 
 # Top level modules:
 # 	dense_layer_delay_reg
-# End time: 14:45:32 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:13 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/decode_dense_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:32 on Jan 17,2021
+# Start time: 14:57:13 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/decode_dense_reg.sv 
 # -- Compiling module decode_dense_reg
 # 
 # Top level modules:
 # 	decode_dense_reg
-# End time: 14:45:33 on Jan 17,2021, Elapsed time: 0:00:01
+# End time: 14:57:14 on Jan 28,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:33 on Jan 17,2021
+# Start time: 14:57:14 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 14:45:33 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:14 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:33 on Jan 17,2021
+# Start time: 14:57:14 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv 
 # -- Compiling module code_storage
 # 
 # Top level modules:
 # 	code_storage
-# End time: 14:45:33 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:14 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:33 on Jan 17,2021
+# Start time: 14:57:14 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/code_count.sv 
 # -- Compiling module code_count
 # 
 # Top level modules:
 # 	code_count
-# End time: 14:45:33 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:14 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack_controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:33 on Jan 17,2021
+# Start time: 14:57:14 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack_controller.sv 
 # -- Compiling module backprop_stack_controller
 # 
 # Top level modules:
 # 	backprop_stack_controller
-# End time: 14:45:33 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:14 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/activation.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:33 on Jan 17,2021
+# Start time: 14:57:14 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/activation.sv 
 # -- Compiling module activation
 # 
 # Top level modules:
 # 	activation
-# End time: 14:45:33 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:15 on Jan 28,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:33 on Jan 17,2021
+# Start time: 14:57:15 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv 
 # -- Compiling module activate_diff_reg
 # 
 # Top level modules:
 # 	activate_diff_reg
-# End time: 14:45:34 on Jan 17,2021, Elapsed time: 0:00:01
+# End time: 14:57:15 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:34 on Jan 17,2021
+# Start time: 14:57:15 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv 
 # -- Compiling module weight_storage
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	weight_storage
-# End time: 14:45:34 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:15 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/systolic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:34 on Jan 17,2021
+# Start time: 14:57:15 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/systolic.sv 
 # -- Compiling module systolic
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	systolic
-# End time: 14:45:34 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:15 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/diff_cost.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:34 on Jan 17,2021
+# Start time: 14:57:15 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/diff_cost.sv 
 # -- Compiling module diff_cost
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	diff_cost
-# End time: 14:45:34 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:15 on Jan 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work data_path +incdir+G:/neural-burning/data_path/data_path/synthesis/submodules {G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:45:34 on Jan 17,2021
+# Start time: 14:57:15 on Jan 28,2021
 # vlog -reportprogress 300 -sv -work data_path "+incdir+G:/neural-burning/data_path/data_path/synthesis/submodules" G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv 
 # -- Compiling module backprop_stack
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	backprop_stack
-# End time: 14:45:34 on Jan 17,2021, Elapsed time: 0:00:00
+# End time: 14:57:16 on Jan 28,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
+vsim data_path.testbench
+# vsim data_path.testbench 
+# Start time: 14:57:25 on Jan 28,2021
+# Loading data_path.testbench
+# Loading data_path.data_path
+# Loading sv_std.std
+# Loading data_path.activate_diff_reg
+# Loading data_path.delay
+# Loading data_path.activation
+# Loading data_path.backprop_stack_controller
+# Loading data_path.gdo
+# Loading data_path.backprop_stack
+# Loading data_path.code_count
+# Loading data_path.code_storage
+# Loading data_path.controller
+# Loading data_path.decode_dense_reg
+# Loading data_path.dense_layer_delay_reg
+# Loading data_path.dense_activate_reg
+# Loading data_path.diff_backprop_reg
+# Loading data_path.diff_to_decode_register
+# Loading data_path.different
+# Loading data_path.diff_dense
+# Loading data_path.diff_start
+# Loading data_path.diff_to_all
+# Loading data_path.diff_cost
+# Loading data_path.fetch_decode_reg
+# Loading data_path.matrix_storage
+# Loading data_path.spreader
+# Loading data_path.matrix_location_spreader
+# Loading data_path.matrix_storage_locator
+# Loading data_path.mult_matrix_prep
+# Loading data_path.mult_matrix_revert
+# Loading data_path.parameter_storage
+# Loading data_path.parse
+# Loading data_path.systolic
+# Loading data_path.train_data_mux
+# Loading data_path.w_and_x_spreder
+# Loading data_path.weight_storage
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 93
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 95
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 97
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 98
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 100
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 101
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 104
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 105
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/data_path/testbench/testbench.v Line: 108
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 22, found 20.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT File: G:/neural-burning/data_path/testbench/testbench.v Line: 26
+# ** Warning: (vsim-3722) G:/neural-burning/data_path/testbench/testbench.v(26): [TFMPC] - Missing connection for port 'fetch_to_decode_register_code_index_out_interface_code_index'.
+# ** Warning: (vsim-3722) G:/neural-burning/data_path/testbench/testbench.v(26): [TFMPC] - Missing connection for port 'parameter_storage_0_learning_rate_interface_learning_rate'.
+add wave -position end  sim:/testbench/DUT/backpropagator/dc_dw_stream
+run
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 1, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 1, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |      0      0      0 |      0      0      0 
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 1, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64     64    128 |    256    256    256 |    256    256    256 |    512    512      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64     64    128 |    256    256    256 |    256    256    256 |    512    512      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64     64    128 |    256    256    256 |    256    256    256 |    512    512      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64     64    128 |    256    256    256 |    256    256    256 |    512    512      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64     64    128 |    256    256    256 |    256    256    256 |    512    512      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64     64    128 |    256    256    256 |    256    256    256 |    512    512      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64     64    128 |    256    256    256 |    256    256    256 |    512    512      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+run
+# lastest_layer:          0, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000000 
+# 
+# layer:           0, lastest_layer:          0
+#    128     64     64 |    256    256    256 |    256    256    256 |      0    512    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64     64    128 |    256    256    256 |    256    256    256 |    512    512      0 
+# layer:           1, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+# layer:           2, lastest_layer:          0
+#      0      0      0 |      0      0      0 |    256    256    256 |      0    512    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+run
+# lastest_layer:          0, current_layer:          1, update_storage: 1, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |    512      0    512 
+#     64    128     64 |    256    256    256 |    256    256    256 |    512    512      0 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+# layer:           1, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |    512      0    512 
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+run
+# lastest_layer:          1, current_layer:          1, update_storage: 1, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |    512    512      0 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+# layer:           1, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |    512    512      0 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+run
+# lastest_layer:          1, current_layer:          1, update_storage: 1, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+run
+# lastest_layer:          1, current_layer:          0, update_storage: 0, temp_lastest_layer: 00000000000000000000000000000001 
+# 
+# layer:           0, lastest_layer:          1
+#    128     64     64 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#     64    128     64 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#     64     64    128 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           1, lastest_layer:          1
+#    256    256    256 |    256    256    256 |    256    256    256 |   1024   1536   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1024   1536 
+#    256    256    256 |    256    256    256 |    256    256    256 |   1536   1536   1024 
+# layer:           2, lastest_layer:          1
+#      0      0      0 |      0      0      0 |    256    256    256 |   1024   1536   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1024   1536 
+#      0      0      0 |      0      0      0 |    256    256    256 |   1536   1536   1024 
+# End time: 15:01:54 on Jan 28,2021, Elapsed time: 0:04:29
+# Errors: 0, Warnings: 12

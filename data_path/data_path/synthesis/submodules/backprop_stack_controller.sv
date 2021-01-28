@@ -1,75 +1,40 @@
 module backprop_stack_controller(
-    backprop_cost,
-    is_update,
-    w_layer_index,
-    w_row_index,
-    is_cost_layer,
+    backprop_controll_bundle,
 
-    diff_start,
-    diff_to_all,
-    diff_dense,
-    diff_cost,
-
-    reset, 
-    current_layer_index, 
-    dc_dw_layer_index, 
-    copy, 
-    cal_dy_dy_old,
-    
-    diff_start_out,
-    diff_to_all_out,
-    diff_dense_out,
-    
-    is_cost_layer_out,
-    
-    w_layer_index_out,
-    w_row_index_out);
+    current_layer_out, 
+    dc_dw_layer_out, 
+    dc_dw_row_out, 
+    update_storage_out, 
+    update_dy_dy_old_out, 
+    cal_dc_dw_out, 
+    cal_dc_dw_out_forward,
+    reset_out,
+    weight_row,
+    weight_layer);
 
     parameter size = 3;
     parameter data_size = 16;
+    parameter backprop_controll_size = 32*3 + 4;
 
-    input backprop_cost;
-    input is_update;
-    input [31:0] w_layer_index;
-    input [31:0] w_row_index;
-    input is_cost_layer;
+    input [backprop_controll_size - 1:0] backprop_controll_bundle;
 
-    input [data_size*size - 1:0] diff_start;
-    input [data_size*size - 1:0] diff_to_all;
-    input [data_size*size - 1:0] diff_dense;
-    input [data_size*size - 1:0] diff_cost;
+    output [31:0] current_layer_out; 
+    output [31:0] dc_dw_layer_out; 
+    output [31:0] dc_dw_row_out; 
+    output update_storage_out; 
+    output update_dy_dy_old_out; 
+    output cal_dc_dw_out;
+    output cal_dc_dw_out_forward;
+    output reset_out;
 
-    output reset;
-    output [31:0] current_layer_index;
-    output [31:0] dc_dw_layer_index;
-    output copy;
-    output cal_dy_dy_old;
+    output [31:0] weight_row;
+    output [31:0] weight_layer;
 
-    output [data_size*size - 1:0] diff_start_out;
-    output [data_size*size - 1:0] diff_to_all_out;
-    output [data_size*size - 1:0] diff_dense_out;
+    assign {current_layer_out, dc_dw_layer_out, dc_dw_row_out, update_storage_out, update_dy_dy_old_out, cal_dc_dw_out, reset_out} = backprop_controll_bundle;
+    assign cal_dc_dw_out_forward = cal_dc_dw_out;
 
-    output [31:0] w_layer_index_out;
-    output [31:0] w_row_index_out;
+    assign weight_row = dc_dw_row_out;
+    assign weight_layer = dc_dw_layer_out;
 
-    output is_cost_layer_out;
-
-    assign reset = is_update && w_row_index == 0 ? 1'b1 : 1'b0;
-    assign current_layer_index = is_update ? w_layer_index : 0;
-    assign dc_dw_layer_index = is_update && is_cost_layer ? w_row_index : 0;
-    assign copy = is_update && is_cost_layer && w_row_index == 0 ? 1'b1 : 1'b0;
-    assign cal_dy_dy_old = is_update && w_row_index == size - 1 ?  1'b1 : 1'b0;
-    
-    assign diff_start_out = ~is_update || backprop_cost ? 0 : diff_start;
-    assign diff_to_all_out = is_update ? 
-                                backprop_cost ? diff_cost : diff_to_all : 
-                                0;
-    assign diff_dense_out = is_update  ? 
-                                backprop_cost ? diff_cost : diff_dense :
-                                0;
-
-    assign w_layer_index_out = is_update ? w_layer_index : 0;
-    assign w_row_index_out = is_update ? w_row_index : 0;
-    assign is_cost_layer_out = is_cost_layer;
 
 endmodule

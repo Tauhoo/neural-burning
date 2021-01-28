@@ -1,32 +1,26 @@
 module dense_layer_delay_reg (
     act_type,
-    backprop_cost,
     cost_type,
-    is_update,
     predict_value,
-    w_layer_index,
-    w_row_index,
-    is_cost_layer,
 
     dense_type,
 
     x,
     w,
 
+    backprop_controll,
+
     act_type_out,
-    backprop_cost_out,
     cost_type_out,
-    is_update_out,
     predict_value_out,
-    w_layer_index_out,
-    w_row_index_out,
-    is_cost_layer_out,
 
     dense_type_out,
     
     x_out,
     w_out,
 
+    backprop_controll_out,
+    
     clk
 );
 
@@ -35,51 +29,43 @@ module dense_layer_delay_reg (
     parameter cost_type_size = 8;
     parameter dense_type_size = 4;
     parameter act_type_size = 4;
-    parameter cycle = 1;
-    localparam  bundle_size = act_type_size + 1 + cost_type_size + 1 + 31 + 31 + dense_type_size + data_size*size*3;
+    parameter cycle = size*2 - 1;
+    parameter backprop_controll_size = 32*3 + 4 ;
+    localparam  bundle_size = act_type_size + cost_type_size + dense_type_size + data_size*size*3;
     
     input clk;
 
     input [act_type_size - 1:0] act_type;
-    input backprop_cost;
     input [cost_type_size - 1:0] cost_type;
-    input is_update;
     input [data_size*size - 1:0] predict_value;
-    input [31:0] w_layer_index;
-    input [31:0] w_row_index;
-    input is_cost_layer;
     
     input [dense_type_size - 1:0] dense_type;
 
     input [data_size*size - 1:0] x;
     input [data_size*size - 1:0] w;
 
+    input [backprop_controll_size - 1:0] backprop_controll;
+
     output [act_type_size - 1:0] act_type_out;
-    output backprop_cost_out;
     output [cost_type_size - 1:0] cost_type_out;
-    output is_update_out;
     output [data_size*size - 1:0] predict_value_out;
-    output [31:0] w_layer_index_out;
-    output [31:0] w_row_index_out;
 
     output [dense_type_size - 1:0] dense_type_out;
 
     output [data_size*size - 1:0] x_out;
     output [data_size*size - 1:0] w_out;
 
-    output is_cost_layer_out;
+    output [backprop_controll_size - 1:0] backprop_controll_out;
 
     wire [bundle_size - 1:0] bundle;
     wire [bundle_size - 1:0] bundle_out;
 
-    assign bundle = {act_type, backprop_cost, cost_type, is_update, predict_value, w_layer_index, w_row_index, dense_type, x, w};
-    assign {act_type_out, backprop_cost_out, cost_type_out, is_update_out, predict_value_out, w_layer_index_out, w_row_index_out, dense_type_out, x_out, w_out} = bundle_out;
+    assign bundle = {act_type, cost_type, predict_value, dense_type, x, w};
+    assign {act_type_out, cost_type_out, predict_value_out, dense_type_out, x_out, w_out} = bundle_out;
 
-    delay #(.data_size(bundle_size), .size(1), .cycle(cycle)) 
-    delay_inst_is_update(.bus_in(bundle), .bus_out(bundle_out), .clk(clk));
+    delay #(.data_size(bundle_size), .size(1), .cycle(cycle))
+    delay_inst_bundle(.bus_in(bundle), .bus_out(bundle_out), .clk(clk));
 
-    delay #(.data_size(1), .size(1))
-    delay_inst_is_cost_layer(.bus_in(is_cost_layer), .bus_out(is_cost_layer_out), .clk(clk));
-
-
+    delay #(.data_size(backprop_controll_size), .size(1), .cycle(cycle))
+    delay_inst_backprop_controll(.bus_in(backprop_controll), .bus_out(backprop_controll_out), .clk(clk));
 endmodule
