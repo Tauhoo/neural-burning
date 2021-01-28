@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Dec 31 16:14:41 2020
+Analysis & Synthesis Status : Successful - Tue Jan 19 17:16:32 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : parse
 Top-level Entity Name : parse
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 32
+Total pins : 60
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

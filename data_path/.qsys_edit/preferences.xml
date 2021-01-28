@@ -3,14 +3,14 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces" showResetDomains="0" showClockDomains="0">
   <columns>
-   <connections preferredWidth="911" />
+   <connections preferredWidth="975" />
    <irq preferredWidth="34" />
    <name preferredWidth="238" />
    <export preferredWidth="336" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Project/neural_burning/activation_layer,Project,Project/neural_burning,Library" />
+   expandedCategories="Project/neural_burning/registers,Library,Project,Project/neural_burning" />
  <window width="1936" height="1056" x="-8" y="-8" />
  <generation path="_PROJECT_NAME_" />
 </preferences>

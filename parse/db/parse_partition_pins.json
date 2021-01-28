@@ -20,6 +20,70 @@
 					"strict" : false
 				},
 				{
+					"name" : "param_a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "param_a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "param_a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "param_a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "param_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "param_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "param_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "param_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "param_c[0]",
+					"strict" : false
+				},
+				{
+					"name" : "param_c[1]",
+					"strict" : false
+				},
+				{
+					"name" : "param_c[2]",
+					"strict" : false
+				},
+				{
+					"name" : "param_c[3]",
+					"strict" : false
+				},
+				{
+					"name" : "param_c[4]",
+					"strict" : false
+				},
+				{
+					"name" : "param_c[5]",
+					"strict" : false
+				},
+				{
+					"name" : "param_c[6]",
+					"strict" : false
+				},
+				{
+					"name" : "param_c[7]",
+					"strict" : false
+				},
+				{
 					"name" : "act_type[0]",
 					"strict" : false
 				},
@@ -68,19 +132,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "cost_type[4]",
+					"name" : "learning_rate[0]",
 					"strict" : false
 				},
 				{
-					"name" : "cost_type[5]",
+					"name" : "learning_rate[1]",
 					"strict" : false
 				},
 				{
-					"name" : "cost_type[6]",
+					"name" : "learning_rate[2]",
 					"strict" : false
 				},
 				{
-					"name" : "cost_type[7]",
+					"name" : "learning_rate[3]",
+					"strict" : false
+				},
+				{
+					"name" : "learning_rate[4]",
+					"strict" : false
+				},
+				{
+					"name" : "learning_rate[5]",
+					"strict" : false
+				},
+				{
+					"name" : "learning_rate[6]",
+					"strict" : false
+				},
+				{
+					"name" : "learning_rate[7]",
 					"strict" : false
 				},
 				{

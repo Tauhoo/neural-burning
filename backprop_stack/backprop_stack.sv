@@ -16,7 +16,16 @@ module backprop_stack(backprop_dense,
 
                       clk,
                       reset);
-    
+                      
+                    //   current_layer,
+                    //   dc_dw_layer,
+                    //   dc_dw_row,
+
+                    //   update_storage,
+                    //   update_dy_dy_old,
+                    //   cal_dc_dw,
+                    //   reset
+
     parameter data_size      = 16;
     parameter size           = 3;
     parameter max_layer_size = 4;
@@ -71,6 +80,8 @@ module backprop_stack(backprop_dense,
     reg signed [data_size - 1:0] temp_data;
     reg signed [data_size - 1:0] temp_data_bus [size - 1:0];
     reg [31:0] lastest_layer;
+    reg [31:0] temp_lastest_layer;
+    reg contain_x_or_z;
 
     initial begin
         for (int row = 0; row < size; row = row + 1) begin
@@ -89,10 +100,24 @@ module backprop_stack(backprop_dense,
             temp_data_bus[colum] = 0;
         end
         lastest_layer = 0;
+        contain_x_or_z = 0;
     end
 
     always @(posedge clk) begin
-        lastest_layer = lastest_layer < current_layer && update_storage ? current_layer : lastest_layer;
+        temp_lastest_layer = lastest_layer < current_layer && update_storage ? current_layer : lastest_layer;
+
+        contain_x_or_z = 0;
+        for (int index = 0; index < 32; index = index + 1) begin
+            if (temp_lastest_layer[index] === 1'bx || temp_lastest_layer[index] === 1'bz) begin
+                contain_x_or_z = 1;
+            end
+        end
+
+
+        if (~contain_x_or_z) begin
+            $write("lastest_layer: %d, current_layer: %d, update_storage: %d, temp_lastest_layer: %b \n\n", lastest_layer, current_layer, update_storage, temp_lastest_layer);
+            lastest_layer = temp_lastest_layer;
+        end
         
         if (update_storage) begin
             for (int row = 0; row < size - 1; row = row + 1) begin
@@ -149,13 +174,11 @@ module backprop_stack(backprop_dense,
                     for (int colum = 0; colum < size; colum = colum + 1) begin
                         temp_data = gdo_add(temp_data, gdo_mult(cost_storage[colum][data_set], to_all_storage[colum][dc_dw_row][dc_dw_layer + 1]));
                     end
-                    $write("%d ", temp_data);
                     
                     for (int colum = 0; colum < size; colum = colum + 1) begin
                         temp_data_bus[colum] = gdo_add(temp_data_bus[colum], gdo_mult(temp_data, start_storage[dc_dw_row][data_set][dc_dw_layer]));
                     end
                 end
-                $write("\n");
             end
             for (int colum = 0; colum < size; colum = colum + 1) begin
                 dc_dw[colum] = temp_data_bus[colum];
@@ -179,6 +202,28 @@ module backprop_stack(backprop_dense,
                 temp_data_bus[colum] = 0;
             end
             lastest_layer = 0;
+        end
+        
+        for (int layer = 0; layer < size; layer = layer + 1) begin
+            $write("layer: %d, lastest_layer: %d\n", layer, lastest_layer);
+            for (int row = 0; row < size; row = row + 1) begin
+                for (int colum = 0; colum < size; colum = colum + 1) begin
+                    $write("%d ", start_storage[colum][row][layer]);
+                end
+                $write("| ");
+                for (int colum = 0; colum < size; colum = colum + 1) begin
+                    $write("%d ", to_all_storage[colum][row][layer]);
+                end
+                $write("| ");
+                for (int colum = 0; colum < size; colum = colum + 1) begin
+                    $write("%d ", dense_storage[colum][row]);
+                end
+                $write("| ");
+                for (int colum = 0; colum < size; colum = colum + 1) begin
+                    $write("%d ", cost_storage[colum][row]);
+                end
+                $write("\n");
+            end
         end
     end
 endmodule

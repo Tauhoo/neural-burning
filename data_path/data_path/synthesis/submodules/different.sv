@@ -25,5 +25,5 @@ module different (weight, x, z, predict_value, cost_type, dense_type, diff_dense
     diff_dense dd(.weight(weight), .diff(diff_dense_out));
     diff_start ds(.x(x), .diff(diff_start_out));
     diff_to_all dta(.weight(weight), .diff(diff_to_all_out));
-    diff_cost dc(.predict_value(predict_value), .z(x), .diff(diff_cost_out));
+    diff_cost dc(.predict_value(predict_value), .z(z_out), .diff(diff_cost_out));
 endmodule

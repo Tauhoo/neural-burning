@@ -6,6 +6,7 @@ module data_path (
 	code_storage_write_interface_is_write,
 	code_storage_write_interface_write_line,
 	controller_enable_interface_enable,
+	fetch_to_decode_register_code_index_out_interface_code_index,
 	input_storage_is_write_interface_is_write,
 	input_storage_write_interface_write_layer_index,
 	input_storage_write_interface_write_row_index,
@@ -15,6 +16,7 @@ module data_path (
 	label_storage_write_interface_write_row_index,
 	label_storage_write_interface_write_data,
 	matrix_storage_locator_reset_interface_reset,
+	parameter_storage_0_learning_rate_interface_learning_rate,
 	reset_reset_n,
 	weight_storage_is_write_interface_is_write,
 	weight_storage_write_interface_write_layer_index,
@@ -27,6 +29,7 @@ module data_path (
 	input		code_storage_write_interface_is_write;
 	input	[31:0]	code_storage_write_interface_write_line;
 	input		controller_enable_interface_enable;
+	output	[31:0]	fetch_to_decode_register_code_index_out_interface_code_index;
 	input		input_storage_is_write_interface_is_write;
 	input	[31:0]	input_storage_write_interface_write_layer_index;
 	input	[31:0]	input_storage_write_interface_write_row_index;
@@ -36,6 +39,7 @@ module data_path (
 	input	[31:0]	label_storage_write_interface_write_row_index;
 	input	[47:0]	label_storage_write_interface_write_data;
 	input		matrix_storage_locator_reset_interface_reset;
+	output	[15:0]	parameter_storage_0_learning_rate_interface_learning_rate;
 	input		reset_reset_n;
 	input		weight_storage_is_write_interface_is_write;
 	input	[31:0]	weight_storage_write_interface_write_layer_index;

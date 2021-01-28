@@ -1,14 +1,31 @@
 module backprop_stack(backprop_dense,
                       backprop_to_all,
                       backprop_start,
+                      backprop_cost,
+                      update_storage,
+
+                      current_layer,
+
+                      update_dy_dy_old,
+
+                      cal_dc_dw,
+                      dc_dw_layer,
+                      dc_dw_row,
+
+                      dc_dw_stream,
+
                       clk,
-                      reset,
-                      current_layer_index,
-                      dc_dw_layer_index,
-                      copy,
-                      cal_dy_dy_old,
-                      dc_dw_stream);
-    
+                      reset);
+                      
+                    //   current_layer,
+                    //   dc_dw_layer,
+                    //   dc_dw_row,
+
+                    //   update_storage,
+                    //   update_dy_dy_old,
+                    //   cal_dc_dw,
+                    //   reset
+
     parameter data_size      = 16;
     parameter size           = 3;
     parameter max_layer_size = 4;
@@ -17,13 +34,6 @@ module backprop_stack(backprop_dense,
     import gdo::gdo_mult;
 	import gdo::gdo_size;
 
-    input clk;
-    input reset;
-    input copy;
-    input cal_dy_dy_old;
-    input [31:0] current_layer_index;
-    input [31:0] dc_dw_layer_index;
-    
     input [data_size*size - 1:0] backprop_dense;
     wire signed [data_size - 1:0] backprop_dense_wire [0:size - 1];
     
@@ -32,140 +42,185 @@ module backprop_stack(backprop_dense,
     
     input [data_size*size - 1:0] backprop_start;
     wire signed [data_size - 1:0] backprop_start_wire [0:size - 1];
+
+    input [data_size*size - 1:0] backprop_cost;
+    wire signed [data_size - 1:0] backprop_cost_wire [0:size - 1];
+
+    input clk;
+    input reset;
+    input update_storage;
+    input [31:0] current_layer;
+    input update_dy_dy_old;
+
+    input cal_dc_dw;
+    input [31:0] dc_dw_layer;
+    input [31:0] dc_dw_row;
     
     output [data_size*size - 1:0] dc_dw_stream;
     
-    genvar gen_index;
-    
-    reg signed [data_size - 1:0] dy_dw [0:size - 1][0:size - 1][0:max_layer_size - 1];
-    reg signed [data_size - 1:0] dy_dy_old [0:size - 1][0:size - 1][0:max_layer_size - 1];
-    reg signed [data_size - 1:0] dy_dy_dense [0:size - 1][0:size - 1];
     reg signed [data_size - 1:0] dc_dw [0:size - 1];
-    reg signed [data_size - 1:0] copy_dy_dw [0:size - 1][0:size - 1];
     
+    genvar gen_index;
     generate
     for (gen_index = 0; gen_index < size; gen_index = gen_index + 1) begin : set_tp_wire
     assign backprop_start_wire[gen_index]                              = backprop_start[(size - gen_index)*data_size - 1 -: data_size];
     assign backprop_to_all_wire[gen_index]                             = backprop_to_all[(size - gen_index)*data_size - 1 -: data_size];
     assign backprop_dense_wire[gen_index]                              = backprop_dense[(size - gen_index)*data_size - 1 -: data_size];
+    assign backprop_cost_wire[gen_index]                              = backprop_cost[(size - gen_index)*data_size - 1 -: data_size];
     assign dc_dw_stream[(size - gen_index)*data_size - 1 -: data_size] = dc_dw[gen_index];
     end
     endgenerate
     
-    //temp variable
-    integer colum;
-    integer row;
-    integer index;
-    integer layer_index;
-    reg signed [data_size - 1:0] temp_matrix [0:size - 1][0:size - 1];
-    
+    reg signed [data_size - 1:0] start_storage [size - 1:0][size - 1:0][max_layer_size - 1:0];
+    reg signed [data_size - 1:0] to_all_storage [size - 1:0][size - 1:0][max_layer_size - 1:0];
+
+    reg signed [data_size - 1:0] dense_storage [size - 1:0][size - 1:0];
+    reg signed [data_size - 1:0] cost_storage [size - 1:0][size - 1:0];
+
+    reg signed [data_size - 1:0] temp_data;
+    reg signed [data_size - 1:0] temp_data_bus [size - 1:0];
+    reg [31:0] lastest_layer;
+    reg [31:0] temp_lastest_layer;
+    reg contain_x_or_z;
+
     initial begin
-        for (layer_index = 0; layer_index < max_layer_size; layer_index = layer_index + 1) begin
-            for (row = 0; row < size; row = row + 1) begin
-                for (colum = 0; colum < size; colum = colum + 1) begin
-                    dy_dw[colum][row][layer_index]     = 0;
-                    dy_dy_old[colum][row][layer_index] = 0;
+        for (int row = 0; row < size; row = row + 1) begin
+            for (int colum = 0; colum < size; colum = colum + 1) begin
+                   for (int layer = 0; layer < max_layer_size; layer = layer + 1) begin
+                        start_storage[colum][row][layer] = 0;
+                        to_all_storage[colum][row][layer] = 0;
+                   end
+                   dense_storage[colum][row] = 0;
+                   cost_storage[colum][row] = 0;
+            end
+        end
+        temp_data = 0;
+        for (int colum = 0; colum < size; colum = colum + 1) begin
+            dc_dw[colum] = 0;
+            temp_data_bus[colum] = 0;
+        end
+        lastest_layer = 0;
+        contain_x_or_z = 0;
+    end
+
+    always @(posedge clk) begin
+        temp_lastest_layer = lastest_layer < current_layer && update_storage ? current_layer : lastest_layer;
+
+        contain_x_or_z = 0;
+        for (int index = 0; index < 32; index = index + 1) begin
+            if (temp_lastest_layer[index] === 1'bx || temp_lastest_layer[index] === 1'bz) begin
+                contain_x_or_z = 1;
+            end
+        end
+
+
+        if (~contain_x_or_z) begin
+            $write("lastest_layer: %d, current_layer: %d, update_storage: %d, temp_lastest_layer: %b \n\n", lastest_layer, current_layer, update_storage, temp_lastest_layer);
+            lastest_layer = temp_lastest_layer;
+        end
+        
+        if (update_storage) begin
+            for (int row = 0; row < size - 1; row = row + 1) begin
+                for (int colum = 0; colum < size; colum = colum + 1) begin                
+                    start_storage[colum][row][current_layer] = start_storage[colum][row + 1][current_layer];
+                    to_all_storage[colum][row][current_layer] = to_all_storage[colum][row + 1][current_layer];
+
+                    dense_storage[colum][row] = dense_storage[colum][row + 1];
+                    cost_storage[colum][row] = cost_storage[colum][row + 1];
+                end
+            end
+
+            for (int colum = 0; colum < size; colum = colum + 1) begin
+                start_storage[colum][size - 1][current_layer] = backprop_start_wire[colum];
+                to_all_storage[colum][size - 1][current_layer] = backprop_to_all_wire[colum];
+
+                dense_storage[colum][size - 1] = backprop_dense_wire[colum];
+                cost_storage[colum][size - 1] = backprop_cost_wire[colum];
+            end
+        end
+
+        if (update_dy_dy_old) begin
+            for (int layer_index = 1; layer_index < max_layer_size; layer_index = layer_index + 1) begin
+                if (layer_index < current_layer) begin
+                    for (int row = 0; row < size; row = row + 1) begin
+                        for (int colum = 0; colum < size; colum = colum + 1) begin
+                            temp_data = 0;
+                            for (int index = 0; index  < size; index = index + 1) begin
+                                temp_data = gdo_add(temp_data, gdo_mult(to_all_storage[colum][row][layer_index], dense_storage[colum][row]));
+                            end
+                            to_all_storage[colum][row][layer_index] = temp_data;
+                        end
+                    end
                 end
             end
         end
-        
-        for (row = 0; row < size; row = row + 1) begin
-            for (colum = 0; colum < size; colum = colum + 1) begin
-                dy_dy_dense[colum][row] = 0;
-                temp_matrix[colum][row] = 0;
-                copy_dy_dw[colum][row]  = 0;
-            end
-        end
-        
-        for (colum = 0; colum < size; colum = colum + 1) begin
+
+        for (int colum = 0; colum < size; colum = colum + 1) begin
             dc_dw[colum] = 0;
         end
-    end
-    
-    always @(posedge clk) begin
-        $write(" ==  ==  ==  ==  ==  ==  == \n");
-        //copy
-        if (copy) begin
-            for (row = 0; row < size; row = row + 1) begin
-                for (colum = 0; colum < size; colum = colum + 1) begin
-                    copy_dy_dw[colum][row] = dy_dw[colum][row][current_layer_index];
+        if (cal_dc_dw) begin
+            for (int colum = 0; colum < size; colum = colum + 1) begin
+                temp_data_bus[colum] = 0;
+            end
+            if (lastest_layer == dc_dw_layer) begin
+                for (int data_set = 0; data_set < size; data_set = data_set + 1) begin
+                    for (int colum = 0; colum < size; colum = colum + 1) begin
+                        temp_data_bus[colum] = gdo_add(temp_data_bus[colum], gdo_mult(cost_storage[colum][data_set], start_storage[dc_dw_row][data_set][dc_dw_layer]));
+                    end
                 end
-            end
-        end
-        
-        //reset
-        if (reset) begin
-            for (row = 0; row < size; row = row + 1) begin
-                for (colum = 0; colum < size; colum = colum + 1) begin
-                    dy_dw[colum][row][current_layer_index] = 0;
-                end
-            end
-        end
-        
-        //update cost dy_old_dw * dy_dy_old
-        for (row = 0; row < size; row = row + 1) begin
-            dc_dw[row] = 0;
-            for (colum = 0; colum < size; colum = colum + 1) begin
-                dc_dw[row] = gdo_add(dc_dw[row], gdo_mult(copy_dy_dw[colum][dc_dw_layer_index], dy_dy_old[row][colum][current_layer_index + 1]));
-            end
-        end
-        
-        //update dy_dw
-        for (colum = 0; colum < size; colum = colum + 1) begin
-            for (row = 0; row < size; row = row + 1) begin
-                dy_dw[colum][row][current_layer_index] = gdo_add(dy_dw[colum][row][current_layer_index], backprop_start_wire[row]);
-            end
-        end
-        
-        //update dy_dy_old and dy_dy_dense
-        for (row = 1; row < size; row = row + 1) begin
-            for (colum = 0; colum < size; colum = colum + 1) begin
-                dy_dy_old[colum][row - 1][current_layer_index] = dy_dy_old[colum][row][current_layer_index];
-                dy_dy_dense[colum][row - 1]                    = dy_dy_dense[colum][row];
-            end
-        end
-        
-        for (colum = 0; colum < size; colum = colum + 1) begin
-            dy_dy_old[colum][size - 1][current_layer_index] = backprop_to_all_wire[colum];
-            dy_dy_dense[colum][size - 1]                    = backprop_dense_wire[colum];
-        end
-        
-        //update to all layer backpropagate
-        if (cal_dy_dy_old) begin
-            for (layer_index = 0; layer_index < max_layer_size; layer_index = layer_index + 1) begin
-                if (layer_index < current_layer_index) begin
-                    //update
-                    for (row = 0; row < size; row = row + 1) begin
-                        for (colum = 0; colum < size; colum = colum + 1) begin
-                            for (index = 0; index < size; index = index + 1) begin
-                                temp_matrix[colum][row] = gdo_add(temp_matrix[colum][row], gdo_mult(dy_dy_old[index][row][layer_index], dy_dy_dense[colum][index]));
-                            end
-                        end
+            end else begin
+                for (int data_set = 0; data_set < size; data_set = data_set + 1) begin
+                    temp_data = 0;
+                    for (int colum = 0; colum < size; colum = colum + 1) begin
+                        temp_data = gdo_add(temp_data, gdo_mult(cost_storage[colum][data_set], to_all_storage[colum][dc_dw_row][dc_dw_layer + 1]));
                     end
                     
-                    for (row = 0; row < size; row = row + 1) begin
-                        for (colum = 0; colum < size; colum = colum + 1) begin
-                            dy_dy_old[colum][row][layer_index] = temp_matrix[colum][row];
-                            temp_matrix[colum][row]            = 0;
-                        end
+                    for (int colum = 0; colum < size; colum = colum + 1) begin
+                        temp_data_bus[colum] = gdo_add(temp_data_bus[colum], gdo_mult(temp_data, start_storage[dc_dw_row][data_set][dc_dw_layer]));
                     end
                 end
             end
+            for (int colum = 0; colum < size; colum = colum + 1) begin
+                dc_dw[colum] = temp_data_bus[colum];
+            end
+        end
+
+        if (reset) begin
+            for (int row = 0; row < size; row = row + 1) begin
+            for (int colum = 0; colum < size; colum = colum + 1) begin
+                   for (int layer = 0; layer < max_layer_size; layer = layer + 1) begin
+                        start_storage[colum][row][layer] = 0;
+                        to_all_storage[colum][row][layer] = 0;
+                   end
+                   dense_storage[colum][row] = 0;
+                   cost_storage[colum][row] = 0;
+                end
+            end
+            temp_data = 0;
+            for (int colum = 0; colum < size; colum = colum + 1) begin
+                dc_dw[colum] = 0;
+                temp_data_bus[colum] = 0;
+            end
+            lastest_layer = 0;
         end
         
-        for (layer_index = 0; layer_index < max_layer_size; layer_index = layer_index + 1) begin
-            $write("layer : %d\n", layer_index);
-            for (row = 0; row < size; row = row + 1) begin
-                for (colum = 0; colum < size; colum = colum + 1) begin
-                    $write("%f ",  dy_dw[colum][row][layer_index] * 2.0**(-1.0*gdo_size));
+        for (int layer = 0; layer < size; layer = layer + 1) begin
+            $write("layer: %d, lastest_layer: %d\n", layer, lastest_layer);
+            for (int row = 0; row < size; row = row + 1) begin
+                for (int colum = 0; colum < size; colum = colum + 1) begin
+                    $write("%d ", start_storage[colum][row][layer]);
                 end
                 $write("| ");
-                for (colum = 0; colum < size; colum = colum + 1) begin
-                    $write("%f ",  dy_dy_old[colum][row][layer_index] * 2.0**(-1.0*gdo_size));
+                for (int colum = 0; colum < size; colum = colum + 1) begin
+                    $write("%d ", to_all_storage[colum][row][layer]);
                 end
                 $write("| ");
-                for (colum = 0; colum < size; colum = colum + 1) begin
-                    $write("%f ", copy_dy_dw[colum][row] * 2.0**(-1.0*gdo_size));
+                for (int colum = 0; colum < size; colum = colum + 1) begin
+                    $write("%d ", dense_storage[colum][row]);
+                end
+                $write("| ");
+                for (int colum = 0; colum < size; colum = colum + 1) begin
+                    $write("%d ", cost_storage[colum][row]);
                 end
                 $write("\n");
             end

@@ -5,12 +5,8 @@ module dense_activate_reg (
     w,
     y,
     x,
-    w_layer_index,
-    w_row_index,
-    is_update,
     predict_value,
-    backprop_cost,
-    is_cost_layer,
+    backprop_controll,
 
     act_type_out,
     dense_type_out,
@@ -18,12 +14,8 @@ module dense_activate_reg (
     w_out,
     y_out,
     x_out,
-    w_layer_index_out,
-    w_row_index_out,
-    is_update_out,
     predict_value_out,
-    backprop_cost_out,
-    is_cost_layer_out,
+    backprop_controll_out,
     clk
 );
 
@@ -32,6 +24,7 @@ module dense_activate_reg (
     parameter cost_type_size = 8;
     parameter dense_type_size = 4;
     parameter act_type_size = 4;
+    parameter backprop_controll_size = 32*3 + 4 ;
 
     input [act_type_size - 1:0] act_type;
     input [dense_type_size - 1:0] dense_type;
@@ -39,12 +32,8 @@ module dense_activate_reg (
     input [data_size*size - 1:0] w;
     input [data_size*size - 1:0] y;
     input [data_size*size - 1:0] x;
-    input [31:0] w_layer_index;
-    input [31:0] w_row_index;
-    input is_update;
     input [data_size*size - 1:0] predict_value;
-    input backprop_cost;
-    input is_cost_layer;
+    input [backprop_controll_size - 1:0] backprop_controll;
 
     input clk;
 
@@ -54,12 +43,8 @@ module dense_activate_reg (
     output [data_size*size - 1:0] w_out;
     output [data_size*size - 1:0] y_out;
     output [data_size*size - 1:0] x_out;
-    output [31:0] w_layer_index_out;
-    output [31:0] w_row_index_out;
-    output is_update_out;
     output [data_size*size - 1:0] predict_value_out;
-    output backprop_cost_out;
-    output is_cost_layer_out;
+    output [backprop_controll_size - 1:0] backprop_controll_out;
 
     delay #(.data_size(act_type_size), .size(1)) 
     delay_inst_act_type(.bus_in(act_type), .bus_out(act_type_out), .clk(clk));
@@ -79,22 +64,10 @@ module dense_activate_reg (
     delay #(.data_size(data_size), .size(size)) 
     delay_inst_x(.bus_in(x), .bus_out(x_out), .clk(clk));
     
-    delay #(.data_size(32), .size(1)) 
-    delay_inst_w_layer_index(.bus_in(w_layer_index), .bus_out(w_layer_index_out), .clk(clk));
-    
-    delay #(.data_size(32), .size(1)) 
-    delay_inst_w_row_index(.bus_in(w_row_index), .bus_out(w_row_index_out), .clk(clk));
-    
-    delay #(.data_size(1), .size(1)) 
-    delay_inst_is_update(.bus_in(is_update), .bus_out(is_update_out), .clk(clk));
-    
     delay #(.data_size(data_size), .size(size)) 
     delay_inst_predict_value(.bus_in(predict_value), .bus_out(predict_value_out), .clk(clk));
-    
-    delay #(.data_size(1), .size(1)) 
-    delay_inst_backprop_cost(.bus_in(backprop_cost), .bus_out(backprop_cost_out), .clk(clk));
 
-    delay #(.data_size(1), .size(1))
-    delay_inst_is_cost_layer(.bus_in(is_cost_layer), .bus_out(is_cost_layer_out), .clk(clk));
+    delay #(.data_size(backprop_controll_size), .size(1))
+    delay_inst_backprop_controll(.bus_in(backprop_controll), .bus_out(backprop_controll_out), .clk(clk));
 
 endmodule

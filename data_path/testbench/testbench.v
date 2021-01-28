@@ -13,12 +13,14 @@ module testbench  ;
   reg    weight_storage_is_write_interface_is_write   ; 
   reg    input_storage_is_write_interface_is_write   ; 
   reg  [31:0]  input_storage_write_interface_write_row_index   ; 
+  wire  [15:0]  parameter_storage_0_learning_rate_interface_learning_rate   ; 
   reg    matrix_storage_locator_reset_interface_reset   ; 
   reg    controller_enable_interface_enable   ; 
   reg  [47:0]  label_storage_write_interface_write_data   ; 
+  reg  [31:0]  label_storage_write_interface_write_layer_index   ; 
   reg    clk_clk   ; 
   reg    code_storage_enable_interface_enable   ; 
-  reg  [31:0]  label_storage_write_interface_write_layer_index   ; 
+  wire  [31:0]  fetch_to_decode_register_code_index_out_interface_code_index   ; 
   reg  [31:0]  label_storage_write_interface_write_row_index   ; 
   reg    code_storage_write_interface_is_write   ; 
   reg    label_storage_is_write_interface_is_write   ; 
@@ -35,16 +37,17 @@ module testbench  ;
       .weight_storage_is_write_interface_is_write (weight_storage_is_write_interface_is_write ) ,
       .input_storage_is_write_interface_is_write (input_storage_is_write_interface_is_write ) ,
       .input_storage_write_interface_write_row_index (input_storage_write_interface_write_row_index ) ,
+      .parameter_storage_0_learning_rate_interface_learning_rate (parameter_storage_0_learning_rate_interface_learning_rate ) ,
       .matrix_storage_locator_reset_interface_reset (matrix_storage_locator_reset_interface_reset ) ,
       .controller_enable_interface_enable (controller_enable_interface_enable ) ,
       .label_storage_write_interface_write_data (label_storage_write_interface_write_data ) ,
+      .label_storage_write_interface_write_layer_index (label_storage_write_interface_write_layer_index ) ,
       .clk_clk (clk_clk ) ,
       .code_storage_enable_interface_enable (code_storage_enable_interface_enable ) ,
-      .label_storage_write_interface_write_layer_index (label_storage_write_interface_write_layer_index ) ,
+      .fetch_to_decode_register_code_index_out_interface_code_index (fetch_to_decode_register_code_index_out_interface_code_index ) ,
       .label_storage_write_interface_write_row_index (label_storage_write_interface_write_row_index ) ,
       .code_storage_write_interface_is_write (code_storage_write_interface_is_write ) ,
       .label_storage_is_write_interface_is_write (label_storage_is_write_interface_is_write ) ); 
-
 
 
   integer weight_storage_write_interface_write_data_file;
@@ -112,10 +115,10 @@ module testbench  ;
      if (round > 0) begin
       controller_enable_interface_enable = enable;
      end else begin
-       controller_enable_interface_enable = 0;
+      controller_enable_interface_enable = 0;
      end
 
-     if( code_storage_enable_interface_enable == 1) begin
+     if (code_storage_enable_interface_enable == 1) begin
        round = 1;
      end
      
@@ -132,5 +135,5 @@ module testbench  ;
   end
 
   initial
-	#8000 $stop;
+	#16000 $stop;
 endmodule

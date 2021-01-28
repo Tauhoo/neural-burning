@@ -1,0 +1,46 @@
+|parameter_storage
+in_act_type[0] => ~NO_FANOUT~
+in_act_type[1] => ~NO_FANOUT~
+in_act_type[2] => ~NO_FANOUT~
+in_act_type[3] => ~NO_FANOUT~
+in_dense_type[0] => ~NO_FANOUT~
+in_dense_type[1] => ~NO_FANOUT~
+in_dense_type[2] => ~NO_FANOUT~
+in_dense_type[3] => ~NO_FANOUT~
+in_cost_type[0] => ~NO_FANOUT~
+in_cost_type[1] => ~NO_FANOUT~
+in_cost_type[2] => ~NO_FANOUT~
+in_cost_type[3] => ~NO_FANOUT~
+in_learning_rate[0] => calculate_signal.DATAB
+in_learning_rate[1] => ~NO_FANOUT~
+in_learning_rate[2] => ~NO_FANOUT~
+in_learning_rate[3] => ~NO_FANOUT~
+in_learning_rate[4] => ~NO_FANOUT~
+in_learning_rate[5] => ~NO_FANOUT~
+in_learning_rate[6] => ~NO_FANOUT~
+in_learning_rate[7] => ~NO_FANOUT~
+in_learning_rate[8] => ~NO_FANOUT~
+in_learning_rate[9] => ~NO_FANOUT~
+in_learning_rate[10] => ~NO_FANOUT~
+in_learning_rate[11] => ~NO_FANOUT~
+in_learning_rate[12] => ~NO_FANOUT~
+in_learning_rate[13] => ~NO_FANOUT~
+in_learning_rate[14] => ~NO_FANOUT~
+in_learning_rate[15] => ~NO_FANOUT~
+update_act_type => ~NO_FANOUT~
+update_dense_type => ~NO_FANOUT~
+update_cost_type => ~NO_FANOUT~
+update_learning_rate => calculate_signal.OUTPUTSELECT
+update_learning_rate => calculate_signal.OUTPUTSELECT
+update_learning_rate => calculate_signal.OUTPUTSELECT
+update_learning_rate => calculate_signal.OUTPUTSELECT
+out_act_type <= calculate_signal.DB_MAX_OUTPUT_PORT_TYPE
+out_dense_type <= calculate_signal.DB_MAX_OUTPUT_PORT_TYPE
+out_cost_type <= calculate_signal.DB_MAX_OUTPUT_PORT_TYPE
+out_learning_rate <= calculate_signal.DB_MAX_OUTPUT_PORT_TYPE
+clk => learning_rate_reg[0].CLK
+clk => learning_rate_reg[1].CLK
+clk => learning_rate_reg[2].CLK
+clk => learning_rate_reg[3].CLK
+
+

@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "out_learning_rate",
+					"strict" : false
+				},
+				{
+					"name" : "in_learning_rate[0]",
+					"strict" : false
+				},
+				{
+					"name" : "update_learning_rate",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
