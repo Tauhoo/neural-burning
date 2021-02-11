@@ -1,5 +1,5 @@
 Analysis & Synthesis report for activation
-Thu Jan 07 22:33:06 2021
+Fri Jan 29 17:09:38 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |activation
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,27 +34,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jan 07 22:33:06 2021       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; activation                                  ;
-; Top-level Entity Name           ; activation                                  ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 96                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Fri Jan 29 17:09:38 2021           ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; activation                                  ;
+; Top-level Entity Name       ; activation                                  ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -167,121 +155,35 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
-; activation.sv                    ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/activation/activation.sv ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
-
-
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Estimate of Logic utilization (ALMs needed) ; 0                  ;
-;                                             ;                    ;
-; Combinational ALUT usage for logic          ; 0                  ;
-;     -- 7 input functions                    ; 0                  ;
-;     -- 6 input functions                    ; 0                  ;
-;     -- 5 input functions                    ; 0                  ;
-;     -- 4 input functions                    ; 0                  ;
-;     -- <=3 input functions                  ; 0                  ;
-;                                             ;                    ;
-; Dedicated logic registers                   ; 0                  ;
-;                                             ;                    ;
-; I/O pins                                    ; 96                 ;
-;                                             ;                    ;
-; Total DSP Blocks                            ; 0                  ;
-;                                             ;                    ;
-; Maximum fan-out node                        ; out_data[0]~output ;
-; Maximum fan-out                             ; 1                  ;
-; Total fan-out                               ; 144                ;
-; Average fan-out                             ; 0.75               ;
-+---------------------------------------------+--------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |activation                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 96   ; 0            ; |activation         ; activation  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |activation ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; data_size      ; 16    ; Signed Integer                                    ;
-; size           ; 3     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 96                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Jan 07 22:32:57 2021
+    Info: Processing started: Fri Jan 29 17:09:31 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off activation -c activation
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 0 entities, in source file /neural-burning/general_data_operator/src/gdo.sv
+    Info (12022): Found design unit 1: gdo (SystemVerilog) File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file activation.sv
     Info (12023): Found entity 1: activation File: G:/neural-burning/activation/activation.sv Line: 1
 Info (12127): Elaborating entity "activation" for the top level hierarchy
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 48 input pins
-    Info (21059): Implemented 48 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Thu Jan 07 22:33:06 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:14
+Warning (10216): Verilog HDL warning at gdo.sv(42): expression attempts to divide or modulo by zero. Treated expression value as Don't Care (X) during synthesis. File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 42
+Error (10172): Verilog HDL unsupported feature error at gdo.sv(42): real variable data type values are not supported File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 42
+Error (10903): Verilog HDL error at gdo.sv(75): failed to elaborate task or function "gdo_pow" File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 75
+Error (10903): Verilog HDL error at gdo.sv(75): failed to elaborate task or function "gdo_add" File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 75
+Error (10903): Verilog HDL error at gdo.sv(75): failed to elaborate task or function "gdo_div" File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at activation.sv(44): truncated value with size 24 to match size of target (16) File: G:/neural-burning/activation/activation.sv Line: 44
+Error (10903): Verilog HDL error at activation.sv(29): failed to elaborate task or function "gdo_sigmoid" File: G:/neural-burning/activation/activation.sv Line: 29
+Warning (10776): Verilog HDL warning at activation.sv(22): variable activate_mux in static task or function activate_mux may have unintended latch behavior File: G:/neural-burning/activation/activation.sv Line: 22
+Error (10903): Verilog HDL error at activation.sv(39): failed to elaborate task or function "activate_mux" File: G:/neural-burning/activation/activation.sv Line: 39
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 4 warnings
+    Error: Peak virtual memory: 4765 megabytes
+    Error: Processing ended: Fri Jan 29 17:09:38 2021
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:14
 
 

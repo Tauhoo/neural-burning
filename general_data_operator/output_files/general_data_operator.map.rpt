@@ -1,5 +1,5 @@
 Analysis & Synthesis report for general_data_operator
-Tue Dec 22 20:42:28 2020
+Thu Feb 11 15:59:05 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Dec 22 20:42:28 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Feb 11 15:59:05 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; general_data_operator                       ;
 ; Top-level Entity Name           ; general_data_operator                       ;
@@ -259,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Dec 22 20:42:22 2020
+    Info: Processing started: Thu Feb 11 15:58:58 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off general_data_operator -c general_data_operator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -268,35 +268,43 @@ Info (12021): Found 1 design units, including 0 entities, in source file src/gdo
 Info (12021): Found 1 design units, including 1 entities, in source file general_data_operator.sv
     Info (12023): Found entity 1: general_data_operator File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 2
 Info (12127): Elaborating entity "general_data_operator" for the top level hierarchy
-Warning (10175): Verilog HDL warning at general_data_operator.sv(13): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 13
-Warning (10175): Verilog HDL warning at general_data_operator.sv(14): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+Warning (10175): Verilog HDL warning at general_data_operator.sv(21): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 21
+Warning (10175): Verilog HDL warning at general_data_operator.sv(22): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 22
+Warning (10175): Verilog HDL warning at general_data_operator.sv(23): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 23
+Warning (10175): Verilog HDL warning at general_data_operator.sv(24): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 24
+Warning (10175): Verilog HDL warning at general_data_operator.sv(25): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 25
+Warning (10175): Verilog HDL warning at general_data_operator.sv(26): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 26
+Warning (10175): Verilog HDL warning at general_data_operator.sv(27): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 27
+Warning (10175): Verilog HDL warning at general_data_operator.sv(28): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 28
+Warning (10175): Verilog HDL warning at general_data_operator.sv(29): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 29
+Warning (10175): Verilog HDL warning at general_data_operator.sv(30): ignoring unsupported system task File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 30
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out_data[0]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[1]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[2]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[3]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[4]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[5]" is stuck at VCC File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[6]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[7]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[8]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[9]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[10]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[11]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[12]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[13]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[14]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[15]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
-    Warning (13410): Pin "out_data[16]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 6
+    Warning (13410): Pin "out_data[0]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[1]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[2]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[3]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[4]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[5]" is stuck at VCC File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[6]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[7]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[8]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[9]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[10]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[11]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[12]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[13]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[14]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[15]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
+    Warning (13410): Pin "out_data[16]" is stuck at GND File: G:/neural-burning/general_data_operator/general_data_operator.sv Line: 14
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 17 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
     Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Tue Dec 22 20:42:28 2020
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Thu Feb 11 15:59:05 2021
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:14
 
 
