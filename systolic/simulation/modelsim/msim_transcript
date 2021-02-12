@@ -10,215 +10,545 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+/neural-burning/general_data_operator/src {/neural-burning/general_data_operator/src/gdo_parameter.v}
+# vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src {G:/neural-burning/general_data_operator/src/gdo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:05:41 on Dec 22,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo_parameter.v 
-# ** Error: G:/neural-burning/general_data_operator/src/gdo_parameter.v(1): (vlog-2155) Global declarations are illegal in Verilog 2001 syntax.
-# End time: 16:05:41 on Dec 22,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./systolic_run_msim_rtl_verilog.do line 8
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -vlog01compat -work work +incdir+/neural-burning/general_data_operator/src {/neural-burning/general_data_operator/src/gdo_parameter.v}"
-vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v
+# Start time: 18:46:20 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
+# -- Compiling package gdo
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:46:20 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+G:/neural-burning/systolic {G:/neural-burning/systolic/systolic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:06:24 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v 
+# Start time: 18:46:20 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
+# -- Compiling module systolic
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	systolic
+# End time: 18:46:20 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:46:34 on Feb 12,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 16:06:24 on Dec 22,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work G:/neural-burning/systolic/systolic.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:06:28 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/systolic/systolic.v 
-# -- Compiling module systolic
-# 
-# Top level modules:
-# 	systolic
-# End time: 16:06:28 on Dec 22,2020, Elapsed time: 0:00:00
+# End time: 18:46:34 on Feb 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 16:06:34 on Dec 22,2020
+# Start time: 18:46:38 on Feb 12,2021
+# Loading sv_std.std
 # Loading work.testbench
+# Loading work.gdo
 # Loading work.systolic
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 49
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 51
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 68
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 70
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
 add wave -position end  sim:/testbench/y_stream
 add wave -position end  sim:/testbench/data_stream
-add wave -position end  sim:/testbench/set_w
-add wave -position end  sim:/testbench/clk
 add wave -position end  sim:/testbench/w_stream
 run
+#   0  16  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
+#  16   0  16 -> weight |  32  16   0 -> data |   x   x   x -> y 
 run
-vlog -reportprogress 300 -work work G:/neural-burning/systolic/systolic.v
+#  16  16   0 -> weight |  48  32  16 -> data |   1   x   x -> y 
+run
+#  16  16   0 -> weight |   0  48  32 -> data |   2   1   x -> y 
+run
+#  16  16   0 -> weight |   0   0  48 -> data |   3   2   2 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   3   4 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   6 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   0 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   0 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   0 -> y 
+vlog -sv -work work +incdir+G:/neural-burning/systolic G:/neural-burning/systolic/systolic.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:10:25 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/systolic/systolic.v 
+# Start time: 18:50:07 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
 # -- Compiling module systolic
+# -- Importing package gdo
 # 
 # Top level modules:
 # 	systolic
-# End time: 16:10:25 on Dec 22,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:10:27 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 16:10:28 on Dec 22,2020, Elapsed time: 0:00:01
+# End time: 18:50:07 on Feb 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
 # Loading work.systolic
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 49
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 51
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 68
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 70
-run
-#   0   1   1 -> weight |   1   0   0 -> data
-#   1   0   1 -> weight |   2   1   0 -> data
-vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:18:46 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 16:18:46 on Dec 22,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 49
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 51
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 61
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 63
-run
-#   0   1   1 -> weight |   1   0   0 -> data |   x   x   x -> y 
-#    1   0   1 -> weight |   2   1   0 -> data |   0   0   0 -> y 
- run
-#   1   1   0 -> weight |   3   2   1 -> data |   0   0   0 -> y 
- run
-#   1   1   0 -> weight |   0   3   2 -> data |   0   0   0 -> y 
- vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:19:21 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 16:19:21 on Dec 22,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 49
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 51
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 61
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 63
-run
-#   0   1   1 -> weight |   1   0   0 -> data |   x   x   x -> y 
-#   1   0   1 -> weight |   2   1   0 -> data |   0   0   0 -> y 
-run
-#   1   1   0 -> weight |   3   2   1 -> data |   0   0   0 -> y 
-run
-#   1   1   0 -> weight |   0   3   2 -> data |   0   0   0 -> y 
-run
-#   1   1   0 -> weight |   0   0   3 -> data |   0   0   0 -> y 
-run
-#   1   1   0 -> weight |   0   0   0 -> data |   0   0   0 -> y 
-run
-#   1   1   0 -> weight |   0   0   0 -> data |   0   0   0 -> y 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 49
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 51
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 61
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 63
-run
-#   0  16  16 -> weight |  22   0   0 -> data |   x   x   x -> y 
-#  16   0  16 -> weight |  50  22   0 -> data |   0   0   0 -> y 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 49
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 51
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 61
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 63
-vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:21:48 on Dec 22,2020
-# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 16:21:48 on Dec 22,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 49
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 51
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 61
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.v Line: 63
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
 run
 #   0  16  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
-#  16   0  16 -> weight |  32  16   0 -> data |   0   0   0 -> y 
+#  16   0  16 -> weight |  32  16   0 -> data |   x   x   x -> y 
 run
-#  16  16   0 -> weight |  48  32  16 -> data |   0   0   0 -> y 
+#  16  16   0 -> weight |  48  32  16 -> data |   1   x   x -> y 
 run
-#  16  16   0 -> weight |   0  48  32 -> data |  32   0   0 -> y 
+#  16  16   0 -> weight |   0  48  32 -> data |   2   1   x -> y 
 run
-#  16  16   0 -> weight |   0   0  48 -> data |  64  32   0 -> y 
+#  16  16   0 -> weight |   0   0  48 -> data |   3   2   2 -> y 
 run
-#  16  16   0 -> weight |   0   0   0 -> data |  96  64  32 -> y 
+#  16  16   0 -> weight |   0   0   0 -> data |   0   3   4 -> y 
 run
-#  16  16   0 -> weight |   0   0   0 -> data |   0  96  64 -> y 
-run
-#  16  16   0 -> weight |   0   0   0 -> data |   0   0  96 -> y 
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   6 -> y 
 run
 #  16  16   0 -> weight |   0   0   0 -> data |   0   0   0 -> y 
-# End time: 16:26:14 on Dec 22,2020, Elapsed time: 0:19:40
+vlog -sv -work work +incdir+G:/neural-burning/systolic G:/neural-burning/systolic/systolic.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:00 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
+# -- Compiling module systolic
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	systolic
+# End time: 19:06:00 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.systolic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
+run
+#   0  16  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
+#  16   0  16 -> weight |  32  16   0 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |  48  32  16 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0  48  32 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0   0  48 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   x -> y 
+vlog -sv -work work +incdir+G:/neural-burning/systolic G:/neural-burning/systolic/systolic.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:06:29 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
+# -- Compiling module systolic
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	systolic
+# End time: 19:06:29 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.systolic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
+run
+#   0  16  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
+#  16   0  16 -> weight |  32  16   0 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |  48  32  16 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0  48  32 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0   0  48 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   1 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   2 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   3 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   0 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   0 -> y 
+run
+vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src G:/neural-burning/general_data_operator/src/gdo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:11:06 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
+# -- Compiling package gdo
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:11:06 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+G:/neural-burning/systolic G:/neural-burning/systolic/systolic.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:11:07 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
+# -- Compiling module systolic
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	systolic
+# End time: 19:11:07 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work G:/neural-burning/systolic/testbench/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:11:07 on Feb 12,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 19:11:07 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.gdo
+# Loading work.systolic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
+run
+#   0  16  16 -> weight |   0   0   0 -> data |   x   x   x -> y 
+#  16   0  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |  32  16   0 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |  48  32  16 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0  48  32 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |   0   0  48 -> data |   x   x   0 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   1 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   2 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   3 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   x   x   0 -> y 
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
+run
+#   0  16  16 -> weight |   0   0   0 -> data |   x   x   x -> y 
+#  16   0  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
+vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src G:/neural-burning/general_data_operator/src/gdo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:16:38 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
+# -- Compiling package gdo
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:16:38 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+G:/neural-burning/systolic G:/neural-burning/systolic/systolic.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:16:38 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
+# -- Compiling module systolic
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	systolic
+# End time: 19:16:38 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work G:/neural-burning/systolic/testbench/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:16:39 on Feb 12,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 19:16:39 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.gdo
+# Loading work.systolic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
+run
+#   0  16  16 -> weight |   0   0   0 -> data |   x   x   x -> y 
+#  16   0  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |  32  16   0 -> data |   x   x   x -> y 
+run
+#  16  16   0 -> weight |  48  32  16 -> data |   0   x   x -> y 
+run
+#  16  16   0 -> weight |   0  48  32 -> data |   2   0   x -> y 
+run
+#  16  16   0 -> weight |   0   0  48 -> data |   4   1   0 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   6   2   1 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   3   2 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   3 -> y 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   0 -> y 
+run
+vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src G:/neural-burning/general_data_operator/src/gdo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:21 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
+# -- Compiling package gdo
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:19:21 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+G:/neural-burning/systolic G:/neural-burning/systolic/systolic.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:21 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
+# -- Compiling module systolic
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	systolic
+# End time: 19:19:21 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work G:/neural-burning/systolic/testbench/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:21 on Feb 12,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 19:19:21 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.gdo
+# Loading work.systolic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
+run
+#   0  16  16 -> weight |   0   0   0 -> data |   x   x   x -> y 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+#  16   0  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
+# 00000000 00000000 00000000 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+run
+#  16  16   0 -> weight |  32  16   0 -> data |   x   x   x -> y 
+# 00000000 00000000 00000000 
+# 00000000 xxxxxxxx xxxxxxxx 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+run
+#  16  16   0 -> weight |  48  32  16 -> data |   0   x   x -> y 
+# 00000000 00000000 00000000 
+# 00000001 00000000 xxxxxxxx 
+# 00000000 xxxxxxxx xxxxxxxx 
+vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src G:/neural-burning/general_data_operator/src/gdo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:20:10 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
+# -- Compiling package gdo
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:20:10 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+G:/neural-burning/systolic G:/neural-burning/systolic/systolic.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:20:10 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
+# -- Compiling module systolic
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	systolic
+# End time: 19:20:10 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work G:/neural-burning/systolic/testbench/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:20:10 on Feb 12,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 19:20:10 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.gdo
+# Loading work.systolic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
+run
+#   0  16  16 -> weight |   0   0   0 -> data |   x   x   x -> y 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+#  16   0  16 -> weight |  16   0   0 -> data |   x   x   x -> y 
+# 00000000 00000000 00000000 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+run
+#  16  16   0 -> weight |  32  16   0 -> data |   x   x   x -> y 
+# 00000000 00000000 00000000 
+# 00000000 xxxxxxxx xxxxxxxx 
+# xxxxxxxx xxxxxxxx xxxxxxxx 
+vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src G:/neural-burning/general_data_operator/src/gdo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:05 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
+# -- Compiling package gdo
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:21:05 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+G:/neural-burning/systolic G:/neural-burning/systolic/systolic.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:05 on Feb 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/systolic" G:/neural-burning/systolic/systolic.sv 
+# -- Compiling module systolic
+# -- Importing package gdo
+# 
+# Top level modules:
+# 	systolic
+# End time: 19:21:05 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work G:/neural-burning/systolic/testbench/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:21:05 on Feb 12,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/systolic/testbench/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 19:21:05 on Feb 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench
+# Loading work.gdo
+# Loading work.systolic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 49
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 51
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 61
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /testbench File: G:/neural-burning/systolic/testbench/testbench.sv Line: 63
+run
+#   0  16  16 -> weight |   0   0   0 -> data |   x   x   x -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+#  16   0  16 -> weight |  16   0   0 -> data |   0   0   0 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+run
+#  16  16   0 -> weight |  32  16   0 -> data |   0   0   0 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+run
+#  16  16   0 -> weight |  48  32  16 -> data |   0   0   0 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+run
+#  16  16   0 -> weight |   0  48  32 -> data |   2   0   0 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000001 00000000 
+# 00000001 00000000 00000000 
+run
+#  16  16   0 -> weight |   0   0  48 -> data |   4   2   0 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000010 00000001 
+# 00000010 00000001 00000000 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   6   4   2 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000011 00000010 
+# 00000011 00000010 00000010 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   6   4 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000011 
+# 00000000 00000011 00000100 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   6 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000110 
+run
+#  16  16   0 -> weight |   0   0   0 -> data |   0   0   0 -> y 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+# 00000000 00000000 00000000 
+# End time: 19:39:55 on Feb 12,2021, Elapsed time: 0:53:17
 # Errors: 0, Warnings: 4

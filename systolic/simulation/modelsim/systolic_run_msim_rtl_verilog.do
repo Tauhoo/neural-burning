@@ -5,8 +5,6 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+/neural-burning/general_data_operator/src {/neural-burning/general_data_operator/src/gdo_parameter.v}
-vlog -vlog01compat -work work +incdir+/neural-burning/general_data_operator/src {/neural-burning/general_data_operator/src/gdo_mult.v}
-vlog -vlog01compat -work work +incdir+/neural-burning/general_data_operator/src {/neural-burning/general_data_operator/src/gdo_add.v}
-vlog -vlog01compat -work work +incdir+G:/neural-burning/systolic {G:/neural-burning/systolic/systolic.v}
+vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src {G:/neural-burning/general_data_operator/src/gdo.sv}
+vlog -sv -work work +incdir+G:/neural-burning/systolic {G:/neural-burning/systolic/systolic.sv}
 

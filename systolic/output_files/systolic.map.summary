@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Jan 03 20:21:18 2021
+Analysis & Synthesis Status : Successful - Fri Feb 12 18:46:06 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : systolic
 Top-level Entity Name : systolic
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 416
+Total registers : 272
 Total pins : 146
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 9
+Total DSP Blocks : 6
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

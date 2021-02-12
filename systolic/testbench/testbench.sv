@@ -55,7 +55,7 @@ parameter size  = 3 ;
     end
 
 
-    if (index < size * 2 - 1) begin
+    if (index < size * 2 ) begin
       for (colum = 0; colum < size; colum = colum + 1) begin
         if (colum == size - 1) begin
           $fscanf(input_matrix_file, "%d\n", temp_data);
