@@ -4,195 +4,195 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "dc_dw_stream[0]",
+					"name" : "diff_z_to_z[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[1]",
+					"name" : "diff_z_to_z[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[2]",
+					"name" : "diff_z_to_z[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[3]",
+					"name" : "diff_z_to_z[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[4]",
+					"name" : "diff_z_to_z[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[5]",
+					"name" : "diff_z_to_z[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[6]",
+					"name" : "diff_z_to_z[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[7]",
+					"name" : "diff_z_to_z[7]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[8]",
+					"name" : "diff_z_to_z[8]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[9]",
+					"name" : "diff_z_to_z[9]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[10]",
+					"name" : "diff_z_to_z[10]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[11]",
+					"name" : "diff_z_to_z[11]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[12]",
+					"name" : "diff_z_to_z[12]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[13]",
+					"name" : "diff_z_to_z[13]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[14]",
+					"name" : "diff_z_to_z[14]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[15]",
+					"name" : "diff_z_to_z[15]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[16]",
+					"name" : "diff_z_to_z[16]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[17]",
+					"name" : "diff_z_to_z[17]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[18]",
+					"name" : "diff_z_to_z[18]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[19]",
+					"name" : "diff_z_to_z[19]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[20]",
+					"name" : "diff_z_to_z[20]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[21]",
+					"name" : "diff_z_to_z[21]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[22]",
+					"name" : "diff_z_to_z[22]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[23]",
+					"name" : "diff_z_to_z[23]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[24]",
+					"name" : "diff_z_to_z[24]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[25]",
+					"name" : "diff_z_to_z[25]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[26]",
+					"name" : "diff_z_to_z[26]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[27]",
+					"name" : "diff_z_to_z[27]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[28]",
+					"name" : "diff_z_to_z[28]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[29]",
+					"name" : "diff_z_to_z[29]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[30]",
+					"name" : "diff_z_to_z[30]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[31]",
+					"name" : "diff_z_to_z[31]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[32]",
+					"name" : "diff_z_to_z[32]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[33]",
+					"name" : "diff_z_to_z[33]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[34]",
+					"name" : "diff_z_to_z[34]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[35]",
+					"name" : "diff_z_to_z[35]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[36]",
+					"name" : "diff_z_to_z[36]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[37]",
+					"name" : "diff_z_to_z[37]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[38]",
+					"name" : "diff_z_to_z[38]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[39]",
+					"name" : "diff_z_to_z[39]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[40]",
+					"name" : "diff_z_to_z[40]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[41]",
+					"name" : "diff_z_to_z[41]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[42]",
+					"name" : "diff_z_to_z[42]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[43]",
+					"name" : "diff_z_to_z[43]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[44]",
+					"name" : "diff_z_to_z[44]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[45]",
+					"name" : "diff_z_to_z[45]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[46]",
+					"name" : "diff_z_to_z[46]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_stream[47]",
+					"name" : "diff_z_to_z[47]",
 					"strict" : false
 				},
 				{
@@ -200,1051 +200,587 @@
 					"strict" : false
 				},
 				{
-					"name" : "cal_dc_dw",
+					"name" : "start_new_layer",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "diff_cost[32]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[0]",
+					"name" : "diff_cost[33]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[0]",
+					"name" : "diff_cost[34]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[7]",
+					"name" : "diff_cost[35]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[6]",
+					"name" : "diff_cost[36]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[5]",
+					"name" : "diff_cost[37]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[4]",
+					"name" : "diff_cost[38]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[1]",
+					"name" : "diff_cost[39]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[3]",
+					"name" : "diff_cost[40]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[2]",
+					"name" : "diff_cost[41]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[14]",
+					"name" : "diff_cost[42]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[13]",
+					"name" : "diff_cost[43]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[12]",
+					"name" : "diff_cost[44]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[11]",
+					"name" : "diff_cost[45]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[9]",
+					"name" : "diff_cost[46]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[10]",
+					"name" : "diff_cost[47]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[8]",
+					"name" : "diff_cost[16]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[18]",
+					"name" : "diff_cost[17]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[21]",
+					"name" : "diff_cost[18]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[20]",
+					"name" : "diff_cost[19]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[19]",
+					"name" : "diff_cost[20]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[17]",
+					"name" : "diff_cost[21]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[16]",
+					"name" : "diff_cost[22]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[15]",
+					"name" : "diff_cost[23]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[25]",
+					"name" : "diff_cost[24]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[28]",
+					"name" : "diff_cost[25]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[27]",
+					"name" : "diff_cost[26]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[26]",
+					"name" : "diff_cost[27]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[24]",
+					"name" : "diff_cost[28]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[23]",
+					"name" : "diff_cost[29]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[22]",
+					"name" : "diff_cost[30]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[30]",
+					"name" : "diff_cost[31]",
 					"strict" : false
 				},
 				{
-					"name" : "update_storage",
+					"name" : "diff_dense[32]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[31]",
+					"name" : "diff_dense[33]",
 					"strict" : false
 				},
 				{
-					"name" : "current_layer[29]",
+					"name" : "diff_dense[34]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[1]",
+					"name" : "diff_dense[35]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[2]",
+					"name" : "diff_dense[36]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[3]",
+					"name" : "diff_dense[37]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[4]",
+					"name" : "diff_dense[38]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[5]",
+					"name" : "diff_dense[39]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[6]",
+					"name" : "diff_dense[40]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[7]",
+					"name" : "diff_dense[41]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[8]",
+					"name" : "diff_dense[42]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[9]",
+					"name" : "diff_dense[43]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[10]",
+					"name" : "diff_dense[44]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[11]",
+					"name" : "diff_dense[45]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[12]",
+					"name" : "diff_dense[46]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[13]",
+					"name" : "diff_dense[47]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[14]",
+					"name" : "diff_act[32]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[15]",
+					"name" : "set_diff_act",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[16]",
+					"name" : "diff_act[33]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[17]",
+					"name" : "diff_act[34]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[18]",
+					"name" : "diff_act[35]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[19]",
+					"name" : "diff_act[36]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[20]",
+					"name" : "diff_act[37]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[21]",
+					"name" : "diff_act[38]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[22]",
+					"name" : "diff_act[39]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[23]",
+					"name" : "diff_act[40]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[24]",
+					"name" : "diff_act[41]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[25]",
+					"name" : "diff_act[42]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[26]",
+					"name" : "diff_act[43]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[27]",
+					"name" : "diff_act[44]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[28]",
+					"name" : "diff_act[45]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[29]",
+					"name" : "diff_act[46]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[30]",
+					"name" : "diff_act[47]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_layer[31]",
+					"name" : "diff_cost[0]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[16]",
+					"name" : "diff_cost[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_row[0]",
+					"name" : "diff_cost[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dc_dw_row[1]",
+					"name" : "diff_cost[3]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[32]",
+					"name" : "diff_cost[4]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[0]",
+					"name" : "diff_cost[5]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[17]",
+					"name" : "diff_cost[6]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[33]",
+					"name" : "diff_cost[7]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[1]",
+					"name" : "diff_cost[8]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[18]",
+					"name" : "diff_cost[9]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[34]",
+					"name" : "diff_cost[10]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[2]",
+					"name" : "diff_cost[11]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[19]",
+					"name" : "diff_cost[12]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[35]",
+					"name" : "diff_cost[13]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[3]",
+					"name" : "diff_cost[14]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[20]",
+					"name" : "diff_cost[15]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[36]",
+					"name" : "diff_dense[16]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[4]",
+					"name" : "diff_dense[17]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[21]",
+					"name" : "diff_dense[18]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[37]",
+					"name" : "diff_dense[19]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[5]",
+					"name" : "diff_dense[20]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[22]",
+					"name" : "diff_dense[21]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[38]",
+					"name" : "diff_dense[22]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[6]",
+					"name" : "diff_dense[23]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[23]",
+					"name" : "diff_dense[24]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[39]",
+					"name" : "diff_dense[25]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[7]",
+					"name" : "diff_dense[26]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[24]",
+					"name" : "diff_dense[27]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[40]",
+					"name" : "diff_dense[28]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[8]",
+					"name" : "diff_dense[29]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[25]",
+					"name" : "diff_dense[30]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[41]",
+					"name" : "diff_dense[31]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[9]",
+					"name" : "diff_act[16]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[26]",
+					"name" : "diff_act[17]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[42]",
+					"name" : "diff_act[18]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[10]",
+					"name" : "diff_act[19]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[27]",
+					"name" : "diff_act[20]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[43]",
+					"name" : "diff_act[21]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[11]",
+					"name" : "diff_act[22]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[28]",
+					"name" : "diff_act[23]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[44]",
+					"name" : "diff_act[24]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[12]",
+					"name" : "diff_act[25]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[29]",
+					"name" : "diff_act[26]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[45]",
+					"name" : "diff_act[27]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[13]",
+					"name" : "diff_act[28]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[30]",
+					"name" : "diff_act[29]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[46]",
+					"name" : "diff_act[30]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[14]",
+					"name" : "diff_act[31]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[31]",
+					"name" : "diff_dense[0]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[47]",
+					"name" : "diff_dense[1]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_start[15]",
+					"name" : "diff_dense[2]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[0]",
+					"name" : "diff_dense[3]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[1]",
+					"name" : "diff_dense[4]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[2]",
+					"name" : "diff_dense[5]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[3]",
+					"name" : "diff_dense[6]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[4]",
+					"name" : "diff_dense[7]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[5]",
+					"name" : "diff_dense[8]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[6]",
+					"name" : "diff_dense[9]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[7]",
+					"name" : "diff_dense[10]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[8]",
+					"name" : "diff_dense[11]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[9]",
+					"name" : "diff_dense[12]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[10]",
+					"name" : "diff_dense[13]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[11]",
+					"name" : "diff_dense[14]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[12]",
+					"name" : "diff_dense[15]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[13]",
+					"name" : "diff_act[0]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[14]",
+					"name" : "diff_act[1]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[15]",
+					"name" : "diff_act[2]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[16]",
+					"name" : "diff_act[3]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[17]",
+					"name" : "diff_act[4]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[18]",
+					"name" : "diff_act[5]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[19]",
+					"name" : "diff_act[6]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[20]",
+					"name" : "diff_act[7]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[21]",
+					"name" : "diff_act[8]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[22]",
+					"name" : "diff_act[9]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[23]",
+					"name" : "diff_act[10]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[24]",
+					"name" : "diff_act[11]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[25]",
+					"name" : "diff_act[12]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[26]",
+					"name" : "diff_act[13]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[27]",
+					"name" : "diff_act[14]",
 					"strict" : false
 				},
 				{
-					"name" : "backprop_cost[28]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[29]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[30]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[31]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[32]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[33]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[34]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[35]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[36]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[37]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[38]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[39]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[40]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[41]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[42]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[43]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[44]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[45]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[46]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_cost[47]",
-					"strict" : false
-				},
-				{
-					"name" : "update_dy_dy_old",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[0]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[1]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[2]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[3]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[4]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[5]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[6]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[7]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[8]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[9]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[10]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[11]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[12]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[13]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[14]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[15]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[16]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[17]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[18]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[19]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[20]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[21]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[22]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[23]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[24]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[25]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[26]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[27]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[28]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[29]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[30]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[31]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[32]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[33]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[34]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[35]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[36]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[37]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[38]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[39]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[40]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[41]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[42]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[43]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[44]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[45]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[46]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_to_all[47]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[0]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[1]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[2]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[3]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[4]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[5]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[6]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[7]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[8]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[9]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[10]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[11]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[12]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[13]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[14]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[15]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[16]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[17]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[18]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[19]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[20]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[21]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[22]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[23]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[24]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[25]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[26]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[27]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[28]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[29]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[30]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[31]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[32]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[33]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[34]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[35]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[36]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[37]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[38]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[39]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[40]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[41]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[42]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[43]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[44]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[45]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[46]",
-					"strict" : false
-				},
-				{
-					"name" : "backprop_dense[47]",
+					"name" : "diff_act[15]",
 					"strict" : false
 				}
 			]

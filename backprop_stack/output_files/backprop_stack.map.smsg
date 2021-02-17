@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at transformer.sv(38): always construct contains both blocking and non-blocking assignments File: G:/neural-burning/backprop_stack/transformer.sv Line: 38

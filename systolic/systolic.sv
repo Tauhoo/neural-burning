@@ -6,6 +6,7 @@ module systolic(data_stream,
     
     parameter data_size = 16;
     parameter size      = 3;
+    parameter set_weight_by_row = 1'b1;
 
     import gdo::gdo_add;
     import gdo::gdo_mult;
@@ -66,7 +67,11 @@ module systolic(data_stream,
             if (w_round < size) begin
                 //update w
                 for (colum = 0; colum < size; colum = colum + 1) begin
-                    w_reg[colum][w_round] <= w[colum];
+                    if (set_weight_by_row) begin
+                        w_reg[colum][w_round] <= w[colum];
+                    end else begin
+                        w_reg[w_round][colum] <= w[colum];
+                    end
                 end
                 w_round <= w_round + 1;
             end
