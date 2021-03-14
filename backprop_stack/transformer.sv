@@ -36,6 +36,7 @@ module transformer (
             end
         end
         counter = 0;
+        index = 0;
     end
 
     always @(posedge clk ) begin
@@ -56,19 +57,6 @@ module transformer (
                 end
             end
         end
-
-        for (int i = 0; i < size - 1; i = i + 1) begin
-            for (int j = 0; j < size; j = j + 1) begin
-                $write("%d ", transform_buffer[j][i]);
-            end
-            $write("\n");
-        end
-        for (int j = 0; j < size; j = j + 1) begin
-            $write("%d ", data[data_size*(size - j) - 1 -: data_size]);
-        end
-        $write("\n");
-
-        $write("counter : %d", counter_wire);
 
         counter <= counter_wire;
     end

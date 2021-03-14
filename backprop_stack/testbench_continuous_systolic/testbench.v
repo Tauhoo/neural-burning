@@ -4,6 +4,8 @@ module testbench  ;
 
 parameter data_size  = 16 ;
 parameter size  = 3 ; 
+  wire  [(data_size*size)-1:0]  a_out   ; 
+  wire  [(data_size*size)-1:0]  b_out   ; 
   reg  [(data_size*size)-1:0]  a   ; 
   reg    clk   ; 
   reg    reset_counter   ; 
@@ -11,7 +13,9 @@ parameter size  = 3 ;
   wire  [(data_size*size)-1:0]  c   ; 
   continuous_systolic    #( .data_size(data_size) , .size(size)  )
    DUT  ( 
-       .a (a ) ,
+       .a_out (a_out ) ,
+      .b_out (b_out ) ,
+      .a (a ) ,
       .clk (clk ) ,
       .reset_counter (reset_counter ) ,
       .b (b ) ,
@@ -61,5 +65,5 @@ parameter size  = 3 ;
   end
 
   initial
-	#4000 $stop;
+	#6000 $stop;
 endmodule

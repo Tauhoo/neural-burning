@@ -5,7 +5,6 @@ module testbench_z_to_z  ;
 parameter data_size  = 16 ;
 parameter data_set  = 0 ;
 parameter size  = 3 ; 
-  reg    set_cost   ; 
   reg  [(data_size*size)-1:0]  diff_act   ; 
   wire  [(data_size*size)-1:0]  diff_z_to_z   ; 
   reg  [(data_size*size)-1:0]  diff_cost   ; 
@@ -13,9 +12,8 @@ parameter size  = 3 ;
   reg    start_new_layer   ; 
   reg    set_diff_act   ; 
   reg  [(data_size*size)-1:0]  diff_dense   ; 
-  z_to_z_calculator    #( .data_size(data_size) , .data_set(data_set) , .size(size) )
+  z_to_z_calculator    #( .data_size(data_size) , .size(size) )
    DUT  ( 
-       .set_cost (set_cost ) ,
       .diff_act (diff_act ) ,
       .diff_z_to_z (diff_z_to_z ) ,
       .diff_cost (diff_cost ) ,
@@ -78,7 +76,7 @@ parameter size  = 3 ;
       diff_cost[data_size*(size - index) - 1 -: data_size] = temp*2**(data_size / 2);
     end
     
-    $fscanf(control_file, "%d %d %d\n", set_cost, set_diff_act, start_new_layer);
+    $fscanf(control_file, "%d %d\n", set_diff_act, start_new_layer);
 
 	  #50 ;
     clk  = 1'b0  ;
