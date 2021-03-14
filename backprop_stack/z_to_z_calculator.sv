@@ -77,6 +77,7 @@ module z_to_z_calculator (
         .output_stream(diff_z_to_z_prep_wire),
         .clk(clk)
     );
+    
     // cost transform
     // wire [data_size*size - 1:0] transform_diff_z_to_z;
     // transformer #(.size(size), .data_size(data_size))
@@ -97,25 +98,28 @@ module z_to_z_calculator (
     //     .clk(clk)
     // );
     //prepare cost derivative
-    wire [data_size*size - 1:0] diff_cost_prep_wire;
-    mult_matrix_prep #(.data_size(data_size), .size(size))
-    mult_cost_matrix_prep_inst(
-        .input_stream(diff_cost),
-        .output_stream(diff_cost_prep_wire),
-        .clk(clk)
-    );
+    // wire [data_size*size - 1:0] diff_cost_prep_wire;
+    // mult_matrix_prep #(.data_size(data_size), .size(size))
+    // mult_cost_matrix_prep_inst(
+    //     .input_stream(diff_cost),
+    //     .output_stream(diff_cost_prep_wire),
+    //     .clk(clk)
+    // );
 
-    wire start_new_layer_delay;
+    // wire start_new_layer_delay;
+    // delay #(.data_size(data_size), .size(size), .cycle(size)) 
+    // delay_inst_start_new_layer_delay_value(.bus_in(start_new_layer), .bus_out(start_new_layer_delay), .clk(clk));
+
+    // continuous_systolic #(.size(size), .data_size(data_size)) 
+    // continuous_systolic(
+    //     .a(diff_cost_prep_wire),
+    //     .b(diff_z_to_z_prep_wire),
+    //     .c(diff_z_to_z),
+    //     .reset_counter(start_new_layer_delay),
+    //     .clk(clk)
+    // );
+
     delay #(.data_size(data_size), .size(size), .cycle(size)) 
-    delay_inst_start_new_layer_delay_value(.bus_in(start_new_layer), .bus_out(start_new_layer_delay), .clk(clk));
-
-    continuous_systolic #(.size(size), .data_size(data_size)) 
-    continuous_systolic(
-        .a(diff_cost_prep_wire),
-        .b(diff_z_to_z_prep_wire),
-        .c(diff_z_to_z),
-        .reset_counter(start_new_layer_delay),
-        .clk(clk)
-    );
+    delay_inst_z_to_z(.bus_in(diff_z_to_z_prep_wire), .bus_out(diff_z_to_z), .clk(clk));
 
 endmodule

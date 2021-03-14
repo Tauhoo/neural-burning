@@ -44,6 +44,19 @@ module backprop_stack(
     output is_update_weight;
     output [size*data_size - 1:0] update_weight_value;
 
+    //=========================== store diff cost =========================================//
+    reg [data_size*size - 1:0] diff_cost_store[size - 1:0];
+    initial begin
+        for (int i = 0; i < size; i = i + 1) begin
+            diff_cost_store[i] = 0;
+        end
+    end
+    always @(posedge clk) begin
+        if (is_last_layer) begin
+            diff_cost_store[current_input_row] <= diff_cost;
+        end
+    end
+
     //========================= set up address and replace pattern ==============================================//
     wire [31:0] address;
     reg [31:0] address_count_reg;
@@ -268,9 +281,22 @@ module backprop_stack(
             wire systolic_array_reset_counter_in;
             wire [size - 1:0] systolic_array_one_address;
             wire [data_size*size - 1:0] systolic_array_acc_z_to_z_result;
+            wire [data_size*size - 1:0] systolic_array_mult_cost_result;
+            wire [data_size*size - 1:0] systolic_array_cost;
             wire [data_size*size - 1:0] systolic_array_revert_result;
             wire [data_size*size - 1:0] systolic_trasform_result;
             wire transform_reset_counter;
+
+            assign systolic_array_cost = transform_reset_counter ? diff_cost_store[systolic_array_index] : 0;
+
+            wire [data_size*size - 1:0] systolic_array_cost_trnasform;
+            transformer #(.size(size), .data_size(data_size))
+            transformer_cost_inst(
+                .data(systolic_array_cost),
+                .transformed_data(systolic_array_cost_trnasform),
+                .reset_counter(transform_reset_counter),
+                .clk(clk)
+            );
 
             // systolic_array_current_layer, address, replace_pattern, start_new_layer, one_address 
             assign { 
@@ -297,34 +323,24 @@ module backprop_stack(
                 .clk(clk)
             );
 
-            delay #(.data_size(data_size), .size(size), .cycle(size - 1)) 
-            delay_inst_systolic_array_result(
-                .bus_in(systolic_array_replace_pattern == {1'b0, {(size - 1){1'b1}}} ? 1'b1 : 1'b0), 
-                .bus_out(transform_reset_counter), 
-                .clk(clk)
-            );
 
-            mult_matrix_revert #(.data_size(data_size), .size(size))
-            mult_z_to_z_matrix_revert_inst( 
-                .input_stream(systolic_array_acc_z_to_z_result),
-                .output_stream(systolic_array_revert_result),
-                .clk(clk)
-            ); 
-
-            transformer #(.size(size), .data_size(data_size))
-            transformer_inst(
-                .data(systolic_array_revert_result),
-                .transformed_data(systolic_trasform_result),
+            continuous_systolic #(.size(size), .data_size(data_size)) 
+            continuous_systolic(
+                .a(systolic_array_acc_z_to_z_result),
+                .b(systolic_array_cost_trnasform),
+                .c(systolic_array_mult_cost_result),
                 .reset_counter(transform_reset_counter),
                 .clk(clk)
             );
 
+            assign transform_reset_counter = systolic_array_replace_pattern == {1'b0, {(size - 1){1'b1}}} ? 1'b1 : 1'b0;
+
             mult_matrix_revert #(.data_size(data_size), .size(size))
-            mult_z_to_z_matrix_revert_transform_inst( 
-                .input_stream(systolic_trasform_result),
+            mult_z_to_z_matrix_revert_inst( 
+                .input_stream(systolic_array_mult_cost_result),
                 .output_stream(systolic_array_acc_z_to_z[systolic_array_index]),
                 .clk(clk)
-            );
+            ); 
         end
         for (systolic_array_index = 0; systolic_array_index < size - 1; systolic_array_index = systolic_array_index + 1) begin : delay_systolic_transformed_result
             delay #(.data_size(data_size), .size(size), .cycle(size - 1 - systolic_array_index)) 
@@ -502,12 +518,6 @@ module backprop_stack(
 
         for (int i = 0; i < size; i = i + 1) begin
             $write("%d ", start_load_data[1][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
-        
-        $write("| ");
-
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", start_load_data[2][data_size*(size - i) - 1 -: data_size] >> 8);
         end
 
         $write("\n");

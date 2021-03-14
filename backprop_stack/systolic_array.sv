@@ -116,15 +116,15 @@ module systolic_array (
         for (int i = 0; i < max_layer_size; i = i + 1) begin
             trans_list[i] <= b_list[i];
         end
-        $write("%b | ", one);
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", one_prepare_wire[data_size*(size - i) - 1 -: data_size] >> 8);
-        end
-        $write("| ");
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", acc_z_to_z[data_size*(size - i) - 1 -: data_size] >> 8);
-        end
-        $write("\n");
+        // $write("%b | ", one);
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%d ", one_prepare_wire[data_size*(size - i) - 1 -: data_size] >> 8);
+        // end
+        // $write("| ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%d ", acc_z_to_z[data_size*(size - i) - 1 -: data_size] >> 8);
+        // end
+        // $write("\n");
         // for (int i = 0; i < size; i = i + 1) begin
         //     for (int j = 0; j < size; j = j + 1) begin
         //         $write("%d ", c_list[i][data_size*(size - i) - 1 -: data_size] >> 8);
