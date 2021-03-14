@@ -51,8 +51,33 @@ module systolic_array (
         end
     endfunction
 
+    reg [size - 1:0] last_one_address_wire;
+    wire [size - 1:0] one;
+    wire [data_size*size - 1:0] one_wire;
+    wire [data_size*size - 1:0] one_prepare_wire;
+
+
+    assign one = one_address_wire[size - 1] ? (one_address_wire ^ last_one_address_wire) : 0;
+    mult_matrix_prep #(.data_size(data_size), .size(size))
+    mult_one_prepare_inst(
+        .input_stream(one_wire),
+        .output_stream(one_prepare_wire),
+        .clk(clk)
+    );
+
+    initial begin
+        last_one_address_wire = 0;
+    end
+
+    always @(posedge clk ) begin
+        last_one_address_wire <=  one_address_wire;
+    end
+
     genvar index;
     generate
+        for (index = 0; index < size; index = index + 1) begin : set_up_one_wire
+            assign one_wire[data_size*(size - index) - 1 -: data_size] = {{(data_size/2 - 1){1'b0}} ,one[size - index - 1], {(data_size/2){1'b0}}};
+        end
         for (index = 0; index < max_layer_size; index = index + 1) begin : set_up_z_to_z
             wire [data_size*size - 1:0] a_transformed;
             continuous_systolic #(.size(size), .data_size(data_size)) 
@@ -66,7 +91,7 @@ module systolic_array (
             );
             delay #(.data_size(data_size), .size(size), .cycle(size)) 
             delay_a_list(.bus_in(a_list[index]), .bus_out(a_list[index + 1]), .clk(clk));
-            assign b_list[index] = current_layer_wire == index ? replace(c_list[index], a_transformed, one_address_wire) : c_list[index];
+            assign b_list[index] = current_layer_wire == index ? replace(c_list[index], one_prepare_wire/*a_transformed*/, one_address_wire) : c_list[index];
         end
     endgenerate
 
@@ -91,15 +116,15 @@ module systolic_array (
         for (int i = 0; i < max_layer_size; i = i + 1) begin
             trans_list[i] <= b_list[i];
         end
-
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%d ", z_to_z[data_size*(size - i) - 1 -: data_size] >> 8);
-        // end
-        // $write("| ");
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%d ", acc_z_to_z[data_size*(size - i) - 1 -: data_size] >> 8);
-        // end
-        // $write("\n");
+        $write("%b | ", one);
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%d ", one_prepare_wire[data_size*(size - i) - 1 -: data_size] >> 8);
+        end
+        $write("| ");
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%d ", acc_z_to_z[data_size*(size - i) - 1 -: data_size] >> 8);
+        end
+        $write("\n");
         // for (int i = 0; i < size; i = i + 1) begin
         //     for (int j = 0; j < size; j = j + 1) begin
         //         $write("%d ", c_list[i][data_size*(size - i) - 1 -: data_size] >> 8);
