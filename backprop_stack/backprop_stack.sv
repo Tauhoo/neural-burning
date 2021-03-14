@@ -215,9 +215,9 @@ module backprop_stack(
             for (int i = 0; i < size - 1; i = i + 1) begin
                 systolic_array_to_z_to_z_single_diff_act_start_present_reg[i] <=  systolic_array_to_z_to_z_single_diff_act_start_reg[i];
             end
-            systolic_array_to_z_to_z_single_diff_act_start_present_reg[size - 1] <= diff_start;
+            systolic_array_to_z_to_z_single_diff_act_start_present_reg[size - 1] <= diff_act;
         end else begin
-            systolic_array_to_z_to_z_single_diff_act_start_reg[current_input_row] <= diff_start;
+            systolic_array_to_z_to_z_single_diff_act_start_reg[current_input_row] <= diff_act;
         end
     end
 
@@ -508,15 +508,15 @@ module backprop_stack(
 
         $write("= %d %d %b |", update_weight_layer, update_weight_row, is_update_weight);
 
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%d ", systolic_array_to_z_to_z_single_diff_start_row[0][data_size*(size - i) - 1 -: data_size] >> 8);
-        // end
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%d ", systolic_array_to_z_to_z_single_diff_start_row[0][data_size*(size - i) - 1 -: data_size] >> 8);
+        end
 
-        // $write("| ");
+        $write("| ");
 
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%d ", systolic_array_to_z_to_z_single_diff_act_row[0][data_size*(size - i) - 1 -: data_size] >> 8);
-        // end
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%d ", systolic_array_to_z_to_z_single_diff_act_row[0][data_size*(size - i) - 1 -: data_size] >> 8);
+        end
 
         for (int i = 0; i < size; i = i + 1) begin
             $write("%d ", start_load_data[0][data_size*(size - i) - 1 -: data_size] >> 8);
