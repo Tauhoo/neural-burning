@@ -70,11 +70,11 @@ module z_to_z_calculator (
     endgenerate
 
     //prepare z-to-z derivative
-    wire [data_size*size - 1:0] diff_z_to_z_prep_wire;
+    // wire [data_size*size - 1:0] diff_z_to_z_prep_wire;
     mult_matrix_prep #(.data_size(data_size), .size(size))
     mult_z_to_z_matrix_prep_inst(
         .input_stream(diff_z_to_z_wire),
-        .output_stream(diff_z_to_z_prep_wire),
+        .output_stream(diff_z_to_z),
         .clk(clk)
     );
     
@@ -119,7 +119,7 @@ module z_to_z_calculator (
     //     .clk(clk)
     // );
 
-    delay #(.data_size(data_size), .size(size), .cycle(size)) 
-    delay_inst_z_to_z(.bus_in(diff_z_to_z_prep_wire), .bus_out(diff_z_to_z), .clk(clk));
+    // delay #(.data_size(data_size), .size(size), .cycle(size)) 
+    // delay_inst_z_to_z(.bus_in(diff_z_to_z_prep_wire), .bus_out(diff_z_to_z), .clk(clk));
 
 endmodule

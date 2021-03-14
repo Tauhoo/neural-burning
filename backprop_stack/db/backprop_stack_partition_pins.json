@@ -336,19 +336,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "read_update_data",
+					"name" : "diff_cost[32]",
 					"strict" : false
 				},
 				{
-					"name" : "start_new_layer",
-					"strict" : false
-				},
-				{
-					"name" : "active_train",
-					"strict" : false
-				},
-				{
-					"name" : "diff_start[0]",
+					"name" : "is_last_layer",
 					"strict" : false
 				},
 				{
@@ -480,6 +472,206 @@
 					"strict" : false
 				},
 				{
+					"name" : "diff_cost[33]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[34]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[35]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[36]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[37]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[38]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[39]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[40]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[41]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[42]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[43]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[44]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[45]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[46]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[47]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[16]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[17]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[18]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[19]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[20]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[21]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[22]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[23]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[24]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[25]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[26]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[27]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[28]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[29]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[30]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[31]",
+					"strict" : false
+				},
+				{
+					"name" : "read_update_data",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[0]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[1]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[2]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[3]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[4]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[5]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[6]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[7]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[8]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[9]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[10]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[11]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[12]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[13]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[14]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_cost[15]",
+					"strict" : false
+				},
+				{
+					"name" : "active_train",
+					"strict" : false
+				},
+				{
+					"name" : "diff_start[0]",
+					"strict" : false
+				},
+				{
 					"name" : "diff_start[1]",
 					"strict" : false
 				},
@@ -537,70 +729,6 @@
 				},
 				{
 					"name" : "diff_start[15]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[32]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[33]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[34]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[35]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[36]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[37]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[38]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[39]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[40]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[41]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[42]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[43]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[44]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[45]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[46]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_act[47]",
 					"strict" : false
 				},
 				{
@@ -732,67 +860,87 @@
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[32]",
+					"name" : "start_new_layer",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[33]",
+					"name" : "current_input_layer[0]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[34]",
+					"name" : "current_input_layer[2]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[35]",
+					"name" : "current_input_layer[1]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[36]",
+					"name" : "current_input_layer[3]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[37]",
+					"name" : "diff_act[32]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[38]",
+					"name" : "diff_act[33]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[39]",
+					"name" : "diff_act[34]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[40]",
+					"name" : "diff_act[35]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[41]",
+					"name" : "diff_act[36]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[42]",
+					"name" : "diff_act[37]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[43]",
+					"name" : "diff_act[38]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[44]",
+					"name" : "diff_act[39]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[45]",
+					"name" : "diff_act[40]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[46]",
+					"name" : "diff_act[41]",
 					"strict" : false
 				},
 				{
-					"name" : "diff_cost[47]",
+					"name" : "diff_act[42]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_act[43]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_act[44]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_act[45]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_act[46]",
+					"strict" : false
+				},
+				{
+					"name" : "diff_act[47]",
 					"strict" : false
 				},
 				{
@@ -857,86 +1005,6 @@
 				},
 				{
 					"name" : "diff_act[31]",
-					"strict" : false
-				},
-				{
-					"name" : "current_input_layer[0]",
-					"strict" : false
-				},
-				{
-					"name" : "current_input_layer[2]",
-					"strict" : false
-				},
-				{
-					"name" : "current_input_layer[1]",
-					"strict" : false
-				},
-				{
-					"name" : "current_input_layer[3]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[16]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[17]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[18]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[19]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[20]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[21]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[22]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[23]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[24]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[25]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[26]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[27]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[28]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[29]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[30]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[31]",
 					"strict" : false
 				},
 				{
@@ -1065,70 +1133,6 @@
 				},
 				{
 					"name" : "diff_act[15]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[0]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[1]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[2]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[3]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[4]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[5]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[6]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[7]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[8]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[9]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[10]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[11]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[12]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[13]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[14]",
-					"strict" : false
-				},
-				{
-					"name" : "diff_cost[15]",
 					"strict" : false
 				},
 				{

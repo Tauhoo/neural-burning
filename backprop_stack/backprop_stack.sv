@@ -99,22 +99,16 @@ module backprop_stack(
     end
 
     //=========================== set up z_to_z_calculator =================================//
-    reg [size*data_size - 1:0] z_to_z_diff_act[size - 2:0];
     reg [size*data_size - 1:0] z_to_z_diff_dense[size - 2:0];
     reg [size*data_size - 1:0] z_to_z_diff_cost[size - 2:0];
-    reg z_to_z_is_last_layer[size - 2:0];
     reg z_to_z_start_new_layer[size - 2:0];
-    reg [31:0] z_to_z_current_layer[size - 2:0];
     reg [31:0] z_to_z_current_row[size - 2:0];
 
     initial begin
         for (int i = 0; i < size - 1; i = i + 1) begin
-            z_to_z_diff_act[i] = 0;
             z_to_z_diff_dense[i] = 0;
             z_to_z_diff_cost[i] = 0;
-            z_to_z_is_last_layer[i] = 0;
             z_to_z_start_new_layer[i] = 0;
-            z_to_z_current_layer[i] = 0;
             z_to_z_current_row[i] = 0;
         end
     end
@@ -142,26 +136,12 @@ module backprop_stack(
     endgenerate
 
     always @(posedge clk) begin
-        // for (int data_set = 0; data_set < size; data_set = data_set + 1) begin 
-        //     for (int i = 0; i < size; i = i + 1) begin
-        //         $write("%d ", z_to_z_diff_z_to_z[data_set][data_size*(size - i) - 1 -: data_size] >> 8);
-        //     end
-        //     $write("| ");
-        // end
-        // $write("\n");
-        z_to_z_diff_act[0] <= diff_act;
         z_to_z_diff_dense[0] <= diff_dense;
         z_to_z_diff_cost[0] <= diff_cost;
-        z_to_z_is_last_layer[0] <= is_last_layer;
-        z_to_z_start_new_layer[0] <= start_new_layer;
-        z_to_z_current_layer[0] <= current_input_layer;
         for (int i = 1; i < size - 1; i = i + 1) begin
-            z_to_z_diff_act[i] <= z_to_z_diff_act[i - 1];
             z_to_z_diff_dense[i] <= z_to_z_diff_dense[i - 1];
             z_to_z_diff_cost[i] <= z_to_z_diff_cost[i - 1];
-            z_to_z_is_last_layer[i] <= z_to_z_is_last_layer[i - 1];
             z_to_z_start_new_layer[i] <= z_to_z_start_new_layer[i - 1];
-            z_to_z_current_layer[i] <= z_to_z_current_layer[i - 1];
         end
     end
     //=========================== set up systolic_array_to_z_to_z_out ===================================//
@@ -173,14 +153,9 @@ module backprop_stack(
  
     localparam systolic_array_to_z_to_z_size = 32 + 32 + 3 + 1 + 3;
     wire [systolic_array_to_z_to_z_size - 1:0] systolic_array_to_z_to_z_out;
-    delay #(.data_size(systolic_array_to_z_to_z_size), .size(1), .cycle(size)) 
-    delay_inst_predict_value(
-        .bus_in({ systolic_array_current_layer, address, replace_pattern, start_new_layer, one_address }), 
-        .bus_out(systolic_array_to_z_to_z_out), 
-        .clk(clk)
-    );
+    assign systolic_array_to_z_to_z_out = { systolic_array_current_layer, address, replace_pattern, start_new_layer, one_address };
 
-    //=========================== set up systolic_array_to_z_to_z_single_out ===================================//
+    //=========================== set up systolic_array_to_store_single_out ===================================//
     // load                 => read_update_data
     // load_address         => addr(read_update_data)
     // load_row             => row(read_update_data)
@@ -199,17 +174,24 @@ module backprop_stack(
     // current_row          = 32
     // diff_start           = data_size*size
     // diff_act             = data_size*size
+
     localparam systolic_array_to_z_to_z_single_out_size = 1 + 1 + 32 + 32;
     wire [systolic_array_to_z_to_z_single_out_size - 1:0] systolic_array_to_z_to_z_single_out;
+    // assign systolic_array_to_z_to_z_single_out = {
+    //         read_update_data,
+    //         active_train,
+    //         current_input_layer,
+    //         current_input_row
+    //      };
 
     delay #(.data_size(systolic_array_to_z_to_z_single_out_size), .size(1), .cycle(size)) 
-    delay_inst_systolic_array_to_z_to_z_single(
+    delay_inst_to_store_single(
         .bus_in({
             read_update_data,
             active_train,
             current_input_layer,
             current_input_row
-         }), 
+        }), 
         .bus_out(systolic_array_to_z_to_z_single_out), 
         .clk(clk)
     );
@@ -242,7 +224,8 @@ module backprop_stack(
     genvar systolic_array_to_z_to_z_single_index;
     generate
         for(systolic_array_to_z_to_z_single_index = 0; systolic_array_to_z_to_z_single_index < size; systolic_array_to_z_to_z_single_index = systolic_array_to_z_to_z_single_index + 1) begin : set_up_systolic_array_to_z_to_z_single_diff
-            delay #(.data_size(systolic_array_to_z_to_z_single_out_size), .size(1), .cycle(size)) 
+            // assign systolic_array_to_z_to_z_single_diff_start_row[systolic_array_to_z_to_z_single_index] = {size{ diff_start[data_size*(size - systolic_array_to_z_to_z_single_index) - 1 -: data_size] }};
+            delay #(.data_size(data_size), .size(size), .cycle(size)) 
             delay_inst_systolic_array_to_z_to_z_single(
                 .bus_in({size{ diff_start[data_size*(size - systolic_array_to_z_to_z_single_index) - 1 -: data_size] }}), 
                 .bus_out(systolic_array_to_z_to_z_single_diff_start_row[systolic_array_to_z_to_z_single_index]), 
@@ -286,6 +269,7 @@ module backprop_stack(
             wire [data_size*size - 1:0] systolic_array_revert_result;
             wire [data_size*size - 1:0] systolic_trasform_result;
             wire transform_reset_counter;
+            wire transform_reset_counter_delay;
 
             assign systolic_array_cost = transform_reset_counter ? diff_cost_store[systolic_array_index] : 0;
 
@@ -336,11 +320,30 @@ module backprop_stack(
             assign transform_reset_counter = systolic_array_replace_pattern == {1'b0, {(size - 1){1'b1}}} ? 1'b1 : 1'b0;
 
             mult_matrix_revert #(.data_size(data_size), .size(size))
-            mult_z_to_z_matrix_revert_inst( 
+            mult_systolic_matrix_revert_inst( 
                 .input_stream(systolic_array_mult_cost_result),
+                .output_stream(systolic_array_revert_result),
+                .clk(clk)
+            ); 
+
+            delay #(.data_size(1), .size(1), .cycle(size - 1)) 
+            delay_transform_reset_counter(.bus_in(transform_reset_counter), .bus_out(transform_reset_counter_delay), .clk(clk));
+
+            transformer #(.size(size), .data_size(data_size))
+            transformer_systolic_inst(
+                .data({size{systolic_array_revert_result[data_size*size - 1 -: data_size]}}),
+                .transformed_data(systolic_trasform_result),
+                .reset_counter(transform_reset_counter_delay),
+                .clk(clk)
+            );
+
+            mult_matrix_revert #(.data_size(data_size), .size(size))
+            mult_systolic_transform_matrix_revert_inst( 
+                .input_stream(systolic_trasform_result),
                 .output_stream(systolic_array_acc_z_to_z[systolic_array_index]),
                 .clk(clk)
             ); 
+
         end
         for (systolic_array_index = 0; systolic_array_index < size - 1; systolic_array_index = systolic_array_index + 1) begin : delay_systolic_transformed_result
             delay #(.data_size(data_size), .size(size), .cycle(size - 1 - systolic_array_index)) 
@@ -483,11 +486,6 @@ module backprop_stack(
             $write("%d ", systolic_array_acc_z_to_z_transformed[2][data_size*(size - i) - 1 -: data_size] >> 8);
         end
 
-        // $write("| update_weight_layer %d | update_weight_row %d | is_update_weight %b |", update_weight_layer, update_weight_row, is_update_weight);
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%d ", sum[size - 1][data_size*(size - i) - 1 -: data_size] >> 8);
-        // end
-
         $write("| ");
 
         for (int i = 0; i < size; i = i + 1) begin
@@ -508,7 +506,17 @@ module backprop_stack(
 
         $write("| ");
 
-        $write("%d %d |", start_current_layer, start_current_row);
+        $write("= %d %d %b |", update_weight_layer, update_weight_row, is_update_weight);
+
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%d ", systolic_array_to_z_to_z_single_diff_start_row[0][data_size*(size - i) - 1 -: data_size] >> 8);
+        // end
+
+        // $write("| ");
+
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%d ", systolic_array_to_z_to_z_single_diff_act_row[0][data_size*(size - i) - 1 -: data_size] >> 8);
+        // end
 
         for (int i = 0; i < size; i = i + 1) begin
             $write("%d ", start_load_data[0][data_size*(size - i) - 1 -: data_size] >> 8);
@@ -518,6 +526,12 @@ module backprop_stack(
 
         for (int i = 0; i < size; i = i + 1) begin
             $write("%d ", start_load_data[1][data_size*(size - i) - 1 -: data_size] >> 8);
+        end
+
+        $write("| ");
+
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%d ", start_load_data[2][data_size*(size - i) - 1 -: data_size] >> 8);
         end
 
         $write("\n");
