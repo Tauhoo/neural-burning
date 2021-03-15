@@ -26,7 +26,7 @@ module controller(
 );
     parameter op_size = 4;
     parameter size = 3;
-    parameter backprop_controll_size = 32*3 + 4;
+    parameter backprop_controll_size = 1 + 1 + 32 + 32;
     parameter total_signal_size = 1 + 32*2 + 10 + backprop_controll_size;
 	parameter param_a_size = 4;
     parameter param_b_size = 4;
@@ -65,15 +65,12 @@ module controller(
     output set_learning_rate_value;
 
     function [backprop_controll_size - 1:0] get_backprop_controll;
-        input [31:0] current_layer;
-        input [31:0] dc_dw_layer;
-        input [31:0] dc_dw_row;
-        input update_storage;
-        input update_dy_dy_old;
-        input cal_dc_dw;
-        input reset;
+        input is_store;
+        input start_train;
+        input [31:0] current_input_layer;
+        input [31:0] current_input_row;
         begin
-            return {current_layer, dc_dw_layer, dc_dw_row, update_storage, update_dy_dy_old, cal_dc_dw, reset};
+            return {is_store, start_train, current_input_layer, current_input_row};
         end
     endfunction
 
@@ -103,13 +100,10 @@ module controller(
                         1'b1, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'd0, //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b0, //update_storage
-                            1'b0, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
                         ) //backprop_controll
                     };
             end
@@ -130,13 +124,10 @@ module controller(
                         1'b0, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'd0, //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b0, //update_storage
-                            1'b0, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
                         ) //backprop_controll
                     };
                 set_cost:
@@ -155,23 +146,20 @@ module controller(
                         1'b1, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'd0, //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b0, //update_storage
-                            1'b0, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
                         ) //backprop_controll
                     };
                 load_weight:
                     return { 
-                        code_count < size ? 1'b0 : 1'b1, //reset
+                        code_count < size - 1 ? 1'b0 : 1'b1, //reset
                         32'(param_c), //w_layer_index
                         32'(code_count%3), //w_row_index
                         1'b1, //is_load
                         1'b0, //code_reset
-                        code_count < size ? 1'b0 : 1'b1, //code_active
+                        code_count < size - 1 ? 1'b0 : 1'b1, //code_active
                         1'b0, //i_is_load
                         1'b1, //load_w
                         1'b0, //use_z
@@ -180,23 +168,20 @@ module controller(
                         1'b0, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'd0, //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b0, //update_storage
-                            1'b0, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
                         ) //backprop_controll
                     };
                 load_input_label:
                     return { 
-                        code_count < size ? 1'b0 : 1'b1, //reset
+                        code_count < size - 1 ? 1'b0 : 1'b1, //reset
                         32'(param_c), //w_layer_index
                         32'(code_count%3), //w_row_index
                         1'b1, //is_load
                         1'b0, //code_reset
-                        code_count < size ? 1'b0 : 1'b1, //code_active
+                        code_count < size - 1 ? 1'b0 : 1'b1, //code_active
                         1'b1, //i_is_load
                         1'b0, //load_w
                         1'b0, //use_z
@@ -205,13 +190,10 @@ module controller(
                         1'b0, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'(param_c), //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b1, //update_storage
-                            code_count < size ? 1'b0 : 1'b1, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b1, //is_store
+                            1'b0, //start_train
+                            32'(param_c), //current_input_layer
+                            32'(code_count%3) //current_input_row
                         ) //backprop_controll
                     };
                 set_learning_rate:
@@ -230,23 +212,20 @@ module controller(
                         1'b0, //set_cost_type
                         1'b1, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'd0, //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b0, //update_storage
-                            1'b0, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
                         ) //backprop_controll
                     };
                 update_weight:
                     return { 
-                        code_count < size ? 1'b0 : 1'b1, //reset
+                        1'b1, //reset
                         32'd0, //w_layer_index
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
-                        code_count < size ? 1'b0 : 1'b1, //code_active
+                        1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
                         1'b0, //use_z
@@ -255,23 +234,20 @@ module controller(
                         1'b0, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'd0, //current_layer
-                            32'(param_c), //dc_dw_layer
-                            32'(code_count%3), //dc_dw_row
-                            1'b0, //update_storage
-                            1'b0, //update_dy_dy_old
-                            1'b1, //cal_dc_dw
-                            1'b0 //reset
+                            1'b0, //is_store
+                            1'b1, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
                         ) //backprop_controll
                     };
                 stall:
                     return { 
-                        code_count < param_c ? 1'b0 : 1'b1, //reset
+                        code_count < param_c - 1 ? 1'b0 : 1'b1, //reset
                         32'd0, //w_layer_index
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
-                        code_count < param_c ? 1'b0 : 1'b1, //code_active
+                        code_count < param_c - 1? 1'b0 : 1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
                         1'b0, //use_z
@@ -280,23 +256,20 @@ module controller(
                         1'b0, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'd0, //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b0, //update_storage
-                            1'b0, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
                         ) //backprop_controll
                     };
                 load_z: 
                     return { 
-                        code_count < size ? 1'b0 : 1'b1, //reset
+                        code_count < size - 1 ? 1'b0 : 1'b1, //reset
                         32'(param_c), //w_layer_index
                         32'(code_count%3), //w_row_index
                         1'b1, //is_load
                         1'b0, //code_reset
-                        code_count < size ? 1'b0 : 1'b1, //code_active
+                        code_count < size - 1 ? 1'b0 : 1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
                         1'b1, //use_z
@@ -305,13 +278,10 @@ module controller(
                         1'b0, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'(param_c), //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b1, //update_storage
-                            code_count < size ? 1'b0 : 1'b1, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b1, //is_store
+                            1'b0, //start_train
+                            32'(param_c), //current_input_layer
+                            32'(code_count%3) //current_input_row
                         ) //backprop_controll
                     };
                 default: 
@@ -330,13 +300,10 @@ module controller(
                         1'b0, //set_cost_type
                         1'b0, //set_learning_rate_value 
                         get_backprop_controll(
-                            32'd0, //current_layer
-                            32'd0, //dc_dw_layer
-                            32'd0, //dc_dw_row
-                            1'b0, //update_storage
-                            1'b0, //update_dy_dy_old
-                            1'b0, //cal_dc_dw
-                            1'b0 //reset
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
                         ) //backprop_controll
                     };
             endcase
@@ -360,5 +327,5 @@ module controller(
         set_learning_rate_value,
         backprop_controll
     } = controll_signal(op, param_a, param_b, param_c, code_count, enable);
-    
+
 endmodule

@@ -221,13 +221,30 @@ module backprop_stack(
         end
     end
 
+    wire [data_size*size - 1:0] transformed_diff_start;
+    transformer #(.size(size), .data_size(data_size))
+    transformer_cost_inst(
+        .data(diff_start),
+        .transformed_data(transformed_diff_start),
+        .reset_counter(current_input_row == 0 ? 1'b1 : 1'b0),
+        .clk(clk)
+    );
+
+    wire [data_size*size - 1:0] transformed_diff_start_plain;
+    mult_matrix_revert #(.data_size(data_size), .size(size))
+    mult_transformed_diff_start_revert_inst( 
+       .input_stream(transformed_diff_start),
+        .output_stream(transformed_diff_start_plain),
+        .clk(clk)
+    ); 
+
     genvar systolic_array_to_z_to_z_single_index;
     generate
         for(systolic_array_to_z_to_z_single_index = 0; systolic_array_to_z_to_z_single_index < size; systolic_array_to_z_to_z_single_index = systolic_array_to_z_to_z_single_index + 1) begin : set_up_systolic_array_to_z_to_z_single_diff
             // assign systolic_array_to_z_to_z_single_diff_start_row[systolic_array_to_z_to_z_single_index] = {size{ diff_start[data_size*(size - systolic_array_to_z_to_z_single_index) - 1 -: data_size] }};
-            delay #(.data_size(data_size), .size(size), .cycle(size)) 
+            delay #(.data_size(data_size), .size(size), .cycle(1)) 
             delay_inst_systolic_array_to_z_to_z_single(
-                .bus_in({size{ diff_start[data_size*(size - systolic_array_to_z_to_z_single_index) - 1 -: data_size] }}), 
+                .bus_in({size{ transformed_diff_start_plain[data_size*(size - systolic_array_to_z_to_z_single_index) - 1 -: data_size] }}), 
                 .bus_out(systolic_array_to_z_to_z_single_diff_start_row[systolic_array_to_z_to_z_single_index]), 
                 .clk(clk)
             );
@@ -473,68 +490,76 @@ module backprop_stack(
         end
         
         //================================= systolic ============================
+        // $write("%d | ", active_train);
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
+        // $write("| ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
+        // $write("| ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", systolic_array_acc_z_to_z_transformed[0][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
-        $write("| ");
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", systolic_array_acc_z_to_z_transformed[1][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
-        $write("| ");
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", systolic_array_acc_z_to_z_transformed[2][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // $write("| ");
 
-        $write("| ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_load_data[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", dc_dw[0][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // $write("| ");
 
-        $write("| ");
-
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", dc_dw[1][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_load_data[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
         
-        $write("| ");
+        // $write("| ");
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", dc_dw[2][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_load_data[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        $write("| ");
+        // $write("|\n ");
 
-        $write("= %d %d %b |", update_weight_layer, update_weight_row, is_update_weight);
+        // // $write("= %d %d %b |", update_weight_layer, update_weight_row, is_update_weight);
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", systolic_array_to_z_to_z_single_diff_start_row[0][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_diff_start[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        $write("| ");
+        // $write("| ");
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", systolic_array_to_z_to_z_single_diff_act_row[0][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_diff_start[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", start_load_data[0][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // $write("| ");
 
-        $write("| ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_diff_start[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", start_load_data[1][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // $write("| ");
 
-        $write("| ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_diff_act[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%d ", start_load_data[2][data_size*(size - i) - 1 -: data_size] >> 8);
-        end
+        // $write("| ");
 
-        $write("\n");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_diff_act[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
+
+        // $write("| ");
+
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_diff_act[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
+
+        // $write("\n");
 
         //================================= calculate z_to_z ============================
 

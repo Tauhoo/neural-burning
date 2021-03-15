@@ -138,6 +138,7 @@ Info: activate_to_diff_register: "data_path" instantiated activate_to_diff_regis
 Info: activation: "data_path" instantiated activation "activation"
 Info: backprop_controller: "data_path" instantiated backprop_controller "backprop_controller"
 Info: backpropagator: "data_path" instantiated backpropagator "backpropagator"
+Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv
 Info: code_count: "data_path" instantiated code_count "code_count"
 Info: code_storage: "data_path" instantiated code_storage "code_storage"
 Info: controller: "data_path" instantiated controller "controller"
@@ -168,6 +169,6 @@ Info: train_data_mux: "data_path" instantiated train_data_mux "train_data_mux"
 Info: w_and_x_spreader: "data_path" instantiated w_and_x_spreader "w_and_x_spreader"
 Info: weight_storage: "data_path" instantiated weight_storage "weight_storage"
 Info: Reusing file G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv
-Info: data_path: Done "data_path" with 27 modules, 33 files
+Info: data_path: Done "data_path" with 27 modules, 38 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

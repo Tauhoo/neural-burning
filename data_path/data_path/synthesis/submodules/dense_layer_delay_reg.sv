@@ -30,7 +30,7 @@ module dense_layer_delay_reg (
     parameter dense_type_size = 4;
     parameter act_type_size = 4;
     parameter cycle = size*2 - 1;
-    parameter backprop_controll_size = 32*3 + 4 ;
+    parameter backprop_controll_size = 1 + 1 + 32 + 32 ;
     localparam  bundle_size = act_type_size + cost_type_size + dense_type_size + data_size*size*3;
     
     input clk;

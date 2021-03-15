@@ -60,6 +60,16 @@ module weight_storage (
     end
 
     always @(negedge clk) begin
+        $write("layer_index = %d | row_index = %d | is_update = %b | ", 
+            layer_index, 
+            row_index,  
+            is_update
+        );
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%f ", real'(signed'(dc_dw[data_size*(size - i) - 1 -: data_size])) / 2**8);
+        end
+        $write("\n");
+        
         //wrtie
         if (is_write) begin
             for (index = 0; index < size; index = index + 1) begin

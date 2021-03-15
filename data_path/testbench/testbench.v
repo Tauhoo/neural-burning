@@ -93,7 +93,7 @@ module testbench  ;
    round = 0;
    repeat(100)
    begin
-     $fscanf(weight_storage_write_interface_write_data_file, "%b %b %b\n", temp_data_1, temp_data_2, temp_data_3);
+     $fscanf(weight_storage_write_interface_write_data_file, "%b %b %b\n", temp_data_1, temp_data_2, temp_data_3 );
      weight_storage_write_interface_write_data <= {temp_data_1, temp_data_2, temp_data_3};
      $fscanf(weight_storage_write_interface_write_control_file, "%d %d %b\n", weight_storage_write_interface_write_layer_index, weight_storage_write_interface_write_row_index, weight_storage_is_write_interface_is_write);
 

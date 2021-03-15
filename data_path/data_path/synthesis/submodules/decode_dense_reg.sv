@@ -23,7 +23,7 @@ module decode_dense_reg (
     parameter cost_type_size = 8;
     parameter dense_type_size = 4;
     parameter act_type_size = 4;
-    parameter backprop_controll_size = 32*3 + 4 ;
+    parameter backprop_controll_size = 1 + 1 + 32 + 32 ;
 
     input [act_type_size - 1:0] act_type;
     input [dense_type_size - 1:0] dense_type;

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for backprop_stack_controller
-Sat Jan 09 00:28:58 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Mon Mar 15 05:43:30 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
 
 
 ---------------------
@@ -15,9 +15,11 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: Top-level Entity: |backprop_stack_controller
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -41,27 +43,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jan 09 00:28:58 2021       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; backprop_stack_controller                   ;
-; Top-level Entity Name           ; backprop_stack_controller                   ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 470                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                  ;
++---------------------------------+-------------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Mar 15 05:43:30 2021                       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition ;
+; Revision Name                   ; backprop_stack_controller                                   ;
+; Top-level Entity Name           ; backprop_stack_controller                                   ;
+; Family                          ; Cyclone V                                                   ;
+; Logic utilization (in ALMs)     ; N/A                                                         ;
+; Total registers                 ; 1969                                                        ;
+; Total pins                      ; 519                                                         ;
+; Total virtual pins              ; 0                                                           ;
+; Total block memory bits         ; 0                                                           ;
+; Total DSP Blocks                ; 0                                                           ;
+; Total HSSI RX PCSs              ; 0                                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                                           ;
+; Total HSSI TX PCSs              ; 0                                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                                           ;
+; Total PLLs                      ; 0                                                           ;
+; Total DLLs                      ; 0                                                           ;
++---------------------------------+-------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -160,56 +162,76 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processors 5-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; backprop_stack_controller.sv     ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; backprop_stack_controller.sv     ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_gbm.tdf            ; yes             ; Auto-Generated Megafunction  ; G:/neural-burning/backprop_stack_controller/db/lpm_divide_gbm.tdf          ;         ;
+; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; G:/neural-burning/backprop_stack_controller/db/sign_div_unsign_mlh.tdf     ;         ;
+; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction  ; G:/neural-burning/backprop_stack_controller/db/alt_u_div_ive.tdf           ;         ;
+; db/lpm_divide_j3m.tdf            ; yes             ; Auto-Generated Megafunction  ; G:/neural-burning/backprop_stack_controller/db/lpm_divide_j3m.tdf          ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimate of Logic utilization (ALMs needed) ; 112                 ;
-;                                             ;                     ;
-; Combinational ALUT usage for logic          ; 217                 ;
-;     -- 7 input functions                    ; 0                   ;
-;     -- 6 input functions                    ; 6                   ;
-;     -- 5 input functions                    ; 0                   ;
-;     -- 4 input functions                    ; 1                   ;
-;     -- <=3 input functions                  ; 210                 ;
-;                                             ;                     ;
-; Dedicated logic registers                   ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 470                 ;
-;                                             ;                     ;
-; Total DSP Blocks                            ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; is_cost_layer~input ;
-; Maximum fan-out                             ; 144                 ;
-; Total fan-out                               ; 1223                ;
-; Average fan-out                             ; 1.06                ;
-+---------------------------------------------+---------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 1444      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1272      ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 704       ;
+;     -- 5 input functions                    ; 55        ;
+;     -- 4 input functions                    ; 71        ;
+;     -- <=3 input functions                  ; 442       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 1969      ;
+;                                             ;           ;
+; I/O pins                                    ; 519       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1969      ;
+; Total fan-out                               ; 12455     ;
+; Average fan-out                             ; 2.91      ;
++---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name               ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------------------+--------------+
-; |backprop_stack_controller ; 217 (217)           ; 0 (0)                     ; 0                 ; 0          ; 470  ; 0            ; |backprop_stack_controller ; backprop_stack_controller ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Entity Name               ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; |backprop_stack_controller             ; 1272 (909)          ; 1969 (1969)               ; 0                 ; 0          ; 519  ; 0            ; |backprop_stack_controller                                                                                                 ; backprop_stack_controller ; work         ;
+;    |lpm_divide:Div0|                   ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |backprop_stack_controller|lpm_divide:Div0                                                                                 ; lpm_divide                ; work         ;
+;       |lpm_divide_gbm:auto_generated|  ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |backprop_stack_controller|lpm_divide:Div0|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm            ; work         ;
+;          |sign_div_unsign_mlh:divider| ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |backprop_stack_controller|lpm_divide:Div0|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh       ; work         ;
+;             |alt_u_div_ive:divider|    ; 181 (181)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |backprop_stack_controller|lpm_divide:Div0|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive             ; work         ;
+;    |lpm_divide:Mod0|                   ; 182 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |backprop_stack_controller|lpm_divide:Mod0                                                                                 ; lpm_divide                ; work         ;
+;       |lpm_divide_j3m:auto_generated|  ; 182 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |backprop_stack_controller|lpm_divide:Mod0|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m            ; work         ;
+;          |sign_div_unsign_mlh:divider| ; 182 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |backprop_stack_controller|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh       ; work         ;
+;             |alt_u_div_ive:divider|    ; 182 (182)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |backprop_stack_controller|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive             ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -218,24 +240,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 1969  ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 1968  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |backprop_stack_controller ;
-+----------------+-------+------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                             ;
-+----------------+-------+------------------------------------------------------------------+
-; size           ; 3     ; Signed Integer                                                   ;
-; data_size      ; 16    ; Signed Integer                                                   ;
-+----------------+-------+------------------------------------------------------------------+
++------------------------+-------+----------------------------------------------------------+
+; Parameter Name         ; Value ; Type                                                     ;
++------------------------+-------+----------------------------------------------------------+
+; size                   ; 3     ; Signed Integer                                           ;
+; data_size              ; 16    ; Signed Integer                                           ;
+; backprop_controll_size ; 66    ; Signed Integer                                           ;
+; max_layer_size         ; 4     ; Signed Integer                                           ;
++------------------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 2              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_gbm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 2              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -244,16 +314,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 217                         ;
-;     normal            ; 217                         ;
-;         2 data inputs ; 128                         ;
-;         3 data inputs ; 82                          ;
-;         4 data inputs ; 1                           ;
-;         6 data inputs ; 6                           ;
-; boundary_port         ; 470                         ;
+; arriav_ff             ; 1969                        ;
+;     ENA               ; 1936                        ;
+;     ENA SCLR          ; 32                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 1273                        ;
+;     arith             ; 339                         ;
+;         0 data inputs ; 62                          ;
+;         1 data inputs ; 127                         ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 61                          ;
+;         4 data inputs ; 58                          ;
+;     normal            ; 934                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 143                         ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 55                          ;
+;         6 data inputs ; 704                         ;
+; boundary_port         ; 519                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.17                        ;
+; Max LUT depth         ; 43.20                       ;
+; Average LUT depth     ; 15.14                       ;
 +-----------------------+-----------------------------+
 
 
@@ -262,7 +344,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -271,25 +353,116 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Jan 09 00:28:51 2021
+    Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
+    Info: Processing started: Mon Mar 15 05:43:20 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off backprop_stack_controller -c backprop_stack_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file backprop_stack_controller.sv
     Info (12023): Found entity 1: backprop_stack_controller File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 1
 Info (12127): Elaborating entity "backprop_stack_controller" for the top level hierarchy
+Info (276014): Found 4 instances of uninferred RAM logic
+    Info (276007): RAM logic "diff_dense_store" is uninferred due to asynchronous read logic File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 67
+    Info (276007): RAM logic "diff_start_store" is uninferred due to asynchronous read logic File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 68
+    Info (276007): RAM logic "diff_cost_store" is uninferred due to asynchronous read logic File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 69
+    Info (276007): RAM logic "diff_to_all_store" is uninferred due to asynchronous read logic File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 70
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 87
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 92
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 87
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 87
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "2"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gbm.tdf
+    Info (12023): Found entity 1: lpm_divide_gbm File: G:/neural-burning/backprop_stack_controller/db/lpm_divide_gbm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_mlh File: G:/neural-burning/backprop_stack_controller/db/sign_div_unsign_mlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
+    Info (12023): Found entity 1: alt_u_div_ive File: G:/neural-burning/backprop_stack_controller/db/alt_u_div_ive.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 92
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 92
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "2"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j3m.tdf
+    Info (12023): Found entity 1: lpm_divide_j3m File: G:/neural-burning/backprop_stack_controller/db/lpm_divide_j3m.tdf Line: 25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "current_layer_out[31]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 43
+    Warning (13410): Pin "current_row_out[2]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[3]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[4]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[5]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[6]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[7]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[8]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[9]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[10]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[11]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[12]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[13]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[14]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[15]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[16]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[17]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[18]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[19]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[20]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[21]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[22]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[23]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[24]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[25]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[26]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[27]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[28]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[29]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[30]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
+    Warning (13410): Pin "current_row_out[31]" is stuck at GND File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 44
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 687 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 30 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[2]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[3]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[4]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[5]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[6]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[7]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[8]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[9]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[10]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[11]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[12]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[13]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[14]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[15]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[16]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[17]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[18]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[19]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[20]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[21]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[22]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[23]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[24]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[25]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[26]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[27]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[28]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[29]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[30]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+    Warning (15610): No output dependent on input pin "backprop_controll_bundle[31]" File: G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv Line: 29
+Info (21057): Implemented 3727 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 259 input pins
-    Info (21059): Implemented 211 output pins
-    Info (21061): Implemented 217 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Sat Jan 09 00:28:58 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info (21059): Implemented 260 output pins
+    Info (21061): Implemented 3208 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Mon Mar 15 05:43:30 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:16
 
 

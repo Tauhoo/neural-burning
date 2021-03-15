@@ -9,10 +9,12 @@ module dense_activate_reg (
     backprop_controll,
 
     act_type_out,
+    act_type_forward_out,
     dense_type_out,
     cost_type_out,
     w_out,
     y_out,
+    y_out_forward,
     x_out,
     predict_value_out,
     backprop_controll_out,
@@ -24,7 +26,7 @@ module dense_activate_reg (
     parameter cost_type_size = 8;
     parameter dense_type_size = 4;
     parameter act_type_size = 4;
-    parameter backprop_controll_size = 32*3 + 4 ;
+    parameter backprop_controll_size = 1 + 1 + 32 + 32 ;
 
     input [act_type_size - 1:0] act_type;
     input [dense_type_size - 1:0] dense_type;
@@ -38,16 +40,21 @@ module dense_activate_reg (
     input clk;
 
     output [act_type_size - 1:0] act_type_out;
+    output [act_type_size - 1:0] act_type_forward_out;
     output [dense_type_size - 1:0] dense_type_out;
     output [cost_type_size - 1:0] cost_type_out;
     output [data_size*size - 1:0] w_out;
     output [data_size*size - 1:0] y_out;
+    output [data_size*size - 1:0] y_out_forward;
     output [data_size*size - 1:0] x_out;
     output [data_size*size - 1:0] predict_value_out;
     output [backprop_controll_size - 1:0] backprop_controll_out;
 
     delay #(.data_size(act_type_size), .size(1)) 
     delay_inst_act_type(.bus_in(act_type), .bus_out(act_type_out), .clk(clk));
+
+    delay #(.data_size(act_type_size), .size(1)) 
+    delay_inst_act_type_forward(.bus_in(act_type), .bus_out(act_type_forward_out), .clk(clk));
 
     delay #(.data_size(dense_type_size), .size(1)) 
     delay_inst_dense_type(.bus_in(dense_type), .bus_out(dense_type_out), .clk(clk));
@@ -60,6 +67,8 @@ module dense_activate_reg (
     
     delay #(.data_size(data_size), .size(size)) 
     delay_inst_y(.bus_in(y), .bus_out(y_out), .clk(clk));
+
+    assign y_out_forward = y_out;
     
     delay #(.data_size(data_size), .size(size)) 
     delay_inst_x(.bus_in(x), .bus_out(x_out), .clk(clk));

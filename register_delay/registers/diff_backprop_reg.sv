@@ -21,7 +21,7 @@ module diff_backprop_reg (
     parameter size = 3;
     parameter data_size = 16;
     parameter dense_type_size = 4;
-    parameter backprop_controll_size = 32*3 + 4 ;
+    parameter backprop_controll_size = 1 + 1 + 32 + 32 ;
 
     input [size*data_size - 1:0] diff_to_all;
     input [size*data_size - 1:0] diff_start;
@@ -62,4 +62,31 @@ module diff_backprop_reg (
     delay #(.data_size(backprop_controll_size), .size(1))
     delay_inst_backprop_controll(.bus_in(backprop_controll), .bus_out(backprop_controll_out), .clk(clk));
     
+    // always @(posedge clk ) begin
+    //     $write("diff_to_all ");
+    //     for (int i = 0; i < size; i = i + 1) begin
+    //         $write("%f ", real'(signed'(diff_to_all[data_size*(size - i) - 1 -: data_size]))/2**8);
+    //     end
+    //     $write("| diff_start ");
+    //     for (int i = 0; i < size; i = i + 1) begin
+    //         $write("%f ", real'(signed'(diff_start[data_size*(size - i) - 1 -: data_size]))/2**8);
+    //     end
+    //     $write("| diff_dense ");
+    //     for (int i = 0; i < size; i = i + 1) begin
+    //         $write("%f ", real'(signed'(diff_dense[data_size*(size - i) - 1 -: data_size]))/2**8);
+    //     end
+    //     $write("| diff_cost ");
+    //     for (int i = 0; i < size; i = i + 1) begin
+    //         $write("%f ", real'(signed'(diff_cost[data_size*(size - i) - 1 -: data_size]))/2**8);
+    //     end
+    //     $write("| predict_value ");
+    //     for (int i = 0; i < size; i = i + 1) begin
+    //         $write("%f ", real'(signed'(predict_value[data_size*(size - i) - 1 -: data_size]))/2**8);
+    //     end
+    //     $write("| z ");
+    //     for (int i = 0; i < size; i = i + 1) begin
+    //         $write("%f ", real'(signed'(z[data_size*(size - i) - 1 -: data_size]))/2**8);
+    //     end
+    //     $write("\n ");
+    // end
 endmodule

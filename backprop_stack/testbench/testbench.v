@@ -58,7 +58,7 @@ parameter size  = 3 ;
    backprop_act_file = $fopen("G:/neural-burning/backprop_stack/testbench/backprop_act.hex", "r");
    backprop_cost_file = $fopen("G:/neural-burning/backprop_stack/testbench/backprop_cost.hex", "r");
    control_file = $fopen("G:/neural-burning/backprop_stack/testbench/control.hex", "r");
-   repeat(30)
+   repeat(100)
    begin
 	   clk  = 1'b1  ;
 
@@ -113,5 +113,5 @@ parameter size  = 3 ;
 
 
   initial
-	#8000 $stop;
+	#10000 $stop;
 endmodule
