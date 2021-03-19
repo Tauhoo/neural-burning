@@ -5,6 +5,7 @@ module backprop_stack(
     is_last_layer,
     read_update_data,
     active_train,
+    learning_rate,
 
     diff_start,
     diff_act,
@@ -20,7 +21,8 @@ module backprop_stack(
     parameter data_size      = 16;
     parameter size           = 3;
     parameter max_layer_size = 4;
-    
+    parameter learning_rate_size = 16;
+
     import gdo::gdo_add;
     import gdo::gdo_mult;
 	import gdo::gdo_size;
@@ -31,6 +33,7 @@ module backprop_stack(
     input is_last_layer;
     input read_update_data;
     input active_train;
+    input [learning_rate_size - 1:0] learning_rate;
 
     input [size*data_size - 1:0] diff_start;
     input [size*data_size - 1:0] diff_act;
@@ -477,10 +480,13 @@ module backprop_stack(
                 );
             end
         end
+        for (conclude_i = 0; conclude_i < size; conclude_i = conclude_i + 1) begin : assign_result
+            assign update_weight_value[data_size*(size - conclude_i) - 1 -: data_size] = gdo_mult(sum[size - 1][data_size*(size - conclude_i) - 1 -: data_size], learning_rate);
+            // assign update_weight_value[data_size*size - 1 -: data_size] = sum[size - 1][data_size*size - 1 -: data_size];
+        end
     endgenerate
 
     assign {update_weight_layer, update_weight_row, is_update_weight} = start_load_info;
-    assign update_weight_value = sum[size - 1];
 
     always @(posedge clk ) begin
         if (start_read_update_data) begin
@@ -490,38 +496,38 @@ module backprop_stack(
         end
         
         //================================= systolic ============================
-        // $write("%d | ", active_train);
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        // end
-        // $write("| ");
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        // end
-        // $write("| ");
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        // end
+        $write("%d\n ", learning_rate);
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        end
+        $write("| ");
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        end
+        $write("| ");
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        end
 
-        // $write("| ");
+        $write("| ");
 
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%f ", real'(signed'(start_load_data[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        // end
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%f ", real'(signed'(start_load_data[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        end
 
-        // $write("| ");
+        $write("| ");
 
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%f ", real'(signed'(start_load_data[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        // end
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%f ", real'(signed'(start_load_data[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        end
         
-        // $write("| ");
+        $write("| ");
 
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%f ", real'(signed'(start_load_data[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        // end
+        for (int i = 0; i < size; i = i + 1) begin
+            $write("%f ", real'(signed'(start_load_data[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        end
 
-        // $write("|\n ");
+        $write("|\n ");
 
         // // $write("= %d %d %b |", update_weight_layer, update_weight_row, is_update_weight);
 

@@ -36,7 +36,7 @@ module activation(in_data, act, out_data);
     genvar gen_index;
     generate
         for (gen_index = 0; gen_index < size; gen_index = gen_index + 1) begin : set_up_output
-            assign out_data[(size - gen_index)*data_size - 1 -: data_size] = activate_mux(in_data[(size - gen_index)*data_size - 1:0], act); 
+            assign out_data[(size - gen_index)*data_size - 1 -: data_size] = activate_mux(in_data[(size - gen_index)*data_size - 1 -: data_size], act); 
         end
     endgenerate
 

@@ -10,643 +10,209 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+G:/neural-burning/mult_matrix_revert {G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:34 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/mult_matrix_revert" G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv 
-# -- Compiling module mult_matrix_revert
-# 
-# Top level modules:
-# 	mult_matrix_revert
-# End time: 01:56:34 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+G:/neural-burning/register_delay {G:/neural-burning/register_delay/delay.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:34 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/register_delay" G:/neural-burning/register_delay/delay.sv 
-# -- Compiling module delay
-# 
-# Top level modules:
-# 	delay
-# End time: 01:56:34 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+G:/neural-burning/backprop_stack {G:/neural-burning/backprop_stack/systolic_array.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:34 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/systolic_array.sv 
-# -- Compiling module systolic_array
-# 
-# Top level modules:
-# 	systolic_array
-# End time: 01:56:34 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+G:/neural-burning/mult_matrix_prep {G:/neural-burning/mult_matrix_prep/mult_matrix_prep.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:34 on Mar 15,2021
+# Start time: 03:03:28 on Mar 20,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/mult_matrix_prep" G:/neural-burning/mult_matrix_prep/mult_matrix_prep.sv 
 # -- Compiling module mult_matrix_prep
 # 
 # Top level modules:
 # 	mult_matrix_prep
-# End time: 01:56:35 on Mar 15,2021, Elapsed time: 0:00:01
+# End time: 03:03:28 on Mar 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src {G:/neural-burning/general_data_operator/src/gdo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:35 on Mar 15,2021
+# Start time: 03:03:29 on Mar 20,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
 # -- Compiling package gdo
 # 
 # Top level modules:
 # 	--none--
-# End time: 01:56:35 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+G:/neural-burning/backprop_stack {G:/neural-burning/backprop_stack/transformer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:35 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/transformer.sv 
-# -- Compiling module transformer
-# 
-# Top level modules:
-# 	transformer
-# End time: 01:56:35 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+G:/neural-burning/backprop_stack {G:/neural-burning/backprop_stack/start_store.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:35 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/start_store.sv 
-# -- Compiling module start_store
-# -- Importing package gdo
-# 
-# Top level modules:
-# 	start_store
-# End time: 01:56:35 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+G:/neural-burning/backprop_stack {G:/neural-burning/backprop_stack/continuous_systolic.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:35 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/continuous_systolic.sv 
-# -- Compiling module continuous_systolic
-# -- Importing package gdo
-# 
-# Top level modules:
-# 	continuous_systolic
-# End time: 01:56:35 on Mar 15,2021, Elapsed time: 0:00:00
+# End time: 03:03:29 on Mar 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+G:/neural-burning/backprop_stack {G:/neural-burning/backprop_stack/z_to_z_calculator.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:35 on Mar 15,2021
+# Start time: 03:03:29 on Mar 20,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/z_to_z_calculator.sv 
 # -- Compiling module z_to_z_calculator
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	z_to_z_calculator
-# End time: 01:56:35 on Mar 15,2021, Elapsed time: 0:00:00
+# End time: 03:03:29 on Mar 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+G:/neural-burning/backprop_stack {G:/neural-burning/backprop_stack/backprop_stack.sv}
+# 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:35 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/backprop_stack.sv 
-# -- Compiling module backprop_stack
-# -- Importing package gdo
+# Start time: 03:03:48 on Mar 20,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v 
+# -- Compiling module testbench_z_to_z
 # 
 # Top level modules:
-# 	backprop_stack
-# End time: 01:56:35 on Mar 15,2021, Elapsed time: 0:00:00
+# 	testbench_z_to_z
+# End time: 03:03:48 on Mar 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:56:38 on Mar 15,2021
-# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 01:56:39 on Mar 15,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vsim work.testbench
-# vsim work.testbench 
-# Start time: 01:56:43 on Mar 15,2021
-# Loading work.testbench
+vsim work.testbench_z_to_z
+# vsim work.testbench_z_to_z 
+# Start time: 03:04:01 on Mar 20,2021
+# Loading work.testbench_z_to_z
 # Loading sv_std.std
 # Loading work.gdo
-# Loading work.backprop_stack
-# Loading work.delay
 # Loading work.z_to_z_calculator
 # Loading work.mult_matrix_prep
-# Loading work.transformer
-# Loading work.systolic_array
-# Loading work.continuous_systolic
-# Loading work.mult_matrix_revert
-# Loading work.start_store
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 68
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 54
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 70
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 56
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 63
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 78
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 65
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 84
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 72
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 86
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 74
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 92
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 94
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 99
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[0]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[1]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[2]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[3]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/continuous_systolic File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 312
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'a_out'.
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[0]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[1]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[2]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[3]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/continuous_systolic File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 312
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'a_out'.
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[0]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[1]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[2]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[3]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/continuous_systolic File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 312
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'a_out'.
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 79
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    3     3     3 |     2     2     1     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    2     2     2 |     2     2     1     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    1     1     1 |     2     2     1     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    3     3     3 |     2     1     1     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    2     2     2 |     2     1     1     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    1     1     1 |     2     1     1     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    3     3     3 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    2     2     2 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    1     1     1 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#    24    24    24 |    32    32    32 |    72    72    72 |   144   144    72 |    64   128   128 |   144   144    72 | =          0          0 1 |    0     0     0 |     1     1     2     6     6     3 |     2     4     4 |     2     2     1 
-run
-#    24    24    24 |    32    32    32 |    72    72    72 |   144   144    72 |    64   128   128 |   144   144    72 | =          0          1 1 |    0     0     0 |     1     1     2     6     6     3 |     2     4     4 |     2     2     1 
-run
-#    24    24    24 |    32    32    32 |    72    72    72 |   144   144    72 |    64   128   128 |   144   144    72 | =          0          2 1 |    0     0     0 |     1     1     2     6     6     3 |     2     4     4 |     2     2     1 
-run
-#     4     0     4 |     8     0     8 |    12     0    12 |    24     0    12 |    16     0    16 |    12     0    24 | =          1          0 1 |    0     0     0 |     1     1     2     6     3     3 |     2     4     2 |     1     1     2 
-run
-#     4     0     4 |     8     0     8 |    12     0    12 |    24     0    12 |    16     0    16 |    12     0    24 | =          1          1 1 |    0     0     0 |     1     1     2     6     3     3 |     2     4     2 |     1     1     2 
-run
-#     4     0     4 |     8     0     8 |    12     0    12 |    24     0    12 |    16     0    16 |    12     0    24 | =          1          2 1 |    0     0     0 |     1     1     2     6     3     3 |     2     4     2 |     1     1     2 
-run
-#     1     1     1 |     2     2     2 |     3     3     3 |     3     3     6 |     4     8     4 |     6     3     3 | =          2          0 1 |    0     0     0 |     1     1     2     3     3     6 |     2     4     2 |     2     1     1 
-run
-#     1     1     1 |     2     2     2 |     3     3     3 |     3     3     6 |     4     8     4 |     6     3     3 | =          2          1 1 |    0     0     0 |     1     1     2     3     3     6 |     2     4     2 |     2     1     1 
-run
-run
-run
-vlog -sv -work work +incdir+G:/neural-burning/backprop_stack G:/neural-burning/backprop_stack/backprop_stack.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:35 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/backprop_stack.sv 
-# -- Compiling module backprop_stack
-# -- Importing package gdo
-# 
-# Top level modules:
-# 	backprop_stack
-# End time: 01:57:35 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -sv -work work +incdir+G:/neural-burning/backprop_stack G:/neural-burning/backprop_stack/continuous_systolic.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:35 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/continuous_systolic.sv 
-# -- Compiling module continuous_systolic
-# -- Importing package gdo
-# 
-# Top level modules:
-# 	continuous_systolic
-# End time: 01:57:35 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -sv -work work +incdir+G:/neural-burning/register_delay G:/neural-burning/register_delay/delay.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:35 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/register_delay" G:/neural-burning/register_delay/delay.sv 
-# -- Compiling module delay
-# 
-# Top level modules:
-# 	delay
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vlog -sv -work work +incdir+G:/neural-burning/general_data_operator/src G:/neural-burning/general_data_operator/src/gdo.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:36 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/general_data_operator/src" G:/neural-burning/general_data_operator/src/gdo.sv 
-# -- Compiling package gdo
-# 
-# Top level modules:
-# 	--none--
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -sv -work work +incdir+G:/neural-burning/mult_matrix_prep G:/neural-burning/mult_matrix_prep/mult_matrix_prep.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:36 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/mult_matrix_prep" G:/neural-burning/mult_matrix_prep/mult_matrix_prep.sv 
-# -- Compiling module mult_matrix_prep
-# 
-# Top level modules:
-# 	mult_matrix_prep
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -sv -work work +incdir+G:/neural-burning/mult_matrix_revert G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:36 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/mult_matrix_revert" G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv 
-# -- Compiling module mult_matrix_revert
-# 
-# Top level modules:
-# 	mult_matrix_revert
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -sv -work work +incdir+G:/neural-burning/backprop_stack G:/neural-burning/backprop_stack/start_store.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:36 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/start_store.sv 
-# -- Compiling module start_store
-# -- Importing package gdo
-# 
-# Top level modules:
-# 	start_store
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -sv -work work +incdir+G:/neural-burning/backprop_stack G:/neural-burning/backprop_stack/systolic_array.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:36 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/systolic_array.sv 
-# -- Compiling module systolic_array
-# 
-# Top level modules:
-# 	systolic_array
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work G:/neural-burning/backprop_stack/testbench/testbench.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:36 on Mar 15,2021
-# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack/testbench/testbench.v 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -sv -work work +incdir+G:/neural-burning/backprop_stack G:/neural-burning/backprop_stack/transformer.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:36 on Mar 15,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/transformer.sv 
-# -- Compiling module transformer
-# 
-# Top level modules:
-# 	transformer
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 vlog -sv -work work +incdir+G:/neural-burning/backprop_stack G:/neural-burning/backprop_stack/z_to_z_calculator.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:57:36 on Mar 15,2021
+# Start time: 03:04:44 on Mar 20,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack" G:/neural-burning/backprop_stack/z_to_z_calculator.sv 
 # -- Compiling module z_to_z_calculator
 # -- Importing package gdo
 # 
 # Top level modules:
 # 	z_to_z_calculator
-# End time: 01:57:36 on Mar 15,2021, Elapsed time: 0:00:00
+# End time: 03:04:44 on Mar 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testbench
-# Loading work.gdo
-# Loading work.backprop_stack
-# Loading work.delay
 # Loading work.z_to_z_calculator
-# Loading work.mult_matrix_prep
-# Loading work.transformer
-# Loading work.systolic_array
-# Loading work.continuous_systolic
-# Loading work.mult_matrix_revert
-# Loading work.start_store
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 68
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 54
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 70
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 56
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 76
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 63
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 78
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 65
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 84
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 72
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 86
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 74
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 92
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 79
+run
+#     1     0     0 
+#     1     1     0 
+run
+#     1     1     1 
+run
+#     4     1     1 
+run
+#     4     4     1 
+run
+#     4     4     4 
+run
+#     9     4     4 
+run
+#     9     9     4 
+run
+#     9     9     9 
+run
+#     0     9     9 
+run
+#     0     0     9 
+run
+#     0     0     0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 94
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 54
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack/testbench/testbench.v Line: 99
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[0]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[1]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[2]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[3]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/continuous_systolic File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 312
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'a_out'.
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[0]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[1]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[2]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[3]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/continuous_systolic File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 312
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'a_out'.
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[0]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[0]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[1]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[1]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[2]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[3]/continuous_systolic File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 84
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/systolic_array.sv(84): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/systolic_array/set_up_z_to_z[3]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'continuous_systolic'.  Expected 7, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/continuous_systolic File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 312
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'a_out'.
-# ** Warning: (vsim-3722) G:/neural-burning/backprop_stack/backprop_stack.sv(312): [TFMPC] - Missing connection for port 'b_out'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_in'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (48) does not match connection size (1) for port 'bus_out'. The port definition is at: G:/neural-burning/register_delay/delay.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT/set_up_systolic_array[2]/continuous_systolic/delay_inst_reset_counter File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 58
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 56
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 65
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 72
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 74
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 79
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
+#     1     0     0 
+#     2     1     0 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
+#     3     2     1 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
+#     2     3     2 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
+#     4     2     3 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
+#     6     4     2 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     0     0     0     0     0     0 |     0     0     0 |     0     0     0 
+#     3     6     4 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    3     3     3 |     2     2     1     0     0     0 |     0     0     0 |     0     0     0 
+#     6     3     6 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    2     2     2 |     2     2     1     0     0     0 |     0     0     0 |     0     0     0 
+#     9     6     3 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    1     1     1 |     2     2     1     0     0     0 |     0     0     0 |     0     0     0 
+#     0     9     6 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    3     3     3 |     2     1     1     0     0     0 |     0     0     0 |     0     0     0 
+#     0     0     9 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    2     2     2 |     2     1     1     0     0     0 |     0     0     0 |     0     0     0 
+#     0     0     0 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 54
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 56
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 63
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 65
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 72
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 74
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_z_to_z File: G:/neural-burning/backprop_stack/testbench_z_to_z/testbench_z_to_z.v Line: 79
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    1     1     1 |     2     1     1     0     0     0 |     0     0     0 |     0     0     0 
+#     0     0     0 
+#     0     0     0 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    3     3     3 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     0     0     0 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    2     2     2 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     0     0     0 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    1     1     1 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     0     0     0 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     0     0     0 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     1     0     0 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     2     1     0 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     3     2     1 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     2     3     2 
 run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          0          0 0 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
+#     4     2     3 
 run
-#    24    24    24 |    32    32    32 |    72    72    72 |   144   144    72 |    64   128   128 |   144   144    72 | =          0          0 1 |    0     0     0 |     1     1     2     6     6     3 |     2     4     4 |     2     2     1 
+#     6     4     2 
 run
-#    24    24    24 |    32    32    32 |    72    72    72 |   144   144    72 |    64   128   128 |   144   144    72 | =          0          1 1 |    0     0     0 |     1     1     2     6     6     3 |     2     4     4 |     2     2     1 
+#     3     6     4 
 run
-#    24    24    24 |    32    32    32 |    72    72    72 |   144   144    72 |    64   128   128 |   144   144    72 | =          0          2 1 |    0     0     0 |     1     1     2     6     6     3 |     2     4     4 |     2     2     1 
+#     6     3     6 
 run
-#     4     0     4 |     8     0     8 |    12     0    12 |    24     0    12 |    16     0    16 |    12     0    24 | =          1          0 1 |    0     0     0 |     1     1     2     6     3     3 |     2     4     2 |     1     1     2 
+#     9     6     3 
 run
-#     4     0     4 |     8     0     8 |    12     0    12 |    24     0    12 |    16     0    16 |    12     0    24 | =          1          1 1 |    0     0     0 |     1     1     2     6     3     3 |     2     4     2 |     1     1     2 
+#     0     9     6 
 run
-#     4     0     4 |     8     0     8 |    12     0    12 |    24     0    12 |    16     0    16 |    12     0    24 | =          1          2 1 |    0     0     0 |     1     1     2     6     3     3 |     2     4     2 |     1     1     2 
-run
-#     1     1     1 |     2     2     2 |     3     3     3 |     3     3     6 |     4     8     4 |     6     3     3 | =          2          0 1 |    0     0     0 |     1     1     2     3     3     6 |     2     4     2 |     2     1     1 
-run
-#     1     1     1 |     2     2     2 |     3     3     3 |     3     3     6 |     4     8     4 |     6     3     3 | =          2          1 1 |    0     0     0 |     1     1     2     3     3     6 |     2     4     2 |     2     1     1 
-run
-#     1     1     1 |     2     2     2 |     3     3     3 |     3     3     6 |     4     8     4 |     6     3     3 | =          2          2 1 |    0     0     0 |     1     1     2     3     3     6 |     2     4     2 |     2     1     1 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          3          0 1 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          3          1 1 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-run
-#     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 |     0     0     0 | =          3          2 1 |    0     0     0 |     1     1     2     0     0     0 |     0     0     0 |     0     0     0 
-# End time: 01:57:57 on Mar 15,2021, Elapsed time: 0:01:14
-# Errors: 0, Warnings: 72
+#     0     0     9 
+# End time: 03:08:28 on Mar 20,2021, Elapsed time: 0:04:27
+# Errors: 0, Warnings: 7

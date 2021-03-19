@@ -36,9 +36,6 @@ module z_to_z_calculator (
         if (set_diff_act) begin
             act_reg <= diff_act;
         end
-        // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%d ", diff_z_to_z_wire[data_size*(size - i) - 1 -: data_size] >> 8);
-        // end
 
         // $write("| ");
 
@@ -57,7 +54,6 @@ module z_to_z_calculator (
         // for (int i = 0; i < size; i = i + 1) begin
         //     $write("%d ", diff_dense[data_size*(size - i) - 1 -: data_size] >> 8);
         // end
-        // $write("\n");
     end
 
     //calculate z-to-z derivative 

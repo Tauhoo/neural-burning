@@ -1,5 +1,5 @@
 Analysis & Synthesis report for data_path
-Tue Mar 16 03:11:19 2021
+Sat Mar 20 04:40:30 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
 
 
@@ -14,19 +14,19 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Editio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register
- 13. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_predict_value
- 14. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_act_type
- 15. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_cost_type
- 16. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_dense_type
- 17. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_w
- 18. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_x
- 19. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_z
- 20. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_y
- 21. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_backprop_controll
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register
+ 12. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_predict_value
+ 13. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_act_type
+ 14. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_cost_type
+ 15. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_dense_type
+ 16. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_w
+ 17. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_x
+ 18. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_z
+ 19. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_y
+ 20. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_backprop_controll
+ 21. Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_learning_rate
  22. Parameter Settings for User Entity Instance: activation:activation
  23. Parameter Settings for User Entity Instance: backprop_stack_controller:backprop_controller
  24. Parameter Settings for User Entity Instance: backprop_stack:backpropagator
@@ -276,96 +276,99 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Editio
 268. Parameter Settings for User Entity Instance: code_storage:code_storage
 269. Parameter Settings for User Entity Instance: controller:controller
 270. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register
-271. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_act_type
-272. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_dense_type
-273. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_cost_type
-274. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_w
-275. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_load_w
-276. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_x
-277. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_label
-278. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_backprop_controll
-279. Parameter Settings for User Entity Instance: dense_layer_delay_reg:dense_layer_delay_reg
-280. Parameter Settings for User Entity Instance: dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_bundle
-281. Parameter Settings for User Entity Instance: dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_backprop_controll
-282. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register
-283. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_act_type
-284. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_act_type_forward
-285. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_dense_type
-286. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_cost_type
-287. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_w
-288. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_y
-289. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_x
-290. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_predict_value
-291. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_backprop_controll
-292. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register
-293. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_diff_to_all
-294. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_diff_start
-295. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_diff_dense
-296. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_diff_cost
-297. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_z
-298. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_predict_value
-299. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_backprop_controll
-300. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register
-301. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_predict_value
-302. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_dc_dw
-303. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_z
-304. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_w_layer_index
-305. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_w_row_index
-306. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_update_weight
-307. Parameter Settings for User Entity Instance: different:differ
-308. Parameter Settings for User Entity Instance: different:differ|diff_dense:dd
-309. Parameter Settings for User Entity Instance: different:differ|diff_start:ds
-310. Parameter Settings for User Entity Instance: different:differ|diff_to_all:dta
-311. Parameter Settings for User Entity Instance: different:differ|diff_cost:dc
-312. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register
-313. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code
-314. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index
-315. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_reset_code_count
-316. Parameter Settings for User Entity Instance: matrix_storage:input_storage
-317. Parameter Settings for User Entity Instance: spreader:is_load_spreader_0
-318. Parameter Settings for User Entity Instance: spreader:is_load_spreader_1
-319. Parameter Settings for User Entity Instance: matrix_storage:label_storage
-320. Parameter Settings for User Entity Instance: matrix_location_spreader:matrix_location_spreader
-321. Parameter Settings for User Entity Instance: matrix_location_spreader:matrix_location_spreader|spreader:spreader_1
-322. Parameter Settings for User Entity Instance: matrix_location_spreader:matrix_location_spreader|spreader:sreader_2
-323. Parameter Settings for User Entity Instance: matrix_storage_locator:matrix_storage_locator
-324. Parameter Settings for User Entity Instance: mult_matrix_prep:mult_matrix_prep
-325. Parameter Settings for User Entity Instance: mult_matrix_revert:mult_matrix_revert
-326. Parameter Settings for User Entity Instance: parameter_storage:parameter_storage
-327. Parameter Settings for User Entity Instance: parse:parse
-328. Parameter Settings for User Entity Instance: systolic:systolic
-329. Parameter Settings for User Entity Instance: train_data_mux:train_data_mux
-330. Parameter Settings for User Entity Instance: w_and_x_spreder:w_and_x_spreader
-331. Parameter Settings for User Entity Instance: w_and_x_spreder:w_and_x_spreader|spreader:spreader_w
-332. Parameter Settings for User Entity Instance: w_and_x_spreder:w_and_x_spreader|spreader:sreader_x
-333. Parameter Settings for User Entity Instance: weight_storage:weight_storage
-334. Port Connectivity Checks: "backprop_stack:backpropagator|start_store:set_up_start_diff[2].start_store_inst"
-335. Port Connectivity Checks: "backprop_stack:backpropagator|start_store:set_up_start_diff[1].start_store_inst"
-336. Port Connectivity Checks: "backprop_stack:backpropagator|start_store:set_up_start_diff[0].start_store_inst"
-337. Port Connectivity Checks: "backprop_stack:backpropagator|mult_matrix_revert:set_up_systolic_array[2].mult_systolic_matrix_revert_inst"
-338. Port Connectivity Checks: "backprop_stack:backpropagator|continuous_systolic:set_up_systolic_array[2].continuous_systolic"
-339. Port Connectivity Checks: "backprop_stack:backpropagator|mult_matrix_revert:set_up_systolic_array[1].mult_systolic_matrix_revert_inst"
-340. Port Connectivity Checks: "backprop_stack:backpropagator|continuous_systolic:set_up_systolic_array[1].continuous_systolic"
-341. Port Connectivity Checks: "backprop_stack:backpropagator|mult_matrix_revert:set_up_systolic_array[0].mult_systolic_matrix_revert_inst"
-342. Port Connectivity Checks: "backprop_stack:backpropagator|continuous_systolic:set_up_systolic_array[0].continuous_systolic"
-343. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|delay:set_up_z_to_z[9].delay_a_list"
-344. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[9].continuous_systolic"
-345. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[8].continuous_systolic"
-346. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[7].continuous_systolic"
-347. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[6].continuous_systolic"
-348. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[5].continuous_systolic"
-349. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[4].continuous_systolic"
-350. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[3].continuous_systolic"
-351. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[2].continuous_systolic"
-352. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[1].continuous_systolic"
-353. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[0].continuous_systolic|delay:delay_inst_reset_counter"
-354. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[0].continuous_systolic"
-355. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|mult_matrix_prep:mult_one_prepare_inst"
-356. Port Connectivity Checks: "backprop_stack:backpropagator|delay:delay_inst_to_store_single"
-357. Port Connectivity Checks: "activate_diff_reg:activate_to_diff_register|delay:delay_inst_act_type"
-358. Post-Synthesis Netlist Statistics for Top Partition
-359. Elapsed Time Per Partition
-360. Analysis & Synthesis Messages
+271. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_learning_rate
+272. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_act_type
+273. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_dense_type
+274. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_cost_type
+275. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_w
+276. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_load_w
+277. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_x
+278. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_label
+279. Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_backprop_controll
+280. Parameter Settings for User Entity Instance: dense_layer_delay_reg:dense_layer_delay_reg
+281. Parameter Settings for User Entity Instance: dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_bundle
+282. Parameter Settings for User Entity Instance: dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_learning_rate
+283. Parameter Settings for User Entity Instance: dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_backprop_controll
+284. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register
+285. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_act_type
+286. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_act_type_forward
+287. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_dense_type
+288. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_cost_type
+289. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_w
+290. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_y
+291. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_x
+292. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_predict_value
+293. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_backprop_controll
+294. Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_learning_rate
+295. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register
+296. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_diff_to_all
+297. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_diff_start
+298. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_diff_dense
+299. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_diff_cost
+300. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_z
+301. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_predict_value
+302. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_backprop_controll
+303. Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_learning_rate
+304. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register
+305. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_predict_value
+306. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_dc_dw
+307. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_z
+308. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_w_layer_index
+309. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_w_row_index
+310. Parameter Settings for User Entity Instance: diff_to_decode_register:diff_to_decode_register|delay:delay_inst_update_weight
+311. Parameter Settings for User Entity Instance: different:differ
+312. Parameter Settings for User Entity Instance: different:differ|diff_dense:dd
+313. Parameter Settings for User Entity Instance: different:differ|diff_start:ds
+314. Parameter Settings for User Entity Instance: different:differ|diff_to_all:dta
+315. Parameter Settings for User Entity Instance: different:differ|diff_cost:dc
+316. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register
+317. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code
+318. Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index
+319. Parameter Settings for User Entity Instance: matrix_storage:input_storage
+320. Parameter Settings for User Entity Instance: spreader:is_load_spreader_0
+321. Parameter Settings for User Entity Instance: spreader:is_load_spreader_1
+322. Parameter Settings for User Entity Instance: matrix_storage:label_storage
+323. Parameter Settings for User Entity Instance: matrix_location_spreader:matrix_location_spreader
+324. Parameter Settings for User Entity Instance: matrix_location_spreader:matrix_location_spreader|spreader:spreader_1
+325. Parameter Settings for User Entity Instance: matrix_location_spreader:matrix_location_spreader|spreader:sreader_2
+326. Parameter Settings for User Entity Instance: matrix_storage_locator:matrix_storage_locator
+327. Parameter Settings for User Entity Instance: mult_matrix_prep:mult_matrix_prep
+328. Parameter Settings for User Entity Instance: mult_matrix_revert:mult_matrix_revert
+329. Parameter Settings for User Entity Instance: parameter_storage:parameter_storage
+330. Parameter Settings for User Entity Instance: parse:parse
+331. Parameter Settings for User Entity Instance: systolic:systolic
+332. Parameter Settings for User Entity Instance: train_data_mux:train_data_mux
+333. Parameter Settings for User Entity Instance: w_and_x_spreder:w_and_x_spreader
+334. Parameter Settings for User Entity Instance: w_and_x_spreder:w_and_x_spreader|spreader:spreader_w
+335. Parameter Settings for User Entity Instance: w_and_x_spreder:w_and_x_spreader|spreader:sreader_x
+336. Parameter Settings for User Entity Instance: weight_storage:weight_storage
+337. Port Connectivity Checks: "backprop_stack:backpropagator|start_store:set_up_start_diff[2].start_store_inst"
+338. Port Connectivity Checks: "backprop_stack:backpropagator|start_store:set_up_start_diff[1].start_store_inst"
+339. Port Connectivity Checks: "backprop_stack:backpropagator|start_store:set_up_start_diff[0].start_store_inst"
+340. Port Connectivity Checks: "backprop_stack:backpropagator|mult_matrix_revert:set_up_systolic_array[2].mult_systolic_matrix_revert_inst"
+341. Port Connectivity Checks: "backprop_stack:backpropagator|continuous_systolic:set_up_systolic_array[2].continuous_systolic"
+342. Port Connectivity Checks: "backprop_stack:backpropagator|mult_matrix_revert:set_up_systolic_array[1].mult_systolic_matrix_revert_inst"
+343. Port Connectivity Checks: "backprop_stack:backpropagator|continuous_systolic:set_up_systolic_array[1].continuous_systolic"
+344. Port Connectivity Checks: "backprop_stack:backpropagator|mult_matrix_revert:set_up_systolic_array[0].mult_systolic_matrix_revert_inst"
+345. Port Connectivity Checks: "backprop_stack:backpropagator|continuous_systolic:set_up_systolic_array[0].continuous_systolic"
+346. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|delay:set_up_z_to_z[9].delay_a_list"
+347. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[9].continuous_systolic"
+348. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[8].continuous_systolic"
+349. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[7].continuous_systolic"
+350. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[6].continuous_systolic"
+351. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[5].continuous_systolic"
+352. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[4].continuous_systolic"
+353. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[3].continuous_systolic"
+354. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[2].continuous_systolic"
+355. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[1].continuous_systolic"
+356. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[0].continuous_systolic|delay:delay_inst_reset_counter"
+357. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[0].continuous_systolic"
+358. Port Connectivity Checks: "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|mult_matrix_prep:mult_one_prepare_inst"
+359. Port Connectivity Checks: "backprop_stack:backpropagator|delay:delay_inst_to_store_single"
+360. Port Connectivity Checks: "activate_diff_reg:activate_to_diff_register|delay:delay_inst_act_type"
+361. Post-Synthesis Netlist Statistics for Top Partition
+362. Elapsed Time Per Partition
+363. Analysis & Synthesis Messages
 
 
 
@@ -392,14 +395,14 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                  ;
 +---------------------------------+-------------------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 16 03:11:19 2021                       ;
+; Analysis & Synthesis Status     ; Successful - Sat Mar 20 04:40:30 2021                       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition ;
 ; Revision Name                   ; data_path                                                   ;
 ; Top-level Entity Name           ; data_path                                                   ;
 ; Family                          ; Cyclone V                                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                                         ;
-; Total registers                 ; 1329                                                        ;
-; Total pins                      ; 437                                                         ;
+; Total registers                 ; 1320                                                        ;
+; Total pins                      ; 421                                                         ;
 ; Total virtual pins              ; 0                                                           ;
 ; Total block memory bits         ; 0                                                           ;
 ; Total DSP Blocks                ; 0                                                           ;
@@ -571,43 +574,41 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 1057          ;
+; Estimate of Logic utilization (ALMs needed) ; 1053          ;
 ;                                             ;               ;
-; Combinational ALUT usage for logic          ; 671           ;
+; Combinational ALUT usage for logic          ; 664           ;
 ;     -- 7 input functions                    ; 290           ;
-;     -- 6 input functions                    ; 142           ;
-;     -- 5 input functions                    ; 36            ;
+;     -- 6 input functions                    ; 130           ;
+;     -- 5 input functions                    ; 41            ;
 ;     -- 4 input functions                    ; 24            ;
 ;     -- <=3 input functions                  ; 179           ;
 ;                                             ;               ;
-; Dedicated logic registers                   ; 1329          ;
+; Dedicated logic registers                   ; 1320          ;
 ;                                             ;               ;
-; I/O pins                                    ; 437           ;
+; I/O pins                                    ; 421           ;
 ;                                             ;               ;
 ; Total DSP Blocks                            ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clk_clk~input ;
-; Maximum fan-out                             ; 1329          ;
-; Total fan-out                               ; 8225          ;
-; Average fan-out                             ; 2.86          ;
+; Maximum fan-out                             ; 1320          ;
+; Total fan-out                               ; 8136          ;
+; Average fan-out                             ; 2.88          ;
 +---------------------------------------------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
-+------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Entity Name       ; Library Name ;
-+------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+-------------------+--------------+
-; |data_path                                     ; 671 (0)             ; 1329 (0)                  ; 0                 ; 0          ; 437  ; 0            ; |data_path                                                                             ; data_path         ; data_path    ;
-;    |code_count:code_count|                     ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|code_count:code_count                                                       ; code_count        ; data_path    ;
-;    |code_storage:code_storage|                 ; 593 (593)           ; 1244 (1244)               ; 0                 ; 0          ; 0    ; 0            ; |data_path|code_storage:code_storage                                                   ; code_storage      ; data_path    ;
-;    |controller:controller|                     ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |data_path|controller:controller                                                       ; controller        ; data_path    ;
-;    |fetch_decode_reg:fetch_to_decode_register| ; 0 (0)               ; 45 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register                                   ; fetch_decode_reg  ; data_path    ;
-;       |delay:delay_inst_code_index|            ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index       ; delay             ; data_path    ;
-;       |delay:delay_inst_code|                  ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code             ; delay             ; data_path    ;
-;       |delay:delay_inst_reset_code_count|      ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_reset_code_count ; delay             ; data_path    ;
-;    |parameter_storage:parameter_storage|       ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |data_path|parameter_storage:parameter_storage                                         ; parameter_storage ; data_path    ;
-+------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------+-------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                          ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name      ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+------------------+--------------+
+; |data_path                                     ; 664 (0)             ; 1320 (0)                  ; 0                 ; 0          ; 421  ; 0            ; |data_path                                                                       ; data_path        ; data_path    ;
+;    |code_count:code_count|                     ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|code_count:code_count                                                 ; code_count       ; data_path    ;
+;    |code_storage:code_storage|                 ; 593 (593)           ; 1244 (1244)               ; 0                 ; 0          ; 0    ; 0            ; |data_path|code_storage:code_storage                                             ; code_storage     ; data_path    ;
+;    |controller:controller|                     ; 39 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |data_path|controller:controller                                                 ; controller       ; data_path    ;
+;    |fetch_decode_reg:fetch_to_decode_register| ; 0 (0)               ; 44 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register                             ; fetch_decode_reg ; data_path    ;
+;       |delay:delay_inst_code_index|            ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code_index ; delay            ; data_path    ;
+;       |delay:delay_inst_code|                  ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code       ; delay            ; data_path    ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -620,23 +621,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                  ;
-+--------------------------------------------------------------+----------------------------------------------------------------------+
-; Register name                                                ; Reason for Removal                                                   ;
-+--------------------------------------------------------------+----------------------------------------------------------------------+
-; parameter_storage:parameter_storage|learning_rate_reg[9..15] ; Merged with parameter_storage:parameter_storage|learning_rate_reg[8] ;
-; parameter_storage:parameter_storage|learning_rate_reg[8]     ; Stuck at GND due to stuck port data_in                               ;
-; Total Number of Removed Registers = 8                        ;                                                                      ;
-+--------------------------------------------------------------+----------------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1329  ;
+; Total registers                              ; 1320  ;
 ; Number of registers using Synchronous Clear  ; 108   ;
 ; Number of registers using Synchronous Load   ; 76    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -651,8 +641,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][8] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |data_path|code_storage:code_storage|code_index[25]                                     ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |data_path|fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code|buffer[0][0] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |data_path|code_storage:code_storage|code_index[26]                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
 
 
@@ -666,6 +656,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cost_type_size         ; 8     ; Signed Integer                                          ;
 ; dense_type_size        ; 4     ; Signed Integer                                          ;
 ; act_type_size          ; 4     ; Signed Integer                                          ;
+; learning_rate_size     ; 16    ; Signed Integer                                          ;
 ; backprop_controll_size ; 66    ; Signed Integer                                          ;
 +------------------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -788,6 +779,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: activate_diff_reg:activate_to_diff_register|delay:delay_inst_learning_rate ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                                                                 ;
+; size           ; 1     ; Signed Integer                                                                                 ;
+; cycle          ; 1     ; Signed Integer                                                                                 ;
+; default_value  ; 0     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: activation:activation ;
 +----------------+-------+-------------------------------------------+
@@ -815,13 +819,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: backprop_stack:backpropagator ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; data_size      ; 16    ; Signed Integer                                    ;
-; size           ; 3     ; Signed Integer                                    ;
-; max_layer_size ; 10    ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
++--------------------+-------+-----------------------------------------------+
+; Parameter Name     ; Value ; Type                                          ;
++--------------------+-------+-----------------------------------------------+
+; data_size          ; 16    ; Signed Integer                                ;
+; size               ; 3     ; Signed Integer                                ;
+; max_layer_size     ; 10    ; Signed Integer                                ;
+; learning_rate_size ; 16    ; Signed Integer                                ;
++--------------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -3769,9 +3774,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; data_size              ; 16    ; Signed Integer                                        ;
 ; cost_type_size         ; 8     ; Signed Integer                                        ;
 ; dense_type_size        ; 4     ; Signed Integer                                        ;
+; learning_rate_size     ; 16    ; Signed Integer                                        ;
 ; act_type_size          ; 4     ; Signed Integer                                        ;
 ; backprop_controll_size ; 66    ; Signed Integer                                        ;
 +------------------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decode_dense_reg:decode_to_dense_register|delay:delay_inst_learning_rate ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                                                               ;
+; size           ; 1     ; Signed Integer                                                                               ;
+; cycle          ; 1     ; Signed Integer                                                                               ;
+; default_value  ; 0     ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -3889,6 +3908,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cost_type_size         ; 8     ; Signed Integer                                          ;
 ; dense_type_size        ; 4     ; Signed Integer                                          ;
 ; act_type_size          ; 4     ; Signed Integer                                          ;
+; learning_rate_size     ; 16    ; Signed Integer                                          ;
 ; cycle                  ; 5     ; Signed Integer                                          ;
 ; backprop_controll_size ; 66    ; Signed Integer                                          ;
 +------------------------+-------+---------------------------------------------------------+
@@ -3905,6 +3925,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycle          ; 5     ; Signed Integer                                                                          ;
 ; default_value  ; 0     ; Signed Integer                                                                          ;
 +----------------+-------+-----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_learning_rate ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                                                                 ;
+; size           ; 1     ; Signed Integer                                                                                 ;
+; cycle          ; 5     ; Signed Integer                                                                                 ;
+; default_value  ; 0     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -3931,6 +3964,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cost_type_size         ; 8     ; Signed Integer                                            ;
 ; dense_type_size        ; 4     ; Signed Integer                                            ;
 ; act_type_size          ; 4     ; Signed Integer                                            ;
+; learning_rate_size     ; 16    ; Signed Integer                                            ;
 ; backprop_controll_size ; 66    ; Signed Integer                                            ;
 +------------------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -4053,6 +4087,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dense_activate_reg:dense_to_activate_register|delay:delay_inst_learning_rate ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                                                                   ;
+; size           ; 1     ; Signed Integer                                                                                   ;
+; cycle          ; 1     ; Signed Integer                                                                                   ;
+; default_value  ; 0     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register ;
 +------------------------+-------+---------------------------------------------------------+
@@ -4061,6 +4108,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; size                   ; 3     ; Signed Integer                                          ;
 ; data_size              ; 16    ; Signed Integer                                          ;
 ; dense_type_size        ; 4     ; Signed Integer                                          ;
+; learning_rate_size     ; 16    ; Signed Integer                                          ;
 ; backprop_controll_size ; 66    ; Signed Integer                                          ;
 +------------------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -4154,6 +4202,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycle          ; 1     ; Signed Integer                                                                                     ;
 ; default_value  ; 0     ; Signed Integer                                                                                     ;
 +----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: diff_backprop_reg:diff_to_backprop_register|delay:delay_inst_learning_rate ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                                                                 ;
+; size           ; 1     ; Signed Integer                                                                                 ;
+; cycle          ; 1     ; Signed Integer                                                                                 ;
+; default_value  ; 0     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -4338,19 +4399,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycle          ; 1     ; Signed Integer                                                                            ;
 ; default_value  ; 0     ; Signed Integer                                                                            ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_reset_code_count ;
-+----------------+-------+-------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                            ;
-+----------------+-------+-------------------------------------------------------------------------------------------------+
-; data_size      ; 1     ; Signed Integer                                                                                  ;
-; size           ; 1     ; Signed Integer                                                                                  ;
-; cycle          ; 1     ; Signed Integer                                                                                  ;
-; default_value  ; 0     ; Signed Integer                                                                                  ;
-+----------------+-------+-------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -4795,27 +4843,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1329                        ;
+; arriav_ff             ; 1320                        ;
 ;     ENA               ; 1212                        ;
 ;     SCLR              ; 32                          ;
 ;     SCLR SLD          ; 76                          ;
-;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 672                         ;
+; arriav_lcell_comb     ; 664                         ;
 ;     arith             ; 73                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 72                          ;
 ;     extend            ; 290                         ;
 ;         7 data inputs ; 290                         ;
-;     normal            ; 309                         ;
-;         0 data inputs ; 1                           ;
+;     normal            ; 301                         ;
 ;         3 data inputs ; 106                         ;
 ;         4 data inputs ; 24                          ;
-;         5 data inputs ; 36                          ;
-;         6 data inputs ; 142                         ;
-; boundary_port         ; 437                         ;
+;         5 data inputs ; 41                          ;
+;         6 data inputs ; 130                         ;
+; boundary_port         ; 421                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.70                       ;
-; Average LUT depth     ; 5.19                        ;
+; Average LUT depth     ; 5.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -4834,7 +4880,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
-    Info: Processing started: Tue Mar 16 03:10:58 2021
+    Info: Processing started: Sat Mar 20 04:40:15 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off data_path -c data_path
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -4915,31 +4961,48 @@ Info (12021): Found 1 design units, including 1 entities, in source file data_pa
 Info (12021): Found 1 design units, including 1 entities, in source file data_path/synthesis/submodules/activate_diff_reg.sv
     Info (12023): Found entity 1: activate_diff_reg File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 1
 Info (12127): Elaborating entity "data_path" for the top level hierarchy
-Info (12128): Elaborating entity "activate_diff_reg" for hierarchy "activate_diff_reg:activate_to_diff_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 180
-Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_predict_value" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 57
-Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_cost_type" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 63
+Info (12128): Elaborating entity "activate_diff_reg" for hierarchy "activate_diff_reg:activate_to_diff_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 187
+Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_predict_value" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 60
+Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_cost_type" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 66
 Warning (10230): Verilog HDL assignment warning at delay.sv(15): truncated value with size 32 to match size of target (8) File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 15
-Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_dense_type" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 66
+Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_dense_type" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 69
 Warning (10230): Verilog HDL assignment warning at delay.sv(15): truncated value with size 32 to match size of target (4) File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 15
-Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_backprop_controll" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 81
-Info (12128): Elaborating entity "activation" for hierarchy "activation:activation" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 190
+Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_backprop_controll" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 84
+Info (12128): Elaborating entity "delay" for hierarchy "activate_diff_reg:activate_to_diff_register|delay:delay_inst_learning_rate" File: G:/neural-burning/data_path/data_path/synthesis/submodules/activate_diff_reg.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at delay.sv(15): truncated value with size 32 to match size of target (16) File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 15
+Info (12128): Elaborating entity "activation" for hierarchy "activation:activation" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 197
 Warning (10230): Verilog HDL assignment warning at gdo.sv(55): truncated value with size 32 to match size of target (16) File: G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv Line: 55
 Warning (10230): Verilog HDL assignment warning at gdo.sv(75): truncated value with size 24 to match size of target (16) File: G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv Line: 75
-Info (12128): Elaborating entity "backprop_stack_controller" for hierarchy "backprop_stack_controller:backprop_controller" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 214
-Info (12128): Elaborating entity "backprop_stack" for hierarchy "backprop_stack:backpropagator" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 236
-Warning (10036): Verilog HDL or VHDL warning at backprop_stack.sv(105): object "z_to_z_current_row" assigned a value but never read File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 105
-Warning (10036): Verilog HDL or VHDL warning at backprop_stack.sv(378): object "start_active_train" assigned a value but never read File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 378
-Warning (10230): Verilog HDL assignment warning at backprop_stack.sv(87): truncated value with size 32 to match size of target (3) File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 87
-Info (12128): Elaborating entity "z_to_z_calculator" for hierarchy "backprop_stack:backpropagator|z_to_z_calculator:set_up_z_to_z_calculator[0].z_to_z_calculator_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 134
+Info (12128): Elaborating entity "backprop_stack_controller" for hierarchy "backprop_stack_controller:backprop_controller" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 221
+Info (12128): Elaborating entity "backprop_stack" for hierarchy "backprop_stack:backpropagator" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 245
+Warning (10036): Verilog HDL or VHDL warning at backprop_stack.sv(108): object "z_to_z_current_row" assigned a value but never read File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 108
+Warning (10036): Verilog HDL or VHDL warning at backprop_stack.sv(381): object "start_active_train" assigned a value but never read File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 381
+Warning (10230): Verilog HDL assignment warning at backprop_stack.sv(90): truncated value with size 32 to match size of target (3) File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 90
+Warning (10175): Verilog HDL warning at backprop_stack.sv(499): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 499
+Warning (10175): Verilog HDL warning at backprop_stack.sv(501): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 501
+Warning (10175): Verilog HDL warning at backprop_stack.sv(503): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 503
+Warning (10175): Verilog HDL warning at backprop_stack.sv(505): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 505
+Warning (10175): Verilog HDL warning at backprop_stack.sv(507): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 507
+Warning (10175): Verilog HDL warning at backprop_stack.sv(509): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 509
+Warning (10175): Verilog HDL warning at backprop_stack.sv(512): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 512
+Warning (10175): Verilog HDL warning at backprop_stack.sv(515): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 515
+Warning (10175): Verilog HDL warning at backprop_stack.sv(518): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 518
+Warning (10175): Verilog HDL warning at backprop_stack.sv(521): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 521
+Warning (10175): Verilog HDL warning at backprop_stack.sv(524): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 524
+Warning (10175): Verilog HDL warning at backprop_stack.sv(527): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 527
+Warning (10175): Verilog HDL warning at backprop_stack.sv(530): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 530
+Info (12128): Elaborating entity "z_to_z_calculator" for hierarchy "backprop_stack:backpropagator|z_to_z_calculator:set_up_z_to_z_calculator[0].z_to_z_calculator_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 137
+Warning (10175): Verilog HDL warning at z_to_z_calculator.sv(40): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/z_to_z_calculator.sv Line: 40
+Warning (10175): Verilog HDL warning at z_to_z_calculator.sv(60): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/z_to_z_calculator.sv Line: 60
 Info (12128): Elaborating entity "mult_matrix_prep" for hierarchy "backprop_stack:backpropagator|z_to_z_calculator:set_up_z_to_z_calculator[0].z_to_z_calculator_inst|mult_matrix_prep:mult_z_to_z_matrix_prep_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/z_to_z_calculator.sv Line: 79
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "buffer" into its bus
-Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:delay_inst_to_store_single" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 197
-Info (12128): Elaborating entity "transformer" for hierarchy "backprop_stack:backpropagator|transformer:transformer_cost_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 231
+Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:delay_inst_to_store_single" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 200
+Info (12128): Elaborating entity "transformer" for hierarchy "backprop_stack:backpropagator|transformer:transformer_cost_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 234
 Warning (10036): Verilog HDL or VHDL warning at transformer.sv(19): object "index" assigned a value but never read File: G:/neural-burning/data_path/data_path/synthesis/submodules/transformer.sv Line: 19
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "transform_buffer" into its bus
-Info (12128): Elaborating entity "mult_matrix_revert" for hierarchy "backprop_stack:backpropagator|mult_matrix_revert:mult_transformed_diff_start_revert_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 239
+Info (12128): Elaborating entity "mult_matrix_revert" for hierarchy "backprop_stack:backpropagator|mult_matrix_revert:mult_transformed_diff_start_revert_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 242
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "buffer" into its bus
-Info (12128): Elaborating entity "systolic_array" for hierarchy "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 325
+Info (12128): Elaborating entity "systolic_array" for hierarchy "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 328
 Warning (10036): Verilog HDL or VHDL warning at systolic_array.sv(26): object "trans_list" assigned a value but never read File: G:/neural-burning/data_path/data_path/synthesis/submodules/systolic_array.sv Line: 26
 Warning (10230): Verilog HDL assignment warning at systolic_array.sv(60): truncated value with size 32 to match size of target (3) File: G:/neural-burning/data_path/data_path/synthesis/submodules/systolic_array.sv Line: 60
 Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|delay:delay_inst_current_layer_wire" File: G:/neural-burning/data_path/data_path/synthesis/submodules/systolic_array.sv Line: 34
@@ -4951,59 +5014,66 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "b_reg" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "sum_wire" into its bus
 Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|systolic_array:set_up_systolic_array[0].systolic_array|continuous_systolic:set_up_z_to_z[0].continuous_systolic|delay:delay_inst_reset_counter" File: G:/neural-burning/data_path/data_path/synthesis/submodules/continuous_systolic.sv Line: 58
-Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:set_up_systolic_array[0].delay_transform_reset_counter" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 347
+Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:set_up_systolic_array[0].delay_transform_reset_counter" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 350
 Warning (10230): Verilog HDL assignment warning at delay.sv(15): truncated value with size 32 to match size of target (1) File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 15
-Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:delay_systolic_transformed_result[0].delay_inst_systolic_array_result" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 371
-Info (12128): Elaborating entity "start_store" for hierarchy "backprop_stack:backpropagator|start_store:set_up_start_diff[0].start_store_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 436
+Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:delay_systolic_transformed_result[0].delay_inst_systolic_array_result" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 374
+Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:delay_systolic_transformed_result[1].delay_inst_systolic_array_result" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 374
+Info (12128): Elaborating entity "start_store" for hierarchy "backprop_stack:backpropagator|start_store:set_up_start_diff[0].start_store_inst" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 439
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "act_storage" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "start_storage" into its bus
-Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:set_up_start_diff[0].delay_inst_systolic_array_result" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 443
-Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:delay_inst_systolic_array_result" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 451
-Info (12128): Elaborating entity "code_count" for hierarchy "code_count:code_count" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 242
-Info (12128): Elaborating entity "code_storage" for hierarchy "code_storage:code_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 257
+Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:set_up_start_diff[0].delay_inst_systolic_array_result" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 446
+Info (12128): Elaborating entity "delay" for hierarchy "backprop_stack:backpropagator|delay:delay_inst_systolic_array_result" File: G:/neural-burning/data_path/data_path/synthesis/submodules/backprop_stack.sv Line: 454
+Info (12128): Elaborating entity "code_count" for hierarchy "code_count:code_count" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 251
+Info (12128): Elaborating entity "code_storage" for hierarchy "code_storage:code_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 266
 Warning (10230): Verilog HDL assignment warning at code_storage.sv(35): truncated value with size 32 to match size of target (12) File: G:/neural-burning/data_path/data_path/synthesis/submodules/code_storage.sv Line: 35
-Info (12128): Elaborating entity "controller" for hierarchy "controller:controller" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 286
-Info (12128): Elaborating entity "decode_dense_reg" for hierarchy "decode_dense_reg:decode_to_dense_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 313
-Info (12128): Elaborating entity "delay" for hierarchy "decode_dense_reg:decode_to_dense_register|delay:delay_inst_load_w" File: G:/neural-burning/data_path/data_path/synthesis/submodules/decode_dense_reg.sv Line: 61
+Info (12128): Elaborating entity "controller" for hierarchy "controller:controller" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 295
+Info (12128): Elaborating entity "decode_dense_reg" for hierarchy "decode_dense_reg:decode_to_dense_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 325
+Info (12128): Elaborating entity "delay" for hierarchy "decode_dense_reg:decode_to_dense_register|delay:delay_inst_load_w" File: G:/neural-burning/data_path/data_path/synthesis/submodules/decode_dense_reg.sv Line: 69
 Warning (10230): Verilog HDL assignment warning at delay.sv(15): truncated value with size 32 to match size of target (1) File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 15
-Info (12128): Elaborating entity "dense_layer_delay_reg" for hierarchy "dense_layer_delay_reg:dense_layer_delay_reg" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 338
-Info (12128): Elaborating entity "delay" for hierarchy "dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_bundle" File: G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv Line: 67
-Info (12128): Elaborating entity "delay" for hierarchy "dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_backprop_controll" File: G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv Line: 70
-Info (12128): Elaborating entity "dense_activate_reg" for hierarchy "dense_activate_reg:dense_to_activate_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 367
-Info (12128): Elaborating entity "diff_backprop_reg" for hierarchy "diff_backprop_reg:diff_to_backprop_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 390
-Info (12128): Elaborating entity "diff_to_decode_register" for hierarchy "diff_to_decode_register:diff_to_decode_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 409
+Info (12128): Elaborating entity "dense_layer_delay_reg" for hierarchy "dense_layer_delay_reg:dense_layer_delay_reg" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 353
+Info (12128): Elaborating entity "delay" for hierarchy "dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_bundle" File: G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv Line: 72
+Info (12128): Elaborating entity "delay" for hierarchy "dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_learning_rate" File: G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at delay.sv(15): truncated value with size 32 to match size of target (16) File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 15
+Info (12128): Elaborating entity "delay" for hierarchy "dense_layer_delay_reg:dense_layer_delay_reg|delay:delay_inst_backprop_controll" File: G:/neural-burning/data_path/data_path/synthesis/submodules/dense_layer_delay_reg.sv Line: 78
+Info (12128): Elaborating entity "dense_activate_reg" for hierarchy "dense_activate_reg:dense_to_activate_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 385
+Info (12128): Elaborating entity "diff_backprop_reg" for hierarchy "diff_backprop_reg:diff_to_backprop_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 411
+Info (12128): Elaborating entity "diff_to_decode_register" for hierarchy "diff_to_decode_register:diff_to_decode_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 430
 Info (12128): Elaborating entity "delay" for hierarchy "diff_to_decode_register:diff_to_decode_register|delay:delay_inst_w_layer_index" File: G:/neural-burning/data_path/data_path/synthesis/submodules/diff_to_decode_register.sv Line: 46
-Info (12128): Elaborating entity "different" for hierarchy "different:differ" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 432
+Info (12128): Elaborating entity "different" for hierarchy "different:differ" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 453
 Info (12128): Elaborating entity "diff_dense" for hierarchy "different:differ|diff_dense:dd" File: G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv Line: 45
 Info (12128): Elaborating entity "diff_start" for hierarchy "different:differ|diff_start:ds" File: G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv Line: 46
 Info (12128): Elaborating entity "diff_to_all" for hierarchy "different:differ|diff_to_all:dta" File: G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv Line: 47
 Warning (10230): Verilog HDL assignment warning at gdo.sv(55): truncated value with size 32 to match size of target (16) File: G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv Line: 55
 Warning (10230): Verilog HDL assignment warning at gdo.sv(75): truncated value with size 24 to match size of target (16) File: G:/neural-burning/data_path/data_path/synthesis/submodules/gdo.sv Line: 75
 Info (12128): Elaborating entity "diff_cost" for hierarchy "different:differ|diff_cost:dc" File: G:/neural-burning/data_path/data_path/synthesis/submodules/different.sv Line: 48
-Info (12128): Elaborating entity "fetch_decode_reg" for hierarchy "fetch_decode_reg:fetch_to_decode_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 444
-Info (12128): Elaborating entity "delay" for hierarchy "fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code" File: G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv Line: 23
+Info (12128): Elaborating entity "fetch_decode_reg" for hierarchy "fetch_decode_reg:fetch_to_decode_register" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 463
+Info (12128): Elaborating entity "delay" for hierarchy "fetch_decode_reg:fetch_to_decode_register|delay:delay_inst_code" File: G:/neural-burning/data_path/data_path/synthesis/submodules/fetch_decode_reg.sv Line: 19
 Warning (10230): Verilog HDL assignment warning at delay.sv(15): truncated value with size 32 to match size of target (12) File: G:/neural-burning/data_path/data_path/synthesis/submodules/delay.sv Line: 15
-Info (12128): Elaborating entity "matrix_storage" for hierarchy "matrix_storage:input_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 460
+Info (12128): Elaborating entity "matrix_storage" for hierarchy "matrix_storage:input_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 479
 Warning (10230): Verilog HDL assignment warning at matrix_storage.sv(33): truncated value with size 32 to match size of target (16) File: G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_storage.sv Line: 33
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "storage" into its bus
-Info (12128): Elaborating entity "spreader" for hierarchy "spreader:is_load_spreader_0" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 468
-Info (12128): Elaborating entity "matrix_location_spreader" for hierarchy "matrix_location_spreader:matrix_location_spreader" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 504
+Info (12128): Elaborating entity "spreader" for hierarchy "spreader:is_load_spreader_0" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 487
+Info (12128): Elaborating entity "matrix_location_spreader" for hierarchy "matrix_location_spreader:matrix_location_spreader" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 523
 Info (12128): Elaborating entity "spreader" for hierarchy "matrix_location_spreader:matrix_location_spreader|spreader:spreader_1" File: G:/neural-burning/data_path/data_path/synthesis/submodules/matrix_location_spreader.sv Line: 20
-Info (12128): Elaborating entity "matrix_storage_locator" for hierarchy "matrix_storage_locator:matrix_storage_locator" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 514
-Info (12128): Elaborating entity "parameter_storage" for hierarchy "parameter_storage:parameter_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 553
-Info (12128): Elaborating entity "parse" for hierarchy "parse:parse" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 570
-Info (12128): Elaborating entity "systolic" for hierarchy "systolic:systolic" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 581
+Info (12128): Elaborating entity "matrix_storage_locator" for hierarchy "matrix_storage_locator:matrix_storage_locator" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 533
+Info (12128): Elaborating entity "parameter_storage" for hierarchy "parameter_storage:parameter_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 572
+Info (12128): Elaborating entity "parse" for hierarchy "parse:parse" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 589
+Info (12128): Elaborating entity "systolic" for hierarchy "systolic:systolic" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 600
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "w_reg" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "a_reg" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "sum_reg" into its bus
-Info (12128): Elaborating entity "train_data_mux" for hierarchy "train_data_mux:train_data_mux" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 594
-Info (12128): Elaborating entity "w_and_x_spreder" for hierarchy "w_and_x_spreder:w_and_x_spreader" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 608
+Info (12128): Elaborating entity "train_data_mux" for hierarchy "train_data_mux:train_data_mux" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 613
+Info (12128): Elaborating entity "w_and_x_spreder" for hierarchy "w_and_x_spreder:w_and_x_spreader" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 627
 Info (12128): Elaborating entity "spreader" for hierarchy "w_and_x_spreder:w_and_x_spreader|spreader:spreader_w" File: G:/neural-burning/data_path/data_path/synthesis/submodules/w_and_x_spreader.sv Line: 26
-Info (12128): Elaborating entity "weight_storage" for hierarchy "weight_storage:weight_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 628
+Info (12128): Elaborating entity "weight_storage" for hierarchy "weight_storage:weight_storage" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 647
 Warning (10855): Verilog HDL warning at weight_storage.sv(52): initial value for variable storage should be constant File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 52
-Warning (10175): Verilog HDL warning at weight_storage.sv(63): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 63
-Warning (10175): Verilog HDL warning at weight_storage.sv(69): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 69
-Warning (10175): Verilog HDL warning at weight_storage.sv(71): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 71
+Warning (10175): Verilog HDL warning at weight_storage.sv(64): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 64
+Warning (10175): Verilog HDL warning at weight_storage.sv(70): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 70
+Warning (10175): Verilog HDL warning at weight_storage.sv(72): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 72
+Warning (10175): Verilog HDL warning at weight_storage.sv(76): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 76
+Warning (10175): Verilog HDL warning at weight_storage.sv(78): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 78
+Warning (10175): Verilog HDL warning at weight_storage.sv(83): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 83
+Warning (10175): Verilog HDL warning at weight_storage.sv(85): ignoring unsupported system task File: G:/neural-burning/data_path/data_path/synthesis/submodules/weight_storage.sv Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "storage" into its bus
 Warning (12010): Port "bus_in" on the entity instantiation of "delay_inst_reset_counter" is connected to a signal of width 1. The formal width of the signal in the module is 48.  The extra bits will be driven by GND. File: G:/neural-burning/data_path/data_path/synthesis/submodules/continuous_systolic.sv Line: 58
 Warning (12030): Port "bus_out" on the entity instantiation of "delay_inst_reset_counter" is connected to a signal of width 1. The formal width of the signal in the module is 48.  The extra bits will be left dangling without any fan-out logic. File: G:/neural-burning/data_path/data_path/synthesis/submodules/continuous_systolic.sv Line: 58
@@ -5074,15 +5144,6 @@ Info (276014): Found 1 instances of uninferred RAM logic
 Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (101) in the Memory Initialization File "G:/neural-burning/data_path/db/data_path.ram0_code_storage_5b31f3b9.hdl.mif" -- setting initial value for remaining addresses to 0
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "G:/neural-burning/data_path/db/data_path.ram0_code_storage_5b31f3b9.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12241): 15 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "parameter_storage_0_learning_rate_interface_learning_rate[8]" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
-    Warning (13410): Pin "parameter_storage_0_learning_rate_interface_learning_rate[9]" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
-    Warning (13410): Pin "parameter_storage_0_learning_rate_interface_learning_rate[10]" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
-    Warning (13410): Pin "parameter_storage_0_learning_rate_interface_learning_rate[11]" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
-    Warning (13410): Pin "parameter_storage_0_learning_rate_interface_learning_rate[12]" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
-    Warning (13410): Pin "parameter_storage_0_learning_rate_interface_learning_rate[13]" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
-    Warning (13410): Pin "parameter_storage_0_learning_rate_interface_learning_rate[14]" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
-    Warning (13410): Pin "parameter_storage_0_learning_rate_interface_learning_rate[15]" is stuck at GND File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -5315,128 +5376,128 @@ Warning (21074): Design contains 342 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "label_storage_write_interface_write_data[46]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 21
     Warning (15610): No output dependent on input pin "label_storage_write_interface_write_data[47]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 21
     Warning (15610): No output dependent on input pin "matrix_storage_locator_reset_interface_reset" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 22
-    Warning (15610): No output dependent on input pin "reset_reset_n" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 24
-    Warning (15610): No output dependent on input pin "weight_storage_is_write_interface_is_write" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[0]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[1]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[2]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[3]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[4]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[5]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[6]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[7]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[8]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[9]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[10]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[11]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[12]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[13]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[14]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[15]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[16]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[17]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[18]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[19]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[20]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[21]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[22]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[23]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[24]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[25]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[26]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[27]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[28]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[29]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[30]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[31]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[0]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[1]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[2]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[3]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[4]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[5]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[6]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[7]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[8]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[9]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[10]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[11]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[12]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[13]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[14]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[15]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[16]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[17]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[18]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[19]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[20]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[21]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[22]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[23]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[24]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[25]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[26]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[27]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[28]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[29]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[30]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[31]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 27
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[0]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[1]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[2]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[3]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[4]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[5]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[6]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[7]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[8]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[9]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[10]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[11]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[12]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[13]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[14]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[15]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[16]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[17]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[18]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[19]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[20]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[21]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[22]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[23]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[24]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[25]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[26]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[27]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[28]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[29]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[30]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[31]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[32]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[33]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[34]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[35]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[36]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[37]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[38]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[39]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[40]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[41]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[42]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[43]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[44]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[45]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[46]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[47]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 29
-Info (21057): Implemented 2393 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "reset_reset_n" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 23
+    Warning (15610): No output dependent on input pin "weight_storage_is_write_interface_is_write" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 24
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[0]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[1]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[2]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[3]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[4]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[5]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[6]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[7]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[8]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[9]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[10]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[11]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[12]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[13]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[14]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[15]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[16]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[17]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[18]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[19]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[20]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[21]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[22]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[23]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[24]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[25]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[26]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[27]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[28]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[29]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[30]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_layer_index[31]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 25
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[0]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[1]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[2]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[3]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[4]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[5]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[6]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[7]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[8]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[9]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[10]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[11]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[12]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[13]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[14]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[15]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[16]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[17]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[18]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[19]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[20]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[21]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[22]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[23]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[24]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[25]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[26]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[27]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[28]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[29]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[30]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_row_index[31]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 26
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[0]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[1]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[2]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[3]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[4]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[5]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[6]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[7]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[8]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[9]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[10]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[11]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[12]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[13]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[14]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[15]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[16]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[17]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[18]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[19]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[20]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[21]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[22]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[23]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[24]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[25]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[26]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[27]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[28]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[29]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[30]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[31]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[32]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[33]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[34]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[35]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[36]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[37]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[38]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[39]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[40]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[41]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[42]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[43]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[44]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[45]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[46]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+    Warning (15610): No output dependent on input pin "weight_storage_write_interface_write_data[47]" File: G:/neural-burning/data_path/data_path/synthesis/data_path.v Line: 28
+Info (21057): Implemented 2361 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 389 input pins
-    Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 1956 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 442 warnings
-    Info: Peak virtual memory: 4969 megabytes
-    Info: Processing ended: Tue Mar 16 03:11:19 2021
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:26
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 1940 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 454 warnings
+    Info: Peak virtual memory: 4962 megabytes
+    Info: Processing ended: Sat Mar 20 04:40:30 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:25
 
 

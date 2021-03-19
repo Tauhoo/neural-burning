@@ -37,7 +37,7 @@ module z_to_z_calculator (
             act_reg <= diff_act;
         end
         // for (int i = 0; i < size; i = i + 1) begin
-        //     $write("%d ", diff_z_to_z_wire[data_size*(size - i) - 1 -: data_size] >> 8);
+        //     $write("%d ", diff_z_to_z[data_size*(size - i) - 1 -: data_size] >> 8);
         // end
 
         // $write("| ");

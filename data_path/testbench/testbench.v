@@ -13,7 +13,6 @@ module testbench  ;
   reg    weight_storage_is_write_interface_is_write   ; 
   reg    input_storage_is_write_interface_is_write   ; 
   reg  [31:0]  input_storage_write_interface_write_row_index   ; 
-  wire  [15:0]  parameter_storage_0_learning_rate_interface_learning_rate   ; 
   reg    matrix_storage_locator_reset_interface_reset   ; 
   reg    controller_enable_interface_enable   ; 
   reg  [47:0]  label_storage_write_interface_write_data   ; 
@@ -37,7 +36,6 @@ module testbench  ;
       .weight_storage_is_write_interface_is_write (weight_storage_is_write_interface_is_write ) ,
       .input_storage_is_write_interface_is_write (input_storage_is_write_interface_is_write ) ,
       .input_storage_write_interface_write_row_index (input_storage_write_interface_write_row_index ) ,
-      .parameter_storage_0_learning_rate_interface_learning_rate (parameter_storage_0_learning_rate_interface_learning_rate ) ,
       .matrix_storage_locator_reset_interface_reset (matrix_storage_locator_reset_interface_reset ) ,
       .controller_enable_interface_enable (controller_enable_interface_enable ) ,
       .label_storage_write_interface_write_data (label_storage_write_interface_write_data ) ,
@@ -91,7 +89,7 @@ module testbench  ;
    input_storage_write_interface_control_file = $fopen("G:/neural-burning/data_path/testbench/input_storage_write_interface_control.hex", "r");
 
    round = 0;
-   repeat(100)
+   repeat(160)
    begin
      $fscanf(weight_storage_write_interface_write_data_file, "%b %b %b\n", temp_data_1, temp_data_2, temp_data_3 );
      weight_storage_write_interface_write_data <= {temp_data_1, temp_data_2, temp_data_3};

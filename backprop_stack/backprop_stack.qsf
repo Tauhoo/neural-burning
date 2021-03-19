@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY backprop_stack
+set_global_assignment -name TOP_LEVEL_ENTITY z_to_z_calculator
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:43:57  DECEMBER 18, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 SP0.01std Lite Edition"

@@ -7,6 +7,7 @@ module dense_activate_reg (
     x,
     predict_value,
     backprop_controll,
+    learning_rate,
 
     act_type_out,
     act_type_forward_out,
@@ -18,6 +19,7 @@ module dense_activate_reg (
     x_out,
     predict_value_out,
     backprop_controll_out,
+    learning_rate_out,
     clk
 );
 
@@ -26,6 +28,7 @@ module dense_activate_reg (
     parameter cost_type_size = 8;
     parameter dense_type_size = 4;
     parameter act_type_size = 4;
+    parameter learning_rate_size = 16;
     parameter backprop_controll_size = 1 + 1 + 32 + 32 ;
 
     input [act_type_size - 1:0] act_type;
@@ -36,6 +39,7 @@ module dense_activate_reg (
     input [data_size*size - 1:0] x;
     input [data_size*size - 1:0] predict_value;
     input [backprop_controll_size - 1:0] backprop_controll;
+    input [learning_rate_size - 1:0] learning_rate;
 
     input clk;
 
@@ -49,6 +53,7 @@ module dense_activate_reg (
     output [data_size*size - 1:0] x_out;
     output [data_size*size - 1:0] predict_value_out;
     output [backprop_controll_size - 1:0] backprop_controll_out;
+    output [learning_rate_size - 1:0] learning_rate_out;
 
     delay #(.data_size(act_type_size), .size(1)) 
     delay_inst_act_type(.bus_in(act_type), .bus_out(act_type_out), .clk(clk));
@@ -78,5 +83,8 @@ module dense_activate_reg (
 
     delay #(.data_size(backprop_controll_size), .size(1))
     delay_inst_backprop_controll(.bus_in(backprop_controll), .bus_out(backprop_controll_out), .clk(clk));
+
+    delay #(.data_size(learning_rate_size), .size(1))
+    delay_inst_learning_rate(.bus_in(learning_rate), .bus_out(learning_rate_out), .clk(clk));
 
 endmodule

@@ -6,8 +6,8 @@ module activate_diff_reg (
     w, 
     x, 
     y,
-
     z,
+    learning_rate,
     backprop_controll,
     
     predict_value_out,
@@ -18,6 +18,7 @@ module activate_diff_reg (
     x_out,
     z_out,
     y_out,
+    learning_rate_out,
     backprop_controll_out,
     clk
 );
@@ -26,6 +27,7 @@ module activate_diff_reg (
     parameter cost_type_size = 8;
     parameter dense_type_size = 4;
     parameter act_type_size = 4;
+    parameter learning_rate_size = 16;
     parameter backprop_controll_size = 1 + 1 + 32 + 32 ;
 
     input [data_size*size - 1:0] predict_value;
@@ -35,7 +37,7 @@ module activate_diff_reg (
     input [data_size*size - 1:0] w;
     input [data_size*size - 1:0] x;
     input [data_size*size - 1:0] y;
-
+    input [learning_rate_size - 1:0] learning_rate;
 
     input [data_size*size - 1:0] z;
     input [backprop_controll_size - 1:0] backprop_controll;
@@ -52,6 +54,7 @@ module activate_diff_reg (
 
     output [data_size*size - 1:0] z_out;
     output [backprop_controll_size - 1:0] backprop_controll_out;
+    output [learning_rate_size - 1:0] learning_rate_out;
 
     delay #(.data_size(data_size), .size(size)) 
     delay_inst_predict_value(.bus_in(predict_value), .bus_out(predict_value_out), .clk(clk));
@@ -80,6 +83,8 @@ module activate_diff_reg (
     delay #(.data_size(backprop_controll_size), .size(1))
     delay_inst_backprop_controll(.bus_in(backprop_controll), .bus_out(backprop_controll_out), .clk(clk));
     
+    delay #(.data_size(learning_rate_size), .size(1))
+    delay_inst_learning_rate(.bus_in(learning_rate), .bus_out(learning_rate_out), .clk(clk));
     // always @(posedge clk ) begin
     //     $write("p ");
     //     for (int i = 0; i < size; i = i + 1) begin

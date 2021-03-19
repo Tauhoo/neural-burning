@@ -133,7 +133,23 @@ module backprop_stack_controller(
         //     current_layer_out, 
         //     current_row_out
         // );
-
+        // $write("diff_start ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(diff_start_out[data_size*(size - i) - 1 -: data_size]))/2**8);
+        // end
+        // $write("| diff_dense ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(diff_dense_out[data_size*(size - i) - 1 -: data_size]))/2**8);
+        // end
+        // $write("| diff_act ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(diff_to_all_out[data_size*(size - i) - 1 -: data_size]))/2**8);
+        // end
+        // $write("| diff_cost ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(diff_cost_out[data_size*(size - i) - 1 -: data_size]))/2**8);
+        // end
+        // $write("\n ");
         if (training) begin
             if (counter == size*(2*(last_layer + 1) + 1) - 1) begin
                 counter <= 0;

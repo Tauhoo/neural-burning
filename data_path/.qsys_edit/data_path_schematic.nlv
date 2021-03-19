@@ -1,103 +1,109 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst data_path.systolic -pg 1 -lvl 2 -y 3130
-preplace inst data_path.parameter_storage -pg 1 -lvl 2 -y 1430
-preplace inst data_path.mult_matrix_revert -pg 1 -lvl 2 -y 3230
-preplace inst data_path.train_data_mux -pg 1 -lvl 2 -y 2030
-preplace inst data_path.dense_layer_delay_reg -pg 1 -lvl 2 -y 2770
+preplace inst data_path.systolic -pg 1 -lvl 2 -y 3250
+preplace inst data_path.parameter_storage -pg 1 -lvl 2 -y 1510
+preplace inst data_path.mult_matrix_revert -pg 1 -lvl 2 -y 3350
+preplace inst data_path.train_data_mux -pg 1 -lvl 2 -y 2110
+preplace inst data_path.dense_layer_delay_reg -pg 1 -lvl 2 -y 2850
 preplace inst data_path.differ -pg 1 -lvl 2 -y 150
-preplace inst data_path.controller -pg 1 -lvl 2 -y 1190
-preplace inst data_path.activation -pg 1 -lvl 2 -y 2710
-preplace inst data_path.decode_to_dense_register -pg 1 -lvl 2 -y 2290
-preplace inst data_path.weight_storage -pg 1 -lvl 2 -y 2530
-preplace inst data_path.w_and_x_spreader -pg 1 -lvl 2 -y 2930
-preplace inst data_path.fetch_to_decode_register -pg 1 -lvl 2 -y 970
-preplace inst data_path.code_count -pg 1 -lvl 2 -y 750
-preplace inst data_path.input_storage -pg 1 -lvl 2 -y 1550
-preplace inst data_path.diff_to_decode_register -pg 1 -lvl 2 -y 590
-preplace inst data_path.matrix_storage_locator -pg 1 -lvl 2 -y 1850
+preplace inst data_path.controller -pg 1 -lvl 2 -y 1270
+preplace inst data_path.activation -pg 1 -lvl 2 -y 2790
+preplace inst data_path.decode_to_dense_register -pg 1 -lvl 2 -y 2370
+preplace inst data_path.weight_storage -pg 1 -lvl 2 -y 2650
+preplace inst data_path.w_and_x_spreader -pg 1 -lvl 2 -y 3050
+preplace inst data_path.fetch_to_decode_register -pg 1 -lvl 2 -y 1050
+preplace inst data_path.code_count -pg 1 -lvl 2 -y 790
+preplace inst data_path.input_storage -pg 1 -lvl 2 -y 1630
+preplace inst data_path.diff_to_decode_register -pg 1 -lvl 2 -y 670
+preplace inst data_path.matrix_storage_locator -pg 1 -lvl 2 -y 1930
+preplace inst data_path.backpropagator -pg 1 -lvl 2 -y 550
 preplace inst data_path -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst data_path.parse -pg 1 -lvl 2 -y 1110
-preplace inst data_path.label_storage -pg 1 -lvl 2 -y 2150
-preplace inst data_path.dense_to_activate_register -pg 1 -lvl 2 -y 3310
+preplace inst data_path.parse -pg 1 -lvl 2 -y 1190
+preplace inst data_path.label_storage -pg 1 -lvl 2 -y 2230
+preplace inst data_path.dense_to_activate_register -pg 1 -lvl 2 -y 3430
 preplace inst data_path.code_storage -pg 1 -lvl 2 -y 30
-preplace inst data_path.matrix_location_spreader -pg 1 -lvl 2 -y 1770
-preplace inst data_path.is_load_spreader_0 -pg 1 -lvl 2 -y 1690
-preplace inst data_path.mult_matrix_prep -pg 1 -lvl 2 -y 3050
-preplace inst data_path.is_load_spreader_1 -pg 1 -lvl 2 -y 1950
+preplace inst data_path.matrix_location_spreader -pg 1 -lvl 2 -y 1850
+preplace inst data_path.is_load_spreader_0 -pg 1 -lvl 2 -y 1770
+preplace inst data_path.backprop_controller -pg 1 -lvl 2 -y 430
+preplace inst data_path.mult_matrix_prep -pg 1 -lvl 2 -y 3170
+preplace inst data_path.is_load_spreader_1 -pg 1 -lvl 2 -y 2030
 preplace inst data_path.diff_to_backprop_register -pg 1 -lvl 2 -y 230
 preplace inst data_path.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst data_path.activate_to_diff_register -pg 1 -lvl 2 -y 830
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.diff_to_decode_register_in_weight_location_interface,(SLAVE)diff_to_decode_register.in_weight_location_interface) 1 0 2 NJ 640 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.out_activate_interface,(SLAVE)activation.in_data_interface) 1 1 1 750
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)input_storage.matrix_location_interface,(SLAVE)matrix_location_spreader.matrix_location_out_1_interface) 1 1 1 870
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)is_load_spreader_0.is_load,(SLAVE)controller.i_is_load_interface) 1 1 1 770
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)systolic.data_stream_interface,(SLAVE)mult_matrix_prep.output_stream_interface) 1 1 1 910
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_layer_delay_reg.in_forward_signal_interface,(SLAVE)decode_to_dense_register.out_forward_interface) 1 1 1 870
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)matrix_storage_locator.is_load_interface,(SLAVE)is_load_spreader_0.is_load_2) 1 1 1 890
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)mult_matrix_revert.input_stream_interface,(SLAVE)systolic.y_stream_interface) 1 1 1 910
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)label_storage.is_write_interface,(SLAVE)data_path.label_storage_is_write_interface) 1 0 2 NJ 2200 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)is_load_spreader_1.is_load_1,(SLAVE)input_storage.is_read_interface) 1 1 1 790
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.parse_interface,(SLAVE)parameter_storage.is_update_parameter_interface) 1 1 1 870
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parameter_storage.in_parameter_interface,(SLAVE)parse.parameter_type_interface) 1 1 1 750
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)weight_storage.update_weight_location_interface,(SLAVE)diff_to_decode_register.out_weight_location_interface) 1 1 1 490
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)weight_storage.load_weight_interface,(SLAVE)controller.weigth_interface) 1 1 1 690
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)controller.enable_interface,(SLAVE)data_path.controller_enable_interface) 1 0 2 NJ 1280 NJ
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.code_storage_write_interface,(SLAVE)code_storage.write_interface) 1 0 2 NJ 120 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)train_data_mux.select_data_interface,(SLAVE)decode_to_dense_register.in_train_data_interface) 1 1 1 790
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.in_control_interface,(SLAVE)controller.forward_control_interface) 1 1 1 670
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)input_storage.read_data_interface,(SLAVE)train_data_mux.use_x_data_x_interface) 1 1 1 810
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.weight_storage_is_write_interface,(SLAVE)weight_storage.is_write_interface) 1 0 2 NJ 2580 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.in_x_and_label_interface,(SLAVE)differ.in_forward_interface) 1 1 1 650
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)code_count.count_interface,(SLAVE)controller.code_count_interface) 1 1 1 650
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)code_storage.code_interface,(SLAVE)fetch_to_decode_register.code_interface) 1 1 1 590
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)fetch_to_decode_register.code_index_out_interface,(SLAVE)data_path.fetch_to_decode_register_code_index_out_interface) 1 0 2 NJ 1000 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.in_diff_interface,(SLAVE)differ.diff_interface) 1 1 1 630
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.in_weight_interface,(SLAVE)weight_storage.weight_output_interface) 1 1 1 910
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)weight_storage.is_update_interface,(SLAVE)diff_to_decode_register.out_update_weight_interface) 1 1 1 510
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.in_forward_interface,(SLAVE)dense_layer_delay_reg.out_forward_signal_interface) 1 1 1 790
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.out_backprop_controll_interface,(SLAVE)data_path.diff_to_backprop_register_out_backprop_controll_interface) 1 0 2 NJ 320 NJ
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)label_storage.write_interface,(SLAVE)data_path.label_storage_write_interface) 1 0 2 NJ 2260 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)is_load_spreader_1.is_load,(SLAVE)is_load_spreader_0.is_load_1) 1 1 1 850
+preplace inst data_path.activate_to_diff_register -pg 1 -lvl 2 -y 870
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.out_backprop_controll_interface,(SLAVE)activate_to_diff_register.in_backprop_controll_interface) 1 1 1 430
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.out_activate_interface,(SLAVE)activation.in_data_interface) 1 1 1 710
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)code_storage.write_interface,(SLAVE)data_path.code_storage_write_interface) 1 0 2 NJ 120 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.in_backprop_controll_interface,(SLAVE)activate_to_diff_register.out_backprop_controll_interface) 1 1 1 610
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)systolic.data_stream_interface,(SLAVE)mult_matrix_prep.output_stream_interface) 1 1 1 890
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)matrix_storage_locator.is_load_interface,(SLAVE)is_load_spreader_0.is_load_2) 1 1 1 870
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.out_backprop_data_interface,(SLAVE)backprop_controller.backprop_controll_matrix_in_interface) 1 1 1 750
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)backprop_controller.backprop_controll_matrix_out_interface,(SLAVE)backpropagator.backprop_data_interface) 1 1 1 730
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.learning_rate_interface,(SLAVE)activate_to_diff_register.learning_rate_out_interface) 1 1 1 630
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.code_storage_enable_interface,(SLAVE)code_storage.enable_interface) 1 0 2 NJ 100 NJ
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)label_storage.is_write_interface,(SLAVE)data_path.label_storage_is_write_interface) 1 0 2 NJ 2280 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)is_load_spreader_1.is_load_1,(SLAVE)input_storage.is_read_interface) 1 1 1 770
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.parse_interface,(SLAVE)parameter_storage.is_update_parameter_interface) 1 1 1 850
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parameter_storage.in_parameter_interface,(SLAVE)parse.parameter_type_interface) 1 1 1 730
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.out_forward_interface,(SLAVE)dense_layer_delay_reg.in_forward_signal_interface) 1 1 1 890
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)weight_storage.load_weight_interface,(SLAVE)controller.weigth_interface) 1 1 1 650
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)mult_matrix_prep.input_stream_interface,(SLAVE)w_and_x_spreader.x_out_interface) 1 1 1 890
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.forward_control_interface,(SLAVE)decode_to_dense_register.in_control_interface) 1 1 1 630
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_decode_register.in_update_weight_interface,(SLAVE)backpropagator.backprop_controll_out_interface) 1 1 1 750
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)input_storage.read_data_interface,(SLAVE)train_data_mux.use_x_data_x_interface) 1 1 1 790
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)w_and_x_spreader.w_out_interface,(SLAVE)systolic.weight_interface) 1 1 1 870
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.weight_storage_write_interface,(SLAVE)weight_storage.write_interface) 1 0 2 NJ 2760 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parse.code_interface,(SLAVE)fetch_to_decode_register.code_out_interface) 1 1 1 750
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.out_dense_type_interface,(SLAVE)dense_layer_delay_reg.in_dense_type_interface) 1 1 1 870
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)label_storage.matrix_location_interface,(SLAVE)matrix_location_spreader.matrix_location_out_2_interface) 1 1 1 810
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.label_storage_write_interface,(SLAVE)label_storage.write_interface) 1 0 2 NJ 2340 NJ
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)fetch_to_decode_register.code_index_out_interface,(SLAVE)data_path.fetch_to_decode_register_code_index_out_interface) 1 0 2 NJ 1080 NJ
+preplace netloc FAN_OUT<net_container>data_path</net_container>(SLAVE)label_storage.clock,(SLAVE)systolic.clock,(SLAVE)activate_to_diff_register.clock,(SLAVE)dense_layer_delay_reg.clock,(SLAVE)code_storage.clock,(SLAVE)backpropagator.clock,(SLAVE)fetch_to_decode_register.clock,(SLAVE)mult_matrix_revert.clock,(SLAVE)decode_to_dense_register.clock,(SLAVE)diff_to_decode_register.clock,(SLAVE)input_storage.clock,(SLAVE)dense_to_activate_register.clock,(SLAVE)code_count.clock,(SLAVE)weight_storage.clock,(SLAVE)matrix_storage_locator.clock,(SLAVE)diff_to_backprop_register.clock,(MASTER)clk_0.clk,(SLAVE)parameter_storage.clock,(SLAVE)backprop_controller.clock,(SLAVE)mult_matrix_prep.clock) 1 1 1 410
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.in_y_interface,(SLAVE)mult_matrix_revert.output_stream_interface) 1 1 1 890
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)backpropagator.learning_rate_interface,(SLAVE)diff_to_backprop_register.learning_rate_out_interface) 1 1 1 670
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)is_load_spreader_1.is_load_2,(SLAVE)label_storage.is_read_interface) 1 1 1 870
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.in_weight_interface,(SLAVE)weight_storage.weight_output_interface) 1 1 1 830
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.in_forward_interface,(SLAVE)dense_layer_delay_reg.out_forward_signal_interface) 1 1 1 770
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_decode_register.in_x_and_label_interface,(SLAVE)diff_to_backprop_register.out_x_and_label_interface) 1 1 1 690
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parameter_storage.learning_rate_interface,(SLAVE)decode_to_dense_register.learning_rate) 1 1 1 670
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)code_storage.code_control_interface,(SLAVE)controller.code_control_interface) 1 1 1 530
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)is_load_spreader_1.is_load,(SLAVE)is_load_spreader_0.is_load_1) 1 1 1 830
 preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)clk_0.clk_in,(SLAVE)data_path.clk) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parse.parameter_interface,(SLAVE)controller.parameter_interface) 1 1 1 730
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.code_control_interface,(SLAVE)code_storage.code_control_interface) 1 1 1 570
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.parameter_storage_0_learning_rate_interface,(SLAVE)parameter_storage.learning_rate_interface) 1 0 2 NJ 1500 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)matrix_location_spreader.matrix_location_out_2_interface,(SLAVE)label_storage.matrix_location_interface) 1 1 1 830
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)train_data_mux.use_x_data_label_interface,(SLAVE)label_storage.read_data_interface) 1 1 1 910
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_layer_delay_reg.in_backprop_controll_interface,(SLAVE)decode_to_dense_register.out_backprop_controll_interface) 1 1 1 830
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)fetch_to_decode_register.reset_code_count_interface,(SLAVE)controller.code_count_reset_interface) 1 1 1 710
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_layer_delay_reg.in_dense_type_interface,(SLAVE)decode_to_dense_register.out_dense_type_interface) 1 1 1 850
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)activate_to_diff_register.out_differ_interface,(SLAVE)differ.in_parameter_interface) 1 1 1 610
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)weight_storage.update_weight_dc_dw_interface,(SLAVE)data_path.weight_storage_update_weight_dc_dw_interface) 1 0 2 NJ 2620 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.backprop_controll_interface,(SLAVE)decode_to_dense_register.in_backprop_controll_interface) 1 1 1 630
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.matrix_storage_locator_reset_interface,(SLAVE)matrix_storage_locator.reset_interface) 1 0 2 NJ 1920 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parse.parameter_interface,(SLAVE)controller.parameter_interface) 1 1 1 710
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_decode_register.out_update_weight_interface,(SLAVE)weight_storage.update_weight_interface) 1 1 1 490
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.learning_rate_out_interface,(SLAVE)activate_to_diff_register.learning_rate_interface) 1 1 1 470
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)differ.diff_interface,(SLAVE)diff_to_backprop_register.in_diff_interface) 1 1 1 630
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)fetch_to_decode_register.code_interface,(SLAVE)code_storage.code_interface) 1 1 1 570
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)train_data_mux.use_x_data_label_interface,(SLAVE)label_storage.read_data_interface) 1 1 1 890
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.i_is_load_interface,(SLAVE)is_load_spreader_0.is_load) 1 1 1 750
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_layer_delay_reg.in_backprop_controll_interface,(SLAVE)decode_to_dense_register.out_backprop_controll_interface) 1 1 1 850
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)input_storage.write_interface,(SLAVE)data_path.input_storage_write_interface) 1 0 2 NJ 1740 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)matrix_location_spreader.matrix_location_out_1_interface,(SLAVE)input_storage.matrix_location_interface) 1 1 1 850
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_layer_delay_reg.learning_rate_out_interface,(SLAVE)dense_to_activate_register.learning_rate_interface) 1 1 1 730
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)fetch_to_decode_register.reset_code_count_interface,(SLAVE)controller.code_count_reset_interface) 1 1 1 690
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)activate_to_diff_register.out_differ_interface,(SLAVE)differ.in_parameter_interface) 1 1 1 590
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)activate_to_diff_register.in_forward_interface,(SLAVE)dense_to_activate_register.out_forward_interface) 1 1 1 450
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)controller.code_count_interface,(SLAVE)code_count.count_interface) 1 1 1 650
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.matrix_storage_locator_reset_interface,(SLAVE)matrix_storage_locator.reset_interface) 1 0 2 NJ 2000 NJ
 preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)train_data_mux.use_z_data_interface,(SLAVE)diff_to_decode_register.out_x_and_label_interface) 1 1 1 550
-preplace netloc FAN_OUT<net_container>data_path</net_container>(SLAVE)input_storage.clock,(SLAVE)decode_to_dense_register.clock,(SLAVE)mult_matrix_prep.clock,(SLAVE)mult_matrix_revert.clock,(SLAVE)systolic.clock,(SLAVE)fetch_to_decode_register.clock,(MASTER)clk_0.clk,(SLAVE)code_count.clock,(SLAVE)dense_layer_delay_reg.clock,(SLAVE)dense_to_activate_register.clock,(SLAVE)parameter_storage.clock,(SLAVE)diff_to_backprop_register.clock,(SLAVE)weight_storage.clock,(SLAVE)code_storage.clock,(SLAVE)matrix_storage_locator.clock,(SLAVE)label_storage.clock,(SLAVE)diff_to_decode_register.clock,(SLAVE)activate_to_diff_register.clock) 1 1 1 430
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)label_storage.is_read_interface,(SLAVE)is_load_spreader_1.is_load_2) 1 1 1 890
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.out_x_and_label_interface,(SLAVE)diff_to_decode_register.in_x_and_label_interface) 1 1 1 690
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)differ.in_forward_interface,(SLAVE)diff_to_backprop_register.in_x_and_label_interface) 1 1 1 750
 preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)train_data_mux.use_z_interface,(SLAVE)controller.use_z_interface) 1 1 1 730
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.out_weight_interface,(SLAVE)w_and_x_spreader.w_inerface) 1 1 1 890
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)activate_to_diff_register.in_backprop_controll_interface,(SLAVE)dense_to_activate_register.out_backprop_controll_interface) 1 1 1 450
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)code_storage.enable_interface,(SLAVE)data_path.code_storage_enable_interface) 1 0 2 NJ 100 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)matrix_storage_locator.matrix_location_interface,(SLAVE)matrix_location_spreader.matrix_location_interface) 1 1 1 910
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)w_and_x_spreader.x_out_interface,(SLAVE)mult_matrix_prep.input_stream_interface) 1 1 1 910
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.out_backprop_data_interface,(SLAVE)data_path.diff_to_backprop_register_out_backprop_data_interface) 1 0 2 NJ 340 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.out_forward_interface,(SLAVE)activate_to_diff_register.in_forward_interface) 1 1 1 470
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)activation.out_data_interface,(SLAVE)activate_to_diff_register.in_z_interface) 1 1 1 530
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)systolic.weight_interface,(SLAVE)w_and_x_spreader.w_out_interface) 1 1 1 890
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)code_count.reset_interface,(SLAVE)fetch_to_decode_register.reset_code_count_out_interface) 1 1 1 690
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_layer_delay_reg.x_and_w_interface,(SLAVE)w_and_x_spreader.w_and_x_out_interface) 1 1 1 910
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)parameter_storage.out_parameter_interface,(SLAVE)decode_to_dense_register.in_typel_interface) 1 1 1 710
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.out_input_interface,(SLAVE)w_and_x_spreader.x_interface) 1 1 1 810
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)mult_matrix_revert.output_stream_interface,(SLAVE)dense_to_activate_register.in_y_interface) 1 1 1 910
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.input_storage_is_write_interface,(SLAVE)input_storage.is_write_interface) 1 0 2 NJ 1600 NJ
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)diff_to_decode_register.in_cal_dc_interface,(SLAVE)data_path.diff_to_decode_register_in_cal_dc_interface) 1 0 2 NJ 620 NJ
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)weight_storage.write_interface,(SLAVE)data_path.weight_storage_write_interface) 1 0 2 NJ 2680 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)activate_to_diff_register.out_backprop_controll_interface,(SLAVE)diff_to_backprop_register.in_backprop_controll_interface) 1 1 1 670
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.in_backprop_controll_interface,(SLAVE)dense_layer_delay_reg.out_backprop_controll_interface) 1 1 1 770
-preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.input_storage_write_interface,(SLAVE)input_storage.write_interface) 1 0 2 NJ 1620 NJ
-preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)fetch_to_decode_register.code_out_interface,(SLAVE)parse.code_interface) 1 1 1 750
-levelinfo -pg 1 0 200 1240
-levelinfo -hier data_path 210 240 1000 1230
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.in_backprop_controll_interface,(SLAVE)controller.backprop_controll_interface) 1 1 1 610
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)train_data_mux.use_z_interface,(SLAVE)controller.use_z_interface) 1 1 1 710
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)matrix_location_spreader.matrix_location_interface,(SLAVE)matrix_storage_locator.matrix_location_interface) 1 1 1 890
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.in_typel_interface,(SLAVE)parameter_storage.out_parameter_interface) 1 1 1 690
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)diff_to_backprop_register.out_backprop_controll_interface,(SLAVE)backprop_controller.backprop_controll_bundle_in_interface) 1 1 1 730
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)activation.out_data_interface,(SLAVE)activate_to_diff_register.in_z_interface) 1 1 1 510
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)code_count.reset_interface,(SLAVE)fetch_to_decode_register.reset_code_count_out_interface) 1 1 1 670
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_layer_delay_reg.x_and_w_interface,(SLAVE)w_and_x_spreader.w_and_x_out_interface) 1 1 1 890
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_layer_delay_reg.learning_rate_interface,(SLAVE)decode_to_dense_register.learning_rate_out) 1 1 1 770
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.input_storage_is_write_interface,(SLAVE)input_storage.is_write_interface) 1 0 2 NJ 1680 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)backprop_controller.backprop_controll_out_controll_interface,(SLAVE)backpropagator.backprop_controll_interface) 1 1 1 750
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)w_and_x_spreader.x_interface,(SLAVE)decode_to_dense_register.out_input_interface) 1 1 1 790
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)w_and_x_spreader.w_inerface,(SLAVE)decode_to_dense_register.out_weight_interface) 1 1 1 810
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)decode_to_dense_register.in_train_data_interface,(SLAVE)train_data_mux.select_data_interface) 1 1 1 770
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)systolic.y_stream_interface,(SLAVE)mult_matrix_revert.input_stream_interface) 1 1 1 890
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)weight_storage.is_write_interface,(SLAVE)data_path.weight_storage_is_write_interface) 1 0 2 NJ 2680 NJ
+preplace netloc POINT_TO_POINT<net_container>data_path</net_container>(SLAVE)dense_to_activate_register.in_backprop_controll_interface,(SLAVE)dense_layer_delay_reg.out_backprop_controll_interface) 1 1 1 750
+preplace netloc EXPORT<net_container>data_path</net_container>(SLAVE)data_path.controller_enable_interface,(SLAVE)controller.enable_interface) 1 0 2 NJ 1360 NJ
+levelinfo -pg 1 0 200 1290
+levelinfo -hier data_path 210 240 1000 1280

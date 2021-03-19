@@ -16,7 +16,7 @@ module code_count(
         count_reg = 0;
     end
 
-    always @(negedge clk ) begin
+    always @(posedge clk ) begin
         if (reset === 1'b1) begin
             count_reg <= 0;
         end else begin

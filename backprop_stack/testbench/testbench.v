@@ -36,7 +36,9 @@ parameter size  = 3 ;
       .current_input_layer (current_input_layer ) ,
       .diff_start (diff_start ) ,
       .update_weight_layer (update_weight_layer ) ,
-      .diff_dense (diff_dense ) ); 
+      .diff_dense (diff_dense ),
+      .learning_rate({8'd0, 8'b10000000 })
+  ); 
 
 
 

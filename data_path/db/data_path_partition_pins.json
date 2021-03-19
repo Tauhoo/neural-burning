@@ -132,38 +132,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "parameter_storage_0_learning_rate_interface_learning_rate[0]",
-					"strict" : false
-				},
-				{
-					"name" : "parameter_storage_0_learning_rate_interface_learning_rate[1]",
-					"strict" : false
-				},
-				{
-					"name" : "parameter_storage_0_learning_rate_interface_learning_rate[2]",
-					"strict" : false
-				},
-				{
-					"name" : "parameter_storage_0_learning_rate_interface_learning_rate[3]",
-					"strict" : false
-				},
-				{
-					"name" : "parameter_storage_0_learning_rate_interface_learning_rate[4]",
-					"strict" : false
-				},
-				{
-					"name" : "parameter_storage_0_learning_rate_interface_learning_rate[5]",
-					"strict" : false
-				},
-				{
-					"name" : "parameter_storage_0_learning_rate_interface_learning_rate[6]",
-					"strict" : false
-				},
-				{
-					"name" : "parameter_storage_0_learning_rate_interface_learning_rate[7]",
-					"strict" : false
-				},
-				{
 					"name" : "clk_clk",
 					"strict" : false
 				},
@@ -172,7 +140,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "code_storage_write_interface_write_data[0]",
+					"name" : "code_storage_write_interface_write_data[10]",
 					"strict" : false
 				},
 				{
@@ -316,23 +284,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "code_storage_write_interface_write_data[10]",
-					"strict" : false
-				},
-				{
 					"name" : "code_storage_write_interface_write_data[9]",
-					"strict" : false
-				},
-				{
-					"name" : "code_storage_write_interface_write_data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "code_storage_write_interface_write_data[2]",
-					"strict" : false
-				},
-				{
-					"name" : "code_storage_write_interface_write_data[3]",
 					"strict" : false
 				},
 				{
@@ -340,7 +292,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "code_storage_write_interface_write_data[5]",
+					"name" : "code_storage_write_interface_write_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "code_storage_write_interface_write_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "code_storage_write_interface_write_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "code_storage_write_interface_write_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "code_storage_write_interface_write_data[7]",
 					"strict" : false
 				},
 				{
@@ -348,7 +316,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "code_storage_write_interface_write_data[7]",
+					"name" : "code_storage_write_interface_write_data[5]",
 					"strict" : false
 				}
 			]

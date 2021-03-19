@@ -16,7 +16,6 @@ module data_path (
 	label_storage_write_interface_write_row_index,
 	label_storage_write_interface_write_data,
 	matrix_storage_locator_reset_interface_reset,
-	parameter_storage_0_learning_rate_interface_learning_rate,
 	reset_reset_n,
 	weight_storage_is_write_interface_is_write,
 	weight_storage_write_interface_write_layer_index,
@@ -39,7 +38,6 @@ module data_path (
 	input	[31:0]	label_storage_write_interface_write_row_index;
 	input	[47:0]	label_storage_write_interface_write_data;
 	input		matrix_storage_locator_reset_interface_reset;
-	output	[15:0]	parameter_storage_0_learning_rate_interface_learning_rate;
 	input		reset_reset_n;
 	input		weight_storage_is_write_interface_is_write;
 	input	[31:0]	weight_storage_write_interface_write_layer_index;
