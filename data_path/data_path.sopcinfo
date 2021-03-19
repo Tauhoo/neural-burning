@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="data_path" kind="data_path" version="1.0" fabric="QSYS">
  <!-- Format version 20.1 711 (Future versions may contain additional information.) -->
- <!-- 2021.03.20.04:39:01 -->
+ <!-- 2021.03.20.06:08:14 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1616189941</value>
+  <value>1616195293</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -2323,6 +2323,69 @@ parameters are a RESULT of the module parameters. -->
     <role>enable</role>
    </port>
   </interface>
+  <interface name="code_reset_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>code_reset_address</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>code_reset_address</role>
+   </port>
+   <port>
+    <name>update_code_reset_address</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>update_code_reset_address</role>
+   </port>
+   <port>
+    <name>code_reset_count</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>code_reset_count</role>
+   </port>
+   <port>
+    <name>update_code_reset_count</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>update_code_reset_count</role>
+   </port>
+  </interface>
  </module>
  <module name="controller" kind="controller" version="1.0" path="controller">
   <!-- Describes a single module. Module parameters are
@@ -2930,6 +2993,69 @@ parameters are a RESULT of the module parameters. -->
     <direction>Input</direction>
     <width>4</width>
     <role>op</role>
+   </port>
+  </interface>
+  <interface name="code_reset_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>code_reset_address</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>code_reset_address</role>
+   </port>
+   <port>
+    <name>update_code_reset_address</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>update_code_reset_address</role>
+   </port>
+   <port>
+    <name>code_reset_count</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>code_reset_count</role>
+   </port>
+   <port>
+    <name>update_code_reset_count</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>update_code_reset_count</role>
    </port>
   </interface>
  </module>
@@ -10577,6 +10703,73 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>code_out_interface</endConnectionPoint>
  </connection>
  <connection
+   name="code_storage.code_reset_interface/controller.code_reset_interface"
+   kind="conduit"
+   version="20.1"
+   start="code_storage.code_reset_interface"
+   end="controller.code_reset_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>code_storage</startModule>
+  <startConnectionPoint>code_reset_interface</startConnectionPoint>
+  <endModule>controller</endModule>
+  <endConnectionPoint>code_reset_interface</endConnectionPoint>
+ </connection>
+ <connection
    name="code_count.count_interface/controller.code_count_interface"
    kind="conduit"
    version="20.1"
@@ -14077,7 +14270,7 @@ parameters are a RESULT of the module parameters. -->
   <version>20.1</version>
  </plugin>
  <plugin>
-  <instanceCount>131</instanceCount>
+  <instanceCount>133</instanceCount>
   <name>conduit_end</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -14333,7 +14526,7 @@ parameters are a RESULT of the module parameters. -->
   <version>20.1</version>
  </plugin>
  <plugin>
-  <instanceCount>60</instanceCount>
+  <instanceCount>61</instanceCount>
   <name>conduit</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>

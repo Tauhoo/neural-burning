@@ -51,6 +51,10 @@ module data_path (
 	wire  [11:0] code_storage_code_interface_code;                                              // code_storage:code -> fetch_to_decode_register:code
 	wire  [31:0] code_storage_code_interface_code_index;                                        // code_storage:code_index -> fetch_to_decode_register:code_index
 	wire  [11:0] fetch_to_decode_register_code_out_interface_code;                              // fetch_to_decode_register:code_out -> parse:code
+	wire         controller_code_reset_interface_update_code_reset_count;                       // controller:update_code_reset_count -> code_storage:update_code_reset_count
+	wire         controller_code_reset_interface_update_code_reset_address;                     // controller:update_code_reset_address -> code_storage:update_code_reset_address
+	wire  [31:0] controller_code_reset_interface_code_reset_count;                              // controller:code_reset_count -> code_storage:code_reset_count
+	wire  [31:0] controller_code_reset_interface_code_reset_address;                            // controller:code_reset_address -> code_storage:code_reset_address
 	wire  [31:0] code_count_count_interface_code_count;                                         // code_count:count -> controller:code_count
 	wire  [47:0] mult_matrix_prep_output_stream_interface_data_stream;                          // mult_matrix_prep:output_stream -> systolic:data_stream
 	wire         controller_forward_control_interface_load_w;                                   // controller:load_w -> decode_to_dense_register:load_w
@@ -254,15 +258,19 @@ module data_path (
 		.code_size     (12),
 		.max_code_line (100)
 	) code_storage (
-		.clk        (clk_clk),                                  //                  clock.clk
-		.code       (code_storage_code_interface_code),         //         code_interface.code
-		.code_index (code_storage_code_interface_code_index),   //                       .code_index
-		.active     (controller_code_control_interface_active), // code_control_interface.active
-		.reset      (controller_code_control_interface_reset),  //                       .reset
-		.write_data (code_storage_write_interface_write_data),  //        write_interface.write_data
-		.is_write   (code_storage_write_interface_is_write),    //                       .is_write
-		.write_line (code_storage_write_interface_write_line),  //                       .write_line
-		.enable     (code_storage_enable_interface_enable)      //       enable_interface.enable
+		.clk                       (clk_clk),                                                   //                  clock.clk
+		.code                      (code_storage_code_interface_code),                          //         code_interface.code
+		.code_index                (code_storage_code_interface_code_index),                    //                       .code_index
+		.active                    (controller_code_control_interface_active),                  // code_control_interface.active
+		.reset                     (controller_code_control_interface_reset),                   //                       .reset
+		.write_data                (code_storage_write_interface_write_data),                   //        write_interface.write_data
+		.is_write                  (code_storage_write_interface_is_write),                     //                       .is_write
+		.write_line                (code_storage_write_interface_write_line),                   //                       .write_line
+		.enable                    (code_storage_enable_interface_enable),                      //       enable_interface.enable
+		.code_reset_address        (controller_code_reset_interface_code_reset_address),        //   code_reset_interface.code_reset_address
+		.update_code_reset_address (controller_code_reset_interface_update_code_reset_address), //                       .update_code_reset_address
+		.code_reset_count          (controller_code_reset_interface_code_reset_count),          //                       .code_reset_count
+		.update_code_reset_count   (controller_code_reset_interface_update_code_reset_count)    //                       .update_code_reset_count
 	);
 
 	controller #(
@@ -272,26 +280,30 @@ module data_path (
 		.param_a_size           (4),
 		.param_b_size           (4)
 	) controller (
-		.load_w                  (controller_forward_control_interface_load_w),              //   forward_control_interface.load_w
-		.i_is_load               (controller_i_is_load_interface_is_load),                   //         i_is_load_interface.is_load
-		.w_layer_index           (controller_weigth_interface_w_layer_index),                //            weigth_interface.w_layer_index
-		.w_row_index             (controller_weigth_interface_w_row_index),                  //                            .w_row_index
-		.is_load                 (controller_weigth_interface_is_load),                      //                            .is_load
-		.reset                   (controller_code_count_reset_interface_reset),              //  code_count_reset_interface.reset
-		.use_z                   (controller_use_z_interface_use_z),                         //             use_z_interface.use_z
-		.code_count              (code_count_count_interface_code_count),                    //        code_count_interface.code_count
-		.code_active             (controller_code_control_interface_active),                 //      code_control_interface.active
-		.code_reset              (controller_code_control_interface_reset),                  //                            .reset
-		.enable                  (controller_enable_interface_enable),                       //            enable_interface.enable
-		.backprop_controll       (controller_backprop_controll_interface_backprop_controll), // backprop_controll_interface.backprop_controll
-		.set_act_type            (controller_parse_interface_set_act_type),                  //             parse_interface.set_act_type
-		.set_cost_type           (controller_parse_interface_set_cost_type),                 //                            .set_cost_type
-		.set_dense_type          (controller_parse_interface_set_dense_type),                //                            .set_dense_type
-		.set_learning_rate_value (controller_parse_interface_set_learning_rate),             //                            .set_learning_rate
-		.param_a                 (parse_parameter_interface_param_a),                        //         parameter_interface.param_a
-		.param_b                 (parse_parameter_interface_param_b),                        //                            .param_b
-		.param_c                 (parse_parameter_interface_param_c),                        //                            .param_c
-		.op                      (parse_parameter_interface_op)                              //                            .op
+		.load_w                    (controller_forward_control_interface_load_w),               //   forward_control_interface.load_w
+		.i_is_load                 (controller_i_is_load_interface_is_load),                    //         i_is_load_interface.is_load
+		.w_layer_index             (controller_weigth_interface_w_layer_index),                 //            weigth_interface.w_layer_index
+		.w_row_index               (controller_weigth_interface_w_row_index),                   //                            .w_row_index
+		.is_load                   (controller_weigth_interface_is_load),                       //                            .is_load
+		.reset                     (controller_code_count_reset_interface_reset),               //  code_count_reset_interface.reset
+		.use_z                     (controller_use_z_interface_use_z),                          //             use_z_interface.use_z
+		.code_count                (code_count_count_interface_code_count),                     //        code_count_interface.code_count
+		.code_active               (controller_code_control_interface_active),                  //      code_control_interface.active
+		.code_reset                (controller_code_control_interface_reset),                   //                            .reset
+		.enable                    (controller_enable_interface_enable),                        //            enable_interface.enable
+		.backprop_controll         (controller_backprop_controll_interface_backprop_controll),  // backprop_controll_interface.backprop_controll
+		.set_act_type              (controller_parse_interface_set_act_type),                   //             parse_interface.set_act_type
+		.set_cost_type             (controller_parse_interface_set_cost_type),                  //                            .set_cost_type
+		.set_dense_type            (controller_parse_interface_set_dense_type),                 //                            .set_dense_type
+		.set_learning_rate_value   (controller_parse_interface_set_learning_rate),              //                            .set_learning_rate
+		.param_a                   (parse_parameter_interface_param_a),                         //         parameter_interface.param_a
+		.param_b                   (parse_parameter_interface_param_b),                         //                            .param_b
+		.param_c                   (parse_parameter_interface_param_c),                         //                            .param_c
+		.op                        (parse_parameter_interface_op),                              //                            .op
+		.code_reset_address        (controller_code_reset_interface_code_reset_address),        //        code_reset_interface.code_reset_address
+		.update_code_reset_address (controller_code_reset_interface_update_code_reset_address), //                            .update_code_reset_address
+		.code_reset_count          (controller_code_reset_interface_code_reset_count),          //                            .code_reset_count
+		.update_code_reset_count   (controller_code_reset_interface_update_code_reset_count)    //                            .update_code_reset_count
 	);
 
 	decode_dense_reg #(

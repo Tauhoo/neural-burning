@@ -13,6 +13,10 @@ module controller(
     w_row_index,
     is_load,
     code_reset,
+    code_reset_address,
+    update_code_reset_address,
+    code_reset_count,
+    update_code_reset_count,
     code_active,
     i_is_load,
     load_w,
@@ -27,7 +31,7 @@ module controller(
     parameter op_size = 4;
     parameter size = 3;
     parameter backprop_controll_size = 1 + 1 + 32 + 32;
-    parameter total_signal_size = 1 + 32*2 + 10 + backprop_controll_size;
+    parameter total_signal_size = 1 + 32*2 + 10 + 32*2 + 2 + backprop_controll_size;
 	parameter param_a_size = 4;
     parameter param_b_size = 4;
 
@@ -40,6 +44,9 @@ module controller(
     localparam update_weight = 4'b0110;
     localparam stall = 4'b0111;
     localparam load_z = 4'b1000;
+    localparam set_return_address = 4'b1001;
+    localparam set_return_count = 4'b1010;
+    localparam return_address = 4'b1011;
 
     input [op_size - 1:0] op; 
     input [param_a_size - 1:0] param_a;
@@ -53,6 +60,12 @@ module controller(
     output [31:0] w_row_index; // w_row use to load and backprop 
     output is_load; //load weight from weight storage
     output code_reset; // reset code line
+
+    output [31:0] code_reset_address; // code_reset_address
+    output update_code_reset_address; // update_code_reset_address
+    output [31:0] code_reset_count; // code_reset_count
+    output update_code_reset_count; // update_code_reset_count
+
     output code_active; // change code line
     output i_is_load; // get next data set
     output load_w; // set weight to systolic
@@ -91,6 +104,8 @@ module controller(
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
+                        // update_code_reset_address
+                        // update_code_reset
                         1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
@@ -115,6 +130,10 @@ module controller(
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
@@ -137,6 +156,10 @@ module controller(
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
@@ -159,6 +182,10 @@ module controller(
                         32'(code_count%3), //w_row_index
                         1'b1, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         code_count < size - 1 ? 1'b0 : 1'b1, //code_active
                         1'b0, //i_is_load
                         1'b1, //load_w
@@ -181,6 +208,10 @@ module controller(
                         32'(code_count%3), //w_row_index
                         1'b1, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         code_count < size - 1 ? 1'b0 : 1'b1, //code_active
                         1'b1, //i_is_load
                         1'b0, //load_w
@@ -203,6 +234,10 @@ module controller(
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
@@ -225,6 +260,10 @@ module controller(
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
@@ -247,6 +286,10 @@ module controller(
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         code_count < param_c - 1? 1'b0 : 1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
@@ -269,6 +312,10 @@ module controller(
                         32'(code_count%3), //w_row_index
                         1'b1, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         code_count < size - 1 ? 1'b0 : 1'b1, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
@@ -284,6 +331,84 @@ module controller(
                             32'(code_count%3) //current_input_row
                         ) //backprop_controll
                     };
+                set_return_count: 
+                    return { 
+                        1'b1, //reset
+                        32'd0, //w_layer_index
+                        32'd0, //w_row_index
+                        1'b0, //is_load
+                        1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'(param_c), // code_reset_count
+                        1'b1, // update_code_reset_count
+                        1'b1, //code_active
+                        1'b0, //i_is_load
+                        1'b0, //load_w
+                        1'b0, //use_z
+                        1'b0, //set_act_type
+                        1'b0, //set_dense_type
+                        1'b0, //set_cost_type
+                        1'b0, //set_learning_rate_value 
+                        get_backprop_controll(
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
+                        ) //backprop_controll
+                    };
+                set_return_address: 
+                    return { 
+                        1'b1, //reset
+                        32'd0, //w_layer_index
+                        32'd0, //w_row_index
+                        1'b0, //is_load
+                        1'b0, //code_reset
+                        32'(param_c), // code_reset_address
+                        1'b1, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
+                        1'b1, //code_active
+                        1'b0, //i_is_load
+                        1'b0, //load_w
+                        1'b0, //use_z
+                        1'b0, //set_act_type
+                        1'b0, //set_dense_type
+                        1'b0, //set_cost_type
+                        1'b0, //set_learning_rate_value 
+                        get_backprop_controll(
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
+                        ) //backprop_controll
+                    };
+                return_address: 
+                    return { 
+                        1'b1, //reset
+                        32'd0, //w_layer_index
+                        32'd0, //w_row_index
+                        1'b0, //is_load
+                        1'b1, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
+                        1'b1, //code_active
+                        1'b0, //i_is_load
+                        1'b0, //load_w
+                        1'b0, //use_z
+                        1'b0, //set_act_type
+                        1'b0, //set_dense_type
+                        1'b0, //set_cost_type
+                        1'b0, //set_learning_rate_value 
+                        get_backprop_controll(
+                            1'b0, //is_store
+                            1'b0, //start_train
+                            32'b0, //current_input_layer
+                            32'b0 //current_input_row
+                        ) //backprop_controll
+                    };
                 default: 
                     return { 
                         1'b0, //reset
@@ -291,6 +416,10 @@ module controller(
                         32'd0, //w_row_index
                         1'b0, //is_load
                         1'b0, //code_reset
+                        32'd0, // code_reset_address
+                        1'b0, // update_code_reset_address
+                        32'd0, // code_reset_count
+                        1'b0, // update_code_reset_count
                         1'b0, //code_active
                         1'b0, //i_is_load
                         1'b0, //load_w
@@ -316,6 +445,12 @@ module controller(
         w_row_index, 
         is_load, 
         code_reset, 
+
+        code_reset_address,
+        update_code_reset_address,
+        code_reset_count,
+        update_code_reset_count,
+
         code_active, 
         i_is_load, 
         load_w, 

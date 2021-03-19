@@ -496,38 +496,38 @@ module backprop_stack(
         end
         
         //================================= systolic ============================
-        $write("%d\n ", learning_rate);
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        end
-        $write("| ");
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        end
-        $write("| ");
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        end
+        // $write("%d\n ", learning_rate);
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
+        // $write("| ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
+        // $write("| ");
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(systolic_array_acc_z_to_z_transformed[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        $write("| ");
+        // $write("| ");
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%f ", real'(signed'(start_load_data[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        end
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_load_data[0][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        $write("| ");
+        // $write("| ");
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%f ", real'(signed'(start_load_data[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        end
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_load_data[1][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
         
-        $write("| ");
+        // $write("| ");
 
-        for (int i = 0; i < size; i = i + 1) begin
-            $write("%f ", real'(signed'(start_load_data[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
-        end
+        // for (int i = 0; i < size; i = i + 1) begin
+        //     $write("%f ", real'(signed'(start_load_data[2][data_size*(size - i) - 1 -: data_size])) / 2**8);
+        // end
 
-        $write("|\n ");
+        // $write("|\n ");
 
         // // $write("= %d %d %b |", update_weight_layer, update_weight_row, is_update_weight);
 

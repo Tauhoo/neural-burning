@@ -1,6 +1,6 @@
 Analysis & Synthesis report for controller
-Tue Jan 19 16:18:17 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Sat Mar 20 05:57:29 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
 
 
 ---------------------
@@ -14,10 +14,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |controller
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |controller
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -41,27 +43,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan 19 16:18:17 2021       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; controller                                  ;
-; Top-level Entity Name           ; controller                                  ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 228                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                  ;
++---------------------------------+-------------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Mar 20 05:57:29 2021                       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition ;
+; Revision Name                   ; controller                                                  ;
+; Top-level Entity Name           ; controller                                                  ;
+; Family                          ; Cyclone V                                                   ;
+; Logic utilization (in ALMs)     ; N/A                                                         ;
+; Total registers                 ; 0                                                           ;
+; Total pins                      ; 198                                                         ;
+; Total virtual pins              ; 0                                                           ;
+; Total block memory bits         ; 0                                                           ;
+; Total DSP Blocks                ; 0                                                           ;
+; Total HSSI RX PCSs              ; 0                                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                                           ;
+; Total HSSI TX PCSs              ; 0                                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                                           ;
+; Total PLLs                      ; 0                                                           ;
+; Total DLLs                      ; 0                                                           ;
++---------------------------------+-------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -167,13 +169,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
-; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/controller/controller.sv ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/controller/controller.sv                                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_j3m.tdf            ; yes             ; Auto-Generated Megafunction  ; G:/neural-burning/controller/db/lpm_divide_j3m.tdf                         ;         ;
+; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; G:/neural-burning/controller/db/sign_div_unsign_mlh.tdf                    ;         ;
+; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction  ; G:/neural-burning/controller/db/alt_u_div_ive.tdf                          ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -181,35 +190,39 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 0           ;
+; Estimate of Logic utilization (ALMs needed) ; 130         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 0           ;
+; Combinational ALUT usage for logic          ; 255         ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 0           ;
-;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 0           ;
+;     -- 6 input functions                    ; 4           ;
+;     -- 5 input functions                    ; 17          ;
+;     -- 4 input functions                    ; 49          ;
+;     -- <=3 input functions                  ; 185         ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 228         ;
+; I/O pins                                    ; 198         ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; op[0]~input ;
-; Maximum fan-out                             ; 2           ;
-; Total fan-out                               ; 230         ;
-; Average fan-out                             ; 0.50        ;
+; Maximum fan-out node                        ; op[3]~input ;
+; Maximum fan-out                             ; 14          ;
+; Total fan-out                               ; 939         ;
+; Average fan-out                             ; 1.44        ;
 +---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |controller                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 228  ; 0            ; |controller         ; controller  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |controller                            ; 255 (74)            ; 0 (0)                     ; 0                 ; 0          ; 198  ; 0            ; |controller                                                                                                 ; controller          ; work         ;
+;    |lpm_divide:Mod0|                   ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |controller|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_j3m:auto_generated|  ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |controller|lpm_divide:Mod0|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m      ; work         ;
+;          |sign_div_unsign_mlh:divider| ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |controller|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
+;             |alt_u_div_ive:divider|    ; 181 (181)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |controller|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -228,6 +241,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |controller|controll_signal ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |controller|controll_signal ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |controller|controll_signal ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 8 LEs                ; 14 LEs                 ; No         ; |controller|controll_signal ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
 +----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |controller ;
 +------------------------+-------+-------------------------------------------+
@@ -235,11 +260,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------+-------+-------------------------------------------+
 ; op_size                ; 4     ; Signed Integer                            ;
 ; size                   ; 3     ; Signed Integer                            ;
-; backprop_controll_size ; 100   ; Signed Integer                            ;
-; total_signal_size      ; 169   ; Signed Integer                            ;
+; backprop_controll_size ; 66    ; Signed Integer                            ;
+; total_signal_size      ; 141   ; Signed Integer                            ;
 ; param_a_size           ; 4     ; Signed Integer                            ;
 ; param_b_size           ; 4     ; Signed Integer                            ;
 +------------------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 2              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -248,13 +296,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
+; arriav_lcell_comb     ; 257                         ;
+;     arith             ; 132                         ;
+;         0 data inputs ; 32                          ;
+;         1 data inputs ; 40                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 29                          ;
+;     normal            ; 125                         ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 228                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 82                          ;
+;         4 data inputs ; 20                          ;
+;         5 data inputs ; 17                          ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 198                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 38.20                       ;
+; Average LUT depth     ; 25.29                       ;
 +-----------------------+-----------------------------+
 
 
@@ -263,7 +321,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -272,251 +330,157 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Jan 19 16:18:10 2021
+    Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
+    Info: Processing started: Sat Mar 20 05:57:20 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off controller -c controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
     Info (12023): Found entity 1: controller File: G:/neural-burning/controller/controller.sv Line: 2
 Info (12127): Elaborating entity "controller" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at controller.sv(340): truncated value with size 175 to match size of target (169) File: G:/neural-burning/controller/controller.sv Line: 340
+Warning (10230): Verilog HDL assignment warning at controller.sv(467): truncated value with size 207 to match size of target (141) File: G:/neural-burning/controller/controller.sv Line: 467
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: G:/neural-burning/controller/controller.sv Line: 331
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: G:/neural-burning/controller/controller.sv Line: 331
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: G:/neural-burning/controller/controller.sv Line: 331
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "2"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j3m.tdf
+    Info (12023): Found entity 1: lpm_divide_j3m File: G:/neural-burning/controller/db/lpm_divide_j3m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_mlh File: G:/neural-burning/controller/db/sign_div_unsign_mlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
+    Info (12023): Found entity 1: alt_u_div_ive File: G:/neural-burning/controller/db/alt_u_div_ive.tdf Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "reset" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 51
-    Warning (13410): Pin "w_layer_index[0]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[1]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[2]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[3]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[4]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[5]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[6]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[7]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[8]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[9]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[10]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[11]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[12]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[13]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[14]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[15]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[16]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[17]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[18]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[19]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[20]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[21]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[22]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[23]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[24]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[25]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[26]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[27]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[28]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[29]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[30]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_layer_index[31]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 52
-    Warning (13410): Pin "w_row_index[0]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[1]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[2]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[3]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[4]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[5]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[6]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[7]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[8]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[9]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[10]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[11]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[12]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[13]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[14]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[15]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[16]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[17]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[18]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[19]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[20]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[21]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[22]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[23]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[24]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[25]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[26]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[27]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[28]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[29]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[30]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "w_row_index[31]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 53
-    Warning (13410): Pin "is_load" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 54
-    Warning (13410): Pin "code_reset" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 55
-    Warning (13410): Pin "code_active" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 56
-    Warning (13410): Pin "i_is_load" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 57
-    Warning (13410): Pin "load_w" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 58
-    Warning (13410): Pin "use_z" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
-    Warning (13410): Pin "backprop_controll[0]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[1]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[2]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[3]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[4]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[5]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[6]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[7]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[8]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[9]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[10]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[11]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[12]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[13]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[14]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[15]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[16]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[17]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[18]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[19]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[20]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[21]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[22]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[23]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[24]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[25]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[26]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[27]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[28]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[29]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[30]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[31]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[32]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[33]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[34]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[35]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[36]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[37]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[38]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[39]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[40]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[41]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[42]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[43]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[44]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[45]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[46]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[47]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[48]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[49]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[50]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[51]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[52]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[53]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[54]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[55]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[56]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[57]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[58]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[59]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[60]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[61]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[62]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[63]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[64]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[65]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[66]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[67]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[68]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[69]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[70]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[71]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[72]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[73]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[74]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[75]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[76]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[77]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[78]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[79]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[80]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[81]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[82]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[83]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[84]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[85]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[86]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[87]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[88]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[89]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[90]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[91]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[92]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[93]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[94]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[95]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[96]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[97]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[98]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "backprop_controll[99]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
-    Warning (13410): Pin "set_cost_type" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 64
-    Warning (13410): Pin "set_learning_rate_value" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 65
+    Warning (13410): Pin "reset" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 58
+    Warning (13410): Pin "w_layer_index[4]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[5]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[6]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[7]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[8]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[9]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[10]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[11]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[12]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[13]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[14]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[15]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[16]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[17]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[18]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[19]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[20]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[21]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[22]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[23]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[24]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[25]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[26]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[27]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[29]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[30]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_layer_index[31]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 59
+    Warning (13410): Pin "w_row_index[3]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[4]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[5]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[6]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[7]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[8]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[9]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[10]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[11]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[12]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[13]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[14]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[15]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[16]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[17]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[18]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[19]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[20]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[21]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[22]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[23]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[24]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[25]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "w_row_index[26]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 60
+    Warning (13410): Pin "backprop_controll[2]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[3]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[4]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[5]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[6]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[7]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[8]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[9]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[10]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[11]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[12]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[13]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[14]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[15]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[16]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[17]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[18]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[19]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[20]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[21]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[22]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[23]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[24]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[25]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[26]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[27]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[28]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[29]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[30]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[31]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[40]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[41]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[42]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[43]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[44]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[45]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[46]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[47]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[48]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[49]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[50]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[51]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[52]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[53]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[54]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[55]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[56]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[57]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[58]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[59]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[60]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[61]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[62]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+    Warning (13410): Pin "backprop_controll[63]" is stuck at GND File: G:/neural-burning/controller/controller.sv Line: 73
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 52 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "op[1]" File: G:/neural-burning/controller/controller.sv Line: 44
-    Warning (15610): No output dependent on input pin "op[2]" File: G:/neural-burning/controller/controller.sv Line: 44
-    Warning (15610): No output dependent on input pin "op[3]" File: G:/neural-burning/controller/controller.sv Line: 44
-    Warning (15610): No output dependent on input pin "param_a[0]" File: G:/neural-burning/controller/controller.sv Line: 45
-    Warning (15610): No output dependent on input pin "param_a[1]" File: G:/neural-burning/controller/controller.sv Line: 45
-    Warning (15610): No output dependent on input pin "param_a[2]" File: G:/neural-burning/controller/controller.sv Line: 45
-    Warning (15610): No output dependent on input pin "param_a[3]" File: G:/neural-burning/controller/controller.sv Line: 45
-    Warning (15610): No output dependent on input pin "param_b[0]" File: G:/neural-burning/controller/controller.sv Line: 46
-    Warning (15610): No output dependent on input pin "param_b[1]" File: G:/neural-burning/controller/controller.sv Line: 46
-    Warning (15610): No output dependent on input pin "param_b[2]" File: G:/neural-burning/controller/controller.sv Line: 46
-    Warning (15610): No output dependent on input pin "param_b[3]" File: G:/neural-burning/controller/controller.sv Line: 46
-    Warning (15610): No output dependent on input pin "param_c[0]" File: G:/neural-burning/controller/controller.sv Line: 47
-    Warning (15610): No output dependent on input pin "param_c[1]" File: G:/neural-burning/controller/controller.sv Line: 47
-    Warning (15610): No output dependent on input pin "param_c[2]" File: G:/neural-burning/controller/controller.sv Line: 47
-    Warning (15610): No output dependent on input pin "param_c[3]" File: G:/neural-burning/controller/controller.sv Line: 47
-    Warning (15610): No output dependent on input pin "param_c[4]" File: G:/neural-burning/controller/controller.sv Line: 47
-    Warning (15610): No output dependent on input pin "param_c[5]" File: G:/neural-burning/controller/controller.sv Line: 47
-    Warning (15610): No output dependent on input pin "param_c[6]" File: G:/neural-burning/controller/controller.sv Line: 47
-    Warning (15610): No output dependent on input pin "param_c[7]" File: G:/neural-burning/controller/controller.sv Line: 47
-    Warning (15610): No output dependent on input pin "code_count[0]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[1]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[2]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[3]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[4]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[5]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[6]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[7]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[8]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[9]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[10]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[11]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[12]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[13]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[14]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[15]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[16]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[17]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[18]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[19]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[20]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[21]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[22]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[23]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[24]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[25]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[26]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[27]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[28]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[29]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[30]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "code_count[31]" File: G:/neural-burning/controller/controller.sv Line: 48
-    Warning (15610): No output dependent on input pin "enable" File: G:/neural-burning/controller/controller.sv Line: 49
-Info (21057): Implemented 228 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "param_a[0]" File: G:/neural-burning/controller/controller.sv Line: 52
+    Warning (15610): No output dependent on input pin "param_a[1]" File: G:/neural-burning/controller/controller.sv Line: 52
+    Warning (15610): No output dependent on input pin "param_a[2]" File: G:/neural-burning/controller/controller.sv Line: 52
+    Warning (15610): No output dependent on input pin "param_a[3]" File: G:/neural-burning/controller/controller.sv Line: 52
+    Warning (15610): No output dependent on input pin "param_b[0]" File: G:/neural-burning/controller/controller.sv Line: 53
+    Warning (15610): No output dependent on input pin "param_b[1]" File: G:/neural-burning/controller/controller.sv Line: 53
+    Warning (15610): No output dependent on input pin "param_b[2]" File: G:/neural-burning/controller/controller.sv Line: 53
+    Warning (15610): No output dependent on input pin "param_b[3]" File: G:/neural-burning/controller/controller.sv Line: 53
+    Warning (15610): No output dependent on input pin "enable" File: G:/neural-burning/controller/controller.sv Line: 56
+Info (21057): Implemented 453 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 53 input pins
-    Info (21059): Implemented 175 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 229 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Tue Jan 19 16:18:17 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info (21059): Implemented 145 output pins
+    Info (21061): Implemented 255 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 119 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Sat Mar 20 05:57:29 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:15
 
 
