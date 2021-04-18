@@ -11,7 +11,7 @@ module matrix_storage(
 );
 	parameter size = 3;
 	parameter data_size = 16;
-	parameter max_layer = 5;
+	parameter max_layer = 36;
 
 	input [data_size*size - 1:0] write_data;
 	input [31:0] write_layer_index; 
@@ -38,6 +38,13 @@ module matrix_storage(
 	endgenerate
 
 	always @(posedge clk ) begin
+		if (is_read) begin
+			$write("data = ");
+			for (int i = 0; i < size; i = i + 1) begin
+				$write("%f ", real'(signed'(read_data[(size - i)*data_size - 1 -: data_size])) / 2**8);
+			end
+			$write("\n");
+		end
 		if (is_write) begin
 			//write
 			for (index = 0; index < size; index = index + 1) begin

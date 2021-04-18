@@ -477,7 +477,7 @@ module data_path (
 	matrix_storage #(
 		.size      (3),
 		.data_size (16),
-		.max_layer (5)
+		.max_layer (40)
 	) input_storage (
 		.clk               (clk_clk),                                                              //                     clock.clk
 		.read_layer_index  (matrix_location_spreader_matrix_location_out_1_interface_layer_index), // matrix_location_interface.layer_index
@@ -509,7 +509,7 @@ module data_path (
 	matrix_storage #(
 		.size      (3),
 		.data_size (16),
-		.max_layer (5)
+		.max_layer (40)
 	) label_storage (
 		.clk               (clk_clk),                                                              //                     clock.clk
 		.read_layer_index  (matrix_location_spreader_matrix_location_out_2_interface_layer_index), // matrix_location_interface.layer_index
