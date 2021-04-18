@@ -1,6 +1,6 @@
 Analysis & Synthesis report for backprop_stack
-Mon Jan 18 02:16:57 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Sat Mar 20 03:02:27 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
 
 
 ---------------------
@@ -15,8 +15,8 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |backprop_stack
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |z_to_z_calculator
+ 11. Parameter Settings for User Entity Instance: mult_matrix_prep:mult_z_to_z_matrix_prep_inst
  12. Post-Synthesis Netlist Statistics for Top Partition
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
@@ -43,27 +43,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jan 18 02:16:57 2021       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; backprop_stack                              ;
-; Top-level Entity Name           ; backprop_stack                              ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1520                                        ;
-; Total pins                      ; 341                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 48                                          ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                  ;
++---------------------------------+-------------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Mar 20 03:02:27 2021                       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition ;
+; Revision Name                   ; backprop_stack                                              ;
+; Top-level Entity Name           ; z_to_z_calculator                                           ;
+; Family                          ; Cyclone V                                                   ;
+; Logic utilization (in ALMs)     ; N/A                                                         ;
+; Total registers                 ; 96                                                          ;
+; Total pins                      ; 195                                                         ;
+; Total virtual pins              ; 0                                                           ;
+; Total block memory bits         ; 0                                                           ;
+; Total DSP Blocks                ; 3                                                           ;
+; Total HSSI RX PCSs              ; 0                                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                                           ;
+; Total HSSI TX PCSs              ; 0                                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                                           ;
+; Total PLLs                      ; 0                                                           ;
+; Total DLLs                      ; 0                                                           ;
++---------------------------------+-------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA6F31C6       ;                    ;
-; Top-level entity name                                                           ; backprop_stack     ; backprop_stack     ;
+; Top-level entity name                                                           ; z_to_z_calculator  ; backprop_stack     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Verilog Show LMF Mapping Messages                                               ; Off                ;                    ;
 ; Verilog Version                                                                 ; SystemVerilog_2005 ; Verilog_2001       ;
@@ -167,22 +167,19 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+-------------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path    ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
-+-------------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
-; ../general_data_operator/src/gdo.sv ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo.sv ;         ;
-; backprop_stack.sv                   ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/backprop_stack/backprop_stack.sv ;         ;
-+-------------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++-----------------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path        ; Used in Netlist ; File Type                    ; File Name with Absolute Path                           ; Library ;
++-----------------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
+; ../mult_matrix_prep/mult_matrix_prep.sv ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/mult_matrix_prep/mult_matrix_prep.sv ;         ;
+; z_to_z_calculator.sv                    ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/backprop_stack/z_to_z_calculator.sv  ;         ;
+; ../general_data_operator/src/gdo.sv     ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/general_data_operator/src/gdo.sv     ;         ;
++-----------------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -190,35 +187,36 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1944      ;
+; Estimate of Logic utilization (ALMs needed) ; 56        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 3092      ;
+; Combinational ALUT usage for logic          ; 48        ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 795       ;
-;     -- 5 input functions                    ; 616       ;
-;     -- 4 input functions                    ; 41        ;
-;     -- <=3 input functions                  ; 1640      ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 48        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 1520      ;
+; Dedicated logic registers                   ; 96        ;
 ;                                             ;           ;
-; I/O pins                                    ; 341       ;
+; I/O pins                                    ; 195       ;
 ;                                             ;           ;
-; Total DSP Blocks                            ; 48        ;
+; Total DSP Blocks                            ; 3         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1520      ;
-; Total fan-out                               ; 19172     ;
-; Average fan-out                             ; 3.59      ;
+; Maximum fan-out                             ; 96        ;
+; Total fan-out                               ; 723       ;
+; Average fan-out                             ; 1.35      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; |backprop_stack            ; 3092 (3092)         ; 1520 (1520)               ; 0                 ; 48         ; 341  ; 0            ; |backprop_stack     ; backprop_stack ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name       ; Library Name ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------------+--------------+
+; |z_to_z_calculator                                 ; 48 (48)             ; 96 (48)                   ; 0                 ; 3          ; 195  ; 0            ; |z_to_z_calculator                                               ; z_to_z_calculator ; work         ;
+;    |mult_matrix_prep:mult_z_to_z_matrix_prep_inst| ; 0 (0)               ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |z_to_z_calculator|mult_matrix_prep:mult_z_to_z_matrix_prep_inst ; mult_matrix_prep  ; work         ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -227,10 +225,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+--------------+
 ; Statistic                     ; Number Used  ;
 +-------------------------------+--------------+
-; Two Independent 18x18         ; 48           ;
-; Total number of DSP blocks    ; 48           ;
+; Two Independent 18x18         ; 3            ;
+; Total number of DSP blocks    ; 3            ;
 ;                               ;              ;
-; Fixed Point Signed Multiplier ; 48           ;
+; Fixed Point Signed Multiplier ; 3            ;
 +-------------------------------+--------------+
 
 
@@ -239,37 +237,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1520  ;
-; Number of registers using Synchronous Clear  ; 1520  ;
-; Number of registers using Synchronous Load   ; 48    ;
+; Total registers                              ; 96    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 4:1                ; 48 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |backprop_stack|dc_dw[2][1] ;
-; 4:1                ; 192 bits  ; 384 LEs       ; 384 LEs              ; 0 LEs                  ; No         ; |backprop_stack|Mux8        ;
-; 13:1               ; 48 bits   ; 384 LEs       ; 384 LEs              ; 0 LEs                  ; No         ; |backprop_stack|Mux503      ;
-; 13:1               ; 48 bits   ; 384 LEs       ; 384 LEs              ; 0 LEs                  ; No         ; |backprop_stack|Mux243      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |z_to_z_calculator ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                           ;
+; size           ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |backprop_stack ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; data_size      ; 16    ; Signed Integer                                        ;
-; size           ; 3     ; Signed Integer                                        ;
-; max_layer_size ; 4     ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult_matrix_prep:mult_z_to_z_matrix_prep_inst ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; data_size      ; 16    ; Signed Integer                                                    ;
+; size           ; 3     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -278,25 +274,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1520                        ;
-;     SCLR              ; 1472                        ;
-;     SCLR SLD          ; 48                          ;
-; arriav_lcell_comb     ; 3092                        ;
-;     arith             ; 405                         ;
-;         2 data inputs ; 405                         ;
-;     normal            ; 2575                        ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 1107                        ;
-;         4 data inputs ; 41                          ;
-;         5 data inputs ; 616                         ;
-;         6 data inputs ; 795                         ;
-;     shared            ; 112                         ;
-;         3 data inputs ; 112                         ;
-; arriav_mac            ; 48                          ;
-; boundary_port         ; 341                         ;
+; arriav_ff             ; 96                          ;
+;     ENA               ; 48                          ;
+;     plain             ; 48                          ;
+; arriav_lcell_comb     ; 48                          ;
+;     normal            ; 48                          ;
+;         3 data inputs ; 48                          ;
+; arriav_mac            ; 3                           ;
+; boundary_port         ; 195                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.37                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -305,7 +293,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -314,65 +302,94 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Jan 18 02:16:43 2021
+    Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
+    Info: Processing started: Sat Mar 20 03:02:18 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off backprop_stack -c backprop_stack
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /neural-burning/mult_matrix_revert/mult_matrix_revert.sv
+    Info (12023): Found entity 1: mult_matrix_revert File: G:/neural-burning/mult_matrix_revert/mult_matrix_revert.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /neural-burning/register_delay/delay.sv
+    Info (12023): Found entity 1: delay File: G:/neural-burning/register_delay/delay.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file start_store.sv
+    Info (12023): Found entity 1: start_store File: G:/neural-burning/backprop_stack/start_store.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file systolic_array.sv
+    Info (12023): Found entity 1: systolic_array File: G:/neural-burning/backprop_stack/systolic_array.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file continuous_systolic.sv
+    Info (12023): Found entity 1: continuous_systolic File: G:/neural-burning/backprop_stack/continuous_systolic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /neural-burning/mult_matrix_prep/mult_matrix_prep.sv
+    Info (12023): Found entity 1: mult_matrix_prep File: G:/neural-burning/mult_matrix_prep/mult_matrix_prep.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file z_to_z_calculator.sv
+    Info (12023): Found entity 1: z_to_z_calculator File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 1
 Info (12021): Found 1 design units, including 0 entities, in source file /neural-burning/general_data_operator/src/gdo.sv
     Info (12022): Found design unit 1: gdo (SystemVerilog) File: G:/neural-burning/general_data_operator/src/gdo.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file backprop_stack.sv
     Info (12023): Found entity 1: backprop_stack File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 1
-Info (12127): Elaborating entity "backprop_stack" for the top level hierarchy
-Warning (10175): Verilog HDL warning at backprop_stack.sv(152): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 152
-Warning (10175): Verilog HDL warning at backprop_stack.sv(158): ignoring unsupported system task File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 158
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "start_storage" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "to_all_storage" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "dense_storage" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cost_storage" into its bus
+Info (12127): Elaborating entity "z_to_z_calculator" for the top level hierarchy
+Info (12128): Elaborating entity "mult_matrix_prep" for hierarchy "mult_matrix_prep:mult_z_to_z_matrix_prep_inst" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 79
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "buffer" into its bus
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 30 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "dc_dw_row[2]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[3]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[4]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[5]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[6]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[7]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[8]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[9]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[10]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[11]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[12]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[13]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[14]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[15]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[16]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[17]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[18]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[19]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[20]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[21]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[22]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[23]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[24]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[25]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[26]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[27]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[28]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[29]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[30]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-    Warning (15610): No output dependent on input pin "dc_dw_row[31]" File: G:/neural-burning/backprop_stack/backprop_stack.sv Line: 48
-Info (21057): Implemented 4923 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 293 input pins
+Warning (21074): Design contains 49 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "diff_cost[0]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[1]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[2]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[3]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[4]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[5]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[6]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[7]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[8]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[9]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[10]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[11]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[12]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[13]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[14]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[15]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[16]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[17]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[18]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[19]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[20]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[21]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[22]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[23]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[24]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[25]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[26]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[27]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[28]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[29]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[30]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[31]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[32]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[33]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[34]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[35]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[36]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[37]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[38]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[39]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[40]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[41]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[42]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[43]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[44]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[45]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[46]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "diff_cost[47]" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 18
+    Warning (15610): No output dependent on input pin "start_new_layer" File: G:/neural-burning/backprop_stack/z_to_z_calculator.sv Line: 19
+Info (21057): Implemented 342 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 147 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 4534 logic cells
-    Info (21062): Implemented 48 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4891 megabytes
-    Info: Processing ended: Mon Jan 18 02:16:57 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21061): Implemented 144 logic cells
+    Info (21062): Implemented 3 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Sat Mar 20 03:02:27 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:15
 
 

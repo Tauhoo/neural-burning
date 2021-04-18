@@ -114,4 +114,37 @@ package gdo;
         end
     endfunction
 
+    function [gdo_data_size - 1:0] gdo_diff_sigmoid;
+        input reg signed [gdo_data_size - 1:0] x;
+        reg signed [gdo_data_size - 1:0] result;
+        begin
+            result = gdo_sigmoid(x);
+            return gdo_mult(result, gdo_sub(gdo_one, result));
+        end
+    endfunction
+
+
+    function [gdo_data_size - 1:0] gdo_diff_linear;
+        input reg signed [gdo_data_size - 1:0] in_data;
+        begin
+            return gdo_one;
+        end
+    endfunction
+
+    function [gdo_data_size - 1:0] gdo_diff_binary;
+        input reg signed [gdo_data_size - 1:0] in_data;
+        begin
+            return gdo_zero;
+        end
+    endfunction
+
+    function [gdo_data_size - 1:0] gdo_diff_tanh;
+        input reg signed [gdo_data_size - 1:0] in_data;
+        reg signed [gdo_data_size - 1:0] result;
+        begin
+            result = gdo_sigmoid(in_data);
+            return gdo_sub(gdo_one, gdo_mult(result, result));
+        end
+    endfunction
+
 endpackage

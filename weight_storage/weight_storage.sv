@@ -60,17 +60,47 @@ module weight_storage (
     end
 
     always @(negedge clk) begin
+        // if (is_update) begin
+        //     $write("layer_index = %d | row_index = %d | is_update = %b | ", 
+        //         layer_index, 
+        //         row_index,  
+        //         is_update
+        //     );
+        //     for (int i = 0; i < size; i = i + 1) begin
+        //         $write("%f ", real'(signed'(dc_dw[(size - i)*data_size - 1 -: data_size])) / 2**8);
+        //     end
+        //     $write("\n");
+        //     // $write("\n");
+        //     for (int i = 0; i < size; i = i + 1) begin
+        //         for (int j = 0; j < size; j = j + 1) begin
+        //             $write("%f ", real'(signed'(storage [j][i][0])) / 2**8);
+        //         end
+        //         $write("\n");
+        //     end
+
+        //     for (int i = 0; i < size; i = i + 1) begin
+        //         for (int j = 0; j < size; j = j + 1) begin
+        //             $write("%f ", real'(signed'(storage [j][i][1])) / 2**8);
+        //         end
+        //         $write("\n");
+        //     end
+        // end
+
+        // if (is_read) begin
+        //     $write("%d %d %b\n", w_layer_index, w_row_index, is_read);
+        // end
+
         //wrtie
         if (is_write) begin
             for (index = 0; index < size; index = index + 1) begin
-                storage[index][write_row_index][write_layer_index] = write_data[(size - index)*data_size - 1 -: data_size];
+                storage[index][write_row_index][write_layer_index] <= write_data[(size - index)*data_size - 1 -: data_size];
             end
         end
 
         //update weight
         if (is_update) begin
             for (index = 0; index < size; index = index + 1) begin
-                storage[index][row_index][layer_index_reg] = gdo_sub(storage[index][row_index][layer_index_reg], dc_dw[(size - index)*data_size - 1 -: data_size]);
+                storage[index][row_index][layer_index] <= gdo_sub(storage[index][row_index][layer_index], dc_dw[(size - index)*data_size - 1 -: data_size]);
             end
         end
         

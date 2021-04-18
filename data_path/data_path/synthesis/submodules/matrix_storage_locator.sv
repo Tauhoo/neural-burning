@@ -7,6 +7,7 @@ module matrix_storage_locator (
 );
 
     parameter size = 3;
+    parameter data_set = 12;
 
     input is_load;
     input reset;
@@ -36,10 +37,15 @@ module matrix_storage_locator (
             row_reg = 0; 
         end else begin       
             if (is_load && is_last_row) begin
-                layer_reg = layer_index + 1;
+                if (data_set - 1 == layer_index) begin
+                    layer_reg = 0;
+                end else begin
+                    layer_reg = layer_index + 1;
+                end
             end
 
             if (is_load) begin
+                // $write("layer = %d | row = %d\n", layer_index, row_index);
                 if (is_last_row) begin
                     row_reg = 0;
                 end else begin

@@ -20,7 +20,6 @@ module data_path (
 		input  wire [31:0] label_storage_write_interface_write_row_index,                //                                                  .write_row_index
 		input  wire [47:0] label_storage_write_interface_write_data,                     //                                                  .write_data
 		input  wire        matrix_storage_locator_reset_interface_reset,                 //            matrix_storage_locator_reset_interface.reset
-		output wire [15:0] parameter_storage_0_learning_rate_interface_learning_rate,    //       parameter_storage_0_learning_rate_interface.learning_rate
 		input  wire        reset_reset_n,                                                //                                             reset.reset_n
 		input  wire        weight_storage_is_write_interface_is_write,                   //                 weight_storage_is_write_interface.is_write
 		input  wire [31:0] weight_storage_write_interface_write_layer_index,             //                    weight_storage_write_interface.write_layer_index
@@ -28,126 +27,145 @@ module data_path (
 		input  wire [47:0] weight_storage_write_interface_write_data                     //                                                  .write_data
 	);
 
-	wire  [31:0] backprop_controller_backprop_controll_out_interface_dc_dw_row;                // backprop_controller:dc_dw_row_out -> backpropagator:dc_dw_row
-	wire  [31:0] backprop_controller_backprop_controll_out_interface_current_layer;            // backprop_controller:current_layer_out -> backpropagator:current_layer
-	wire         backprop_controller_backprop_controll_out_interface_update_storage;           // backprop_controller:update_storage_out -> backpropagator:update_storage
-	wire         backprop_controller_backprop_controll_out_interface_cal_dc_dw;                // backprop_controller:cal_dc_dw_out -> backpropagator:cal_dc_dw
-	wire         backprop_controller_backprop_controll_out_interface_reset;                    // backprop_controller:reset_out -> backpropagator:reset
-	wire  [31:0] backprop_controller_backprop_controll_out_interface_dc_dw_layer;              // backprop_controller:dc_dw_layer_out -> backpropagator:dc_dw_layer
-	wire         backprop_controller_backprop_controll_out_interface_update_dy_dy_old;         // backprop_controller:update_dy_dy_old_out -> backpropagator:update_dy_dy_old
-	wire         backprop_controller_cal_dc_dw_out_forward_interface_cal_dc_dw;                // backprop_controller:cal_dc_dw_out_forward -> diff_to_decode_register:cal_dc_dw
-	wire         controller_code_control_interface_active;                                     // controller:code_active -> code_storage:active
-	wire         controller_code_control_interface_reset;                                      // controller:code_reset -> code_storage:reset
-	wire  [31:0] code_count_count_interface_code_count;                                        // code_count:count -> controller:code_count
-	wire         controller_code_count_reset_interface_reset;                                  // controller:reset -> fetch_to_decode_register:reset_code_count
-	wire  [11:0] code_storage_code_interface_code;                                             // code_storage:code -> fetch_to_decode_register:code
-	wire  [31:0] code_storage_code_interface_code_index;                                       // code_storage:code_index -> fetch_to_decode_register:code_index
-	wire  [11:0] fetch_to_decode_register_code_out_interface_code;                             // fetch_to_decode_register:code_out -> parse:code
-	wire  [47:0] mult_matrix_prep_output_stream_interface_data_stream;                         // mult_matrix_prep:output_stream -> systolic:data_stream
-	wire         controller_forward_control_interface_load_w;                                  // controller:load_w -> decode_to_dense_register:load_w
-	wire  [99:0] controller_backprop_controll_interface_backprop_controll;                     // controller:backprop_controll -> decode_to_dense_register:backprop_controll
-	wire  [99:0] dense_layer_delay_reg_out_backprop_controll_interface_backprop_controll;      // dense_layer_delay_reg:backprop_controll_out -> dense_to_activate_register:backprop_controll
-	wire  [99:0] decode_to_dense_register_out_backprop_controll_interface_backprop_controll;   // decode_to_dense_register:backprop_controll_out -> dense_layer_delay_reg:backprop_controll
-	wire  [99:0] dense_to_activate_register_out_backprop_controll_interface_backprop_controll; // dense_to_activate_register:backprop_controll_out -> activate_to_diff_register:backprop_controll
-	wire  [99:0] activate_to_diff_register_out_backprop_controll_interface_backprop_controll;  // activate_to_diff_register:backprop_controll_out -> diff_to_backprop_register:backprop_controll
-	wire  [47:0] dense_to_activate_register_out_activate_interface_data_stream;                // dense_to_activate_register:y_out -> activation:in_data
-	wire   [3:0] dense_to_activate_register_out_activate_interface_act_type;                   // dense_to_activate_register:act_type_out -> activation:activtion
-	wire   [3:0] decode_to_dense_register_out_dense_type_interface_dense_type;                 // decode_to_dense_register:dense_type_out -> dense_layer_delay_reg:dense_type
-	wire  [47:0] differ_diff_interface_diff_start;                                             // differ:diff_start_out -> diff_to_backprop_register:diff_start
-	wire  [47:0] differ_diff_interface_diff_dense;                                             // differ:diff_dense_out -> diff_to_backprop_register:diff_dense
-	wire  [47:0] differ_diff_interface_diff_to_all;                                            // differ:diff_to_all_out -> diff_to_backprop_register:diff_to_all
-	wire  [47:0] differ_diff_interface_diff_cost;                                              // differ:diff_cost_out -> diff_to_backprop_register:diff_cost
-	wire  [47:0] differ_in_forward_interface_z;                                                // differ:z_out -> diff_to_backprop_register:z
-	wire  [47:0] differ_in_forward_interface_label;                                            // differ:predict_value_out -> diff_to_backprop_register:predict_value
-	wire   [7:0] decode_to_dense_register_out_forward_interface_cost_type;                     // decode_to_dense_register:cost_type_out -> dense_layer_delay_reg:cost_type
-	wire   [3:0] decode_to_dense_register_out_forward_interface_act_type;                      // decode_to_dense_register:act_type_out -> dense_layer_delay_reg:act_type
-	wire  [47:0] decode_to_dense_register_out_forward_interface_label;                         // decode_to_dense_register:label_out -> dense_layer_delay_reg:predict_value
-	wire   [3:0] parse_parameter_type_interface_dense_type;                                    // parse:dense_type -> parameter_storage:in_dense_type
-	wire   [7:0] parse_parameter_type_interface_cost_type;                                     // parse:cost_type -> parameter_storage:in_cost_type
-	wire   [3:0] parse_parameter_type_interface_act_type;                                      // parse:act_type -> parameter_storage:in_act_type
-	wire  [15:0] parse_parameter_type_interface_learning_rate;                                 // parse:learning_rate -> parameter_storage:in_learning_rate
-	wire  [47:0] train_data_mux_select_data_interface_x;                                       // train_data_mux:data_out -> decode_to_dense_register:x
-	wire  [47:0] train_data_mux_select_data_interface_label;                                   // train_data_mux:predict_value_out -> decode_to_dense_register:label_in
-	wire   [3:0] parameter_storage_out_parameter_interface_dense_type;                         // parameter_storage:out_dense_type -> decode_to_dense_register:dense_type
-	wire   [7:0] parameter_storage_out_parameter_interface_cost_type;                          // parameter_storage:out_cost_type -> decode_to_dense_register:cost_type
-	wire   [3:0] parameter_storage_out_parameter_interface_act_type;                           // parameter_storage:out_act_type -> decode_to_dense_register:act_type
-	wire  [47:0] diff_to_backprop_register_out_x_and_label_interface_z;                        // diff_to_backprop_register:z_out -> diff_to_decode_register:z
-	wire  [47:0] diff_to_backprop_register_out_x_and_label_interface_label;                    // diff_to_backprop_register:predict_value_out -> diff_to_decode_register:predict_value
-	wire  [47:0] mult_matrix_revert_output_stream_interface_y_stream;                          // mult_matrix_revert:output_stream -> dense_to_activate_register:y
-	wire  [47:0] w_and_x_spreader_x_out_interface_data_stream;                                 // w_and_x_spreader:x_out -> mult_matrix_prep:input_stream
-	wire         controller_i_is_load_interface_is_load;                                       // controller:i_is_load -> is_load_spreader_0:data_in
-	wire   [0:0] is_load_spreader_0_is_load_1_is_load;                                         // is_load_spreader_0:data_out_a -> is_load_spreader_1:data_in
-	wire   [0:0] is_load_spreader_1_is_load_2_is_load;                                         // is_load_spreader_1:data_out_b -> label_storage:is_read
-	wire   [0:0] is_load_spreader_0_is_load_2_is_load;                                         // is_load_spreader_0:data_out_b -> matrix_storage_locator:is_load
-	wire   [0:0] is_load_spreader_1_is_load_1_is_load;                                         // is_load_spreader_1:data_out_a -> input_storage:is_read
-	wire         controller_parse_interface_set_cost_type;                                     // controller:set_cost_type -> parameter_storage:update_cost_type
-	wire         controller_parse_interface_set_act_type;                                      // controller:set_act_type -> parameter_storage:update_act_type
-	wire         controller_parse_interface_set_learning_rate;                                 // controller:set_learning_rate_value -> parameter_storage:update_learning_rate
-	wire         controller_parse_interface_set_dense_type;                                    // controller:set_dense_type -> parameter_storage:update_dense_type
-	wire  [31:0] matrix_storage_locator_matrix_location_interface_row_index;                   // matrix_storage_locator:row_index -> matrix_location_spreader:read_row_index
-	wire  [31:0] matrix_storage_locator_matrix_location_interface_layer_index;                 // matrix_storage_locator:layer_index -> matrix_location_spreader:read_layer_index
-	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_row_index;           // matrix_location_spreader:read_row_index_1 -> input_storage:read_row_index
-	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_layer_index;         // matrix_location_spreader:read_layer_index_1 -> input_storage:read_layer_index
-	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_row_index;           // matrix_location_spreader:read_row_index_2 -> label_storage:read_row_index
-	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_layer_index;         // matrix_location_spreader:read_layer_index_2 -> label_storage:read_layer_index
-	wire  [99:0] diff_to_backprop_register_out_backprop_controll_interface_backprop_controll;  // diff_to_backprop_register:backprop_controll_out -> backprop_controller:backprop_controll_bundle
-	wire  [47:0] diff_to_backprop_register_out_backprop_data_interface_backprop_dense;         // diff_to_backprop_register:diff_dense_out -> backpropagator:backprop_dense
-	wire  [47:0] diff_to_backprop_register_out_backprop_data_interface_backprop_to_all;        // diff_to_backprop_register:diff_to_all_out -> backpropagator:backprop_to_all
-	wire  [47:0] diff_to_backprop_register_out_backprop_data_interface_backprop_start;         // diff_to_backprop_register:diff_start_out -> backpropagator:backprop_start
-	wire  [47:0] diff_to_backprop_register_out_backprop_data_interface_backprop_cost;          // diff_to_backprop_register:diff_cost_out -> backpropagator:backprop_cost
-	wire  [47:0] activation_out_data_interface_z;                                              // activation:out_data -> activate_to_diff_register:z
-	wire   [3:0] activate_to_diff_register_out_differ_interface_dense_type;                    // activate_to_diff_register:dense_type_out -> differ:dense_type
-	wire   [7:0] activate_to_diff_register_out_differ_interface_cost_type;                     // activate_to_diff_register:cost_type_out -> differ:cost_type
-	wire  [47:0] activate_to_diff_register_out_differ_interface_w;                             // activate_to_diff_register:w_out -> differ:weight
-	wire  [47:0] activate_to_diff_register_out_differ_interface_x;                             // activate_to_diff_register:x_out -> differ:x
-	wire  [47:0] activate_to_diff_register_out_differ_interface_z;                             // activate_to_diff_register:z_out -> differ:z
-	wire  [47:0] activate_to_diff_register_out_differ_interface_label;                         // activate_to_diff_register:predict_value_out -> differ:predict_value
-	wire   [3:0] dense_to_activate_register_out_forward_interface_dense_type;                  // dense_to_activate_register:dense_type_out -> activate_to_diff_register:dense_type
-	wire   [7:0] dense_to_activate_register_out_forward_interface_cost_type;                   // dense_to_activate_register:cost_type_out -> activate_to_diff_register:cost_type
-	wire  [47:0] dense_to_activate_register_out_forward_interface_w;                           // dense_to_activate_register:w_out -> activate_to_diff_register:w
-	wire  [47:0] dense_to_activate_register_out_forward_interface_x;                           // dense_to_activate_register:x_out -> activate_to_diff_register:x
-	wire  [47:0] dense_to_activate_register_out_forward_interface_label;                       // dense_to_activate_register:predict_value_out -> activate_to_diff_register:predict_value
-	wire   [3:0] dense_layer_delay_reg_out_forward_signal_interface_dense_type;                // dense_layer_delay_reg:dense_type_out -> dense_to_activate_register:dense_type
-	wire   [7:0] dense_layer_delay_reg_out_forward_signal_interface_cost_type;                 // dense_layer_delay_reg:cost_type_out -> dense_to_activate_register:cost_type
-	wire  [47:0] dense_layer_delay_reg_out_forward_signal_interface_w;                         // dense_layer_delay_reg:w_out -> dense_to_activate_register:w
-	wire  [47:0] dense_layer_delay_reg_out_forward_signal_interface_x;                         // dense_layer_delay_reg:x_out -> dense_to_activate_register:x
-	wire   [3:0] dense_layer_delay_reg_out_forward_signal_interface_act_type;                  // dense_layer_delay_reg:act_type_out -> dense_to_activate_register:act_type
-	wire  [47:0] dense_layer_delay_reg_out_forward_signal_interface_label;                     // dense_layer_delay_reg:predict_value_out -> dense_to_activate_register:predict_value
-	wire         diff_to_decode_register_out_update_weight_interface_is_update;                // diff_to_decode_register:update_weight -> weight_storage:is_update
-	wire  [31:0] backprop_controller_out_weight_interface_weight_layer;                        // backprop_controller:weight_layer -> diff_to_decode_register:w_layer_index
-	wire  [31:0] backprop_controller_out_weight_interface_weight_row;                          // backprop_controller:weight_row -> diff_to_decode_register:w_row_index
-	wire  [31:0] diff_to_decode_register_out_weight_location_interface_row_index;              // diff_to_decode_register:w_row_index_out -> weight_storage:row_index
-	wire  [31:0] diff_to_decode_register_out_weight_location_interface_layer_index;            // diff_to_decode_register:w_layer_index_out -> weight_storage:layer_index
-	wire  [47:0] diff_to_decode_register_out_x_and_label_interface_z;                          // diff_to_decode_register:z_out -> train_data_mux:z
-	wire  [47:0] diff_to_decode_register_out_x_and_label_interface_label;                      // diff_to_decode_register:predict_value_out -> train_data_mux:predict_value_old
-	wire   [3:0] parse_parameter_interface_op;                                                 // parse:op -> controller:op
-	wire   [3:0] parse_parameter_interface_param_b;                                            // parse:param_b -> controller:param_b
-	wire   [7:0] parse_parameter_interface_param_c;                                            // parse:param_c -> controller:param_c
-	wire   [3:0] parse_parameter_interface_param_a;                                            // parse:param_a -> controller:param_a
-	wire         fetch_to_decode_register_reset_code_count_out_interface_reset;                // fetch_to_decode_register:reset_code_count_out -> code_count:reset
-	wire  [47:0] backpropagator_dc_dw_stream_interface_dc_dw;                                  // backpropagator:dc_dw_stream -> weight_storage:dc_dw
-	wire  [47:0] label_storage_read_data_interface_read_data;                                  // label_storage:read_data -> train_data_mux:predict_value
-	wire  [47:0] input_storage_read_data_interface_read_data;                                  // input_storage:read_data -> train_data_mux:x
-	wire         controller_use_z_interface_use_z;                                             // controller:use_z -> train_data_mux:use_z
-	wire  [47:0] decode_to_dense_register_out_weight_interface_w_stream;                       // decode_to_dense_register:w_out -> w_and_x_spreader:w
-	wire         decode_to_dense_register_out_weight_interface_set_w;                          // decode_to_dense_register:load_w_out -> w_and_x_spreader:set_w
-	wire  [47:0] w_and_x_spreader_w_out_interface_w_stream;                                    // w_and_x_spreader:w_out -> systolic:w_stream
-	wire         w_and_x_spreader_w_out_interface_set_w;                                       // w_and_x_spreader:set_w_out -> systolic:set_w
-	wire  [47:0] weight_storage_weight_output_interface_weight;                                // weight_storage:w -> decode_to_dense_register:w
-	wire         controller_weigth_interface_is_load;                                          // controller:is_load -> weight_storage:is_read
-	wire  [31:0] controller_weigth_interface_w_layer_index;                                    // controller:w_layer_index -> weight_storage:w_layer_index
-	wire  [31:0] controller_weigth_interface_w_row_index;                                      // controller:w_row_index -> weight_storage:w_row_index
-	wire  [47:0] w_and_x_spreader_w_and_x_out_interface_w;                                     // w_and_x_spreader:w_out_interface -> dense_layer_delay_reg:w
-	wire  [47:0] w_and_x_spreader_w_and_x_out_interface_x;                                     // w_and_x_spreader:x_out_interface -> dense_layer_delay_reg:x
-	wire  [47:0] decode_to_dense_register_out_input_interface_data_stream;                     // decode_to_dense_register:x_out -> w_and_x_spreader:x
-	wire  [47:0] systolic_y_stream_interface_y_stream;                                         // systolic:y_stream -> mult_matrix_revert:input_stream
+	wire  [47:0] diff_to_backprop_register_out_backprop_data_interface_backprop_dense;          // diff_to_backprop_register:diff_dense_out -> backprop_controller:diff_dense
+	wire  [47:0] diff_to_backprop_register_out_backprop_data_interface_backprop_to_all;         // diff_to_backprop_register:diff_to_all_out -> backprop_controller:diff_to_all
+	wire  [47:0] diff_to_backprop_register_out_backprop_data_interface_backprop_start;          // diff_to_backprop_register:diff_start_out -> backprop_controller:diff_start
+	wire  [47:0] diff_to_backprop_register_out_backprop_data_interface_backprop_cost;           // diff_to_backprop_register:diff_cost_out -> backprop_controller:diff_cost
+	wire  [47:0] backprop_controller_backprop_controll_matrix_out_interface_diff_start;         // backprop_controller:diff_start_out -> backpropagator:diff_start
+	wire  [47:0] backprop_controller_backprop_controll_matrix_out_interface_diff_act;           // backprop_controller:diff_to_all_out -> backpropagator:diff_act
+	wire  [47:0] backprop_controller_backprop_controll_matrix_out_interface_diff_dense;         // backprop_controller:diff_dense_out -> backpropagator:diff_dense
+	wire  [47:0] backprop_controller_backprop_controll_matrix_out_interface_diff_cost;          // backprop_controller:diff_cost_out -> backpropagator:diff_cost
+	wire         backprop_controller_backprop_controll_out_controll_interface_active_train;     // backprop_controller:active_train -> backpropagator:active_train
+	wire         backprop_controller_backprop_controll_out_controll_interface_read_update_data; // backprop_controller:read_update_data -> backpropagator:read_update_data
+	wire  [31:0] backprop_controller_backprop_controll_out_controll_interface_current_layer;    // backprop_controller:current_layer_out -> backpropagator:current_input_layer
+	wire         backprop_controller_backprop_controll_out_controll_interface_is_last_layer;    // backprop_controller:is_last_layer -> backpropagator:is_last_layer
+	wire         backprop_controller_backprop_controll_out_controll_interface_start_new_layer;  // backprop_controller:start_new_layer -> backpropagator:start_new_layer
+	wire  [31:0] backprop_controller_backprop_controll_out_controll_interface_current_row;      // backprop_controller:current_row_out -> backpropagator:current_input_row
+	wire  [31:0] backpropagator_backprop_controll_out_interface_update_weight_row;              // backpropagator:update_weight_row -> diff_to_decode_register:w_row_index
+	wire         backpropagator_backprop_controll_out_interface_is_update_weight;               // backpropagator:is_update_weight -> diff_to_decode_register:update_weight
+	wire  [47:0] backpropagator_backprop_controll_out_interface_update_weight_value;            // backpropagator:update_weight_value -> diff_to_decode_register:dc_dw
+	wire  [31:0] backpropagator_backprop_controll_out_interface_update_weight_layer;            // backpropagator:update_weight_layer -> diff_to_decode_register:w_layer_index
+	wire         controller_code_control_interface_active;                                      // controller:code_active -> code_storage:active
+	wire         controller_code_control_interface_reset;                                       // controller:code_reset -> code_storage:reset
+	wire         controller_code_count_reset_interface_reset;                                   // controller:reset -> code_count:reset
+	wire  [11:0] code_storage_code_interface_code;                                              // code_storage:code -> fetch_to_decode_register:code
+	wire  [31:0] code_storage_code_interface_code_index;                                        // code_storage:code_index -> fetch_to_decode_register:code_index
+	wire  [11:0] fetch_to_decode_register_code_out_interface_code;                              // fetch_to_decode_register:code_out -> parse:code
+	wire         controller_code_reset_interface_update_code_reset_count;                       // controller:update_code_reset_count -> code_storage:update_code_reset_count
+	wire         controller_code_reset_interface_update_code_reset_address;                     // controller:update_code_reset_address -> code_storage:update_code_reset_address
+	wire  [31:0] controller_code_reset_interface_code_reset_count;                              // controller:code_reset_count -> code_storage:code_reset_count
+	wire  [31:0] controller_code_reset_interface_code_reset_address;                            // controller:code_reset_address -> code_storage:code_reset_address
+	wire  [31:0] code_count_count_interface_code_count;                                         // code_count:count -> controller:code_count
+	wire  [47:0] mult_matrix_prep_output_stream_interface_data_stream;                          // mult_matrix_prep:output_stream -> systolic:data_stream
+	wire         controller_forward_control_interface_load_w;                                   // controller:load_w -> decode_to_dense_register:load_w
+	wire  [65:0] controller_backprop_controll_interface_backprop_controll;                      // controller:backprop_controll -> decode_to_dense_register:backprop_controll
+	wire  [65:0] dense_layer_delay_reg_out_backprop_controll_interface_backprop_controll;       // dense_layer_delay_reg:backprop_controll_out -> dense_to_activate_register:backprop_controll
+	wire  [65:0] decode_to_dense_register_out_backprop_controll_interface_backprop_controll;    // decode_to_dense_register:backprop_controll_out -> dense_layer_delay_reg:backprop_controll
+	wire  [65:0] dense_to_activate_register_out_backprop_controll_interface_backprop_controll;  // dense_to_activate_register:backprop_controll_out -> activate_to_diff_register:backprop_controll
+	wire  [65:0] activate_to_diff_register_out_backprop_controll_interface_backprop_controll;   // activate_to_diff_register:backprop_controll_out -> diff_to_backprop_register:backprop_controll
+	wire  [47:0] dense_to_activate_register_out_activate_interface_data_stream;                 // dense_to_activate_register:y_out -> activation:in_data
+	wire   [3:0] dense_to_activate_register_out_activate_interface_act_type;                    // dense_to_activate_register:act_type_out -> activation:act
+	wire   [3:0] decode_to_dense_register_out_dense_type_interface_dense_type;                  // decode_to_dense_register:dense_type_out -> dense_layer_delay_reg:dense_type
+	wire  [47:0] differ_diff_interface_diff_start;                                              // differ:diff_start_out -> diff_to_backprop_register:diff_start
+	wire  [47:0] differ_diff_interface_diff_dense;                                              // differ:diff_dense_out -> diff_to_backprop_register:diff_dense
+	wire  [47:0] differ_diff_interface_diff_to_all;                                             // differ:diff_to_all_out -> diff_to_backprop_register:diff_to_all
+	wire  [47:0] differ_diff_interface_diff_cost;                                               // differ:diff_cost_out -> diff_to_backprop_register:diff_cost
+	wire  [47:0] differ_in_forward_interface_z;                                                 // differ:z_out -> diff_to_backprop_register:z
+	wire  [47:0] differ_in_forward_interface_label;                                             // differ:predict_value_out -> diff_to_backprop_register:predict_value
+	wire   [7:0] decode_to_dense_register_out_forward_interface_cost_type;                      // decode_to_dense_register:cost_type_out -> dense_layer_delay_reg:cost_type
+	wire   [3:0] decode_to_dense_register_out_forward_interface_act_type;                       // decode_to_dense_register:act_type_out -> dense_layer_delay_reg:act_type
+	wire  [47:0] decode_to_dense_register_out_forward_interface_label;                          // decode_to_dense_register:label_out -> dense_layer_delay_reg:predict_value
+	wire   [3:0] parse_parameter_type_interface_dense_type;                                     // parse:dense_type -> parameter_storage:in_dense_type
+	wire   [7:0] parse_parameter_type_interface_cost_type;                                      // parse:cost_type -> parameter_storage:in_cost_type
+	wire   [3:0] parse_parameter_type_interface_act_type;                                       // parse:act_type -> parameter_storage:in_act_type
+	wire  [15:0] parse_parameter_type_interface_learning_rate;                                  // parse:learning_rate -> parameter_storage:in_learning_rate
+	wire  [47:0] train_data_mux_select_data_interface_x;                                        // train_data_mux:data_out -> decode_to_dense_register:x
+	wire  [47:0] train_data_mux_select_data_interface_label;                                    // train_data_mux:predict_value_out -> decode_to_dense_register:label_in
+	wire   [3:0] parameter_storage_out_parameter_interface_dense_type;                          // parameter_storage:out_dense_type -> decode_to_dense_register:dense_type
+	wire   [7:0] parameter_storage_out_parameter_interface_cost_type;                           // parameter_storage:out_cost_type -> decode_to_dense_register:cost_type
+	wire   [3:0] parameter_storage_out_parameter_interface_act_type;                            // parameter_storage:out_act_type -> decode_to_dense_register:act_type
+	wire  [47:0] diff_to_backprop_register_out_x_and_label_interface_z;                         // diff_to_backprop_register:z_out -> diff_to_decode_register:z
+	wire  [47:0] diff_to_backprop_register_out_x_and_label_interface_label;                     // diff_to_backprop_register:predict_value_out -> diff_to_decode_register:predict_value
+	wire  [47:0] mult_matrix_revert_output_stream_interface_y_stream;                           // mult_matrix_revert:output_stream -> dense_to_activate_register:y
+	wire  [47:0] w_and_x_spreader_x_out_interface_data_stream;                                  // w_and_x_spreader:x_out -> mult_matrix_prep:input_stream
+	wire         controller_i_is_load_interface_is_load;                                        // controller:i_is_load -> is_load_spreader_0:data_in
+	wire   [0:0] is_load_spreader_0_is_load_1_is_load;                                          // is_load_spreader_0:data_out_a -> is_load_spreader_1:data_in
+	wire   [0:0] is_load_spreader_1_is_load_2_is_load;                                          // is_load_spreader_1:data_out_b -> label_storage:is_read
+	wire   [0:0] is_load_spreader_0_is_load_2_is_load;                                          // is_load_spreader_0:data_out_b -> matrix_storage_locator:is_load
+	wire   [0:0] is_load_spreader_1_is_load_1_is_load;                                          // is_load_spreader_1:data_out_a -> input_storage:is_read
+	wire         controller_parse_interface_set_cost_type;                                      // controller:set_cost_type -> parameter_storage:update_cost_type
+	wire         controller_parse_interface_set_act_type;                                       // controller:set_act_type -> parameter_storage:update_act_type
+	wire         controller_parse_interface_set_learning_rate;                                  // controller:set_learning_rate_value -> parameter_storage:update_learning_rate
+	wire         controller_parse_interface_set_dense_type;                                     // controller:set_dense_type -> parameter_storage:update_dense_type
+	wire  [15:0] parameter_storage_learning_rate_interface_learning_rate;                       // parameter_storage:out_learning_rate -> decode_to_dense_register:learning_rate
+	wire  [15:0] decode_to_dense_register_learning_rate_out_learning_rate;                      // decode_to_dense_register:learning_rate_out -> dense_layer_delay_reg:learning_rate
+	wire  [15:0] dense_layer_delay_reg_learning_rate_out_interface_learning_rate;               // dense_layer_delay_reg:learning_rate_out -> dense_to_activate_register:learning_rate
+	wire  [15:0] dense_to_activate_register_learning_rate_out_interface_learning_rate;          // dense_to_activate_register:learning_rate_out -> activate_to_diff_register:learning_rate
+	wire  [15:0] activate_to_diff_register_learning_rate_out_interface_learning_rate;           // activate_to_diff_register:learning_rate_out -> diff_to_backprop_register:learning_rate
+	wire  [15:0] diff_to_backprop_register_learning_rate_out_interface_learning_rate;           // diff_to_backprop_register:learning_rate_out -> backpropagator:learning_rate
+	wire  [31:0] matrix_storage_locator_matrix_location_interface_row_index;                    // matrix_storage_locator:row_index -> matrix_location_spreader:read_row_index
+	wire  [31:0] matrix_storage_locator_matrix_location_interface_layer_index;                  // matrix_storage_locator:layer_index -> matrix_location_spreader:read_layer_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_row_index;            // matrix_location_spreader:read_row_index_1 -> input_storage:read_row_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_1_interface_layer_index;          // matrix_location_spreader:read_layer_index_1 -> input_storage:read_layer_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_row_index;            // matrix_location_spreader:read_row_index_2 -> label_storage:read_row_index
+	wire  [31:0] matrix_location_spreader_matrix_location_out_2_interface_layer_index;          // matrix_location_spreader:read_layer_index_2 -> label_storage:read_layer_index
+	wire  [65:0] diff_to_backprop_register_out_backprop_controll_interface_backprop_controll;   // diff_to_backprop_register:backprop_controll_out -> backprop_controller:backprop_controll_bundle
+	wire  [47:0] activation_out_data_interface_z;                                               // activation:out_data -> activate_to_diff_register:z
+	wire   [3:0] activate_to_diff_register_out_differ_interface_dense_type;                     // activate_to_diff_register:dense_type_out -> differ:dense_type
+	wire   [7:0] activate_to_diff_register_out_differ_interface_cost_type;                      // activate_to_diff_register:cost_type_out -> differ:cost_type
+	wire  [47:0] activate_to_diff_register_out_differ_interface_w;                              // activate_to_diff_register:w_out -> differ:weight
+	wire  [47:0] activate_to_diff_register_out_differ_interface_x;                              // activate_to_diff_register:x_out -> differ:x
+	wire   [3:0] activate_to_diff_register_out_differ_interface_act_type;                       // activate_to_diff_register:act_type_out -> differ:act_type
+	wire  [47:0] activate_to_diff_register_out_differ_interface_y;                              // activate_to_diff_register:y_out -> differ:y
+	wire  [47:0] activate_to_diff_register_out_differ_interface_z;                              // activate_to_diff_register:z_out -> differ:z
+	wire  [47:0] activate_to_diff_register_out_differ_interface_label;                          // activate_to_diff_register:predict_value_out -> differ:predict_value
+	wire   [3:0] dense_to_activate_register_out_forward_interface_dense_type;                   // dense_to_activate_register:dense_type_out -> activate_to_diff_register:dense_type
+	wire   [7:0] dense_to_activate_register_out_forward_interface_cost_type;                    // dense_to_activate_register:cost_type_out -> activate_to_diff_register:cost_type
+	wire  [47:0] dense_to_activate_register_out_forward_interface_w;                            // dense_to_activate_register:w_out -> activate_to_diff_register:w
+	wire  [47:0] dense_to_activate_register_out_forward_interface_x;                            // dense_to_activate_register:x_out -> activate_to_diff_register:x
+	wire   [3:0] dense_to_activate_register_out_forward_interface_act_type;                     // dense_to_activate_register:act_type_forward_out -> activate_to_diff_register:act_type
+	wire  [47:0] dense_to_activate_register_out_forward_interface_y;                            // dense_to_activate_register:y_out_forward -> activate_to_diff_register:y
+	wire  [47:0] dense_to_activate_register_out_forward_interface_label;                        // dense_to_activate_register:predict_value_out -> activate_to_diff_register:predict_value
+	wire   [3:0] dense_layer_delay_reg_out_forward_signal_interface_dense_type;                 // dense_layer_delay_reg:dense_type_out -> dense_to_activate_register:dense_type
+	wire   [7:0] dense_layer_delay_reg_out_forward_signal_interface_cost_type;                  // dense_layer_delay_reg:cost_type_out -> dense_to_activate_register:cost_type
+	wire  [47:0] dense_layer_delay_reg_out_forward_signal_interface_w;                          // dense_layer_delay_reg:w_out -> dense_to_activate_register:w
+	wire  [47:0] dense_layer_delay_reg_out_forward_signal_interface_x;                          // dense_layer_delay_reg:x_out -> dense_to_activate_register:x
+	wire   [3:0] dense_layer_delay_reg_out_forward_signal_interface_act_type;                   // dense_layer_delay_reg:act_type_out -> dense_to_activate_register:act_type
+	wire  [47:0] dense_layer_delay_reg_out_forward_signal_interface_label;                      // dense_layer_delay_reg:predict_value_out -> dense_to_activate_register:predict_value
+	wire  [47:0] diff_to_decode_register_out_x_and_label_interface_z;                           // diff_to_decode_register:z_out -> train_data_mux:z
+	wire  [47:0] diff_to_decode_register_out_x_and_label_interface_label;                       // diff_to_decode_register:predict_value_out -> train_data_mux:predict_value_old
+	wire   [3:0] parse_parameter_interface_op;                                                  // parse:op -> controller:op
+	wire   [3:0] parse_parameter_interface_param_b;                                             // parse:param_b -> controller:param_b
+	wire   [7:0] parse_parameter_interface_param_c;                                             // parse:param_c -> controller:param_c
+	wire   [3:0] parse_parameter_interface_param_a;                                             // parse:param_a -> controller:param_a
+	wire  [31:0] diff_to_decode_register_out_update_weight_interface_update_weight_row;         // diff_to_decode_register:w_row_index_out -> weight_storage:row_index
+	wire  [47:0] diff_to_decode_register_out_update_weight_interface_update_weight_value;       // diff_to_decode_register:dc_dw_out -> weight_storage:dc_dw
+	wire         diff_to_decode_register_out_update_weight_interface_is_update_weight;          // diff_to_decode_register:update_weight_out -> weight_storage:is_update
+	wire  [31:0] diff_to_decode_register_out_update_weight_interface_update_weight_layer;       // diff_to_decode_register:w_layer_index_out -> weight_storage:layer_index
+	wire  [47:0] label_storage_read_data_interface_read_data;                                   // label_storage:read_data -> train_data_mux:predict_value
+	wire  [47:0] input_storage_read_data_interface_read_data;                                   // input_storage:read_data -> train_data_mux:x
+	wire         controller_use_z_interface_use_z;                                              // controller:use_z -> train_data_mux:use_z
+	wire  [47:0] decode_to_dense_register_out_weight_interface_w_stream;                        // decode_to_dense_register:w_out -> w_and_x_spreader:w
+	wire         decode_to_dense_register_out_weight_interface_set_w;                           // decode_to_dense_register:load_w_out -> w_and_x_spreader:set_w
+	wire  [47:0] w_and_x_spreader_w_out_interface_w_stream;                                     // w_and_x_spreader:w_out -> systolic:w_stream
+	wire         w_and_x_spreader_w_out_interface_set_w;                                        // w_and_x_spreader:set_w_out -> systolic:set_w
+	wire  [47:0] weight_storage_weight_output_interface_weight;                                 // weight_storage:w -> decode_to_dense_register:w
+	wire         controller_weigth_interface_is_load;                                           // controller:is_load -> weight_storage:is_read
+	wire  [31:0] controller_weigth_interface_w_layer_index;                                     // controller:w_layer_index -> weight_storage:w_layer_index
+	wire  [31:0] controller_weigth_interface_w_row_index;                                       // controller:w_row_index -> weight_storage:w_row_index
+	wire  [47:0] w_and_x_spreader_w_and_x_out_interface_w;                                      // w_and_x_spreader:w_out_interface -> dense_layer_delay_reg:w
+	wire  [47:0] w_and_x_spreader_w_and_x_out_interface_x;                                      // w_and_x_spreader:x_out_interface -> dense_layer_delay_reg:x
+	wire  [47:0] decode_to_dense_register_out_input_interface_data_stream;                      // decode_to_dense_register:x_out -> w_and_x_spreader:x
+	wire  [47:0] systolic_y_stream_interface_y_stream;                                          // systolic:y_stream -> mult_matrix_revert:input_stream
 
 	activate_diff_reg #(
 		.size                   (3),
 		.data_size              (16),
 		.cost_type_size         (8),
 		.dense_type_size        (4),
-		.backprop_controll_size (100)
+		.act_type_size          (4),
+		.learning_rate_size     (16),
+		.backprop_controll_size (66)
 	) activate_to_diff_register (
 		.clk                   (clk_clk),                                                                      //                           clock.clk
 		.cost_type             (dense_to_activate_register_out_forward_interface_cost_type),                   //            in_forward_interface.cost_type
@@ -155,6 +173,8 @@ module data_path (
 		.w                     (dense_to_activate_register_out_forward_interface_w),                           //                                .w
 		.x                     (dense_to_activate_register_out_forward_interface_x),                           //                                .x
 		.predict_value         (dense_to_activate_register_out_forward_interface_label),                       //                                .label
+		.act_type              (dense_to_activate_register_out_forward_interface_act_type),                    //                                .act_type
+		.y                     (dense_to_activate_register_out_forward_interface_y),                           //                                .y
 		.z                     (activation_out_data_interface_z),                                              //                  in_z_interface.z
 		.cost_type_out         (activate_to_diff_register_out_differ_interface_cost_type),                     //            out_differ_interface.cost_type
 		.w_out                 (activate_to_diff_register_out_differ_interface_w),                             //                                .w
@@ -162,8 +182,12 @@ module data_path (
 		.z_out                 (activate_to_diff_register_out_differ_interface_z),                             //                                .z
 		.predict_value_out     (activate_to_diff_register_out_differ_interface_label),                         //                                .label
 		.dense_type_out        (activate_to_diff_register_out_differ_interface_dense_type),                    //                                .dense_type
+		.act_type_out          (activate_to_diff_register_out_differ_interface_act_type),                      //                                .act_type
+		.y_out                 (activate_to_diff_register_out_differ_interface_y),                             //                                .y
 		.backprop_controll     (dense_to_activate_register_out_backprop_controll_interface_backprop_controll), //  in_backprop_controll_interface.backprop_controll
-		.backprop_controll_out (activate_to_diff_register_out_backprop_controll_interface_backprop_controll)   // out_backprop_controll_interface.backprop_controll
+		.backprop_controll_out (activate_to_diff_register_out_backprop_controll_interface_backprop_controll),  // out_backprop_controll_interface.backprop_controll
+		.learning_rate_out     (activate_to_diff_register_learning_rate_out_interface_learning_rate),          //     learning_rate_out_interface.learning_rate
+		.learning_rate         (dense_to_activate_register_learning_rate_out_interface_learning_rate)          //         learning_rate_interface.learning_rate
 	);
 
 	activation #(
@@ -171,97 +195,115 @@ module data_path (
 		.size          (3),
 		.activate_size (4)
 	) activation (
-		.in_data   (dense_to_activate_register_out_activate_interface_data_stream), //  in_data_interface.data_stream
-		.activtion (dense_to_activate_register_out_activate_interface_act_type),    //                   .act_type
-		.out_data  (activation_out_data_interface_z)                                // out_data_interface.z
+		.in_data  (dense_to_activate_register_out_activate_interface_data_stream), //  in_data_interface.data_stream
+		.act      (dense_to_activate_register_out_activate_interface_act_type),    //                   .act_type
+		.out_data (activation_out_data_interface_z)                                // out_data_interface.z
 	);
 
 	backprop_stack_controller #(
 		.size                   (3),
 		.data_size              (16),
-		.backprop_controll_size (100)
+		.backprop_controll_size (66),
+		.max_layer_size         (4)
 	) backprop_controller (
-		.current_layer_out        (backprop_controller_backprop_controll_out_interface_current_layer),           //       backprop_controll_out_interface.current_layer
-		.dc_dw_layer_out          (backprop_controller_backprop_controll_out_interface_dc_dw_layer),             //                                      .dc_dw_layer
-		.dc_dw_row_out            (backprop_controller_backprop_controll_out_interface_dc_dw_row),               //                                      .dc_dw_row
-		.update_storage_out       (backprop_controller_backprop_controll_out_interface_update_storage),          //                                      .update_storage
-		.update_dy_dy_old_out     (backprop_controller_backprop_controll_out_interface_update_dy_dy_old),        //                                      .update_dy_dy_old
-		.cal_dc_dw_out            (backprop_controller_backprop_controll_out_interface_cal_dc_dw),               //                                      .cal_dc_dw
-		.reset_out                (backprop_controller_backprop_controll_out_interface_reset),                   //                                      .reset
-		.backprop_controll_bundle (diff_to_backprop_register_out_backprop_controll_interface_backprop_controll), // backprop_controll_bundle_in_interface.backprop_controll
-		.cal_dc_dw_out_forward    (backprop_controller_cal_dc_dw_out_forward_interface_cal_dc_dw),               //       cal_dc_dw_out_forward_interface.cal_dc_dw
-		.weight_row               (backprop_controller_out_weight_interface_weight_row),                         //                  out_weight_interface.weight_row
-		.weight_layer             (backprop_controller_out_weight_interface_weight_layer)                        //                                      .weight_layer
+		.backprop_controll_bundle (diff_to_backprop_register_out_backprop_controll_interface_backprop_controll),   //    backprop_controll_bundle_in_interface.backprop_controll
+		.clk                      (clk_clk),                                                                       //                                    clock.clk
+		.diff_dense               (diff_to_backprop_register_out_backprop_data_interface_backprop_dense),          //    backprop_controll_matrix_in_interface.backprop_dense
+		.diff_start               (diff_to_backprop_register_out_backprop_data_interface_backprop_start),          //                                         .backprop_start
+		.diff_cost                (diff_to_backprop_register_out_backprop_data_interface_backprop_cost),           //                                         .backprop_cost
+		.diff_to_all              (diff_to_backprop_register_out_backprop_data_interface_backprop_to_all),         //                                         .backprop_to_all
+		.diff_cost_out            (backprop_controller_backprop_controll_matrix_out_interface_diff_cost),          //   backprop_controll_matrix_out_interface.diff_cost
+		.diff_dense_out           (backprop_controller_backprop_controll_matrix_out_interface_diff_dense),         //                                         .diff_dense
+		.diff_start_out           (backprop_controller_backprop_controll_matrix_out_interface_diff_start),         //                                         .diff_start
+		.diff_to_all_out          (backprop_controller_backprop_controll_matrix_out_interface_diff_act),           //                                         .diff_act
+		.active_train             (backprop_controller_backprop_controll_out_controll_interface_active_train),     // backprop_controll_out_controll_interface.active_train
+		.current_row_out          (backprop_controller_backprop_controll_out_controll_interface_current_row),      //                                         .current_row
+		.is_last_layer            (backprop_controller_backprop_controll_out_controll_interface_is_last_layer),    //                                         .is_last_layer
+		.read_update_data         (backprop_controller_backprop_controll_out_controll_interface_read_update_data), //                                         .read_update_data
+		.start_new_layer          (backprop_controller_backprop_controll_out_controll_interface_start_new_layer),  //                                         .start_new_layer
+		.current_layer_out        (backprop_controller_backprop_controll_out_controll_interface_current_layer)     //                                         .current_layer
 	);
 
 	backprop_stack #(
-		.data_size      (16),
-		.size           (3),
-		.max_layer_size (10)
+		.data_size          (16),
+		.size               (3),
+		.max_layer_size     (10),
+		.learning_rate_size (16)
 	) backpropagator (
-		.clk              (clk_clk),                                                               //                       clock.clk
-		.dc_dw_stream     (backpropagator_dc_dw_stream_interface_dc_dw),                           //      dc_dw_stream_interface.dc_dw
-		.update_storage   (backprop_controller_backprop_controll_out_interface_update_storage),    // backprop_controll_interface.update_storage
-		.current_layer    (backprop_controller_backprop_controll_out_interface_current_layer),     //                            .current_layer
-		.update_dy_dy_old (backprop_controller_backprop_controll_out_interface_update_dy_dy_old),  //                            .update_dy_dy_old
-		.cal_dc_dw        (backprop_controller_backprop_controll_out_interface_cal_dc_dw),         //                            .cal_dc_dw
-		.dc_dw_layer      (backprop_controller_backprop_controll_out_interface_dc_dw_layer),       //                            .dc_dw_layer
-		.dc_dw_row        (backprop_controller_backprop_controll_out_interface_dc_dw_row),         //                            .dc_dw_row
-		.reset            (backprop_controller_backprop_controll_out_interface_reset),             //                            .reset
-		.backprop_dense   (diff_to_backprop_register_out_backprop_data_interface_backprop_dense),  //     backprop_data_interface.backprop_dense
-		.backprop_start   (diff_to_backprop_register_out_backprop_data_interface_backprop_start),  //                            .backprop_start
-		.backprop_to_all  (diff_to_backprop_register_out_backprop_data_interface_backprop_to_all), //                            .backprop_to_all
-		.backprop_cost    (diff_to_backprop_register_out_backprop_data_interface_backprop_cost)    //                            .backprop_cost
+		.clk                 (clk_clk),                                                                       //                           clock.clk
+		.active_train        (backprop_controller_backprop_controll_out_controll_interface_active_train),     //     backprop_controll_interface.active_train
+		.current_input_layer (backprop_controller_backprop_controll_out_controll_interface_current_layer),    //                                .current_layer
+		.current_input_row   (backprop_controller_backprop_controll_out_controll_interface_current_row),      //                                .current_row
+		.is_last_layer       (backprop_controller_backprop_controll_out_controll_interface_is_last_layer),    //                                .is_last_layer
+		.start_new_layer     (backprop_controller_backprop_controll_out_controll_interface_start_new_layer),  //                                .start_new_layer
+		.read_update_data    (backprop_controller_backprop_controll_out_controll_interface_read_update_data), //                                .read_update_data
+		.diff_act            (backprop_controller_backprop_controll_matrix_out_interface_diff_act),           //         backprop_data_interface.diff_act
+		.diff_cost           (backprop_controller_backprop_controll_matrix_out_interface_diff_cost),          //                                .diff_cost
+		.diff_dense          (backprop_controller_backprop_controll_matrix_out_interface_diff_dense),         //                                .diff_dense
+		.diff_start          (backprop_controller_backprop_controll_matrix_out_interface_diff_start),         //                                .diff_start
+		.is_update_weight    (backpropagator_backprop_controll_out_interface_is_update_weight),               // backprop_controll_out_interface.is_update_weight
+		.update_weight_layer (backpropagator_backprop_controll_out_interface_update_weight_layer),            //                                .update_weight_layer
+		.update_weight_row   (backpropagator_backprop_controll_out_interface_update_weight_row),              //                                .update_weight_row
+		.update_weight_value (backpropagator_backprop_controll_out_interface_update_weight_value),            //                                .update_weight_value
+		.learning_rate       (diff_to_backprop_register_learning_rate_out_interface_learning_rate)            //         learning_rate_interface.learning_rate
 	);
 
 	code_count code_count (
-		.clk   (clk_clk),                                                       //           clock.clk
-		.reset (fetch_to_decode_register_reset_code_count_out_interface_reset), // reset_interface.reset
-		.count (code_count_count_interface_code_count)                          // count_interface.code_count
+		.clk   (clk_clk),                                     //           clock.clk
+		.reset (controller_code_count_reset_interface_reset), // reset_interface.reset
+		.count (code_count_count_interface_code_count)        // count_interface.code_count
 	);
 
 	code_storage #(
 		.code_size     (12),
 		.max_code_line (100)
 	) code_storage (
-		.clk        (clk_clk),                                  //                  clock.clk
-		.code       (code_storage_code_interface_code),         //         code_interface.code
-		.code_index (code_storage_code_interface_code_index),   //                       .code_index
-		.active     (controller_code_control_interface_active), // code_control_interface.active
-		.reset      (controller_code_control_interface_reset),  //                       .reset
-		.write_data (code_storage_write_interface_write_data),  //        write_interface.write_data
-		.is_write   (code_storage_write_interface_is_write),    //                       .is_write
-		.write_line (code_storage_write_interface_write_line),  //                       .write_line
-		.enable     (code_storage_enable_interface_enable)      //       enable_interface.enable
+		.clk                       (clk_clk),                                                   //                  clock.clk
+		.code                      (code_storage_code_interface_code),                          //         code_interface.code
+		.code_index                (code_storage_code_interface_code_index),                    //                       .code_index
+		.active                    (controller_code_control_interface_active),                  // code_control_interface.active
+		.reset                     (controller_code_control_interface_reset),                   //                       .reset
+		.write_data                (code_storage_write_interface_write_data),                   //        write_interface.write_data
+		.is_write                  (code_storage_write_interface_is_write),                     //                       .is_write
+		.write_line                (code_storage_write_interface_write_line),                   //                       .write_line
+		.enable                    (code_storage_enable_interface_enable),                      //       enable_interface.enable
+		.code_reset_address        (controller_code_reset_interface_code_reset_address),        //   code_reset_interface.code_reset_address
+		.update_code_reset_address (controller_code_reset_interface_update_code_reset_address), //                       .update_code_reset_address
+		.code_reset_count          (controller_code_reset_interface_code_reset_count),          //                       .code_reset_count
+		.update_code_reset_count   (controller_code_reset_interface_update_code_reset_count)    //                       .update_code_reset_count
 	);
 
 	controller #(
 		.op_size                (4),
 		.size                   (3),
-		.backprop_controll_size (100),
+		.backprop_controll_size (66),
 		.param_a_size           (4),
 		.param_b_size           (4)
 	) controller (
-		.load_w                  (controller_forward_control_interface_load_w),              //   forward_control_interface.load_w
-		.i_is_load               (controller_i_is_load_interface_is_load),                   //         i_is_load_interface.is_load
-		.w_layer_index           (controller_weigth_interface_w_layer_index),                //            weigth_interface.w_layer_index
-		.w_row_index             (controller_weigth_interface_w_row_index),                  //                            .w_row_index
-		.is_load                 (controller_weigth_interface_is_load),                      //                            .is_load
-		.reset                   (controller_code_count_reset_interface_reset),              //  code_count_reset_interface.reset
-		.use_z                   (controller_use_z_interface_use_z),                         //             use_z_interface.use_z
-		.code_count              (code_count_count_interface_code_count),                    //        code_count_interface.code_count
-		.code_active             (controller_code_control_interface_active),                 //      code_control_interface.active
-		.code_reset              (controller_code_control_interface_reset),                  //                            .reset
-		.enable                  (controller_enable_interface_enable),                       //            enable_interface.enable
-		.backprop_controll       (controller_backprop_controll_interface_backprop_controll), // backprop_controll_interface.backprop_controll
-		.set_act_type            (controller_parse_interface_set_act_type),                  //             parse_interface.set_act_type
-		.set_cost_type           (controller_parse_interface_set_cost_type),                 //                            .set_cost_type
-		.set_dense_type          (controller_parse_interface_set_dense_type),                //                            .set_dense_type
-		.set_learning_rate_value (controller_parse_interface_set_learning_rate),             //                            .set_learning_rate
-		.param_a                 (parse_parameter_interface_param_a),                        //         parameter_interface.param_a
-		.param_b                 (parse_parameter_interface_param_b),                        //                            .param_b
-		.param_c                 (parse_parameter_interface_param_c),                        //                            .param_c
-		.op                      (parse_parameter_interface_op)                              //                            .op
+		.load_w                    (controller_forward_control_interface_load_w),               //   forward_control_interface.load_w
+		.i_is_load                 (controller_i_is_load_interface_is_load),                    //         i_is_load_interface.is_load
+		.w_layer_index             (controller_weigth_interface_w_layer_index),                 //            weigth_interface.w_layer_index
+		.w_row_index               (controller_weigth_interface_w_row_index),                   //                            .w_row_index
+		.is_load                   (controller_weigth_interface_is_load),                       //                            .is_load
+		.reset                     (controller_code_count_reset_interface_reset),               //  code_count_reset_interface.reset
+		.use_z                     (controller_use_z_interface_use_z),                          //             use_z_interface.use_z
+		.code_count                (code_count_count_interface_code_count),                     //        code_count_interface.code_count
+		.code_active               (controller_code_control_interface_active),                  //      code_control_interface.active
+		.code_reset                (controller_code_control_interface_reset),                   //                            .reset
+		.enable                    (controller_enable_interface_enable),                        //            enable_interface.enable
+		.backprop_controll         (controller_backprop_controll_interface_backprop_controll),  // backprop_controll_interface.backprop_controll
+		.set_act_type              (controller_parse_interface_set_act_type),                   //             parse_interface.set_act_type
+		.set_cost_type             (controller_parse_interface_set_cost_type),                  //                            .set_cost_type
+		.set_dense_type            (controller_parse_interface_set_dense_type),                 //                            .set_dense_type
+		.set_learning_rate_value   (controller_parse_interface_set_learning_rate),              //                            .set_learning_rate
+		.param_a                   (parse_parameter_interface_param_a),                         //         parameter_interface.param_a
+		.param_b                   (parse_parameter_interface_param_b),                         //                            .param_b
+		.param_c                   (parse_parameter_interface_param_c),                         //                            .param_c
+		.op                        (parse_parameter_interface_op),                              //                            .op
+		.code_reset_address        (controller_code_reset_interface_code_reset_address),        //        code_reset_interface.code_reset_address
+		.update_code_reset_address (controller_code_reset_interface_update_code_reset_address), //                            .update_code_reset_address
+		.code_reset_count          (controller_code_reset_interface_code_reset_count),          //                            .code_reset_count
+		.update_code_reset_count   (controller_code_reset_interface_update_code_reset_count)    //                            .update_code_reset_count
 	);
 
 	decode_dense_reg #(
@@ -269,8 +311,9 @@ module data_path (
 		.data_size              (16),
 		.cost_type_size         (8),
 		.dense_type_size        (4),
+		.learning_rate_size     (16),
 		.act_type_size          (4),
-		.backprop_controll_size (100)
+		.backprop_controll_size (66)
 	) decode_to_dense_register (
 		.clk                   (clk_clk),                                                                    //                           clock.clk
 		.w_out                 (decode_to_dense_register_out_weight_interface_w_stream),                     //            out_weight_interface.w_stream
@@ -288,7 +331,9 @@ module data_path (
 		.x                     (train_data_mux_select_data_interface_x),                                     //         in_train_data_interface.x
 		.label_in              (train_data_mux_select_data_interface_label),                                 //                                .label
 		.backprop_controll     (controller_backprop_controll_interface_backprop_controll),                   //  in_backprop_controll_interface.backprop_controll
-		.backprop_controll_out (decode_to_dense_register_out_backprop_controll_interface_backprop_controll)  // out_backprop_controll_interface.backprop_controll
+		.backprop_controll_out (decode_to_dense_register_out_backprop_controll_interface_backprop_controll), // out_backprop_controll_interface.backprop_controll
+		.learning_rate         (parameter_storage_learning_rate_interface_learning_rate),                    //                   learning_rate.learning_rate
+		.learning_rate_out     (decode_to_dense_register_learning_rate_out_learning_rate)                    //               learning_rate_out.learning_rate
 	);
 
 	dense_layer_delay_reg #(
@@ -297,7 +342,8 @@ module data_path (
 		.cost_type_size         (8),
 		.dense_type_size        (4),
 		.act_type_size          (4),
-		.backprop_controll_size (100)
+		.learning_rate_size     (16),
+		.backprop_controll_size (66)
 	) dense_layer_delay_reg (
 		.clk                   (clk_clk),                                                                    //                           clock.clk
 		.w                     (w_and_x_spreader_w_and_x_out_interface_w),                                   //               x_and_w_interface.w
@@ -313,7 +359,9 @@ module data_path (
 		.predict_value         (decode_to_dense_register_out_forward_interface_label),                       //                                .label
 		.dense_type            (decode_to_dense_register_out_dense_type_interface_dense_type),               //         in_dense_type_interface.dense_type
 		.backprop_controll     (decode_to_dense_register_out_backprop_controll_interface_backprop_controll), //  in_backprop_controll_interface.backprop_controll
-		.backprop_controll_out (dense_layer_delay_reg_out_backprop_controll_interface_backprop_controll)     // out_backprop_controll_interface.backprop_controll
+		.backprop_controll_out (dense_layer_delay_reg_out_backprop_controll_interface_backprop_controll),    // out_backprop_controll_interface.backprop_controll
+		.learning_rate_out     (dense_layer_delay_reg_learning_rate_out_interface_learning_rate),            //     learning_rate_out_interface.learning_rate
+		.learning_rate         (decode_to_dense_register_learning_rate_out_learning_rate)                    //         learning_rate_interface.learning_rate
 	);
 
 	dense_activate_reg #(
@@ -322,32 +370,38 @@ module data_path (
 		.cost_type_size         (8),
 		.dense_type_size        (4),
 		.act_type_size          (4),
-		.backprop_controll_size (100)
+		.learning_rate_size     (16),
+		.backprop_controll_size (66)
 	) dense_to_activate_register (
 		.clk                   (clk_clk),                                                                      //                           clock.clk
-		.act_type              (dense_layer_delay_reg_out_forward_signal_interface_act_type),                  //            in_forward_interface.act_type
-		.cost_type             (dense_layer_delay_reg_out_forward_signal_interface_cost_type),                 //                                .cost_type
+		.cost_type             (dense_layer_delay_reg_out_forward_signal_interface_cost_type),                 //            in_forward_interface.cost_type
 		.dense_type            (dense_layer_delay_reg_out_forward_signal_interface_dense_type),                //                                .dense_type
 		.w                     (dense_layer_delay_reg_out_forward_signal_interface_w),                         //                                .w
 		.x                     (dense_layer_delay_reg_out_forward_signal_interface_x),                         //                                .x
 		.predict_value         (dense_layer_delay_reg_out_forward_signal_interface_label),                     //                                .label
-		.act_type_out          (dense_to_activate_register_out_activate_interface_act_type),                   //          out_activate_interface.act_type
-		.y_out                 (dense_to_activate_register_out_activate_interface_data_stream),                //                                .data_stream
+		.act_type              (dense_layer_delay_reg_out_forward_signal_interface_act_type),                  //                                .act_type
+		.y_out                 (dense_to_activate_register_out_activate_interface_data_stream),                //          out_activate_interface.data_stream
+		.act_type_out          (dense_to_activate_register_out_activate_interface_act_type),                   //                                .act_type
 		.dense_type_out        (dense_to_activate_register_out_forward_interface_dense_type),                  //           out_forward_interface.dense_type
 		.cost_type_out         (dense_to_activate_register_out_forward_interface_cost_type),                   //                                .cost_type
 		.w_out                 (dense_to_activate_register_out_forward_interface_w),                           //                                .w
 		.x_out                 (dense_to_activate_register_out_forward_interface_x),                           //                                .x
 		.predict_value_out     (dense_to_activate_register_out_forward_interface_label),                       //                                .label
+		.act_type_forward_out  (dense_to_activate_register_out_forward_interface_act_type),                    //                                .act_type
+		.y_out_forward         (dense_to_activate_register_out_forward_interface_y),                           //                                .y
 		.y                     (mult_matrix_revert_output_stream_interface_y_stream),                          //                  in_y_interface.y_stream
 		.backprop_controll     (dense_layer_delay_reg_out_backprop_controll_interface_backprop_controll),      //  in_backprop_controll_interface.backprop_controll
-		.backprop_controll_out (dense_to_activate_register_out_backprop_controll_interface_backprop_controll)  // out_backprop_controll_interface.backprop_controll
+		.backprop_controll_out (dense_to_activate_register_out_backprop_controll_interface_backprop_controll), // out_backprop_controll_interface.backprop_controll
+		.learning_rate_out     (dense_to_activate_register_learning_rate_out_interface_learning_rate),         //     learning_rate_out_interface.learning_rate
+		.learning_rate         (dense_layer_delay_reg_learning_rate_out_interface_learning_rate)               //         learning_rate_interface.learning_rate
 	);
 
 	diff_backprop_reg #(
 		.size                   (3),
 		.data_size              (16),
 		.dense_type_size        (4),
-		.backprop_controll_size (100)
+		.learning_rate_size     (16),
+		.backprop_controll_size (66)
 	) diff_to_backprop_register (
 		.clk                   (clk_clk),                                                                     //                           clock.clk
 		.diff_cost             (differ_diff_interface_diff_cost),                                             //               in_diff_interface.diff_cost
@@ -363,31 +417,36 @@ module data_path (
 		.diff_cost_out         (diff_to_backprop_register_out_backprop_data_interface_backprop_cost),         //     out_backprop_data_interface.backprop_cost
 		.diff_dense_out        (diff_to_backprop_register_out_backprop_data_interface_backprop_dense),        //                                .backprop_dense
 		.diff_start_out        (diff_to_backprop_register_out_backprop_data_interface_backprop_start),        //                                .backprop_start
-		.diff_to_all_out       (diff_to_backprop_register_out_backprop_data_interface_backprop_to_all)        //                                .backprop_to_all
+		.diff_to_all_out       (diff_to_backprop_register_out_backprop_data_interface_backprop_to_all),       //                                .backprop_to_all
+		.learning_rate         (activate_to_diff_register_learning_rate_out_interface_learning_rate),         //         learning_rate_interface.learning_rate
+		.learning_rate_out     (diff_to_backprop_register_learning_rate_out_interface_learning_rate)          //     learning_rate_out_interface.learning_rate
 	);
 
 	diff_to_decode_register #(
 		.size      (3),
 		.data_size (16)
 	) diff_to_decode_register (
-		.clk               (clk_clk),                                                           //                         clock.clk
-		.z                 (diff_to_backprop_register_out_x_and_label_interface_z),             //      in_x_and_label_interface.z
-		.predict_value     (diff_to_backprop_register_out_x_and_label_interface_label),         //                              .label
-		.z_out             (diff_to_decode_register_out_x_and_label_interface_z),               //     out_x_and_label_interface.z
-		.predict_value_out (diff_to_decode_register_out_x_and_label_interface_label),           //                              .label
-		.w_layer_index     (backprop_controller_out_weight_interface_weight_layer),             //  in_weight_location_interface.weight_layer
-		.w_row_index       (backprop_controller_out_weight_interface_weight_row),               //                              .weight_row
-		.w_layer_index_out (diff_to_decode_register_out_weight_location_interface_layer_index), // out_weight_location_interface.layer_index
-		.w_row_index_out   (diff_to_decode_register_out_weight_location_interface_row_index),   //                              .row_index
-		.cal_dc_dw         (backprop_controller_cal_dc_dw_out_forward_interface_cal_dc_dw),     //           in_cal_dc_interface.cal_dc_dw
-		.update_weight     (diff_to_decode_register_out_update_weight_interface_is_update)      //   out_update_weight_interface.is_update
+		.clk               (clk_clk),                                                                 //                       clock.clk
+		.z                 (diff_to_backprop_register_out_x_and_label_interface_z),                   //    in_x_and_label_interface.z
+		.predict_value     (diff_to_backprop_register_out_x_and_label_interface_label),               //                            .label
+		.z_out             (diff_to_decode_register_out_x_and_label_interface_z),                     //   out_x_and_label_interface.z
+		.predict_value_out (diff_to_decode_register_out_x_and_label_interface_label),                 //                            .label
+		.update_weight_out (diff_to_decode_register_out_update_weight_interface_is_update_weight),    // out_update_weight_interface.is_update_weight
+		.w_layer_index_out (diff_to_decode_register_out_update_weight_interface_update_weight_layer), //                            .update_weight_layer
+		.w_row_index_out   (diff_to_decode_register_out_update_weight_interface_update_weight_row),   //                            .update_weight_row
+		.dc_dw_out         (diff_to_decode_register_out_update_weight_interface_update_weight_value), //                            .update_weight_value
+		.dc_dw             (backpropagator_backprop_controll_out_interface_update_weight_value),      //  in_update_weight_interface.update_weight_value
+		.w_layer_index     (backpropagator_backprop_controll_out_interface_update_weight_layer),      //                            .update_weight_layer
+		.w_row_index       (backpropagator_backprop_controll_out_interface_update_weight_row),        //                            .update_weight_row
+		.update_weight     (backpropagator_backprop_controll_out_interface_is_update_weight)          //                            .is_update_weight
 	);
 
 	different #(
 		.size            (3),
 		.data_size       (16),
 		.cost_type_size  (8),
-		.dense_type_size (4)
+		.dense_type_size (4),
+		.act_type_size   (4)
 	) differ (
 		.cost_type         (activate_to_diff_register_out_differ_interface_cost_type),  // in_parameter_interface.cost_type
 		.predict_value     (activate_to_diff_register_out_differ_interface_label),      //                       .label
@@ -395,6 +454,8 @@ module data_path (
 		.x                 (activate_to_diff_register_out_differ_interface_x),          //                       .x
 		.z                 (activate_to_diff_register_out_differ_interface_z),          //                       .z
 		.dense_type        (activate_to_diff_register_out_differ_interface_dense_type), //                       .dense_type
+		.act_type          (activate_to_diff_register_out_differ_interface_act_type),   //                       .act_type
+		.y                 (activate_to_diff_register_out_differ_interface_y),          //                       .y
 		.diff_dense_out    (differ_diff_interface_diff_dense),                          //         diff_interface.diff_dense
 		.diff_start_out    (differ_diff_interface_diff_start),                          //                       .diff_start
 		.diff_to_all_out   (differ_diff_interface_diff_to_all),                         //                       .diff_to_all
@@ -406,19 +467,17 @@ module data_path (
 	fetch_decode_reg #(
 		.code_size (12)
 	) fetch_to_decode_register (
-		.clk                  (clk_clk),                                                       //                          clock.clk
-		.code                 (code_storage_code_interface_code),                              //                 code_interface.code
-		.code_index           (code_storage_code_interface_code_index),                        //                               .code_index
-		.code_out             (fetch_to_decode_register_code_out_interface_code),              //             code_out_interface.code
-		.code_index_out       (fetch_to_decode_register_code_index_out_interface_code_index),  //       code_index_out_interface.code_index
-		.reset_code_count     (controller_code_count_reset_interface_reset),                   //     reset_code_count_interface.reset
-		.reset_code_count_out (fetch_to_decode_register_reset_code_count_out_interface_reset)  // reset_code_count_out_interface.reset
+		.clk            (clk_clk),                                                      //                    clock.clk
+		.code           (code_storage_code_interface_code),                             //           code_interface.code
+		.code_index     (code_storage_code_interface_code_index),                       //                         .code_index
+		.code_out       (fetch_to_decode_register_code_out_interface_code),             //       code_out_interface.code
+		.code_index_out (fetch_to_decode_register_code_index_out_interface_code_index)  // code_index_out_interface.code_index
 	);
 
 	matrix_storage #(
 		.size      (3),
 		.data_size (16),
-		.max_layer (5)
+		.max_layer (40)
 	) input_storage (
 		.clk               (clk_clk),                                                              //                     clock.clk
 		.read_layer_index  (matrix_location_spreader_matrix_location_out_1_interface_layer_index), // matrix_location_interface.layer_index
@@ -450,7 +509,7 @@ module data_path (
 	matrix_storage #(
 		.size      (3),
 		.data_size (16),
-		.max_layer (5)
+		.max_layer (40)
 	) label_storage (
 		.clk               (clk_clk),                                                              //                     clock.clk
 		.read_layer_index  (matrix_location_spreader_matrix_location_out_2_interface_layer_index), // matrix_location_interface.layer_index
@@ -509,19 +568,19 @@ module data_path (
 		.cost_type_size     (8),
 		.learning_rate_size (16)
 	) parameter_storage (
-		.clk                  (clk_clk),                                                   //                         clock.clk
-		.in_act_type          (parse_parameter_type_interface_act_type),                   //        in_parameter_interface.act_type
-		.in_cost_type         (parse_parameter_type_interface_cost_type),                  //                              .cost_type
-		.in_dense_type        (parse_parameter_type_interface_dense_type),                 //                              .dense_type
-		.in_learning_rate     (parse_parameter_type_interface_learning_rate),              //                              .learning_rate
-		.update_act_type      (controller_parse_interface_set_act_type),                   // is_update_parameter_interface.set_act_type
-		.update_cost_type     (controller_parse_interface_set_cost_type),                  //                              .set_cost_type
-		.update_dense_type    (controller_parse_interface_set_dense_type),                 //                              .set_dense_type
-		.update_learning_rate (controller_parse_interface_set_learning_rate),              //                              .set_learning_rate
-		.out_act_type         (parameter_storage_out_parameter_interface_act_type),        //       out_parameter_interface.act_type
-		.out_dense_type       (parameter_storage_out_parameter_interface_dense_type),      //                              .dense_type
-		.out_cost_type        (parameter_storage_out_parameter_interface_cost_type),       //                              .cost_type
-		.out_learning_rate    (parameter_storage_0_learning_rate_interface_learning_rate)  //       learning_rate_interface.learning_rate
+		.clk                  (clk_clk),                                                 //                         clock.clk
+		.in_act_type          (parse_parameter_type_interface_act_type),                 //        in_parameter_interface.act_type
+		.in_cost_type         (parse_parameter_type_interface_cost_type),                //                              .cost_type
+		.in_dense_type        (parse_parameter_type_interface_dense_type),               //                              .dense_type
+		.in_learning_rate     (parse_parameter_type_interface_learning_rate),            //                              .learning_rate
+		.update_act_type      (controller_parse_interface_set_act_type),                 // is_update_parameter_interface.set_act_type
+		.update_cost_type     (controller_parse_interface_set_cost_type),                //                              .set_cost_type
+		.update_dense_type    (controller_parse_interface_set_dense_type),               //                              .set_dense_type
+		.update_learning_rate (controller_parse_interface_set_learning_rate),            //                              .set_learning_rate
+		.out_act_type         (parameter_storage_out_parameter_interface_act_type),      //       out_parameter_interface.act_type
+		.out_dense_type       (parameter_storage_out_parameter_interface_dense_type),    //                              .dense_type
+		.out_cost_type        (parameter_storage_out_parameter_interface_cost_type),     //                              .cost_type
+		.out_learning_rate    (parameter_storage_learning_rate_interface_learning_rate)  //       learning_rate_interface.learning_rate
 	);
 
 	parse #(
@@ -584,19 +643,19 @@ module data_path (
 		.size       (3),
 		.layer_size (5)
 	) weight_storage (
-		.clk               (clk_clk),                                                           //                            clock.clk
-		.write_layer_index (weight_storage_write_interface_write_layer_index),                  //                  write_interface.write_layer_index
-		.write_row_index   (weight_storage_write_interface_write_row_index),                    //                                 .write_row_index
-		.write_data        (weight_storage_write_interface_write_data),                         //                                 .write_data
-		.is_update         (diff_to_decode_register_out_update_weight_interface_is_update),     //              is_update_interface.is_update
-		.is_write          (weight_storage_is_write_interface_is_write),                        //               is_write_interface.is_write
-		.w                 (weight_storage_weight_output_interface_weight),                     //          weight_output_interface.weight
-		.is_read           (controller_weigth_interface_is_load),                               //            load_weight_interface.is_load
-		.w_layer_index     (controller_weigth_interface_w_layer_index),                         //                                 .w_layer_index
-		.w_row_index       (controller_weigth_interface_w_row_index),                           //                                 .w_row_index
-		.dc_dw             (backpropagator_dc_dw_stream_interface_dc_dw),                       //    update_weight_dc_dw_interface.dc_dw
-		.layer_index       (diff_to_decode_register_out_weight_location_interface_layer_index), // update_weight_location_interface.layer_index
-		.row_index         (diff_to_decode_register_out_weight_location_interface_row_index)    //                                 .row_index
+		.clk               (clk_clk),                                                                 //                   clock.clk
+		.write_layer_index (weight_storage_write_interface_write_layer_index),                        //         write_interface.write_layer_index
+		.write_row_index   (weight_storage_write_interface_write_row_index),                          //                        .write_row_index
+		.write_data        (weight_storage_write_interface_write_data),                               //                        .write_data
+		.is_write          (weight_storage_is_write_interface_is_write),                              //      is_write_interface.is_write
+		.w                 (weight_storage_weight_output_interface_weight),                           // weight_output_interface.weight
+		.is_read           (controller_weigth_interface_is_load),                                     //   load_weight_interface.is_load
+		.w_layer_index     (controller_weigth_interface_w_layer_index),                               //                        .w_layer_index
+		.w_row_index       (controller_weigth_interface_w_row_index),                                 //                        .w_row_index
+		.layer_index       (diff_to_decode_register_out_update_weight_interface_update_weight_layer), // update_weight_interface.update_weight_layer
+		.row_index         (diff_to_decode_register_out_update_weight_interface_update_weight_row),   //                        .update_weight_row
+		.dc_dw             (diff_to_decode_register_out_update_weight_interface_update_weight_value), //                        .update_weight_value
+		.is_update         (diff_to_decode_register_out_update_weight_interface_is_update_weight)     //                        .is_update_weight
 	);
 
 endmodule

@@ -15,7 +15,6 @@
 		.label_storage_write_interface_write_row_index                (<connected-to-label_storage_write_interface_write_row_index>),                //                                                  .write_row_index
 		.label_storage_write_interface_write_data                     (<connected-to-label_storage_write_interface_write_data>),                     //                                                  .write_data
 		.matrix_storage_locator_reset_interface_reset                 (<connected-to-matrix_storage_locator_reset_interface_reset>),                 //            matrix_storage_locator_reset_interface.reset
-		.parameter_storage_0_learning_rate_interface_learning_rate    (<connected-to-parameter_storage_0_learning_rate_interface_learning_rate>),    //       parameter_storage_0_learning_rate_interface.learning_rate
 		.reset_reset_n                                                (<connected-to-reset_reset_n>),                                                //                                             reset.reset_n
 		.weight_storage_is_write_interface_is_write                   (<connected-to-weight_storage_is_write_interface_is_write>),                   //                 weight_storage_is_write_interface.is_write
 		.weight_storage_write_interface_write_layer_index             (<connected-to-weight_storage_write_interface_write_layer_index>),             //                    weight_storage_write_interface.write_layer_index

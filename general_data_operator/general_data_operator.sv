@@ -10,6 +10,7 @@ module general_data_operator (out_data);
     import gdo::gdo_e;
     import gdo::gdo_one;
     import gdo::gdo_zero;
+    import gdo::gdo_sub;
 
     output [16:0] out_data;
     reg [16:0] data;
@@ -21,8 +22,8 @@ module general_data_operator (out_data);
         $write("in data : %d\n", (-1)*3*(2**8) << 1);
         $write("add : %d\n", gdo_add(16, 16));
         $write("mult : %d\n", gdo_mult(-128, 128));
-        $write("sub : %d\n", gdo_div(1024, 768));
-        $write("sub : %d\n", gdo_div(1280, 768));
+        $write("sub : %f\n", real'(signed'(gdo_sub(1024, 768))));
+        $write("sub : %f\n", real'(signed'(gdo_sub(768, 1280))));
         $write("sigmoid : %d %b\n", gdo_sigmoid((1)*3*(2**8)), (-1)*3*(2**8));
         $write("sigmoid : %b\n", gdo_sigmoid(gdo_one >> 1));
         $write("binary : %d\n", gdo_binary((1)*3*(2**8)));

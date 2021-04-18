@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="data_path" kind="data_path" version="1.0" fabric="QSYS">
  <!-- Format version 20.1 711 (Future versions may contain additional information.) -->
- <!-- 2021.01.28.14:56:39 -->
+ <!-- 2021.03.20.06:08:14 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1611820599</value>
+  <value>1616195293</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -134,9 +134,25 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
+  <parameter name="act_type_size">
+   <type>int</type>
+   <value>4</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="learning_rate_size">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
   <parameter name="backprop_controll_size">
    <type>int</type>
-   <value>100</value>
+   <value>66</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -271,6 +287,18 @@ parameters are a RESULT of the module parameters. -->
     <width>48</width>
     <role>label</role>
    </port>
+   <port>
+    <name>act_type</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>act_type</role>
+   </port>
+   <port>
+    <name>y</name>
+    <direction>Input</direction>
+    <width>48</width>
+    <role>y</role>
+   </port>
   </interface>
   <interface name="in_z_interface" kind="conduit_end" version="20.1">
    <!-- The connection points exposed by a module instance for the
@@ -391,6 +419,18 @@ parameters are a RESULT of the module parameters. -->
     <width>4</width>
     <role>dense_type</role>
    </port>
+   <port>
+    <name>act_type_out</name>
+    <direction>Output</direction>
+    <width>4</width>
+    <role>act_type</role>
+   </port>
+   <port>
+    <name>y_out</name>
+    <direction>Output</direction>
+    <width>48</width>
+    <role>y</role>
+   </port>
   </interface>
   <interface
      name="in_backprop_controll_interface"
@@ -436,7 +476,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll</name>
     <direction>Input</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
    </port>
   </interface>
@@ -484,8 +524,98 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll_out</name>
     <direction>Output</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_out_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate_out</name>
+    <direction>Output</direction>
+    <width>16</width>
+    <role>learning_rate</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate</name>
+    <direction>Input</direction>
+    <width>16</width>
+    <role>learning_rate</role>
    </port>
   </interface>
  </module>
@@ -577,7 +707,7 @@ parameters are a RESULT of the module parameters. -->
     <role>data_stream</role>
    </port>
    <port>
-    <name>activtion</name>
+    <name>act</name>
     <direction>Input</direction>
     <width>4</width>
     <role>act_type</role>
@@ -654,7 +784,15 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="backprop_controll_size">
    <type>int</type>
-   <value>100</value>
+   <value>66</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="max_layer_size">
+   <type>int</type>
+   <value>4</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -676,90 +814,6 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface
-     name="backprop_controll_out_interface"
-     kind="conduit_end"
-     version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>current_layer_out</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>current_layer</role>
-   </port>
-   <port>
-    <name>dc_dw_layer_out</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>dc_dw_layer</role>
-   </port>
-   <port>
-    <name>dc_dw_row_out</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>dc_dw_row</role>
-   </port>
-   <port>
-    <name>update_storage_out</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>update_storage</role>
-   </port>
-   <port>
-    <name>update_dy_dy_old_out</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>update_dy_dy_old</role>
-   </port>
-   <port>
-    <name>cal_dc_dw_out</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>cal_dc_dw</role>
-   </port>
-   <port>
-    <name>reset_out</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-  </interface>
   <interface
      name="backprop_controll_bundle_in_interface"
      kind="conduit_end"
@@ -804,12 +858,57 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll_bundle</name>
     <direction>Input</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
    </port>
   </interface>
+  <interface name="clock" kind="clock_sink" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="externallyDriven">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="ptfSchematicName">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>clock</type>
+   <isStart>false</isStart>
+   <port>
+    <name>clk</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>clk</role>
+   </port>
+  </interface>
   <interface
-     name="cal_dc_dw_out_forward_interface"
+     name="backprop_controll_matrix_in_interface"
      kind="conduit_end"
      version="20.1">
    <!-- The connection points exposed by a module instance for the
@@ -850,13 +949,34 @@ parameters are a RESULT of the module parameters. -->
    <type>conduit</type>
    <isStart>false</isStart>
    <port>
-    <name>cal_dc_dw_out_forward</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>cal_dc_dw</role>
+    <name>diff_dense</name>
+    <direction>Input</direction>
+    <width>48</width>
+    <role>backprop_dense</role>
+   </port>
+   <port>
+    <name>diff_start</name>
+    <direction>Input</direction>
+    <width>48</width>
+    <role>backprop_start</role>
+   </port>
+   <port>
+    <name>diff_cost</name>
+    <direction>Input</direction>
+    <width>48</width>
+    <role>backprop_cost</role>
+   </port>
+   <port>
+    <name>diff_to_all</name>
+    <direction>Input</direction>
+    <width>48</width>
+    <role>backprop_to_all</role>
    </port>
   </interface>
-  <interface name="out_weight_interface" kind="conduit_end" version="20.1">
+  <interface
+     name="backprop_controll_matrix_out_interface"
+     kind="conduit_end"
+     version="20.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -895,16 +1015,106 @@ parameters are a RESULT of the module parameters. -->
    <type>conduit</type>
    <isStart>false</isStart>
    <port>
-    <name>weight_row</name>
+    <name>diff_cost_out</name>
     <direction>Output</direction>
-    <width>32</width>
-    <role>weight_row</role>
+    <width>48</width>
+    <role>diff_cost</role>
    </port>
    <port>
-    <name>weight_layer</name>
+    <name>diff_dense_out</name>
+    <direction>Output</direction>
+    <width>48</width>
+    <role>diff_dense</role>
+   </port>
+   <port>
+    <name>diff_start_out</name>
+    <direction>Output</direction>
+    <width>48</width>
+    <role>diff_start</role>
+   </port>
+   <port>
+    <name>diff_to_all_out</name>
+    <direction>Output</direction>
+    <width>48</width>
+    <role>diff_act</role>
+   </port>
+  </interface>
+  <interface
+     name="backprop_controll_out_controll_interface"
+     kind="conduit_end"
+     version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>active_train</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>active_train</role>
+   </port>
+   <port>
+    <name>current_row_out</name>
     <direction>Output</direction>
     <width>32</width>
-    <role>weight_layer</role>
+    <role>current_row</role>
+   </port>
+   <port>
+    <name>is_last_layer</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>is_last_layer</role>
+   </port>
+   <port>
+    <name>read_update_data</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>read_update_data</role>
+   </port>
+   <port>
+    <name>start_new_layer</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>start_new_layer</role>
+   </port>
+   <port>
+    <name>current_layer_out</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>current_layer</role>
    </port>
   </interface>
  </module>
@@ -934,6 +1144,14 @@ the requested settings for a module instance. -->
   <parameter name="max_layer_size">
    <type>int</type>
    <value>10</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="learning_rate_size">
+   <type>int</type>
+   <value>16</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1000,51 +1218,6 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="dc_dw_stream_interface" kind="conduit_end" version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>dc_dw_stream</name>
-    <direction>Output</direction>
-    <width>48</width>
-    <role>dc_dw</role>
-   </port>
-  </interface>
   <interface name="backprop_controll_interface" kind="conduit_end" version="20.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
@@ -1084,46 +1257,40 @@ parameters are a RESULT of the module parameters. -->
    <type>conduit</type>
    <isStart>false</isStart>
    <port>
-    <name>update_storage</name>
+    <name>active_train</name>
     <direction>Input</direction>
     <width>1</width>
-    <role>update_storage</role>
+    <role>active_train</role>
    </port>
    <port>
-    <name>current_layer</name>
+    <name>current_input_layer</name>
     <direction>Input</direction>
     <width>32</width>
     <role>current_layer</role>
    </port>
    <port>
-    <name>update_dy_dy_old</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>update_dy_dy_old</role>
-   </port>
-   <port>
-    <name>cal_dc_dw</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>cal_dc_dw</role>
-   </port>
-   <port>
-    <name>dc_dw_layer</name>
+    <name>current_input_row</name>
     <direction>Input</direction>
     <width>32</width>
-    <role>dc_dw_layer</role>
+    <role>current_row</role>
    </port>
    <port>
-    <name>dc_dw_row</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>dc_dw_row</role>
-   </port>
-   <port>
-    <name>reset</name>
+    <name>is_last_layer</name>
     <direction>Input</direction>
     <width>1</width>
-    <role>reset</role>
+    <role>is_last_layer</role>
+   </port>
+   <port>
+    <name>start_new_layer</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>start_new_layer</role>
+   </port>
+   <port>
+    <name>read_update_data</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>read_update_data</role>
    </port>
   </interface>
   <interface name="backprop_data_interface" kind="conduit_end" version="20.1">
@@ -1165,28 +1332,139 @@ parameters are a RESULT of the module parameters. -->
    <type>conduit</type>
    <isStart>false</isStart>
    <port>
-    <name>backprop_dense</name>
+    <name>diff_act</name>
     <direction>Input</direction>
     <width>48</width>
-    <role>backprop_dense</role>
+    <role>diff_act</role>
    </port>
    <port>
-    <name>backprop_start</name>
+    <name>diff_cost</name>
     <direction>Input</direction>
     <width>48</width>
-    <role>backprop_start</role>
+    <role>diff_cost</role>
    </port>
    <port>
-    <name>backprop_to_all</name>
+    <name>diff_dense</name>
     <direction>Input</direction>
     <width>48</width>
-    <role>backprop_to_all</role>
+    <role>diff_dense</role>
    </port>
    <port>
-    <name>backprop_cost</name>
+    <name>diff_start</name>
     <direction>Input</direction>
     <width>48</width>
-    <role>backprop_cost</role>
+    <role>diff_start</role>
+   </port>
+  </interface>
+  <interface
+     name="backprop_controll_out_interface"
+     kind="conduit_end"
+     version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>is_update_weight</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>is_update_weight</role>
+   </port>
+   <port>
+    <name>update_weight_layer</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>update_weight_layer</role>
+   </port>
+   <port>
+    <name>update_weight_row</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>update_weight_row</role>
+   </port>
+   <port>
+    <name>update_weight_value</name>
+    <direction>Output</direction>
+    <width>48</width>
+    <role>update_weight_value</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate</name>
+    <direction>Input</direction>
+    <width>16</width>
+    <role>learning_rate</role>
    </port>
   </interface>
  </module>
@@ -1517,12 +1795,6 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>backpropagator</moduleName>
-    <slaveName>clock</slaveName>
-    <name>backpropagator.clock</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
     <moduleName>diff_to_decode_register</moduleName>
     <slaveName>clock</slaveName>
     <name>diff_to_decode_register.clock</name>
@@ -1532,6 +1804,18 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>parameter_storage</moduleName>
     <slaveName>clock</slaveName>
     <name>parameter_storage.clock</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>backprop_controller</moduleName>
+    <slaveName>clock</slaveName>
+    <name>backprop_controller.clock</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>backpropagator</moduleName>
+    <slaveName>clock</slaveName>
+    <name>backpropagator.clock</name>
    </clockDomainMember>
   </interface>
   <interface name="clk_reset" kind="reset_source" version="20.1">
@@ -2039,6 +2323,69 @@ parameters are a RESULT of the module parameters. -->
     <role>enable</role>
    </port>
   </interface>
+  <interface name="code_reset_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>code_reset_address</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>code_reset_address</role>
+   </port>
+   <port>
+    <name>update_code_reset_address</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>update_code_reset_address</role>
+   </port>
+   <port>
+    <name>code_reset_count</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>code_reset_count</role>
+   </port>
+   <port>
+    <name>update_code_reset_count</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>update_code_reset_count</role>
+   </port>
+  </interface>
  </module>
  <module name="controller" kind="controller" version="1.0" path="controller">
   <!-- Describes a single module. Module parameters are
@@ -2061,7 +2408,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="backprop_controll_size">
    <type>int</type>
-   <value>100</value>
+   <value>66</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2518,7 +2865,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll</name>
     <direction>Output</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
    </port>
   </interface>
@@ -2648,6 +2995,69 @@ parameters are a RESULT of the module parameters. -->
     <role>op</role>
    </port>
   </interface>
+  <interface name="code_reset_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>code_reset_address</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>code_reset_address</role>
+   </port>
+   <port>
+    <name>update_code_reset_address</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>update_code_reset_address</role>
+   </port>
+   <port>
+    <name>code_reset_count</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>code_reset_count</role>
+   </port>
+   <port>
+    <name>update_code_reset_count</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>update_code_reset_count</role>
+   </port>
+  </interface>
  </module>
  <module
    name="decode_to_dense_register"
@@ -2688,6 +3098,14 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
+  <parameter name="learning_rate_size">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
   <parameter name="act_type_size">
    <type>int</type>
    <value>4</value>
@@ -2698,7 +3116,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="backprop_controll_size">
    <type>int</type>
-   <value>100</value>
+   <value>66</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -3205,7 +3623,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll</name>
     <direction>Input</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
    </port>
   </interface>
@@ -3253,8 +3671,98 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll_out</name>
     <direction>Output</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
+   </port>
+  </interface>
+  <interface name="learning_rate" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate</name>
+    <direction>Input</direction>
+    <width>16</width>
+    <role>learning_rate</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_out" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate_out</name>
+    <direction>Output</direction>
+    <width>16</width>
+    <role>learning_rate</role>
    </port>
   </interface>
  </module>
@@ -3305,9 +3813,17 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
+  <parameter name="learning_rate_size">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
   <parameter name="backprop_controll_size">
    <type>int</type>
-   <value>100</value>
+   <value>66</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -3646,7 +4162,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll</name>
     <direction>Input</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
    </port>
   </interface>
@@ -3694,8 +4210,98 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll_out</name>
     <direction>Output</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_out_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate_out</name>
+    <direction>Output</direction>
+    <width>16</width>
+    <role>learning_rate</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate</name>
+    <direction>Input</direction>
+    <width>16</width>
+    <role>learning_rate</role>
    </port>
   </interface>
  </module>
@@ -3746,9 +4352,17 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
+  <parameter name="learning_rate_size">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
   <parameter name="backprop_controll_size">
    <type>int</type>
-   <value>100</value>
+   <value>66</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -3854,12 +4468,6 @@ parameters are a RESULT of the module parameters. -->
    <type>conduit</type>
    <isStart>false</isStart>
    <port>
-    <name>act_type</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>act_type</role>
-   </port>
-   <port>
     <name>cost_type</name>
     <direction>Input</direction>
     <width>8</width>
@@ -3888,6 +4496,12 @@ parameters are a RESULT of the module parameters. -->
     <direction>Input</direction>
     <width>48</width>
     <role>label</role>
+   </port>
+   <port>
+    <name>act_type</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>act_type</role>
    </port>
   </interface>
   <interface name="out_activate_interface" kind="conduit_end" version="20.1">
@@ -3929,16 +4543,16 @@ parameters are a RESULT of the module parameters. -->
    <type>conduit</type>
    <isStart>false</isStart>
    <port>
-    <name>act_type_out</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>act_type</role>
-   </port>
-   <port>
     <name>y_out</name>
     <direction>Output</direction>
     <width>48</width>
     <role>data_stream</role>
+   </port>
+   <port>
+    <name>act_type_out</name>
+    <direction>Output</direction>
+    <width>4</width>
+    <role>act_type</role>
    </port>
   </interface>
   <interface name="out_forward_interface" kind="conduit_end" version="20.1">
@@ -4008,6 +4622,18 @@ parameters are a RESULT of the module parameters. -->
     <direction>Output</direction>
     <width>48</width>
     <role>label</role>
+   </port>
+   <port>
+    <name>act_type_forward_out</name>
+    <direction>Output</direction>
+    <width>4</width>
+    <role>act_type</role>
+   </port>
+   <port>
+    <name>y_out_forward</name>
+    <direction>Output</direction>
+    <width>48</width>
+    <role>y</role>
    </port>
   </interface>
   <interface name="in_y_interface" kind="conduit_end" version="20.1">
@@ -4099,7 +4725,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll</name>
     <direction>Input</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
    </port>
   </interface>
@@ -4147,8 +4773,98 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll_out</name>
     <direction>Output</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_out_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate_out</name>
+    <direction>Output</direction>
+    <width>16</width>
+    <role>learning_rate</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate</name>
+    <direction>Input</direction>
+    <width>16</width>
+    <role>learning_rate</role>
    </port>
   </interface>
  </module>
@@ -4183,9 +4899,17 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
+  <parameter name="learning_rate_size">
+   <type>int</type>
+   <value>16</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
   <parameter name="backprop_controll_size">
    <type>int</type>
-   <value>100</value>
+   <value>66</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -4461,7 +5185,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll</name>
     <direction>Input</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
    </port>
   </interface>
@@ -4509,7 +5233,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>backprop_controll_out</name>
     <direction>Output</direction>
-    <width>100</width>
+    <width>66</width>
     <role>backprop_controll</role>
    </port>
   </interface>
@@ -4574,6 +5298,96 @@ parameters are a RESULT of the module parameters. -->
     <direction>Output</direction>
     <width>48</width>
     <role>backprop_to_all</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate</name>
+    <direction>Input</direction>
+    <width>16</width>
+    <role>learning_rate</role>
+   </port>
+  </interface>
+  <interface name="learning_rate_out_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>learning_rate_out</name>
+    <direction>Output</direction>
+    <width>16</width>
+    <role>learning_rate</role>
    </port>
   </interface>
  </module>
@@ -4763,156 +5577,6 @@ parameters are a RESULT of the module parameters. -->
     <role>label</role>
    </port>
   </interface>
-  <interface name="in_weight_location_interface" kind="conduit_end" version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>w_layer_index</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>weight_layer</role>
-   </port>
-   <port>
-    <name>w_row_index</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>weight_row</role>
-   </port>
-  </interface>
-  <interface
-     name="out_weight_location_interface"
-     kind="conduit_end"
-     version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>w_layer_index_out</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>layer_index</role>
-   </port>
-   <port>
-    <name>w_row_index_out</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>row_index</role>
-   </port>
-  </interface>
-  <interface name="in_cal_dc_interface" kind="conduit_end" version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>cal_dc_dw</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>cal_dc_dw</role>
-   </port>
-  </interface>
   <interface name="out_update_weight_interface" kind="conduit_end" version="20.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
@@ -4952,10 +5616,91 @@ parameters are a RESULT of the module parameters. -->
    <type>conduit</type>
    <isStart>false</isStart>
    <port>
-    <name>update_weight</name>
+    <name>update_weight_out</name>
     <direction>Output</direction>
     <width>1</width>
-    <role>is_update</role>
+    <role>is_update_weight</role>
+   </port>
+   <port>
+    <name>w_layer_index_out</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>update_weight_layer</role>
+   </port>
+   <port>
+    <name>w_row_index_out</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>update_weight_row</role>
+   </port>
+   <port>
+    <name>dc_dw_out</name>
+    <direction>Output</direction>
+    <width>48</width>
+    <role>update_weight_value</role>
+   </port>
+  </interface>
+  <interface name="in_update_weight_interface" kind="conduit_end" version="20.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>conduit</type>
+   <isStart>false</isStart>
+   <port>
+    <name>dc_dw</name>
+    <direction>Input</direction>
+    <width>48</width>
+    <role>update_weight_value</role>
+   </port>
+   <port>
+    <name>w_layer_index</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>update_weight_layer</role>
+   </port>
+   <port>
+    <name>w_row_index</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>update_weight_row</role>
+   </port>
+   <port>
+    <name>update_weight</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>is_update_weight</role>
    </port>
   </interface>
  </module>
@@ -4987,6 +5732,14 @@ the requested settings for a module instance. -->
    <valid>true</valid>
   </parameter>
   <parameter name="dense_type_size">
+   <type>int</type>
+   <value>4</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="act_type_size">
    <type>int</type>
    <value>4</value>
    <derived>false</derived>
@@ -5083,6 +5836,18 @@ parameters are a RESULT of the module parameters. -->
     <direction>Input</direction>
     <width>4</width>
     <role>dense_type</role>
+   </port>
+   <port>
+    <name>act_type</name>
+    <direction>Input</direction>
+    <width>4</width>
+    <role>act_type</role>
+   </port>
+   <port>
+    <name>y</name>
+    <direction>Input</direction>
+    <width>48</width>
+    <role>y</role>
    </port>
   </interface>
   <interface name="diff_interface" kind="conduit_end" version="20.1">
@@ -5415,99 +6180,6 @@ parameters are a RESULT of the module parameters. -->
     <direction>Output</direction>
     <width>32</width>
     <role>code_index</role>
-   </port>
-  </interface>
-  <interface name="reset_code_count_interface" kind="conduit_end" version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>reset_code_count</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-  </interface>
-  <interface
-     name="reset_code_count_out_interface"
-     kind="conduit_end"
-     version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>reset_code_count_out</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>reset</role>
    </port>
   </interface>
  </module>
@@ -8770,51 +9442,6 @@ parameters are a RESULT of the module parameters. -->
     <role>write_data</role>
    </port>
   </interface>
-  <interface name="is_update_interface" kind="conduit_end" version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>is_update</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>is_update</role>
-   </port>
-  </interface>
   <interface name="is_write_interface" kind="conduit_end" version="20.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
@@ -8962,58 +9589,7 @@ parameters are a RESULT of the module parameters. -->
     <role>w_row_index</role>
    </port>
   </interface>
-  <interface
-     name="update_weight_dc_dw_interface"
-     kind="conduit_end"
-     version="20.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>conduit</type>
-   <isStart>false</isStart>
-   <port>
-    <name>dc_dw</name>
-    <direction>Input</direction>
-    <width>48</width>
-    <role>dc_dw</role>
-   </port>
-  </interface>
-  <interface
-     name="update_weight_location_interface"
-     kind="conduit_end"
-     version="20.1">
+  <interface name="update_weight_interface" kind="conduit_end" version="20.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -9055,13 +9631,25 @@ parameters are a RESULT of the module parameters. -->
     <name>layer_index</name>
     <direction>Input</direction>
     <width>32</width>
-    <role>layer_index</role>
+    <role>update_weight_layer</role>
    </port>
    <port>
     <name>row_index</name>
     <direction>Input</direction>
     <width>32</width>
-    <role>row_index</role>
+    <role>update_weight_row</role>
+   </port>
+   <port>
+    <name>dc_dw</name>
+    <direction>Input</direction>
+    <width>48</width>
+    <role>update_weight_value</role>
+   </port>
+   <port>
+    <name>is_update</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>is_update_weight</role>
    </port>
   </interface>
  </module>
@@ -9471,33 +10059,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk/backpropagator.clock"
-   kind="clock"
-   version="20.1"
-   start="clk_0.clk"
-   end="backpropagator.clock">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>clk_0</startModule>
-  <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>backpropagator</endModule>
-  <endConnectionPoint>clock</endConnectionPoint>
- </connection>
- <connection
    name="clk_0.clk/diff_to_decode_register.clock"
    kind="clock"
    version="20.1"
@@ -9552,51 +10113,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
-   name="backpropagator.backprop_controll_interface/backprop_controller.backprop_controll_out_interface"
-   kind="conduit"
+   name="clk_0.clk/backprop_controller.clock"
+   kind="clock"
    version="20.1"
-   start="backpropagator.backprop_controll_interface"
-   end="backprop_controller.backprop_controll_out_interface">
-  <parameter name="endPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="endPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="width">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
+   start="clk_0.clk"
+   end="backprop_controller.clock">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -9613,17 +10134,44 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>backpropagator</startModule>
-  <startConnectionPoint>backprop_controll_interface</startConnectionPoint>
+  <startModule>clk_0</startModule>
+  <startConnectionPoint>clk</startConnectionPoint>
   <endModule>backprop_controller</endModule>
-  <endConnectionPoint>backprop_controll_out_interface</endConnectionPoint>
+  <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
-   name="backprop_controller.cal_dc_dw_out_forward_interface/diff_to_decode_register.in_cal_dc_interface"
+   name="clk_0.clk/backpropagator.clock"
+   kind="clock"
+   version="20.1"
+   start="clk_0.clk"
+   end="backpropagator.clock">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>clk_0</startModule>
+  <startConnectionPoint>clk</startConnectionPoint>
+  <endModule>backpropagator</endModule>
+  <endConnectionPoint>clock</endConnectionPoint>
+ </connection>
+ <connection
+   name="backprop_controller.backprop_controll_matrix_in_interface/diff_to_backprop_register.out_backprop_data_interface"
    kind="conduit"
    version="20.1"
-   start="backprop_controller.cal_dc_dw_out_forward_interface"
-   end="diff_to_decode_register.in_cal_dc_interface">
+   start="backprop_controller.backprop_controll_matrix_in_interface"
+   end="diff_to_backprop_register.out_backprop_data_interface">
   <parameter name="endPort">
    <type>com.altera.entityinterfaces.IPort</type>
    <value></value>
@@ -9681,9 +10229,210 @@ parameters are a RESULT of the module parameters. -->
    <valid>true</valid>
   </parameter>
   <startModule>backprop_controller</startModule>
-  <startConnectionPoint>cal_dc_dw_out_forward_interface</startConnectionPoint>
+  <startConnectionPoint>backprop_controll_matrix_in_interface</startConnectionPoint>
+  <endModule>diff_to_backprop_register</endModule>
+  <endConnectionPoint>out_backprop_data_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="backprop_controller.backprop_controll_matrix_out_interface/backpropagator.backprop_data_interface"
+   kind="conduit"
+   version="20.1"
+   start="backprop_controller.backprop_controll_matrix_out_interface"
+   end="backpropagator.backprop_data_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>backprop_controller</startModule>
+  <startConnectionPoint>backprop_controll_matrix_out_interface</startConnectionPoint>
+  <endModule>backpropagator</endModule>
+  <endConnectionPoint>backprop_data_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="backprop_controller.backprop_controll_out_controll_interface/backpropagator.backprop_controll_interface"
+   kind="conduit"
+   version="20.1"
+   start="backprop_controller.backprop_controll_out_controll_interface"
+   end="backpropagator.backprop_controll_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>backprop_controller</startModule>
+  <startConnectionPoint>backprop_controll_out_controll_interface</startConnectionPoint>
+  <endModule>backpropagator</endModule>
+  <endConnectionPoint>backprop_controll_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="backpropagator.backprop_controll_out_interface/diff_to_decode_register.in_update_weight_interface"
+   kind="conduit"
+   version="20.1"
+   start="backpropagator.backprop_controll_out_interface"
+   end="diff_to_decode_register.in_update_weight_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>backpropagator</startModule>
+  <startConnectionPoint>backprop_controll_out_interface</startConnectionPoint>
   <endModule>diff_to_decode_register</endModule>
-  <endConnectionPoint>in_cal_dc_interface</endConnectionPoint>
+  <endConnectionPoint>in_update_weight_interface</endConnectionPoint>
  </connection>
  <connection
    name="controller.code_control_interface/code_storage.code_control_interface"
@@ -9753,78 +10502,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>code_control_interface</endConnectionPoint>
  </connection>
  <connection
-   name="controller.code_count_interface/code_count.count_interface"
-   kind="conduit"
-   version="20.1"
-   start="controller.code_count_interface"
-   end="code_count.count_interface">
-  <parameter name="endPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="endPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="width">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>controller</startModule>
-  <startConnectionPoint>code_count_interface</startConnectionPoint>
-  <endModule>code_count</endModule>
-  <endConnectionPoint>count_interface</endConnectionPoint>
- </connection>
- <connection
-   name="controller.code_count_reset_interface/fetch_to_decode_register.reset_code_count_interface"
+   name="controller.code_count_reset_interface/code_count.reset_interface"
    kind="conduit"
    version="20.1"
    start="controller.code_count_reset_interface"
-   end="fetch_to_decode_register.reset_code_count_interface">
+   end="code_count.reset_interface">
   <parameter name="endPort">
    <type>com.altera.entityinterfaces.IPort</type>
    <value></value>
@@ -9883,8 +10565,8 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>controller</startModule>
   <startConnectionPoint>code_count_reset_interface</startConnectionPoint>
-  <endModule>fetch_to_decode_register</endModule>
-  <endConnectionPoint>reset_code_count_interface</endConnectionPoint>
+  <endModule>code_count</endModule>
+  <endConnectionPoint>reset_interface</endConnectionPoint>
  </connection>
  <connection
    name="code_storage.code_interface/fetch_to_decode_register.code_interface"
@@ -10019,6 +10701,140 @@ parameters are a RESULT of the module parameters. -->
   <startConnectionPoint>code_interface</startConnectionPoint>
   <endModule>fetch_to_decode_register</endModule>
   <endConnectionPoint>code_out_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="code_storage.code_reset_interface/controller.code_reset_interface"
+   kind="conduit"
+   version="20.1"
+   start="code_storage.code_reset_interface"
+   end="controller.code_reset_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>code_storage</startModule>
+  <startConnectionPoint>code_reset_interface</startConnectionPoint>
+  <endModule>controller</endModule>
+  <endConnectionPoint>code_reset_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="code_count.count_interface/controller.code_count_interface"
+   kind="conduit"
+   version="20.1"
+   start="code_count.count_interface"
+   end="controller.code_count_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>code_count</startModule>
+  <startConnectionPoint>count_interface</startConnectionPoint>
+  <endModule>controller</endModule>
+  <endConnectionPoint>code_count_interface</endConnectionPoint>
  </connection>
  <connection
    name="systolic.data_stream_interface/mult_matrix_prep.output_stream_interface"
@@ -11629,6 +12445,408 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>parse_interface</endConnectionPoint>
  </connection>
  <connection
+   name="decode_to_dense_register.learning_rate/parameter_storage.learning_rate_interface"
+   kind="conduit"
+   version="20.1"
+   start="decode_to_dense_register.learning_rate"
+   end="parameter_storage.learning_rate_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>decode_to_dense_register</startModule>
+  <startConnectionPoint>learning_rate</startConnectionPoint>
+  <endModule>parameter_storage</endModule>
+  <endConnectionPoint>learning_rate_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="dense_layer_delay_reg.learning_rate_interface/decode_to_dense_register.learning_rate_out"
+   kind="conduit"
+   version="20.1"
+   start="dense_layer_delay_reg.learning_rate_interface"
+   end="decode_to_dense_register.learning_rate_out">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>dense_layer_delay_reg</startModule>
+  <startConnectionPoint>learning_rate_interface</startConnectionPoint>
+  <endModule>decode_to_dense_register</endModule>
+  <endConnectionPoint>learning_rate_out</endConnectionPoint>
+ </connection>
+ <connection
+   name="dense_to_activate_register.learning_rate_interface/dense_layer_delay_reg.learning_rate_out_interface"
+   kind="conduit"
+   version="20.1"
+   start="dense_to_activate_register.learning_rate_interface"
+   end="dense_layer_delay_reg.learning_rate_out_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>dense_to_activate_register</startModule>
+  <startConnectionPoint>learning_rate_interface</startConnectionPoint>
+  <endModule>dense_layer_delay_reg</endModule>
+  <endConnectionPoint>learning_rate_out_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="activate_to_diff_register.learning_rate_interface/dense_to_activate_register.learning_rate_out_interface"
+   kind="conduit"
+   version="20.1"
+   start="activate_to_diff_register.learning_rate_interface"
+   end="dense_to_activate_register.learning_rate_out_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>activate_to_diff_register</startModule>
+  <startConnectionPoint>learning_rate_interface</startConnectionPoint>
+  <endModule>dense_to_activate_register</endModule>
+  <endConnectionPoint>learning_rate_out_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="diff_to_backprop_register.learning_rate_interface/activate_to_diff_register.learning_rate_out_interface"
+   kind="conduit"
+   version="20.1"
+   start="diff_to_backprop_register.learning_rate_interface"
+   end="activate_to_diff_register.learning_rate_out_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>diff_to_backprop_register</startModule>
+  <startConnectionPoint>learning_rate_interface</startConnectionPoint>
+  <endModule>activate_to_diff_register</endModule>
+  <endConnectionPoint>learning_rate_out_interface</endConnectionPoint>
+ </connection>
+ <connection
+   name="backpropagator.learning_rate_interface/diff_to_backprop_register.learning_rate_out_interface"
+   kind="conduit"
+   version="20.1"
+   start="backpropagator.learning_rate_interface"
+   end="diff_to_backprop_register.learning_rate_out_interface">
+  <parameter name="endPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="endPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPort">
+   <type>com.altera.entityinterfaces.IPort</type>
+   <value></value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="startPortLSB">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="width">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>backpropagator</startModule>
+  <startConnectionPoint>learning_rate_interface</startConnectionPoint>
+  <endModule>diff_to_backprop_register</endModule>
+  <endConnectionPoint>learning_rate_out_interface</endConnectionPoint>
+ </connection>
+ <connection
    name="matrix_storage_locator.matrix_location_interface/matrix_location_spreader.matrix_location_interface"
    kind="conduit"
    version="20.1"
@@ -11895,73 +13113,6 @@ parameters are a RESULT of the module parameters. -->
   <startConnectionPoint>out_backprop_controll_interface</startConnectionPoint>
   <endModule>backprop_controller</endModule>
   <endConnectionPoint>backprop_controll_bundle_in_interface</endConnectionPoint>
- </connection>
- <connection
-   name="diff_to_backprop_register.out_backprop_data_interface/backpropagator.backprop_data_interface"
-   kind="conduit"
-   version="20.1"
-   start="diff_to_backprop_register.out_backprop_data_interface"
-   end="backpropagator.backprop_data_interface">
-  <parameter name="endPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="endPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="width">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>diff_to_backprop_register</startModule>
-  <startConnectionPoint>out_backprop_data_interface</startConnectionPoint>
-  <endModule>backpropagator</endModule>
-  <endConnectionPoint>backprop_data_interface</endConnectionPoint>
  </connection>
  <connection
    name="activation.out_data_interface/activate_to_diff_register.in_z_interface"
@@ -12232,207 +13383,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>in_forward_interface</endConnectionPoint>
  </connection>
  <connection
-   name="diff_to_decode_register.out_update_weight_interface/weight_storage.is_update_interface"
-   kind="conduit"
-   version="20.1"
-   start="diff_to_decode_register.out_update_weight_interface"
-   end="weight_storage.is_update_interface">
-  <parameter name="endPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="endPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="width">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>diff_to_decode_register</startModule>
-  <startConnectionPoint>out_update_weight_interface</startConnectionPoint>
-  <endModule>weight_storage</endModule>
-  <endConnectionPoint>is_update_interface</endConnectionPoint>
- </connection>
- <connection
-   name="backprop_controller.out_weight_interface/diff_to_decode_register.in_weight_location_interface"
-   kind="conduit"
-   version="20.1"
-   start="backprop_controller.out_weight_interface"
-   end="diff_to_decode_register.in_weight_location_interface">
-  <parameter name="endPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="endPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="width">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>backprop_controller</startModule>
-  <startConnectionPoint>out_weight_interface</startConnectionPoint>
-  <endModule>diff_to_decode_register</endModule>
-  <endConnectionPoint>in_weight_location_interface</endConnectionPoint>
- </connection>
- <connection
-   name="diff_to_decode_register.out_weight_location_interface/weight_storage.update_weight_location_interface"
-   kind="conduit"
-   version="20.1"
-   start="diff_to_decode_register.out_weight_location_interface"
-   end="weight_storage.update_weight_location_interface">
-  <parameter name="endPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="endPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="width">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>diff_to_decode_register</startModule>
-  <startConnectionPoint>out_weight_location_interface</startConnectionPoint>
-  <endModule>weight_storage</endModule>
-  <endConnectionPoint>update_weight_location_interface</endConnectionPoint>
- </connection>
- <connection
    name="diff_to_decode_register.out_x_and_label_interface/train_data_mux.use_z_data_interface"
    kind="conduit"
    version="20.1"
@@ -12567,78 +13517,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>parameter_interface</endConnectionPoint>
  </connection>
  <connection
-   name="code_count.reset_interface/fetch_to_decode_register.reset_code_count_out_interface"
+   name="weight_storage.update_weight_interface/diff_to_decode_register.out_update_weight_interface"
    kind="conduit"
    version="20.1"
-   start="code_count.reset_interface"
-   end="fetch_to_decode_register.reset_code_count_out_interface">
-  <parameter name="endPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="endPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPort">
-   <type>com.altera.entityinterfaces.IPort</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="startPortLSB">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="width">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>code_count</startModule>
-  <startConnectionPoint>reset_interface</startConnectionPoint>
-  <endModule>fetch_to_decode_register</endModule>
-  <endConnectionPoint>reset_code_count_out_interface</endConnectionPoint>
- </connection>
- <connection
-   name="weight_storage.update_weight_dc_dw_interface/backpropagator.dc_dw_stream_interface"
-   kind="conduit"
-   version="20.1"
-   start="weight_storage.update_weight_dc_dw_interface"
-   end="backpropagator.dc_dw_stream_interface">
+   start="weight_storage.update_weight_interface"
+   end="diff_to_decode_register.out_update_weight_interface">
   <parameter name="endPort">
    <type>com.altera.entityinterfaces.IPort</type>
    <value></value>
@@ -12696,9 +13579,9 @@ parameters are a RESULT of the module parameters. -->
    <valid>true</valid>
   </parameter>
   <startModule>weight_storage</startModule>
-  <startConnectionPoint>update_weight_dc_dw_interface</startConnectionPoint>
-  <endModule>backpropagator</endModule>
-  <endConnectionPoint>dc_dw_stream_interface</endConnectionPoint>
+  <startConnectionPoint>update_weight_interface</startConnectionPoint>
+  <endModule>diff_to_decode_register</endModule>
+  <endConnectionPoint>out_update_weight_interface</endConnectionPoint>
  </connection>
  <connection
    name="train_data_mux.use_x_data_label_interface/label_storage.read_data_interface"
@@ -13379,7 +14262,7 @@ parameters are a RESULT of the module parameters. -->
   <version>1.0</version>
  </plugin>
  <plugin>
-  <instanceCount>18</instanceCount>
+  <instanceCount>19</instanceCount>
   <name>clock_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -13387,7 +14270,7 @@ parameters are a RESULT of the module parameters. -->
   <version>20.1</version>
  </plugin>
  <plugin>
-  <instanceCount>126</instanceCount>
+  <instanceCount>133</instanceCount>
   <name>conduit_end</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -13635,7 +14518,7 @@ parameters are a RESULT of the module parameters. -->
   <version>1.0</version>
  </plugin>
  <plugin>
-  <instanceCount>18</instanceCount>
+  <instanceCount>19</instanceCount>
   <name>clock</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
@@ -13643,7 +14526,7 @@ parameters are a RESULT of the module parameters. -->
   <version>20.1</version>
  </plugin>
  <plugin>
-  <instanceCount>57</instanceCount>
+  <instanceCount>61</instanceCount>
   <name>conduit</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>

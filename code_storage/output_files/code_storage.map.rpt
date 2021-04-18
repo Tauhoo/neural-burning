@@ -1,6 +1,6 @@
 Analysis & Synthesis report for code_storage
-Thu Dec 31 16:12:29 2020
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Sat Mar 20 05:58:23 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
 
 
 ---------------------
@@ -13,18 +13,13 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
+  8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Registers Added for RAM Pass-Through Logic
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated
- 14. Parameter Settings for User Entity Instance: Top-level Entity: |code_storage
- 15. Parameter Settings for Inferred Entity Instance: altsyncram:storage_rtl_0
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |code_storage
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -48,27 +43,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 31 16:12:29 2020       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; code_storage                                ;
-; Top-level Entity Name           ; code_storage                                ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 71                                          ;
-; Total pins                      ; 92                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 1,212                                       ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                  ;
++---------------------------------+-------------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Mar 20 05:58:23 2021                       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition ;
+; Revision Name                   ; code_storage                                                ;
+; Top-level Entity Name           ; code_storage                                                ;
+; Family                          ; Cyclone V                                                   ;
+; Logic utilization (in ALMs)     ; N/A                                                         ;
+; Total registers                 ; 1276                                                        ;
+; Total pins                      ; 97                                                          ;
+; Total virtual pins              ; 0                                                           ;
+; Total block memory bits         ; 0                                                           ;
+; Total DSP Blocks                ; 0                                                           ;
+; Total HSSI RX PCSs              ; 0                                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                                           ;
+; Total HSSI TX PCSs              ; 0                                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                                           ;
+; Total PLLs                      ; 0                                                           ;
+; Total DLLs                      ; 0                                                           ;
++---------------------------------+-------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -171,78 +166,69 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                     ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                   ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------+---------+
-; code_storage.sv                                    ; yes             ; User SystemVerilog HDL File                           ; G:/neural-burning/code_storage/code_storage.sv                                    ;         ;
-; altsyncram.tdf                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf             ;         ;
-; stratix_ram_block.inc                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc      ;         ;
-; lpm_mux.inc                                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                ;         ;
-; lpm_decode.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc             ;         ;
-; aglobal201.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc             ;         ;
-; a_rdenreg.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc              ;         ;
-; altrom.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                 ;         ;
-; altram.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                 ;         ;
-; altdpram.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc               ;         ;
-; db/altsyncram_37o1.tdf                             ; yes             ; Auto-Generated Megafunction                           ; G:/neural-burning/code_storage/db/altsyncram_37o1.tdf                             ;         ;
-; db/code_storage.ram0_code_storage_15842c54.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; G:/neural-burning/code_storage/db/code_storage.ram0_code_storage_15842c54.hdl.mif ;         ;
-+----------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
+; code_storage.sv                  ; yes             ; User SystemVerilog HDL File  ; G:/neural-burning/code_storage/code_storage.sv ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 85           ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 124          ;
-;     -- 7 input functions                    ; 1            ;
-;     -- 6 input functions                    ; 34           ;
-;     -- 5 input functions                    ; 21           ;
-;     -- 4 input functions                    ; 31           ;
-;     -- <=3 input functions                  ; 37           ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 71           ;
-;                                             ;              ;
-; I/O pins                                    ; 92           ;
-; Total MLAB memory bits                      ; 0            ;
-; Total block memory bits                     ; 1212         ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; active~input ;
-; Maximum fan-out                             ; 94           ;
-; Total fan-out                               ; 1104         ;
-; Average fan-out                             ; 2.82         ;
-+---------------------------------------------+--------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 1042      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 662       ;
+;     -- 7 input functions                    ; 288       ;
+;     -- 6 input functions                    ; 177       ;
+;     -- 5 input functions                    ; 14        ;
+;     -- 4 input functions                    ; 4         ;
+;     -- <=3 input functions                  ; 179       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 1276      ;
+;                                             ;           ;
+; I/O pins                                    ; 97        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1276      ;
+; Total fan-out                               ; 7632      ;
+; Average fan-out                             ; 3.58      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name     ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
-; |code_storage                          ; 124 (124)           ; 71 (71)                   ; 1212              ; 0          ; 92   ; 0            ; |code_storage                                                         ; code_storage    ; work         ;
-;    |altsyncram:storage_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1212              ; 0          ; 0    ; 0            ; |code_storage|altsyncram:storage_rtl_0                                ; altsyncram      ; work         ;
-;       |altsyncram_37o1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1212              ; 0          ; 0    ; 0            ; |code_storage|altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated ; altsyncram_37o1 ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+; |code_storage              ; 662 (662)           ; 1276 (1276)               ; 0                 ; 0          ; 97   ; 0            ; |code_storage       ; code_storage ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                     ;
-+--------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------+
-; Name                                                               ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                ;
-+--------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------+
-; altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 101          ; 12           ; 101          ; 12           ; 1212 ; db/code_storage.ram0_code_storage_15842c54.hdl.mif ;
-+--------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; code_reset_address_reg[1..31]          ; Merged with code_reset_address_reg[0]  ;
+; code_reset_address_reg[0]              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 32 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -250,82 +236,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 71    ;
-; Number of registers using Synchronous Clear  ; 39    ;
-; Number of registers using Synchronous Load   ; 39    ;
+; Total registers                              ; 1276  ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 1276  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; storage_rtl_0_bypass[16]                ; 1       ;
-; storage_rtl_0_bypass[18]                ; 1       ;
-; storage_rtl_0_bypass[20]                ; 1       ;
-; storage_rtl_0_bypass[22]                ; 1       ;
-; storage_rtl_0_bypass[24]                ; 1       ;
-; storage_rtl_0_bypass[26]                ; 1       ;
-; storage_rtl_0_bypass[28]                ; 1       ;
-; storage_rtl_0_bypass[30]                ; 1       ;
-; storage_rtl_0_bypass[32]                ; 1       ;
-; storage_rtl_0_bypass[34]                ; 1       ;
-; storage_rtl_0_bypass[36]                ; 1       ;
-; storage_rtl_0_bypass[38]                ; 1       ;
-; Total number of inverted registers = 12 ;         ;
-+-----------------------------------------+---------+
-
-
-+--------------------------------------------+
-; Registers Added for RAM Pass-Through Logic ;
-+--------------------------+-----------------+
-; Register Name            ; RAM Name        ;
-+--------------------------+-----------------+
-; storage_rtl_0_bypass[0]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[1]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[2]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[3]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[4]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[5]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[6]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[7]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[8]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[9]  ; storage_rtl_0   ;
-; storage_rtl_0_bypass[10] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[11] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[12] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[13] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[14] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[15] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[16] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[17] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[18] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[19] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[20] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[21] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[22] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[23] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[24] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[25] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[26] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[27] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[28] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[29] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[30] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[31] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[32] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[33] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[34] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[35] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[36] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[37] ; storage_rtl_0   ;
-; storage_rtl_0_bypass[38] ; storage_rtl_0   ;
-+--------------------------+-----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -333,17 +251,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |code_storage|code_index   ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |code_storage|code         ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |code_storage|code_index   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; Source assignments for altsyncram:storage_rtl_0|altsyncram_37o1:auto_generated ;
-+---------------------------------+--------------------+------+------------------+
-; Assignment                      ; Value              ; From ; To               ;
-+---------------------------------+--------------------+------+------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                ;
-+---------------------------------+--------------------+------+------------------+
 
 
 +------------------------------------------------------------------------------+
@@ -357,111 +267,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: altsyncram:storage_rtl_0                                ;
-+------------------------------------+----------------------------------------------------+----------------+
-; Parameter Name                     ; Value                                              ; Type           ;
-+------------------------------------+----------------------------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                                  ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                                                 ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                                ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                                                 ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                                ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                                  ; Untyped        ;
-; OPERATION_MODE                     ; DUAL_PORT                                          ; Untyped        ;
-; WIDTH_A                            ; 12                                                 ; Untyped        ;
-; WIDTHAD_A                          ; 7                                                  ; Untyped        ;
-; NUMWORDS_A                         ; 101                                                ; Untyped        ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                       ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                                               ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                                               ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                                               ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                                               ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                                               ; Untyped        ;
-; WIDTH_B                            ; 12                                                 ; Untyped        ;
-; WIDTHAD_B                          ; 7                                                  ; Untyped        ;
-; NUMWORDS_B                         ; 101                                                ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                                             ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                             ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                             ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK0                                             ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                       ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                                             ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                                               ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                                               ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                                               ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                                               ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                                               ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                                               ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                                                  ; Untyped        ;
-; WIDTH_BYTEENA_B                    ; 1                                                  ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                               ; Untyped        ;
-; BYTE_SIZE                          ; 8                                                  ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                          ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                               ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                               ; Untyped        ;
-; INIT_FILE                          ; db/code_storage.ram0_code_storage_15842c54.hdl.mif ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                             ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                                                  ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                             ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                             ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                             ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                             ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                    ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                    ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                                              ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                              ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                                  ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone V                                          ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_37o1                                    ; Untyped        ;
-+------------------------------------+----------------------------------------------------+----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                     ;
-+-------------------------------------------+--------------------------+
-; Name                                      ; Value                    ;
-+-------------------------------------------+--------------------------+
-; Number of entity instances                ; 1                        ;
-; Entity Instance                           ; altsyncram:storage_rtl_0 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                ;
-;     -- WIDTH_A                            ; 12                       ;
-;     -- NUMWORDS_A                         ; 101                      ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED             ;
-;     -- WIDTH_B                            ; 12                       ;
-;     -- NUMWORDS_B                         ; 101                      ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                   ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED             ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                     ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                ;
-+-------------------------------------------+--------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 71                          ;
-;     SCLR SLD          ; 39                          ;
-;     plain             ; 32                          ;
-; arriav_lcell_comb     ; 124                         ;
-;     arith             ; 32                          ;
-;         1 data inputs ; 32                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 91                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 31                          ;
-;         5 data inputs ; 21                          ;
-;         6 data inputs ; 34                          ;
-; boundary_port         ; 92                          ;
-; stratixv_ram_block    ; 12                          ;
+; arriav_ff             ; 1276                        ;
+;     ENA               ; 1244                        ;
+;     ENA SCLR          ; 32                          ;
+; arriav_lcell_comb     ; 663                         ;
+;     arith             ; 64                          ;
+;         1 data inputs ; 64                          ;
+;     extend            ; 288                         ;
+;         7 data inputs ; 288                         ;
+;     normal            ; 311                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 112                         ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 14                          ;
+;         6 data inputs ; 177                         ;
+; boundary_port         ; 97                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.63                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 5.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -470,7 +300,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -479,65 +309,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Dec 31 16:12:21 2020
+    Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
+    Info: Processing started: Sat Mar 20 05:58:15 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off code_storage -c code_storage
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file code_storage.sv
     Info (12023): Found entity 1: code_storage File: G:/neural-burning/code_storage/code_storage.sv Line: 1
 Info (12127): Elaborating entity "code_storage" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at code_storage.sv(47): truncated value with size 32 to match size of target (12) File: G:/neural-burning/code_storage/code_storage.sv Line: 47
+Warning (10030): Net "code_reset_address" at code_storage.sv(31) has no driver or initial value, using a default initial value '0' File: G:/neural-burning/code_storage/code_storage.sv Line: 31
+Warning (10030): Net "update_code_reset_address" at code_storage.sv(32) has no driver or initial value, using a default initial value '0' File: G:/neural-burning/code_storage/code_storage.sv Line: 32
+Warning (10030): Net "code_reset_count" at code_storage.sv(33) has no driver or initial value, using a default initial value '0' File: G:/neural-burning/code_storage/code_storage.sv Line: 33
+Warning (10030): Net "update_code_reset_count" at code_storage.sv(34) has no driver or initial value, using a default initial value '0' File: G:/neural-burning/code_storage/code_storage.sv Line: 34
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "storage" is uninferred due to asynchronous read logic File: G:/neural-burning/code_storage/code_storage.sv Line: 39
 Critical Warning (127005): Memory depth (128) in the design file differs from memory depth (101) in the Memory Initialization File "G:/neural-burning/code_storage/db/code_storage.ram0_code_storage_15842c54.hdl.mif" -- setting initial value for remaining addresses to 0
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "G:/neural-burning/code_storage/db/code_storage.ram0_code_storage_15842c54.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (276020): Inferred RAM node "storage_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "storage_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 12
-        Info (286033): Parameter WIDTHAD_A set to 7
-        Info (286033): Parameter NUMWORDS_A set to 101
-        Info (286033): Parameter WIDTH_B set to 12
-        Info (286033): Parameter WIDTHAD_B set to 7
-        Info (286033): Parameter NUMWORDS_B set to 101
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/code_storage.ram0_code_storage_15842c54.hdl.mif
-Info (12130): Elaborated megafunction instantiation "altsyncram:storage_rtl_0"
-Info (12133): Instantiated megafunction "altsyncram:storage_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "12"
-    Info (12134): Parameter "WIDTHAD_A" = "7"
-    Info (12134): Parameter "NUMWORDS_A" = "101"
-    Info (12134): Parameter "WIDTH_B" = "12"
-    Info (12134): Parameter "WIDTHAD_B" = "7"
-    Info (12134): Parameter "NUMWORDS_B" = "101"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/code_storage.ram0_code_storage_15842c54.hdl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_37o1.tdf
-    Info (12023): Found entity 1: altsyncram_37o1 File: G:/neural-burning/code_storage/db/altsyncram_37o1.tdf Line: 28
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "code_reset_address" is stuck at GND File: G:/neural-burning/code_storage/code_storage.sv Line: 31
+    Warning (13410): Pin "update_code_reset_address" is stuck at GND File: G:/neural-burning/code_storage/code_storage.sv Line: 32
+    Warning (13410): Pin "code_reset_count" is stuck at GND File: G:/neural-burning/code_storage/code_storage.sv Line: 33
+    Warning (13410): Pin "update_code_reset_count" is stuck at GND File: G:/neural-burning/code_storage/code_storage.sv Line: 34
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 299 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 48 input pins
-    Info (21059): Implemented 44 output pins
-    Info (21061): Implemented 195 logic cells
-    Info (21064): Implemented 12 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4848 megabytes
-    Info: Processing ended: Thu Dec 31 16:12:29 2020
+Info (21057): Implemented 2003 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 49 input pins
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 1906 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Sat Mar 20 05:58:23 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:15
 
 

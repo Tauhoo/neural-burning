@@ -1,0 +1,132 @@
+# Reading pref.tcl
+# do backprop_stack_controller_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+G:/neural-burning/backprop_stack_controller {G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:04:19 on Mar 15,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+G:/neural-burning/backprop_stack_controller" G:/neural-burning/backprop_stack_controller/backprop_stack_controller.sv 
+# -- Compiling module backprop_stack_controller
+# 
+# Top level modules:
+# 	backprop_stack_controller
+# End time: 08:04:19 on Mar 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack_controller/testbench/testbench.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:04:46 on Mar 15,2021
+# vlog -reportprogress 300 -work work G:/neural-burning/backprop_stack_controller/testbench/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 08:04:46 on Mar 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 08:04:49 on Mar 15,2021
+# Loading work.testbench
+# Loading sv_std.std
+# Loading work.backprop_stack_controller
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 72
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 74
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 81
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 83
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 90
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 92
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 99
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 101
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: G:/neural-burning/backprop_stack_controller/testbench/testbench.v Line: 106
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 1, read_update_data = 0, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 1, current_layer_out =          0, current_row_out =          1
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 1, current_layer_out =          0, current_row_out =          2
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 1, read_update_data = 0, active_train = 1, current_layer_out =          1, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 1, current_layer_out =          1, current_row_out =          1
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 1, current_layer_out =          1, current_row_out =          2
+run
+# training = 1, last_phase = 0, is_last_layer = 1, start_new_layer = 1, read_update_data = 0, active_train = 1, current_layer_out =          2, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 1, start_new_layer = 0, read_update_data = 0, active_train = 1, current_layer_out =          2, current_row_out =          1
+run
+# training = 1, last_phase = 0, is_last_layer = 1, start_new_layer = 0, read_update_data = 0, active_train = 1, current_layer_out =          2, current_row_out =          2
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 1, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 1, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 1, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 1, last_phase = 1, is_last_layer = 0, start_new_layer = 0, read_update_data = 1, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+run
+# training = 0, last_phase = 0, is_last_layer = 0, start_new_layer = 0, read_update_data = 0, active_train = 0, current_layer_out =          0, current_row_out =          0
+# End time: 08:06:16 on Mar 15,2021, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 9

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for general_data_operator
-Thu Feb 11 15:59:05 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Sun Mar 21 19:46:32 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
 
 
 ---------------------
@@ -40,27 +40,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 11 15:59:05 2021       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; general_data_operator                       ;
-; Top-level Entity Name           ; general_data_operator                       ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 17                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                  ;
++---------------------------------+-------------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Mar 21 19:46:32 2021                       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition ;
+; Revision Name                   ; general_data_operator                                       ;
+; Top-level Entity Name           ; general_data_operator                                       ;
+; Family                          ; Cyclone V                                                   ;
+; Logic utilization (in ALMs)     ; N/A                                                         ;
+; Total registers                 ; 0                                                           ;
+; Total pins                      ; 17                                                          ;
+; Total virtual pins              ; 0                                                           ;
+; Total block memory bits         ; 0                                                           ;
+; Total DSP Blocks                ; 0                                                           ;
+; Total HSSI RX PCSs              ; 0                                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                                           ;
+; Total HSSI TX PCSs              ; 0                                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                                           ;
+; Total PLLs                      ; 0                                                           ;
+; Total DLLs                      ; 0                                                           ;
++---------------------------------+-------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------+
@@ -258,8 +258,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 11 15:58:58 2021
+    Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.01std SJ Lite Edition
+    Info: Processing started: Sun Mar 21 19:46:23 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off general_data_operator -c general_data_operator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -302,9 +302,9 @@ Info (21057): Implemented 17 device resources after synthesis - the final resour
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 17 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Thu Feb 11 15:59:05 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Sun Mar 21 19:46:32 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:15
 
 

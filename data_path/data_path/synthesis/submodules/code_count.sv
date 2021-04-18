@@ -10,13 +10,17 @@ module code_count(
 
     reg [31:0] count_reg;
 
-    assign count = reset === 1'b1 ? 0 : count_reg + 1;
+    assign count = count_reg;
 
     initial begin
-        count_reg <= 0;
+        count_reg = 0;
     end
 
-    always @(negedge clk ) begin
-        count_reg <= count; 
+    always @(posedge clk ) begin
+        if (reset === 1'b1) begin
+            count_reg <= 0;
+        end else begin
+            count_reg <= count_reg + 1;
+        end
     end
 endmodule

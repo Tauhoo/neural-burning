@@ -7,6 +7,7 @@ module decode_dense_reg (
     x, // single
     label_in, // single
     backprop_controll,
+    learning_rate,
 
     act_type_out,
     dense_type_out,
@@ -16,14 +17,16 @@ module decode_dense_reg (
     x_out,
     label_out,
     backprop_controll_out,
+    learning_rate_out,
     clk
 );
     parameter size = 3;
     parameter data_size = 16;
     parameter cost_type_size = 8;
     parameter dense_type_size = 4;
+    parameter learning_rate_size = 16;
     parameter act_type_size = 4;
-    parameter backprop_controll_size = 32*3 + 4 ;
+    parameter backprop_controll_size = 1 + 1 + 32 + 32 ;
 
     input [act_type_size - 1:0] act_type;
     input [dense_type_size - 1:0] dense_type;
@@ -33,6 +36,7 @@ module decode_dense_reg (
     input [data_size*size - 1:0] x;
     input [data_size*size - 1:0] label_in;
     input [backprop_controll_size - 1:0] backprop_controll;
+    input [learning_rate_size - 1:0] learning_rate;
 
     input clk;
 
@@ -44,6 +48,10 @@ module decode_dense_reg (
     output [data_size*size - 1:0] x_out;
     output [data_size*size - 1:0] label_out;
     output [backprop_controll_size - 1:0] backprop_controll_out;
+    output [learning_rate_size - 1:0] learning_rate_out;
+
+    delay #(.data_size(learning_rate_size), .size(1)) 
+    delay_inst_learning_rate(.bus_in(learning_rate), .bus_out(learning_rate_out), .clk(clk));
 
     delay #(.data_size(act_type_size), .size(1)) 
     delay_inst_act_type(.bus_in(act_type), .bus_out(act_type_out), .clk(clk));
